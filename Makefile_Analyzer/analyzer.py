@@ -33,9 +33,31 @@ def analyze_makefile(makefile_path, compilers):
         parsed_commands.append(parse_command(command, compilers, compiler_flag_information_dict))
 
     print()
-    print("Parsed commands: ")
+    print("#######################")
+    print("### PARSED COMMANDS ###")
+    print("#######################")
+    print()
     for cmd in parsed_commands:
         print(cmd)
+
+    # instrument commands
+    for cmd in parsed_commands:
+        cmd.add_discopop_instrumentation()
+
+    print()
+    print("#############################")
+    print("### INSTRUMENTED COMMANDS ###")
+    print("#############################")
+    print()
+    for cmd in parsed_commands:
+        print(cmd)
+
+    # execute commands
+    for cmd in parsed_commands:
+        print("Execute: ", str(cmd))
+        stream = os.popen(str(cmd))
+        print("Result: ", stream.readlines())
+
 
     # reset cwd
     os.chdir(starting_cwd)

@@ -2,10 +2,10 @@ test: atax.o polybench.o
 	gcc atax.o polybench.o -o out
 	
 atax.o: useless.o
-	gcc -c atax.c
+	gcc -c atax.c -O3
 
 useless.o:
-	gcc -c useless
+	gcc -c useless.c
 	
 polybench.o:
 	gcc -c polybench.c
@@ -16,3 +16,5 @@ direct_compile:
 clean:
 	rm -f *.o
 	rm -f out
+	rm -f *.ll
+	rm -f *.txt

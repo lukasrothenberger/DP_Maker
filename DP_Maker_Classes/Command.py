@@ -27,5 +27,38 @@ class Command(object):
             # the following works, because either enter_dir or exit_dir will be empty.
             return "cd " + self.enter_dir + self.exit_dir
         if self.cmd_type == CmdType.COMPILE:
-            return self.compiler_command + " " + str(self.non_flag_arguments) + " " + str(self.flags)
+            return self.compiler_command + " " + " ".join(self.non_flag_arguments) + " " + " ".join(self.flags)
         return self.cmd_line
+
+    def add_discopop_instrumentation(self):
+        if self.cmd_type in [CmdType.ENTER_DIR, CmdType.EXIT_DIR, CmdType.UNKNOWN]:
+            return
+        if self.cmd_type == CmdType.COMPILE:
+            # check if single file is compiled or multiple files are linked
+            if "-c" in self.flags:
+                # single file is compiled
+                self.compiler_command = "clang"
+                # append DiscoPoP compiler flags
+                self.flags.append("-g -O0 -S -emit-llvm -fno-discard-value-names -Xclang -load -Xclang /home/lukas/git/discopop/build/libi/LLVMDPInstrumentation.so -mllvm -fm-path -mllvm ../FileMapping.txt")
+                # change file type of output file
+                for idx, flag in enumerate(self.flags):
+                    if flag.startswith("-o "):
+                        # manually set output file
+                        self.flags[idx] += ".ll"
+                        break
+
+                # output file named according to input file
+                # find name of compiled file
+                file_name = ""
+                for arg in self.non_flag_arguments:
+                    if arg.endswith(".c") or arg.endswith(".cpp"):
+                        file_name = arg
+                self.flags.append("-o " + file_name[:file_name.rfind(".")]+".ll")
+            else:
+                # multiple files are linked
+                self.compiler_command = "clang++"
+                self.flags.append("-L/home/lukas/git/discopop/build/rtlib -lDiscoPoP_RT -lpthread")
+                for idx, arg in enumerate(self.non_flag_arguments):
+                    if arg.endswith(".o"):
+                        self.non_flag_arguments[idx] = self.non_flag_arguments[idx][:self.non_flag_arguments[idx].rfind(".")]
+                        self.non_flag_arguments[idx] += ".ll"
