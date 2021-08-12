@@ -54,9 +54,9 @@ def analyze_makefile(makefile_path, compilers):
     #for cmd in parsed_commands:
     #    print(cmd)
 
-    enable_instrumentation = False
+    enable_instrumentation = True
     enable_cu_generation = False
-    enable_dp_reduction = True
+    enable_dp_reduction = False
 
     # execute Instrumentation
     if enable_instrumentation:
