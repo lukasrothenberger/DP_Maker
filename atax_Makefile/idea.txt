@@ -1,0 +1,8 @@
+split each command into:
+	- compiler
+	- output
+	- compile only (-c)
+	- linking
+	- flags
+	
+to allow reconstructing of "simple" make-commands

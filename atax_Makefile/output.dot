@@ -1,0 +1,9 @@
+digraph G {
+n3[label="atax.o", color="red"];
+n5[label="polybench.o", color="red"];
+n2[label="test", color="red"];
+n4[label="uselessa.o", color="red"];
+n4 -> n3 ; 
+n3 -> n2 ; 
+n5 -> n2 ; 
+}
