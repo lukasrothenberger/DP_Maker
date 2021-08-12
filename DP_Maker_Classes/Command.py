@@ -27,7 +27,9 @@ class Command(object):
             # the following works, because either enter_dir or exit_dir will be empty.
             return "cd " + self.enter_dir + self.exit_dir
         if self.cmd_type == CmdType.COMPILE:
-            return self.compiler_command + " " + " ".join(self.non_flag_arguments) + " " + " ".join(self.flags)
+            ret_str = self.compiler_command + " " + " ".join(self.non_flag_arguments) + " " + " ".join(self.flags)
+
+            return ret_str
         return self.cmd_line
 
     def add_discopop_instrumentation(self):

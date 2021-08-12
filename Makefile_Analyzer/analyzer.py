@@ -4,6 +4,7 @@ import subprocess
 from os.path import dirname
 from .parser import parse_command
 from Helper.compiler_information import CompilerFlagInformation, get_compiler_argument_information
+from Helper.command_preprocessor import preprocess
 from DP_Maker_Classes.Command import Command, CmdType
 
 
@@ -30,6 +31,7 @@ def analyze_makefile(makefile_path, compilers):
     parsed_commands: List[Command] = []
     for command in stream.readlines():
         command = command.replace("\n", "")
+        command = preprocess(command)
         parsed_commands.append(parse_command(command, compilers, compiler_flag_information_dict))
 
     print()
@@ -60,8 +62,11 @@ def analyze_makefile(makefile_path, compilers):
         print()
         print("PWD: ", last_dir)
         print("ORIG: ", cmd.cmd_line)
-        print("Execute: ", "cd " + last_dir+"&& "+ str(cmd).replace("\"",""))
-        stream = os.popen("cd " + last_dir+"&& "+ str(cmd).replace("\"", ""))
+        cmd_str = str(cmd)
+        # replace § signs introduced by the preprocessor with whitespaces
+        cmd_str = cmd_str.replace("§", " ")
+        print("Execute: ", "cd " + last_dir+" && " + cmd_str)
+        stream = os.popen("cd " + last_dir+" && " + cmd_str)
         print("Result: ", stream.readlines())
 
 
