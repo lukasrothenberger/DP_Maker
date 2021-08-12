@@ -54,20 +54,81 @@ def analyze_makefile(makefile_path, compilers):
     #for cmd in parsed_commands:
     #    print(cmd)
 
-    # execute commands
-    last_dir = os.getcwd()
-    for cmd in parsed_commands:
-        if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
-            last_dir = "" + cmd.exit_dir + cmd.enter_dir
-        print()
-        print("PWD: ", last_dir)
-        print("ORIG: ", cmd.cmd_line)
-        cmd_str = str(cmd)
-        # replace § signs introduced by the preprocessor with whitespaces
-        cmd_str = cmd_str.replace("§", " ")
-        print("Execute: ", "cd " + last_dir+" && " + cmd_str)
-        stream = os.popen("cd " + last_dir+" && " + cmd_str)
-        print("Result: ", stream.readlines())
+    enable_instrumentation = False
+    enable_cu_generation = False
+    enable_dp_reduction = True
+
+    # execute Instrumentation
+    if enable_instrumentation:
+        last_dir = os.getcwd()
+        # execute FileMapping
+        os.system("cp /home/lukas/git/discopop/scripts/dp-fmap " + last_dir + "/dp-fmap")
+        for cmd in parsed_commands:
+            if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
+                last_dir = "" + cmd.exit_dir + cmd.enter_dir
+            print()
+            print("PWD: ", last_dir)
+            print("ORIG: ", cmd.cmd_line)
+            print("PRE: ", str(cmd))
+            cmd_str = str(cmd)
+            # replace § signs introduced by the preprocessor with whitespaces
+            cmd_str = cmd_str.replace("§", " ")
+            # replace DP-Shared Object marker with Instrumentation
+            cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
+                                      "/home/lukas/git/discopop/build/libi/LLVMDPInstrumentation.so")
+            # replace DP-FMAP marker with path of FileMapping.txt
+            cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
+            print("Execute: ", "cd " + last_dir+" && " + cmd_str)
+            stream = os.popen("cd " + last_dir+" && " + cmd_str)
+            print("Result: ", stream.readlines())
+
+    # execute Instrumentation
+    if enable_cu_generation:
+        last_dir = os.getcwd()
+        # execute FileMapping
+        os.system("cp /home/lukas/git/discopop/scripts/dp-fmap " + last_dir + "/dp-fmap")
+        for cmd in parsed_commands:
+            if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
+                last_dir = "" + cmd.exit_dir + cmd.enter_dir
+            print()
+            print("PWD: ", last_dir)
+            print("ORIG: ", cmd.cmd_line)
+            print("PRE: ", str(cmd))
+            cmd_str = str(cmd)
+            # replace § signs introduced by the preprocessor with whitespaces
+            cmd_str = cmd_str.replace("§", " ")
+            # replace DP-Shared Object marker with Instrumentation
+            cmd_str = cmd_str.replace("##DPSHAREDOBJECT##", "/home/lukas/git/discopop/build/libi/LLVMCUGeneration.so")
+            # replace DP-FMAP marker with path of FileMapping.txt
+            cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
+            print("Execute: ", "cd " + last_dir+" && " + cmd_str)
+            stream = os.popen("cd " + last_dir+" && " + cmd_str)
+            print("Result: ", stream.readlines())
+
+    # execute DP Reduction
+    if enable_dp_reduction:
+        last_dir = os.getcwd()
+        # execute FileMapping
+        os.system("cp /home/lukas/git/discopop/scripts/dp-fmap " + last_dir + "/dp-fmap")
+        os.system("cd " + last_dir + " && ./dp-fmap")
+        for cmd in parsed_commands:
+            if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
+                last_dir = "" + cmd.exit_dir + cmd.enter_dir
+            print()
+            print("PWD: ", last_dir)
+            print("ORIG: ", cmd.cmd_line)
+            print("PRE: ", str(cmd))
+            cmd_str = str(cmd)
+            # replace § signs introduced by the preprocessor with whitespaces
+            cmd_str = cmd_str.replace("§", " ")
+            # replace DP-Shared Object marker with Instrumentation
+            cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
+                                      "/home/lukas/git/discopop/build/libi/LLVMDPReduction.so")
+            # replace DP-FMAP marker with path of FileMapping.txt
+            cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
+            print("Execute: ", "cd " + last_dir + " && " + cmd_str)
+            stream = os.popen("cd " + last_dir + " && " + cmd_str)
+            print("Result: ", stream.readlines())
 
 
     # reset cwd

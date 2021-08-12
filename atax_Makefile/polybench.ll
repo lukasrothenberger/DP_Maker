@@ -21,122 +21,70 @@ target triple = "x86_64-pc-linux-gnu"
 @polybench_inter_array_padding_sz = internal global i64 0, align 8, !dbg !21
 @stderr = external dso_local global %struct._IO_FILE*, align 8
 @.str.3 = private unnamed_addr constant [51 x i8] c"[PolyBench] posix_memalign: cannot allocate memory\00", align 1
-@.str.4 = private unnamed_addr constant [3 x i8] c"cs\00", align 1
-@.str.5 = private unnamed_addr constant [6 x i8] c"flush\00", align 1
-@.str.6 = private unnamed_addr constant [4 x i8] c"tmp\00", align 1
-@.str.7 = private unnamed_addr constant [2 x i8] c"i\00", align 1
-@.str.8 = private unnamed_addr constant [18 x i8] c"polybench_t_start\00", align 1
-@.str.9 = private unnamed_addr constant [16 x i8] c"polybench_t_end\00", align 1
-@.str.10 = private unnamed_addr constant [9 x i8] c"ptr.addr\00", align 1
-@.str.11 = private unnamed_addr constant [7 x i8] c"n.addr\00", align 1
-@.str.12 = private unnamed_addr constant [4 x i8] c"val\00", align 1
-@.str.13 = private unnamed_addr constant [14 x i8] c"elt_size.addr\00", align 1
-@.str.14 = private unnamed_addr constant [4 x i8] c"ret\00", align 1
-@.str.15 = private unnamed_addr constant [33 x i8] c"polybench_inter_array_padding_sz\00", align 1
-@.str.16 = private unnamed_addr constant [14 x i8] c"alloc_sz.addr\00", align 1
-@.str.17 = private unnamed_addr constant [10 x i8] c"padded_sz\00", align 1
-@.str.18 = private unnamed_addr constant [4 x i8] c"err\00", align 1
-@.str.19 = private unnamed_addr constant [7 x i8] c"stderr\00", align 1
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local void @polybench_flush_cache() #0 !dbg !31 {
 entry:
-  call void @__dp_func_entry(i32 16498, i32 0)
   %cs = alloca i32, align 4
   %flush = alloca double*, align 8
   %i = alloca i32, align 4
   %tmp = alloca double, align 8
   call void @llvm.dbg.declare(metadata i32* %cs, metadata !34, metadata !DIExpression()), !dbg !35
-  %0 = ptrtoint i32* %cs to i64
-  call void @__dp_write(i32 16498, i64 %0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.4, i32 0, i32 0))
   store i32 4194560, i32* %cs, align 4, !dbg !35
   call void @llvm.dbg.declare(metadata double** %flush, metadata !36, metadata !DIExpression()), !dbg !37
-  %1 = ptrtoint i32* %cs to i64
-  call void @__dp_read(i32 16499, i64 %1, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.4, i32 0, i32 0))
-  %2 = load i32, i32* %cs, align 4, !dbg !38
-  %conv = sext i32 %2 to i64, !dbg !38
-  call void @__dp_call(i32 16499), !dbg !39
+  %0 = load i32, i32* %cs, align 4, !dbg !38
+  %conv = sext i32 %0 to i64, !dbg !38
   %call = call noalias i8* @calloc(i64 %conv, i64 8) #5, !dbg !39
-  %3 = bitcast i8* %call to double*, !dbg !40
-  %4 = ptrtoint double** %flush to i64
-  call void @__dp_write(i32 16499, i64 %4, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.5, i32 0, i32 0))
-  store double* %3, double** %flush, align 8, !dbg !37
+  %1 = bitcast i8* %call to double*, !dbg !40
+  store double* %1, double** %flush, align 8, !dbg !37
   call void @llvm.dbg.declare(metadata i32* %i, metadata !41, metadata !DIExpression()), !dbg !42
   call void @llvm.dbg.declare(metadata double* %tmp, metadata !43, metadata !DIExpression()), !dbg !44
-  %5 = ptrtoint double* %tmp to i64
-  call void @__dp_write(i32 16501, i64 %5, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.6, i32 0, i32 0))
   store double 0.000000e+00, double* %tmp, align 8, !dbg !44
-  %6 = ptrtoint i32* %i to i64
-  call void @__dp_write(i32 16505, i64 %6, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.7, i32 0, i32 0))
   store i32 0, i32* %i, align 4, !dbg !45
   br label %for.cond, !dbg !47
 
 for.cond:                                         ; preds = %for.inc, %entry
-  call void @__dp_loop_entry(i32 16505, i32 0)
-  %7 = ptrtoint i32* %i to i64
-  call void @__dp_read(i32 16505, i64 %7, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.7, i32 0, i32 0))
-  %8 = load i32, i32* %i, align 4, !dbg !48
-  %9 = ptrtoint i32* %cs to i64
-  call void @__dp_read(i32 16505, i64 %9, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.4, i32 0, i32 0))
-  %10 = load i32, i32* %cs, align 4, !dbg !50
-  %cmp = icmp slt i32 %8, %10, !dbg !51
+  %2 = load i32, i32* %i, align 4, !dbg !48
+  %3 = load i32, i32* %cs, align 4, !dbg !50
+  %cmp = icmp slt i32 %2, %3, !dbg !51
   br i1 %cmp, label %for.body, label %for.end, !dbg !52
 
 for.body:                                         ; preds = %for.cond
-  %11 = ptrtoint double** %flush to i64
-  call void @__dp_read(i32 16506, i64 %11, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.5, i32 0, i32 0))
-  %12 = load double*, double** %flush, align 8, !dbg !53
-  %13 = ptrtoint i32* %i to i64
-  call void @__dp_read(i32 16506, i64 %13, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.7, i32 0, i32 0))
-  %14 = load i32, i32* %i, align 4, !dbg !54
-  %idxprom = sext i32 %14 to i64, !dbg !53
-  %arrayidx = getelementptr inbounds double, double* %12, i64 %idxprom, !dbg !53
-  %15 = ptrtoint double* %arrayidx to i64
-  call void @__dp_read(i32 16506, i64 %15, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.5, i32 0, i32 0))
-  %16 = load double, double* %arrayidx, align 8, !dbg !53
-  %17 = ptrtoint double* %tmp to i64
-  call void @__dp_read(i32 16506, i64 %17, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.6, i32 0, i32 0))
-  %18 = load double, double* %tmp, align 8, !dbg !55
-  %add = fadd double %18, %16, !dbg !55
-  %19 = ptrtoint double* %tmp to i64
-  call void @__dp_write(i32 16506, i64 %19, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.6, i32 0, i32 0))
+  call void @incr_loop_counter(i32 1)
+  %4 = load double*, double** %flush, align 8, !dbg !53
+  %5 = load i32, i32* %i, align 4, !dbg !54
+  %idxprom = sext i32 %5 to i64, !dbg !53
+  %arrayidx = getelementptr inbounds double, double* %4, i64 %idxprom, !dbg !53
+  %6 = load double, double* %arrayidx, align 8, !dbg !53
+  call void @add_instr_rec(i32 121, i64 1, i32 0)
+  %7 = load double, double* %tmp, align 8, !dbg !55
+  %add = fadd double %7, %6, !dbg !55
+  call void @add_instr_rec(i32 121, i64 1, i32 1)
   store double %add, double* %tmp, align 8, !dbg !55
   br label %for.inc, !dbg !56
 
 for.inc:                                          ; preds = %for.body
-  %20 = ptrtoint i32* %i to i64
-  call void @__dp_read(i32 16505, i64 %20, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.7, i32 0, i32 0))
-  %21 = load i32, i32* %i, align 4, !dbg !57
-  %inc = add nsw i32 %21, 1, !dbg !57
-  %22 = ptrtoint i32* %i to i64
-  call void @__dp_write(i32 16505, i64 %22, i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.7, i32 0, i32 0))
+  %8 = load i32, i32* %i, align 4, !dbg !57
+  %inc = add nsw i32 %8, 1, !dbg !57
   store i32 %inc, i32* %i, align 4, !dbg !57
   br label %for.cond, !dbg !58, !llvm.loop !59
 
 for.end:                                          ; preds = %for.cond
-  call void @__dp_loop_exit(i32 16507, i32 0)
-  %23 = ptrtoint double* %tmp to i64
-  call void @__dp_read(i32 16507, i64 %23, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.6, i32 0, i32 0))
-  %24 = load double, double* %tmp, align 8, !dbg !61
-  %cmp2 = fcmp ole double %24, 1.000000e+01, !dbg !61
+  %9 = load double, double* %tmp, align 8, !dbg !61
+  %cmp2 = fcmp ole double %9, 1.000000e+01, !dbg !61
   br i1 %cmp2, label %if.then, label %if.else, !dbg !64
 
 if.then:                                          ; preds = %for.end
   br label %if.end, !dbg !64
 
 if.else:                                          ; preds = %for.end
-  call void @__dp_finalize(i32 16507), !dbg !61
   call void @__assert_fail(i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.1, i32 0, i32 0), i32 123, i8* getelementptr inbounds ([29 x i8], [29 x i8]* @__PRETTY_FUNCTION__.polybench_flush_cache, i32 0, i32 0)) #6, !dbg !61
   unreachable, !dbg !61
 
 if.end:                                           ; preds = %if.then
-  %25 = ptrtoint double** %flush to i64
-  call void @__dp_read(i32 16508, i64 %25, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.5, i32 0, i32 0))
-  %26 = load double*, double** %flush, align 8, !dbg !65
-  %27 = bitcast double* %26 to i8*, !dbg !65
-  call void @__dp_call(i32 16508), !dbg !66
-  call void @free(i8* %27) #5, !dbg !66
-  call void @__dp_func_exit(i32 16509, i32 0), !dbg !67
+  %10 = load double*, double** %flush, align 8, !dbg !65
+  %11 = bitcast double* %10 to i8*, !dbg !65
+  call void @free(i8* %11) #5, !dbg !66
   ret void, !dbg !67
 }
 
@@ -155,55 +103,34 @@ declare dso_local void @free(i8*) #2
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local void @polybench_prepare_instruments() #0 !dbg !68 {
 entry:
-  call void @__dp_func_entry(i32 16740, i32 0), !dbg !69
-  call void @__dp_call(i32 16740), !dbg !69
   call void @polybench_flush_cache(), !dbg !69
-  call void @__dp_func_exit(i32 16745, i32 0), !dbg !70
   ret void, !dbg !70
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local void @polybench_timer_start() #0 !dbg !71 {
 entry:
-  call void @__dp_func_entry(i32 16750, i32 0), !dbg !72
-  call void @__dp_call(i32 16750), !dbg !72
   call void @polybench_prepare_instruments(), !dbg !72
-  call void @__dp_call(i32 16752), !dbg !73
   %call = call double @rtclock(), !dbg !73
-  %0 = ptrtoint double* @polybench_t_start to i64
-  call void @__dp_write(i32 16752, i64 %0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.8, i32 0, i32 0))
   store double %call, double* @polybench_t_start, align 8, !dbg !74
-  call void @__dp_func_exit(i32 16756, i32 0), !dbg !75
   ret void, !dbg !75
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local void @polybench_timer_stop() #0 !dbg !76 {
 entry:
-  call void @__dp_func_entry(i32 16762, i32 0), !dbg !77
-  call void @__dp_call(i32 16762), !dbg !77
   %call = call double @rtclock(), !dbg !77
-  %0 = ptrtoint double* @polybench_t_end to i64
-  call void @__dp_write(i32 16762, i64 %0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.9, i32 0, i32 0))
   store double %call, double* @polybench_t_end, align 8, !dbg !78
-  call void @__dp_func_exit(i32 16769, i32 0), !dbg !79
   ret void, !dbg !79
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local void @polybench_timer_print() #0 !dbg !80 {
 entry:
-  call void @__dp_func_entry(i32 16786, i32 0), !dbg !81
-  %0 = ptrtoint double* @polybench_t_end to i64
-  call void @__dp_read(i32 16786, i64 %0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.9, i32 0, i32 0))
-  %1 = load double, double* @polybench_t_end, align 8, !dbg !81
-  %2 = ptrtoint double* @polybench_t_start to i64
-  call void @__dp_read(i32 16786, i64 %2, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.8, i32 0, i32 0))
-  %3 = load double, double* @polybench_t_start, align 8, !dbg !82
-  %sub = fsub double %1, %3, !dbg !83
-  call void @__dp_call(i32 16786), !dbg !84
+  %0 = load double, double* @polybench_t_end, align 8, !dbg !81
+  %1 = load double, double* @polybench_t_start, align 8, !dbg !82
+  %sub = fsub double %0, %1, !dbg !83
   %call = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.2, i32 0, i32 0), double %sub), !dbg !84
-  call void @__dp_func_exit(i32 16791, i32 0), !dbg !85
   ret void, !dbg !85
 }
 
@@ -212,23 +139,17 @@ declare dso_local i32 @printf(i8*, ...) #4
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local void @polybench_free_data(i8* %ptr) #0 !dbg !86 {
 entry:
-  call void @__dp_func_entry(i32 16931, i32 0)
   %ptr.addr = alloca i8*, align 8
   store i8* %ptr, i8** %ptr.addr, align 8
   call void @llvm.dbg.declare(metadata i8** %ptr.addr, metadata !89, metadata !DIExpression()), !dbg !90
-  %0 = ptrtoint i8** %ptr.addr to i64
-  call void @__dp_read(i32 16936, i64 %0, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.10, i32 0, i32 0))
-  %1 = load i8*, i8** %ptr.addr, align 8, !dbg !91
-  call void @__dp_call(i32 16936), !dbg !92
-  call void @free(i8* %1) #5, !dbg !92
-  call void @__dp_func_exit(i32 16938, i32 0), !dbg !93
+  %0 = load i8*, i8** %ptr.addr, align 8, !dbg !91
+  call void @free(i8* %0) #5, !dbg !92
   ret void, !dbg !93
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define dso_local i8* @polybench_alloc_data(i64 %n, i32 %elt_size) #0 !dbg !94 {
 entry:
-  call void @__dp_func_entry(i32 16941, i32 0)
   %n.addr = alloca i64, align 8
   %elt_size.addr = alloca i32, align 4
   %val = alloca i64, align 8
@@ -238,43 +159,24 @@ entry:
   store i32 %elt_size, i32* %elt_size.addr, align 4
   call void @llvm.dbg.declare(metadata i32* %elt_size.addr, metadata !99, metadata !DIExpression()), !dbg !100
   call void @llvm.dbg.declare(metadata i64* %val, metadata !101, metadata !DIExpression()), !dbg !102
-  %0 = ptrtoint i64* %n.addr to i64
-  call void @__dp_read(i32 16948, i64 %0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.11, i32 0, i32 0))
-  %1 = load i64, i64* %n.addr, align 8, !dbg !103
-  %2 = ptrtoint i64* %val to i64
-  call void @__dp_write(i32 16948, i64 %2, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i32 0, i32 0))
-  store i64 %1, i64* %val, align 8, !dbg !102
-  %3 = ptrtoint i32* %elt_size.addr to i64
-  call void @__dp_read(i32 16949, i64 %3, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.13, i32 0, i32 0))
-  %4 = load i32, i32* %elt_size.addr, align 4, !dbg !104
-  %conv = sext i32 %4 to i64, !dbg !104
-  %5 = ptrtoint i64* %val to i64
-  call void @__dp_read(i32 16949, i64 %5, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i32 0, i32 0))
-  %6 = load i64, i64* %val, align 8, !dbg !105
-  %mul = mul i64 %6, %conv, !dbg !105
-  %7 = ptrtoint i64* %val to i64
-  call void @__dp_write(i32 16949, i64 %7, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i32 0, i32 0))
+  %0 = load i64, i64* %n.addr, align 8, !dbg !103
+  store i64 %0, i64* %val, align 8, !dbg !102
+  %1 = load i32, i32* %elt_size.addr, align 4, !dbg !104
+  %conv = sext i32 %1 to i64, !dbg !104
+  %2 = load i64, i64* %val, align 8, !dbg !105
+  %mul = mul i64 %2, %conv, !dbg !105
   store i64 %mul, i64* %val, align 8, !dbg !105
   call void @llvm.dbg.declare(metadata i8** %ret, metadata !106, metadata !DIExpression()), !dbg !107
-  %8 = ptrtoint i64* %val to i64
-  call void @__dp_read(i32 16950, i64 %8, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.12, i32 0, i32 0))
-  %9 = load i64, i64* %val, align 8, !dbg !108
-  call void @__dp_call(i32 16950), !dbg !109
-  %call = call i8* @xmalloc(i64 %9), !dbg !109
-  %10 = ptrtoint i8** %ret to i64
-  call void @__dp_write(i32 16950, i64 %10, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.14, i32 0, i32 0))
+  %3 = load i64, i64* %val, align 8, !dbg !108
+  %call = call i8* @xmalloc(i64 %3), !dbg !109
   store i8* %call, i8** %ret, align 8, !dbg !107
-  %11 = ptrtoint i8** %ret to i64
-  call void @__dp_read(i32 16952, i64 %11, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.14, i32 0, i32 0))
-  %12 = load i8*, i8** %ret, align 8, !dbg !110
-  call void @__dp_func_exit(i32 16952, i32 0), !dbg !111
-  ret i8* %12, !dbg !111
+  %4 = load i8*, i8** %ret, align 8, !dbg !110
+  ret i8* %4, !dbg !111
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define internal i8* @xmalloc(i64 %alloc_sz) #0 !dbg !112 {
 entry:
-  call void @__dp_func_entry(i32 16901, i32 0)
   %alloc_sz.addr = alloca i64, align 8
   %ret = alloca i8*, align 8
   %padded_sz = alloca i64, align 8
@@ -282,72 +184,42 @@ entry:
   store i64 %alloc_sz, i64* %alloc_sz.addr, align 8
   call void @llvm.dbg.declare(metadata i64* %alloc_sz.addr, metadata !115, metadata !DIExpression()), !dbg !116
   call void @llvm.dbg.declare(metadata i8** %ret, metadata !117, metadata !DIExpression()), !dbg !118
-  %0 = ptrtoint i8** %ret to i64
-  call void @__dp_write(i32 16903, i64 %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.14, i32 0, i32 0))
   store i8* null, i8** %ret, align 8, !dbg !118
-  %1 = ptrtoint i64* @polybench_inter_array_padding_sz to i64
-  call void @__dp_read(i32 16905, i64 %1, i8* getelementptr inbounds ([33 x i8], [33 x i8]* @.str.15, i32 0, i32 0))
-  %2 = load i64, i64* @polybench_inter_array_padding_sz, align 8, !dbg !119
-  %add = add i64 %2, 0, !dbg !119
-  %3 = ptrtoint i64* @polybench_inter_array_padding_sz to i64
-  call void @__dp_write(i32 16905, i64 %3, i8* getelementptr inbounds ([33 x i8], [33 x i8]* @.str.15, i32 0, i32 0))
+  %0 = load i64, i64* @polybench_inter_array_padding_sz, align 8, !dbg !119
+  %add = add i64 %0, 0, !dbg !119
   store i64 %add, i64* @polybench_inter_array_padding_sz, align 8, !dbg !119
   call void @llvm.dbg.declare(metadata i64* %padded_sz, metadata !120, metadata !DIExpression()), !dbg !121
-  %4 = ptrtoint i64* %alloc_sz.addr to i64
-  call void @__dp_read(i32 16906, i64 %4, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.16, i32 0, i32 0))
-  %5 = load i64, i64* %alloc_sz.addr, align 8, !dbg !122
-  %6 = ptrtoint i64* @polybench_inter_array_padding_sz to i64
-  call void @__dp_read(i32 16906, i64 %6, i8* getelementptr inbounds ([33 x i8], [33 x i8]* @.str.15, i32 0, i32 0))
-  %7 = load i64, i64* @polybench_inter_array_padding_sz, align 8, !dbg !123
-  %add1 = add i64 %5, %7, !dbg !124
-  %8 = ptrtoint i64* %padded_sz to i64
-  call void @__dp_write(i32 16906, i64 %8, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.17, i32 0, i32 0))
+  %1 = load i64, i64* %alloc_sz.addr, align 8, !dbg !122
+  %2 = load i64, i64* @polybench_inter_array_padding_sz, align 8, !dbg !123
+  %add1 = add i64 %1, %2, !dbg !124
   store i64 %add1, i64* %padded_sz, align 8, !dbg !121
   call void @llvm.dbg.declare(metadata i32* %err, metadata !125, metadata !DIExpression()), !dbg !126
-  %9 = ptrtoint i64* %padded_sz to i64
-  call void @__dp_read(i32 16907, i64 %9, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.17, i32 0, i32 0))
-  %10 = load i64, i64* %padded_sz, align 8, !dbg !127
-  call void @__dp_call(i32 16907), !dbg !128
-  %call = call i32 @posix_memalign(i8** %ret, i64 4096, i64 %10) #5, !dbg !128
-  %11 = ptrtoint i32* %err to i64
-  call void @__dp_write(i32 16907, i64 %11, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.18, i32 0, i32 0))
+  %3 = load i64, i64* %padded_sz, align 8, !dbg !127
+  %call = call i32 @posix_memalign(i8** %ret, i64 4096, i64 %3) #5, !dbg !128
   store i32 %call, i32* %err, align 4, !dbg !126
-  %12 = ptrtoint i8** %ret to i64
-  call void @__dp_read(i32 16908, i64 %12, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.14, i32 0, i32 0))
-  %13 = load i8*, i8** %ret, align 8, !dbg !129
-  %tobool = icmp ne i8* %13, null, !dbg !129
+  %4 = load i8*, i8** %ret, align 8, !dbg !129
+  %tobool = icmp ne i8* %4, null, !dbg !129
   br i1 %tobool, label %lor.lhs.false, label %if.then, !dbg !131
 
 lor.lhs.false:                                    ; preds = %entry
-  %14 = ptrtoint i32* %err to i64
-  call void @__dp_read(i32 16908, i64 %14, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.18, i32 0, i32 0))
-  %15 = load i32, i32* %err, align 4, !dbg !132
-  %tobool2 = icmp ne i32 %15, 0, !dbg !132
+  %5 = load i32, i32* %err, align 4, !dbg !132
+  %tobool2 = icmp ne i32 %5, 0, !dbg !132
   br i1 %tobool2, label %if.then, label %if.end, !dbg !133
 
 if.then:                                          ; preds = %lor.lhs.false, %entry
-  %16 = ptrtoint %struct._IO_FILE** @stderr to i64
-  call void @__dp_read(i32 16910, i64 %16, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.19, i32 0, i32 0))
-  %17 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8, !dbg !134
-  call void @__dp_call(i32 16910), !dbg !136
-  %call3 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %17, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.3, i32 0, i32 0)), !dbg !136
-  call void @__dp_finalize(i32 16911), !dbg !137
+  %6 = load %struct._IO_FILE*, %struct._IO_FILE** @stderr, align 8, !dbg !134
+  %call3 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* %6, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.3, i32 0, i32 0)), !dbg !136
   call void @exit(i32 1) #6, !dbg !137
   unreachable, !dbg !137
 
 if.end:                                           ; preds = %lor.lhs.false
-  %18 = ptrtoint i8** %ret to i64
-  call void @__dp_read(i32 16927, i64 %18, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.14, i32 0, i32 0))
-  %19 = load i8*, i8** %ret, align 8, !dbg !138
-  call void @__dp_func_exit(i32 16927, i32 0), !dbg !139
-  ret i8* %19, !dbg !139
+  %7 = load i8*, i8** %ret, align 8, !dbg !138
+  ret i8* %7, !dbg !139
 }
 
 ; Function Attrs: noinline nounwind optnone uwtable
 define internal double @rtclock() #0 !dbg !140 {
 entry:
-  call void @__dp_func_entry(i32 16477, i32 0), !dbg !143
-  call void @__dp_func_exit(i32 16477, i32 0), !dbg !143
   ret double 0.000000e+00, !dbg !143
 }
 
@@ -359,23 +231,13 @@ declare dso_local i32 @fprintf(%struct._IO_FILE*, i8*, ...) #4
 ; Function Attrs: noreturn nounwind
 declare dso_local void @exit(i32) #3
 
-declare void @__dp_init(i32, i32, i32)
+declare void @add_instr_rec(i32, i64, i32)
 
-declare void @__dp_finalize(i32)
+declare void @add_ptr_instr_rec(i32, i64, i32, i64)
 
-declare void @__dp_read(i32, i64, i8*)
+declare void @incr_loop_counter(i32)
 
-declare void @__dp_write(i32, i64, i8*)
-
-declare void @__dp_call(i32)
-
-declare void @__dp_func_entry(i32, i32)
-
-declare void @__dp_func_exit(i32, i32)
-
-declare void @__dp_loop_entry(i32, i32)
-
-declare void @__dp_loop_exit(i32, i32)
+declare void @loop_counter_output()
 
 attributes #0 = { noinline nounwind optnone uwtable "correctly-rounded-divide-sqrt-fp-math"="false" "disable-tail-calls"="false" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+fxsr,+mmx,+sse,+sse2,+x87" "unsafe-fp-math"="false" "use-soft-float"="false" }
 attributes #1 = { nounwind readnone speculatable }

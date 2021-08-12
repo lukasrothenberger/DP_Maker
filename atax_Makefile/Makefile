@@ -18,3 +18,4 @@ clean:
 	rm -f out
 	rm -f *.ll
 	rm -f *.txt
+	rm -f *.xml

@@ -3,23 +3,13 @@ source_filename = "useless.c"
 target datalayout = "e-m:e-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
 
-declare void @__dp_init(i32, i32, i32)
+declare void @add_instr_rec(i32, i64, i32)
 
-declare void @__dp_finalize(i32)
+declare void @add_ptr_instr_rec(i32, i64, i32, i64)
 
-declare void @__dp_read(i32, i64, i8*)
+declare void @incr_loop_counter(i32)
 
-declare void @__dp_write(i32, i64, i8*)
-
-declare void @__dp_call(i32)
-
-declare void @__dp_func_entry(i32, i32)
-
-declare void @__dp_func_exit(i32, i32)
-
-declare void @__dp_loop_entry(i32, i32)
-
-declare void @__dp_loop_exit(i32, i32)
+declare void @loop_counter_output()
 
 !llvm.dbg.cu = !{!0}
 !llvm.module.flags = !{!3, !4, !5}
