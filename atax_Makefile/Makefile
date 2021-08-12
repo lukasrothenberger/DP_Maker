@@ -4,7 +4,7 @@ test: atax.o polybench.o
 atax.o: useless.o
 	gcc -c atax.c
 
-useless.o: useless_in_folder.o
+useless.o:
 	gcc -c useless
 	
 polybench.o:
