@@ -71,6 +71,11 @@ def get_compiler_argument_information(compiler_cmd: str) -> List[CompilerFlagInf
             else:
                 flag = line[idx]
 
+            if flag.endswith(","):
+                flag = flag.replace(",", "")
+            if flag == "-" or flag == "--":
+                continue
+
             if has_required_argument:
                 res_list.append(CompilerFlagInformation(flag, separators, has_required_argument))
             elif has_optional_argument:
@@ -81,6 +86,7 @@ def get_compiler_argument_information(compiler_cmd: str) -> List[CompilerFlagInf
     # remove duplicates from res_list
     filtered_res_list: List[CompilerFlagInformation] = []
     tmp_seen_tuples = []
+
     for e in res_list:
         if e.get_tuple() in tmp_seen_tuples:
             continue

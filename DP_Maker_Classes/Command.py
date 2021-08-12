@@ -12,6 +12,7 @@ class CmdType(IntEnum):
 class Command(object):
     cmd_line: str = ""
     cmd_type: CmdType = CmdType.UNKNOWN
+    compiler_command: str = []
     compile_files: List[str] = []
     compile_only_files: List[str] = []
     output_file: str = ""

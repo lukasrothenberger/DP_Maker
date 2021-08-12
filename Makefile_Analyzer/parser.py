@@ -11,21 +11,25 @@ def parse_command(cmd: str, compilers: List[str],
     :param compiler_flag_information_dict: Dictionary containing information on available Flags per compiler
     :return: Command-Object representation of the given command."""
     # split cmd into elements
-    cmd_elements = cmd.split(" ")
+    raw_cmd_elements = cmd.split(" ")
     # filter out empty elements
-    cmd_elements = [e for e in cmd_elements if len(e) > 0]
+    raw_cmd_elements = [e for e in raw_cmd_elements if len(e) > 0]
     # check for type of command
-    if cmd_elements[0].startswith("make["):
-        return __check_for_directory_changes(cmd, cmd_elements)
-    elif cmd_elements[0] in compilers:
+    if raw_cmd_elements[0].startswith("make["):
+        return __check_for_directory_changes(cmd, raw_cmd_elements)
+    elif raw_cmd_elements[0] in compilers:
         # compiler command
         # group flags and arguments together
         print()
-        print(cmd_elements)
+        print(raw_cmd_elements)
         modification_found = True
+        finished_cmd_elements = []
         while modification_found:
-            modification_found, cmd_elements = __group_flags_and_arguments(cmd_elements, compiler_flag_information_dict)
-        print(cmd_elements)
+            modification_found, raw_cmd_elements, finished_cmd_elements = __group_flags_and_arguments(raw_cmd_elements, finished_cmd_elements,
+                                                                           compiler_flag_information_dict[raw_cmd_elements[0]])
+        print("raw: ", raw_cmd_elements)
+        print("finished: ", finished_cmd_elements)
+        # todo return Command
     else:
         # unknown command, leave as is
         return Command(cmd, CmdType.UNKNOWN)
@@ -49,16 +53,38 @@ def __check_for_directory_changes(cmd: str, cmd_elements: List[str]) -> Command:
         return Command(cmd, CmdType.UNKNOWN)
 
 
-def __group_flags_and_arguments(cmd_elems: List[str], compiler_flag_information_dict: Dict[str, List[CompilerFlagInformation]])\
+def __group_flags_and_arguments(raw_cmd_elems: List[str], finished_cmd_elems: List[str], available_compiler_flags: List[CompilerFlagInformation])\
         -> Tuple[bool, List[str]]:
-    """groups flags and arguments together into one string, if they belong together.
+    """groups a single flag and its arguments together into one string, if they belong together.
     returns a tuple containing a boolean, which is true if a modification has been done,
     and the updated list of command elements."""
-    modification_found = False
-    for idx, cur_str in enumerate(cmd_elems):
+    sorted_avail_compiler_flags = sorted(available_compiler_flags, key=lambda x: len(x.flag), reverse=True)
+
+    for idx, cur_str in enumerate(raw_cmd_elems):
         # check if last element is reached
-        if idx+1 == len(cmd_elems):
+        if idx+1 == len(raw_cmd_elems):
             continue
+        if not cur_str.startswith("-"):
+            continue
+        # check if cur_str is flag
+        print("CUR STR: ", cur_str)
+        for cfi in sorted_avail_compiler_flags:
+            if cur_str.startswith(cfi.flag):
+                # cur_str is flag
+                print("\t-->Is flag: ", cfi.get_tuple())
+                print("\t-->Separators: ", cfi.separators)
+
+                # check if argument included
+                if cfi.has_argument:
+                    for sep in cfi.separators:
+                        if cur_str.startswith(cfi.flag + sep) and len(cur_str) > len(cfi.flag + sep):
+                            # cur_elem includes argument, mark cur_str as finished
+                            finished_cmd_elems.append(raw_cmd_elems.pop(idx))
+                            return True, raw_cmd_elems, finished_cmd_elems
+                else:
+                    # no argument necessary
+                    finished_cmd_elems.append(raw_cmd_elems.pop(idx))
+                    return True, raw_cmd_elems, finished_cmd_elems
 
 
-    return modification_found, cmd_elems
+    return False, raw_cmd_elems, finished_cmd_elems
