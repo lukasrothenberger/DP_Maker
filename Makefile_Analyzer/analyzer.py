@@ -28,6 +28,7 @@ def analyze_makefile(makefile_path, compilers):
     # parse each individual command
     files: str = []
     for command in stream.readlines():
+        command = command.replace("\n", "")
         parse_command(command, compilers, compiler_flag_information_dict)
 
     # reset cwd

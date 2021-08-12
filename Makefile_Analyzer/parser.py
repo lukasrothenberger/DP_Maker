@@ -67,13 +67,9 @@ def __group_flags_and_arguments(raw_cmd_elems: List[str], finished_cmd_elems: Li
         if not cur_str.startswith("-"):
             continue
         # check if cur_str is flag
-        print("CUR STR: ", cur_str)
         for cfi in sorted_avail_compiler_flags:
             if cur_str.startswith(cfi.flag):
                 # cur_str is flag
-                print("\t-->Is flag: ", cfi.get_tuple())
-                print("\t-->Separators: ", cfi.separators)
-
                 # check if argument included
                 if cfi.has_argument:
                     for sep in cfi.separators:
@@ -85,6 +81,14 @@ def __group_flags_and_arguments(raw_cmd_elems: List[str], finished_cmd_elems: Li
                     # no argument necessary
                     finished_cmd_elems.append(raw_cmd_elems.pop(idx))
                     return True, raw_cmd_elems, finished_cmd_elems
+
+                # check for succeeding arguments
+                if cfi.has_argument:
+                    # if next element is not a flag, it's an argument
+                    if not raw_cmd_elems[idx+1].startswith("-"):
+                        # concatenate cur_elem and it's successor
+                        finished_cmd_elems.append(raw_cmd_elems.pop(idx)+" "+raw_cmd_elems.pop(idx))
+                        return True, raw_cmd_elems, finished_cmd_elems
 
 
     return False, raw_cmd_elems, finished_cmd_elems
