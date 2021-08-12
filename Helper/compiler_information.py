@@ -29,47 +29,47 @@ def get_compiler_argument_information(compiler_cmd: str) -> List[CompilerFlagInf
     stream = os.popen(get_help_command)
     for line in stream.readlines():
         # split at spaces
-        line = line.split(" ")
-        line = [e for e in line if len(e) > 0]
+        split_line = line.split(" ")
+        split_line = [e for e in split_line if len(e) > 0]
         # get indices of flags
         flag_indices: List[int] = []
-        for idx, elem in enumerate(line):
+        for idx, elem in enumerate(split_line):
             if elem.startswith("-"):
                 flag_indices.append(idx)
         for idx in flag_indices:
             # ignore flags mentioned at the end of a line
-            if idx + 1 >= len(line):
+            if idx + 1 >= len(split_line):
                 continue
             # check for arguments in element
             has_required_argument = False
             has_optional_argument = False
             separators = []
-            if "[=" in line[idx]:
+            if "[=" in split_line[idx]:
                 # has optional argument
                 has_optional_argument = True
                 separators.append("=")
-            elif "=" in line[idx]:
+            elif "=" in split_line[idx]:
                 # has required argument
                 has_required_argument = True
                 separators.append("=")
             # check for arguments after element
-            if line[idx+1].isupper():
+            if split_line[idx+1].isupper():
                 # gcc style argument after flag
                 has_required_argument = True
                 separators.append(" ")
                 separators.append("")
-            elif line[idx+1].startswith("<"):
+            elif split_line[idx+1].startswith("<"):
                 # clang style argument after flag
                 has_required_argument = True
                 separators.append(" ")
                 separators.append("")
             # create (multiple) CompilerFlagInformation object
-            if "[" in line[idx]:
-                flag = line[idx][:line[idx].index("[")]
-            elif "=" in line[idx]:
-                flag = line[idx][:line[idx].index("=")]
+            if "[" in split_line[idx]:
+                flag = split_line[idx][:split_line[idx].index("[")]
+            elif "=" in split_line[idx]:
+                flag = split_line[idx][:split_line[idx].index("=")]
             else:
-                flag = line[idx]
+                flag = split_line[idx]
 
             if flag.endswith(","):
                 flag = flag.replace(",", "")

@@ -12,7 +12,7 @@ class CmdType(IntEnum):
 class Command(object):
     cmd_line: str = ""
     cmd_type: CmdType = CmdType.UNKNOWN
-    compiler_command: str = []
+    compiler_command: str = ""
     flags: List[str] = []
     non_flag_arguments: List[str] = []
     enter_dir: str = ""

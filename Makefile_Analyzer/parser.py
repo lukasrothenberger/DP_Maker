@@ -23,7 +23,7 @@ def parse_command(cmd: str, compilers: List[str],
         print()
         print(raw_cmd_elements)
         modification_found = True
-        finished_cmd_elements = []
+        finished_cmd_elements: List[str] = []
         while modification_found:
             modification_found, raw_cmd_elements, finished_cmd_elements = \
                 __group_flags_and_arguments(raw_cmd_elements,
