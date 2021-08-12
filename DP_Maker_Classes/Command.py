@@ -13,11 +13,8 @@ class Command(object):
     cmd_line: str = ""
     cmd_type: CmdType = CmdType.UNKNOWN
     compiler_command: str = []
-    compile_files: List[str] = []
-    compile_only_files: List[str] = []
-    output_file: str = ""
     flags: List[str] = []
-    includes: List[str] = []
+    non_flag_arguments: List[str] = []
     enter_dir: str = ""
     exit_dir: str = ""
 

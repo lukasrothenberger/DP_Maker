@@ -27,9 +27,15 @@ def parse_command(cmd: str, compilers: List[str],
         while modification_found:
             modification_found, raw_cmd_elements, finished_cmd_elements = __group_flags_and_arguments(raw_cmd_elements, finished_cmd_elements,
                                                                            compiler_flag_information_dict[raw_cmd_elements[0]])
-        print("raw: ", raw_cmd_elements)
-        print("finished: ", finished_cmd_elements)
-        # todo return Command
+        ret_cmd = Command(cmd, CmdType.COMPILE)
+        ret_cmd.compiler_command = raw_cmd_elements[0]
+        ret_cmd.flags = finished_cmd_elements
+        ret_cmd.non_flag_arguments = raw_cmd_elements[1:]
+        print("--> command: ", ret_cmd.compiler_command)
+        print("--> arguments: ", ret_cmd.non_flag_arguments)
+        print("--> flags: ", ret_cmd.flags)
+        return ret_cmd
+
     else:
         # unknown command, leave as is
         return Command(cmd, CmdType.UNKNOWN)
