@@ -4,7 +4,7 @@ import subprocess
 from os.path import dirname
 from .parser import parse_command
 from Helper.compiler_information import CompilerFlagInformation, get_compiler_argument_information
-from DP_Maker_Classes.Command import Command
+from DP_Maker_Classes.Command import Command, CmdType
 
 
 def analyze_makefile(makefile_path, compilers):
@@ -37,8 +37,8 @@ def analyze_makefile(makefile_path, compilers):
     print("### PARSED COMMANDS ###")
     print("#######################")
     print()
-    for cmd in parsed_commands:
-        print(cmd)
+    #for cmd in parsed_commands:
+    #    print(cmd)
 
     # instrument commands
     for cmd in parsed_commands:
@@ -49,13 +49,19 @@ def analyze_makefile(makefile_path, compilers):
     print("### INSTRUMENTED COMMANDS ###")
     print("#############################")
     print()
-    for cmd in parsed_commands:
-        print(cmd)
+    #for cmd in parsed_commands:
+    #    print(cmd)
 
     # execute commands
+    last_dir = os.getcwd()
     for cmd in parsed_commands:
-        print("Execute: ", str(cmd))
-        stream = os.popen(str(cmd))
+        if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
+            last_dir = "" + cmd.exit_dir + cmd.enter_dir
+        print()
+        print("PWD: ", last_dir)
+        print("ORIG: ", cmd.cmd_line)
+        print("Execute: ", "cd " + last_dir+"&& "+ str(cmd).replace("\"",""))
+        stream = os.popen("cd " + last_dir+"&& "+ str(cmd).replace("\"", ""))
         print("Result: ", stream.readlines())
 
 
