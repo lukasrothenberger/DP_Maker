@@ -25,8 +25,10 @@ def parse_command(cmd: str, compilers: List[str],
         modification_found = True
         finished_cmd_elements = []
         while modification_found:
-            modification_found, raw_cmd_elements, finished_cmd_elements = __group_flags_and_arguments(raw_cmd_elements, finished_cmd_elements,
-                                                                           compiler_flag_information_dict[raw_cmd_elements[0]])
+            modification_found, raw_cmd_elements, finished_cmd_elements = \
+                __group_flags_and_arguments(raw_cmd_elements,
+                                            finished_cmd_elements,
+                                            compiler_flag_information_dict[raw_cmd_elements[0]])
         ret_cmd = Command(cmd, CmdType.COMPILE)
         ret_cmd.compiler_command = raw_cmd_elements[0]
         ret_cmd.flags = finished_cmd_elements
@@ -35,7 +37,6 @@ def parse_command(cmd: str, compilers: List[str],
         print("--> arguments: ", ret_cmd.non_flag_arguments)
         print("--> flags: ", ret_cmd.flags)
         return ret_cmd
-
     else:
         # unknown command, leave as is
         return Command(cmd, CmdType.UNKNOWN)
@@ -59,8 +60,9 @@ def __check_for_directory_changes(cmd: str, cmd_elements: List[str]) -> Command:
         return Command(cmd, CmdType.UNKNOWN)
 
 
-def __group_flags_and_arguments(raw_cmd_elems: List[str], finished_cmd_elems: List[str], available_compiler_flags: List[CompilerFlagInformation])\
-        -> Tuple[bool, List[str]]:
+def __group_flags_and_arguments(raw_cmd_elems: List[str], finished_cmd_elems: List[str],
+                                available_compiler_flags: List[CompilerFlagInformation]) \
+        -> Tuple[bool, List[str], List[str]]:
     """groups a single flag and its arguments together into one string, if they belong together.
     returns a tuple containing a boolean, which is true if a modification has been done,
     and the updated list of command elements."""
@@ -68,7 +70,7 @@ def __group_flags_and_arguments(raw_cmd_elems: List[str], finished_cmd_elems: Li
 
     for idx, cur_str in enumerate(raw_cmd_elems):
         # check if last element is reached
-        if idx+1 == len(raw_cmd_elems):
+        if idx + 1 == len(raw_cmd_elems):
             continue
         if not cur_str.startswith("-"):
             continue
@@ -91,10 +93,9 @@ def __group_flags_and_arguments(raw_cmd_elems: List[str], finished_cmd_elems: Li
                 # check for succeeding arguments
                 if cfi.has_argument:
                     # if next element is not a flag, it's an argument
-                    if not raw_cmd_elems[idx+1].startswith("-"):
+                    if not raw_cmd_elems[idx + 1].startswith("-"):
                         # concatenate cur_elem and it's successor
-                        finished_cmd_elems.append(raw_cmd_elems.pop(idx)+" "+raw_cmd_elems.pop(idx))
+                        finished_cmd_elems.append(raw_cmd_elems.pop(idx) + " " + raw_cmd_elems.pop(idx))
                         return True, raw_cmd_elems, finished_cmd_elems
-
 
     return False, raw_cmd_elems, finished_cmd_elems
