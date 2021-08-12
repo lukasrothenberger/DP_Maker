@@ -47,5 +47,6 @@ def main():
 
     analyze_makefile(target, compilers)
 
+
 if __name__ == "__main__":
     main()

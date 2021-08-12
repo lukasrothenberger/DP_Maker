@@ -4,6 +4,7 @@ import subprocess
 from os.path import dirname
 from .parser import parse_command
 from Helper.compiler_information import CompilerFlagInformation, get_compiler_argument_information
+from DP_Maker_Classes.Command import Command
 
 
 def analyze_makefile(makefile_path, compilers):
@@ -26,10 +27,15 @@ def analyze_makefile(makefile_path, compilers):
     # dry run the specified makefile
     stream = os.popen("LANGUAGE=en make -n -j1")
     # parse each individual command
-    files: str = []
+    parsed_commands: List[Command] = []
     for command in stream.readlines():
         command = command.replace("\n", "")
-        parse_command(command, compilers, compiler_flag_information_dict)
+        parsed_commands.append(parse_command(command, compilers, compiler_flag_information_dict))
+
+    print()
+    print("Parsed commands: ")
+    for cmd in parsed_commands:
+        print(cmd)
 
     # reset cwd
     os.chdir(starting_cwd)
