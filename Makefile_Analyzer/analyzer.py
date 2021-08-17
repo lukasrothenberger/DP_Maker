@@ -27,79 +27,153 @@ def analyze_makefile(run_configuration: RunConfiguration):
 
     # dry run the specified makefile
     stream = os.popen("LANGUAGE=en make -n -j1")
+
+    # group lines to support multi-line commands
+    raw_lines = stream.readlines()
+    grouped_lines: List[str] = []
+    line_buffer = ""
+    for idx, line in enumerate(raw_lines):
+        line_buffer = line_buffer + line #.replace("\n", "")
+        if line_buffer.endswith("\\\n"):
+            # preserve line_buffer, replace \\\n at the end of the line with whitespace
+            print()
+            print("line_buffer ends with \\")
+            print("LINE_BUFFER: ", line_buffer)
+            line_buffer = line_buffer.replace("\\\n", " ")
+        else:
+            # remove newline-marker and tabs
+            line_buffer = line_buffer.replace("\n", "").replace("\t", " ")
+            # remove multiple whitespaces
+            while "  " in line_buffer:
+                line_buffer = line_buffer.replace("  ", " ")
+            # append line_buffer to grouped lines
+            grouped_lines.append(line_buffer)
+            # clear line_buffer
+            line_buffer = ""
+    print("\nGROUPED LINES:")
+    print(grouped_lines)
+    # preprocess grouped lines
+    preprocessed_grouped_lines = [preprocess(line) for line in grouped_lines]
+    print("\nPREPROCESSED LINES:")
+    print(preprocessed_grouped_lines)
+
+    # get grouped raw commands, split grouped lines into individual commands
+    grouped_raw_commands: List[List[str]] = [line.split(";") for line in preprocessed_grouped_lines]
+    print("\nGROUPED RAW COMMANDS")
+    print(grouped_raw_commands)
     # parse each individual command
-    parsed_commands: List[Command] = []
-    for command in stream.readlines():
-        command = command.replace("\n", "")
-        command = preprocess(command)
-        parsed_commands.append(parse_command(command, run_configuration.compilers, compiler_flag_information_dict))
+    grouped_parsed_commands: List[Command] = []
+    for raw_cmd_group in grouped_raw_commands:
+        parsed_cmd_group: List[Command] = []
+        for raw_cmd in raw_cmd_group:
+            # filter out empty commands
+            if len(raw_cmd) == 0:
+                continue
+            raw_cmd = preprocess(raw_cmd)
+            print("RAW CMD: ", raw_cmd)
+            parsed_cmd_group.append(parse_command(raw_cmd, run_configuration.compilers, compiler_flag_information_dict))
+        grouped_parsed_commands.append(parsed_cmd_group)
 
     print()
     print("#######################")
     print("### PARSED COMMANDS ###")
     print("#######################")
     print()
-    # for cmd in parsed_commands:
-    #     print(cmd)
+    for group in grouped_parsed_commands:
+        print("NEW GROUP")
+        for cmd in group:
+            print(cmd)
 
     # instrument commands
-    for cmd in parsed_commands:
-        cmd.add_discopop_instrumentation(run_configuration)
+    for group in grouped_parsed_commands:
+        for cmd in group:
+            cmd.add_discopop_instrumentation(run_configuration)
 
     print()
     print("#############################")
     print("### INSTRUMENTED COMMANDS ###")
     print("#############################")
     print()
-    # for cmd in parsed_commands:
-    #     print(cmd)
+    for group in grouped_parsed_commands:
+        print("GROUP")
+        for cmd in group:
+            print(str(cmd))
+
+    tmp_make_file = open("tmp_makefile.txt", "w+")
+    tmp_make_file.write("all:\n")
 
     # execute Dependency Analysis
     if run_configuration.execution_mode is ExecutionMode.DEP_ANALYSIS:
         last_dir = os.getcwd()
         # execute FileMapping
         os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
-        for cmd in parsed_commands:
-            if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
-                last_dir = "" + cmd.exit_dir + cmd.enter_dir
-            print()
-            print("PWD: ", last_dir)
-            print("ORIG: ", cmd.cmd_line)
-            print("PRE: ", str(cmd))
-            cmd_str = str(cmd)
-            # replace § signs introduced by the preprocessor with whitespaces
-            cmd_str = cmd_str.replace("§", " ")
-            # replace DP-Shared Object marker with Instrumentation
-            cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
-                                      run_configuration.dp_build_path + "/libi/LLVMDPInstrumentation.so")
-            # replace DP-FMAP marker with path of FileMapping.txt
-            cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
-            print("Execute: ", "cd " + last_dir+" && " + cmd_str)
-            stream = os.popen("cd " + last_dir+" && " + cmd_str)
-            print("Result: ", stream.readlines())
+        for group in grouped_parsed_commands:
+            cmd_line_str = ""
+            for cmd in group:
+                cmd.prepare_output()
+                if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
+                    last_dir = "" + cmd.exit_dir + cmd.enter_dir
+                print()
+                print("PWD: ", last_dir)
+                print("ORIG: ", cmd.cmd_line)
+                print("PRE: ", str(cmd))
+                cmd_str = str(cmd)
+                # replace DP-Shared Object marker with Instrumentation
+                cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
+                                          run_configuration.dp_build_path + "/libi/LLVMDPInstrumentation.so")
+                # replace DP-FMAP marker with path of FileMapping.txt
+                cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
+                # replace § signs introduced by the preprocessor with whitespaces
+                cmd_str = cmd_str.replace("§", " ")
+                # replace # signs introduced by the preprocessor with semicolon
+                cmd_str = cmd_str.replace("#", ";")
+                print("Execute: ", "cd " + last_dir+" && " + cmd_str)
+                #tmp_make_file.write("\tcd " + last_dir + " && " + cmd_str + "\n")
+                if len(cmd_line_str) == 0:
+                    cmd_line_str += "cd " + last_dir
+                    if len(cmd_str) > 0:
+                        cmd_line_str += " && "
+                cmd_line_str += cmd_str + " "
+                #stream = os.popen("cd " + last_dir+" && " + cmd_str)
+                #print("Result: ", stream.readlines())
+            tmp_make_file.write("\t" + cmd_line_str + "\n")
 
     # execute CUGeneration
     if run_configuration.execution_mode is ExecutionMode.CU_GENERATION:
         last_dir = os.getcwd()
         # execute FileMapping
         os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
-        for cmd in parsed_commands:
-            if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
-                last_dir = "" + cmd.exit_dir + cmd.enter_dir
-            print()
-            print("PWD: ", last_dir)
-            print("ORIG: ", cmd.cmd_line)
-            print("PRE: ", str(cmd))
-            cmd_str = str(cmd)
-            # replace § signs introduced by the preprocessor with whitespaces
-            cmd_str = cmd_str.replace("§", " ")
-            # replace DP-Shared Object marker with Instrumentation
-            cmd_str = cmd_str.replace("##DPSHAREDOBJECT##", run_configuration.dp_build_path+"/libi/LLVMCUGeneration.so")
-            # replace DP-FMAP marker with path of FileMapping.txt
-            cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
-            print("Execute: ", "cd " + last_dir+" && " + cmd_str)
-            stream = os.popen("cd " + last_dir+" && " + cmd_str)
-            print("Result: ", stream.readlines())
+        for group in grouped_parsed_commands:
+            cmd_line_str = ""
+            for cmd in group:
+                cmd.prepare_output()
+                if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
+                    last_dir = "" + cmd.exit_dir + cmd.enter_dir
+                print()
+                print("PWD: ", last_dir)
+                print("ORIG: ", cmd.cmd_line)
+                print("PRE: ", str(cmd))
+                cmd_str = str(cmd)
+                # replace DP-Shared Object marker with Instrumentation
+                cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
+                                          run_configuration.dp_build_path + "/libi/LLVMCUGeneration.so")
+                # replace DP-FMAP marker with path of FileMapping.txt
+                cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
+                # replace § signs introduced by the preprocessor with whitespaces
+                cmd_str = cmd_str.replace("§", " ")
+                # replace # signs introduced by the preprocessor with semicolon
+                cmd_str = cmd_str.replace("#", ";")
+
+                print("Execute: ", "cd " + last_dir+" && " + cmd_str)
+                #stream = os.popen("cd " + last_dir+" && " + cmd_str)
+                if len(cmd_line_str) == 0:
+                    cmd_line_str += "cd " + last_dir
+                    if len(cmd_str) > 0:
+                        cmd_line_str += " && "
+                cmd_line_str += cmd_str + " "
+                # tmp_make_file.write("\tcd " + last_dir+" && " + cmd_str + "\n")
+                #print("Result: ", stream.readlines())
+            tmp_make_file.write("\t" + cmd_line_str + "\n")
 
     # execute DP Reduction
     if run_configuration.execution_mode is ExecutionMode.DP_REDUCTION:
@@ -107,25 +181,39 @@ def analyze_makefile(run_configuration: RunConfiguration):
         # execute FileMapping
         os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
         os.system("cd " + last_dir + " && ./dp-fmap")
-        for cmd in parsed_commands:
-            if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
-                last_dir = "" + cmd.exit_dir + cmd.enter_dir
-            print()
-            print("PWD: ", last_dir)
-            print("ORIG: ", cmd.cmd_line)
-            print("PRE: ", str(cmd))
-            cmd_str = str(cmd)
-            # replace § signs introduced by the preprocessor with whitespaces
-            cmd_str = cmd_str.replace("§", " ")
-            # replace DP-Shared Object marker with Instrumentation
-            cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
-                                      run_configuration.dp_build_path+"/libi/LLVMDPReduction.so")
-            # replace DP-FMAP marker with path of FileMapping.txt
-            cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
-            print("Execute: ", "cd " + last_dir + " && " + cmd_str)
-            stream = os.popen("cd " + last_dir + " && " + cmd_str)
-            print("Result: ", stream.readlines())
+        for group in grouped_parsed_commands:
+            cmd_line_str = ""
+            for cmd in group:
+                cmd.prepare_output()
+                if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
+                    last_dir = "" + cmd.exit_dir + cmd.enter_dir
+                print()
+                print("PWD: ", last_dir)
+                print("ORIG: ", cmd.cmd_line)
+                print("PRE: ", str(cmd))
+                cmd_str = str(cmd)
+                # replace DP-Shared Object marker with Instrumentation
+                cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
+                                          run_configuration.dp_build_path + "/libi/LLVMDPReduction.so")
+                # replace DP-FMAP marker with path of FileMapping.txt
+                cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
+                # replace § signs introduced by the preprocessor with whitespaces
+                cmd_str = cmd_str.replace("§", " ")
+                # replace # signs introduced by the preprocessor with semicolon
+                cmd_str = cmd_str.replace("#", ";")
 
+                print("Execute: ", "cd " + last_dir + " && " + cmd_str)
+                #stream = os.popen("cd " + last_dir + " && " + cmd_str)
+                if len(cmd_line_str) == 0:
+                    cmd_line_str += "cd " + last_dir
+                    if len(cmd_str) > 0:
+                        cmd_line_str += " && "
+                cmd_line_str += cmd_str + " "
+                #tmp_make_file.write("\tcd " + last_dir + " && " + cmd_str + "\n")
+                #print("Result: ", stream.readlines())
+            tmp_make_file.write("\t" + cmd_line_str + "\n")
+
+    tmp_make_file.close()
 
     # reset cwd
     os.chdir(starting_cwd)

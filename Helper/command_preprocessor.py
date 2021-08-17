@@ -31,10 +31,11 @@ def preprocess(cmd: str) -> str:
         print("cmd pre:  ", cmd)
         for quote_range in quote_tuples:
             cmd = __replace_whitespace_in_quote_range(cmd, quote_range)
+            cmd = __replace_semicolon_in_quote_range(cmd, quote_range)
         print("cmd post: ", cmd)
 
-        cmd = cmd.replace("\"\\\"", "\"")
-        cmd = cmd.replace("\\\"\"", "\"")
+        #cmd = cmd.replace("\"\\\"", "\"")
+        #cmd = cmd.replace("\\\"\"", "\"")
 
         print("cmd aft:  ", cmd)
     return cmd
@@ -46,5 +47,14 @@ def __replace_whitespace_in_quote_range(string, quote_range):
     while cur_idx <= end_idx:
         if string[cur_idx] == " ":
             string = string[:cur_idx] + "§" + string[cur_idx + 1:]
+        cur_idx += 1
+    return string
+
+def __replace_semicolon_in_quote_range(string, quote_range):
+    cur_idx = quote_range[0]
+    end_idx = quote_range[1]
+    while cur_idx <= end_idx:
+        if string[cur_idx] == ";":
+            string = string[:cur_idx] + "#" + string[cur_idx + 1:]
         cur_idx += 1
     return string

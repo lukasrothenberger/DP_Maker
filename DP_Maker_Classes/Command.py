@@ -25,12 +25,14 @@ class Command(object):
     def __str__(self):
         if self.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
             # the following works, because either enter_dir or exit_dir will be empty.
-            return "cd " + self.enter_dir + self.exit_dir
+            return "cd " + self.enter_dir + self.exit_dir + ";"
         if self.cmd_type == CmdType.COMPILE:
-            ret_str = self.compiler_command + " " + " ".join(self.non_flag_arguments) + " " + " ".join(self.flags)
-
+            ret_str = self.compiler_command + " " + " ".join(self.non_flag_arguments) + " " + " ".join(self.flags) + ";"
             return ret_str
-        return self.cmd_line
+        return self.cmd_line + ";"
+
+    def prepare_output(self):
+        self.cmd_line = self.cmd_line.replace("$", "$$")
 
     def add_discopop_instrumentation(self, run_configuration):
         if self.cmd_type in [CmdType.ENTER_DIR, CmdType.EXIT_DIR, CmdType.UNKNOWN]:
@@ -47,13 +49,16 @@ class Command(object):
                 # single file is compiled
                 self.compiler_command = "clang"
                 # append DiscoPoP compiler flags
-                self.flags.append("-g -O0 -S -emit-llvm -fno-discard-value-names -Xclang -load -Xclang ##DPSHAREDOBJECT## -mllvm -fm-path -mllvm ##DPFILEMAPPING##")
+                self.flags.append("-fopenmp -g -O0 -S -emit-llvm -fno-discard-value-names -Xclang -load -Xclang ##DPSHAREDOBJECT## -mllvm -fm-path -mllvm ##DPFILEMAPPING##")
                 # change file type of output file
                 modified_output_file = False
                 for idx, flag in enumerate(self.flags):
                     if flag.startswith("-o "):
                         # manually set output file
-                        self.flags[idx] += ".ll"
+                        if self.flags[idx].endswith(".o"):
+                            self.flags[idx] = self.flags[idx][:self.flags[idx].rfind(".")]+".ll"
+                        else:
+                            self.flags[idx] += ".ll"
                         modified_output_file = True
                         break
 
