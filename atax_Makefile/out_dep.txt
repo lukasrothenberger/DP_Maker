@@ -31,6 +31,7 @@ START 1:89
 1:80 NOM  RAW 1:36|A.addr RAW 1:37|A.addr RAW 1:38|x.addr RAW 1:38|A.addr RAW 1:38|tmp.addr RAW 1:76|i RAW 1:76|A.addr RAW 1:78|tmp.addr RAW 1:79|j RAW 1:79|A.addr RAW 1:80|A.addr RAW 1:80|tmp.addr RAW 1:82|A.addr WAR 1:80|tmp.addr
 1:109 NOM  RAW 1:38|A
 1:522 NOM  RAW 1:521|polybench_inter_array_padding_sz WAR 1:523|padded_sz INIT *|padded_sz
+1:99 NOM  INIT *|tmp
 1:112 NOM  RAW 1:38|tmp
 1:75 NOM  RAW 1:37|y.addr RAW 1:74|i WAW 1:38|y.addr
 1:76 NOM  RAW 1:38|m.addr RAW 1:76|i WAR 1:74|i WAR 1:76|i
@@ -42,7 +43,6 @@ START 1:89
 1:523 NOM  RAW 1:522|padded_sz WAR 1:524|err INIT *|err
 1:120 NOM  RAW 1:38|argc.addr
 1:126 NOM  RAW 1:38|tmp
-1:99 NOM  INIT *|tmp
 1:564 NOM  WAR 1:566|val INIT *|val
 1:92 NOM  INIT *|m
 1:565 NOM  RAW 1:564|val WAR 1:565|val
@@ -60,9 +60,9 @@ START 1:89
 1:97 NOM  INIT *|x
 1:38 NOM  RAW 1:36|i RAW 1:37|j RAW 1:38|n.addr RAW 1:38|i RAW 1:38|m.addr RAW 1:38|A.addr WAR 1:35|A.addr WAR 1:38|A.addr WAR 1:102|A.addr WAR 1:522|A.addr WAR 1:523|A.addr WAR 1:524|A.addr WAR 1:543|A.addr WAW 1:35|A.addr WAW 1:38|A.addr WAW 1:98|A.addr WAW 1:99|A.addr INIT *|A.addr
 1:125 NOM  RAW 1:38|y
-1:521 NOM  RAW 1:521|polybench_inter_array_padding_sz WAR 1:521|polybench_inter_array_padding_sz INIT *|polybench_inter_array_padding_sz
-1:108 NOM  RAW 1:38|n RAW 1:38|m
 1:81 NOM  RAW 1:38|n.addr RAW 1:81|j WAR 1:79|j WAR 1:81|j
 1:74 NOM  RAW 1:38|n.addr RAW 1:74|i WAR 1:74|i WAW 1:38|i
 1:519 NOM  WAR 1:543|ret INIT *|ret
+1:108 NOM  RAW 1:38|n RAW 1:38|m
+1:521 NOM  RAW 1:521|polybench_inter_array_padding_sz WAR 1:521|polybench_inter_array_padding_sz INIT *|polybench_inter_array_padding_sz
 1:128 END program

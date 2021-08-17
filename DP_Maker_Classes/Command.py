@@ -49,7 +49,7 @@ class Command(object):
                 # single file is compiled
                 self.compiler_command = "clang"
                 # append DiscoPoP compiler flags
-                self.flags.append("-fopenmp -g -O0 -S -emit-llvm -fno-discard-value-names -Xclang -load -Xclang ##DPSHAREDOBJECT## -mllvm -fm-path -mllvm ##DPFILEMAPPING##")
+                self.flags.append("-g -O0 -S -emit-llvm -fno-discard-value-names -Xclang -load -Xclang ##DPSHAREDOBJECT## -mllvm -fm-path -mllvm ##DPFILEMAPPING##")
                 # change file type of output file
                 modified_output_file = False
                 for idx, flag in enumerate(self.flags):
