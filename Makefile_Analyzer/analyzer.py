@@ -8,19 +8,18 @@ from Helper.command_preprocessor import preprocess
 from DP_Maker_Classes.Command import Command, CmdType
 
 
-def analyze_makefile(makefile_path, compilers):
+def analyze_makefile(run_configuration):
     """Analyzes the makefile at the given path.
-    :param makefile_path: Path to target Makefile
-    :param compilers: List of known compiler commands"""
+    :param run_configuration: Object storing run configuration (paths etc.)"""
     # save starting cwd
     starting_cwd = os.getcwd()
     # set cwd to makefile's parent directory
     print()
-    parent_dir = dirname(makefile_path)
+    parent_dir = dirname(run_configuration.target_makefile)
     os.chdir(parent_dir)
     # get information on available flags of used compilers
     compiler_flag_information_dict: Dict[str, List[CompilerFlagInformation]] = dict()
-    for compiler_cmd in compilers:
+    for compiler_cmd in run_configuration.compilers:
         if compiler_cmd in compiler_flag_information_dict:
             continue
         compiler_flag_information_dict[compiler_cmd] = get_compiler_argument_information(compiler_cmd)
@@ -32,7 +31,7 @@ def analyze_makefile(makefile_path, compilers):
     for command in stream.readlines():
         command = command.replace("\n", "")
         command = preprocess(command)
-        parsed_commands.append(parse_command(command, compilers, compiler_flag_information_dict))
+        parsed_commands.append(parse_command(command, run_configuration.compilers, compiler_flag_information_dict))
 
     print()
     print("#######################")
@@ -44,7 +43,7 @@ def analyze_makefile(makefile_path, compilers):
 
     # instrument commands
     for cmd in parsed_commands:
-        cmd.add_discopop_instrumentation()
+        cmd.add_discopop_instrumentation(run_configuration)
 
     print()
     print("#############################")
@@ -62,7 +61,7 @@ def analyze_makefile(makefile_path, compilers):
     if enable_instrumentation:
         last_dir = os.getcwd()
         # execute FileMapping
-        os.system("cp /home/lukas/git/discopop/scripts/dp-fmap " + last_dir + "/dp-fmap")
+        os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
         for cmd in parsed_commands:
             if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
                 last_dir = "" + cmd.exit_dir + cmd.enter_dir
@@ -75,7 +74,7 @@ def analyze_makefile(makefile_path, compilers):
             cmd_str = cmd_str.replace("§", " ")
             # replace DP-Shared Object marker with Instrumentation
             cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
-                                      "/home/lukas/git/discopop/build/libi/LLVMDPInstrumentation.so")
+                                      run_configuration.dp_build_path + "/libi/LLVMDPInstrumentation.so")
             # replace DP-FMAP marker with path of FileMapping.txt
             cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
             print("Execute: ", "cd " + last_dir+" && " + cmd_str)
@@ -86,7 +85,7 @@ def analyze_makefile(makefile_path, compilers):
     if enable_cu_generation:
         last_dir = os.getcwd()
         # execute FileMapping
-        os.system("cp /home/lukas/git/discopop/scripts/dp-fmap " + last_dir + "/dp-fmap")
+        os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
         for cmd in parsed_commands:
             if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
                 last_dir = "" + cmd.exit_dir + cmd.enter_dir
@@ -98,7 +97,7 @@ def analyze_makefile(makefile_path, compilers):
             # replace § signs introduced by the preprocessor with whitespaces
             cmd_str = cmd_str.replace("§", " ")
             # replace DP-Shared Object marker with Instrumentation
-            cmd_str = cmd_str.replace("##DPSHAREDOBJECT##", "/home/lukas/git/discopop/build/libi/LLVMCUGeneration.so")
+            cmd_str = cmd_str.replace("##DPSHAREDOBJECT##", run_configuration.dp_build_path+"/libi/LLVMCUGeneration.so")
             # replace DP-FMAP marker with path of FileMapping.txt
             cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
             print("Execute: ", "cd " + last_dir+" && " + cmd_str)
@@ -109,7 +108,7 @@ def analyze_makefile(makefile_path, compilers):
     if enable_dp_reduction:
         last_dir = os.getcwd()
         # execute FileMapping
-        os.system("cp /home/lukas/git/discopop/scripts/dp-fmap " + last_dir + "/dp-fmap")
+        os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
         os.system("cd " + last_dir + " && ./dp-fmap")
         for cmd in parsed_commands:
             if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
@@ -123,7 +122,7 @@ def analyze_makefile(makefile_path, compilers):
             cmd_str = cmd_str.replace("§", " ")
             # replace DP-Shared Object marker with Instrumentation
             cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
-                                      "/home/lukas/git/discopop/build/libi/LLVMDPReduction.so")
+                                      run_configuration.dp_build_path+"/libi/LLVMDPReduction.so")
             # replace DP-FMAP marker with path of FileMapping.txt
             cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
             print("Execute: ", "cd " + last_dir + " && " + cmd_str)

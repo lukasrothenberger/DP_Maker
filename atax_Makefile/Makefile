@@ -19,3 +19,4 @@ clean:
 	rm -f *.ll
 	rm -f *.txt
 	rm -f *.xml
+	rm -f dp-fmap

@@ -32,7 +32,7 @@ class Command(object):
             return ret_str
         return self.cmd_line
 
-    def add_discopop_instrumentation(self):
+    def add_discopop_instrumentation(self, run_configuration):
         if self.cmd_type in [CmdType.ENTER_DIR, CmdType.EXIT_DIR, CmdType.UNKNOWN]:
             return
         if self.cmd_type == CmdType.COMPILE:
@@ -68,7 +68,7 @@ class Command(object):
             else:
                 # multiple files are linked
                 self.compiler_command = "clang++"
-                self.flags.append("-L/home/lukas/git/discopop/build/rtlib -lDiscoPoP_RT -lpthread")
+                self.flags.append("-L"+run_configuration.dp_build_path+"/rtlib -lDiscoPoP_RT -lpthread")
                 for idx, arg in enumerate(self.non_flag_arguments):
                     if arg.endswith(".o"):
                         self.non_flag_arguments[idx] = self.non_flag_arguments[idx][:self.non_flag_arguments[idx].rfind(".")]
