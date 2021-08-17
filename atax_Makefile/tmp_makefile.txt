@@ -1,5 +1,0 @@
-all:
-	cd /home/lukas/git/DP_Maker/atax_Makefile && clang useless.c -c -g -O0 -S -emit-llvm -fno-discard-value-names -Xclang -load -Xclang /home/lukas/git/discopop/build//libi/LLVMDPReduction.so -mllvm -fm-path -mllvm /home/lukas/git/DP_Maker/atax_Makefile/FileMapping.txt -o useless.ll; 
-	cd /home/lukas/git/DP_Maker/atax_Makefile && clang atax.c -O3 -c -g -O0 -S -emit-llvm -fno-discard-value-names -Xclang -load -Xclang /home/lukas/git/discopop/build//libi/LLVMDPReduction.so -mllvm -fm-path -mllvm /home/lukas/git/DP_Maker/atax_Makefile/FileMapping.txt -o atax.ll; 
-	cd /home/lukas/git/DP_Maker/atax_Makefile && clang polybench.c -c -g -O0 -S -emit-llvm -fno-discard-value-names -Xclang -load -Xclang /home/lukas/git/discopop/build//libi/LLVMDPReduction.so -mllvm -fm-path -mllvm /home/lukas/git/DP_Maker/atax_Makefile/FileMapping.txt -o polybench.ll; 
-	cd /home/lukas/git/DP_Maker/atax_Makefile && clang++ atax.ll polybench.ll -o out -L/home/lukas/git/discopop/build//rtlib -lDiscoPoP_RT -lpthread; 
