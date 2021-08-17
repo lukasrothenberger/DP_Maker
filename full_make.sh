@@ -2,7 +2,7 @@ cd atax_Makefile
 make clean
 cd ..
 
-python -m Makefile_Analyzer --t=atax_Makefile/Makefile --dp-path=/home/lukas/git/discopop/ --dp-bui=/home/lukas/git/discopop/build/ --exec-mode=dep
+python -m Makefile_Analyzer --t=atax_Makefile/Makefile --dp-path=/home/lukas/git/discopop/ --dp-build-path=/home/lukas/git/discopop/build/ --exec-mode=dep
 cd atax_Makefile && ./out && cd ..
 
 python -m Makefile_Analyzer --t=atax_Makefile/Makefile --dp-path=/home/lukas/git/discopop/ --dp-bui=/home/lukas/git/discopop/build/ --exec-mode=cu_gen
