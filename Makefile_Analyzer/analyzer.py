@@ -57,7 +57,7 @@ def analyze_makefile(run_configuration):
     enable_cu_generation = False
     enable_dp_reduction = False
 
-    # execute Instrumentation
+    # execute Dependency Analysis
     if enable_instrumentation:
         last_dir = os.getcwd()
         # execute FileMapping
@@ -81,7 +81,7 @@ def analyze_makefile(run_configuration):
             stream = os.popen("cd " + last_dir+" && " + cmd_str)
             print("Result: ", stream.readlines())
 
-    # execute Instrumentation
+    # execute CUGeneration
     if enable_cu_generation:
         last_dir = os.getcwd()
         # execute FileMapping

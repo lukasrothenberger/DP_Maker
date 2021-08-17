@@ -1,15 +1,16 @@
 """Discopop Makefile Analyzer and Execution Driver
 
 Usage:
-    Makefile_Analyzer [--target <path>] [--compiler <name>] [--dp-path <path>] [--dp-build-path <path]
+    Makefile_Analyzer --dp-path <path> --dp-build-path <path --exec-mode <mode> [--target <path>] [--compiler <name>]
 
 Options:
+    --exec-mode=<mode>      Specifies the mode of operation. Available values are: [dep, cu_gen, dp_red]
+    --dp-path=<path>        Path to DiscoPoP folder
+    --dp-build-path=<path>  Path to DiscoPoP build folder
     --target=<path>         Path of the target Makefile [default: ./Makefile]
     --compiler=<name>       Name of the used compile command (e.g. gcc, clang etc.)
                             If multiple compilers are used, a comma separated list can be supplied (e.g gcc,clang)
                             [default: gcc,clang,g++,clang++]
-    --dp-path=<path>        Path to DiscoPoP folder
-    --dp-build-path=<path>  Path to DiscoPoP build folder
     -h --help               Show this screen
 """
 import os
@@ -20,12 +21,14 @@ from schema import SchemaError, Schema, Use  # type:ignore
 
 from DP_Maker_Classes.RunConfiguration import RunConfiguration
 from .analyzer import analyze_makefile
+from DP_Maker_Classes.RunConfiguration import ExecutionMode
 
 docopt_schema = Schema({
     '--target': Use(str),
     '--compiler': Use(str),
     '--dp-path': Use(str),
-    '--dp-build-path': Use(str)
+    '--dp-build-path': Use(str),
+    '--exec-mode': Use(str)
 })
 
 
@@ -50,15 +53,18 @@ def main():
     compilers = arguments["--compiler"].split(",")
     dp_path = arguments["--dp-path"]
     dp_build_path = arguments["--dp-build-path"]
+    execution_mode = arguments["--exec-mode"]
 
-    if dp_path == "None":
-        raise ValueError("Argument --dp-path must be set!")
-    if dp_build_path == "None":
-        raise ValueError("Argument --dp-build-path must be set!")
+    try:
+        execution_mode = ExecutionMode(execution_mode)
+    except ValueError:
+        raise ValueError("Value of argument 'execution_mode': '" + execution_mode + "' not allowed. " +
+                         "Please set a valid value.")
 
     run_configuration = RunConfiguration()
     run_configuration.target_makefile = target
     run_configuration.compilers = compilers
+    run_configuration.execution_mode = execution_mode
     run_configuration.dp_path = dp_path
     run_configuration.dp_build_path = dp_build_path
     print(str(run_configuration))
