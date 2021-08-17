@@ -102,6 +102,15 @@ def analyze_makefile(run_configuration: RunConfiguration):
     tmp_make_file = open("tmp_makefile.txt", "w+")
     tmp_make_file.write("all:\n")
 
+    print("TARGET: ", run_configuration.target_makefile)
+    print("DIR: ", dirname(run_configuration.target_makefile))
+
+    # create filemapping on parent directory of target Makefile
+    tmp_cwd = os.getcwd()
+    os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + run_configuration.target_project_root + "/dp-fmap")
+    os.system("cd " + run_configuration.target_project_root + " && ./dp-fmap")
+    os.system("cd " + tmp_cwd)
+
     # execute Dependency Analysis
     if run_configuration.execution_mode is ExecutionMode.DEP_ANALYSIS:
         last_dir = os.getcwd()
@@ -122,7 +131,7 @@ def analyze_makefile(run_configuration: RunConfiguration):
                 cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
                                           run_configuration.dp_build_path + "/libi/LLVMDPInstrumentation.so")
                 # replace DP-FMAP marker with path of FileMapping.txt
-                cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
+                cmd_str = cmd_str.replace("##DPFILEMAPPING##", run_configuration.target_project_root + "/FileMapping.txt")
                 # replace § signs introduced by the preprocessor with whitespaces
                 cmd_str = cmd_str.replace("§", " ")
                 # replace # signs introduced by the preprocessor with semicolon
@@ -158,7 +167,7 @@ def analyze_makefile(run_configuration: RunConfiguration):
                 cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
                                           run_configuration.dp_build_path + "/libi/LLVMCUGeneration.so")
                 # replace DP-FMAP marker with path of FileMapping.txt
-                cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
+                cmd_str = cmd_str.replace("##DPFILEMAPPING##", run_configuration.target_project_root + "/FileMapping.txt")
                 # replace § signs introduced by the preprocessor with whitespaces
                 cmd_str = cmd_str.replace("§", " ")
                 # replace # signs introduced by the preprocessor with semicolon
@@ -196,7 +205,7 @@ def analyze_makefile(run_configuration: RunConfiguration):
                 cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
                                           run_configuration.dp_build_path + "/libi/LLVMDPReduction.so")
                 # replace DP-FMAP marker with path of FileMapping.txt
-                cmd_str = cmd_str.replace("##DPFILEMAPPING##", last_dir + "/FileMapping.txt")
+                cmd_str = cmd_str.replace("##DPFILEMAPPING##", run_configuration.target_project_root + "/FileMapping.txt")
                 # replace § signs introduced by the preprocessor with whitespaces
                 cmd_str = cmd_str.replace("§", " ")
                 # replace # signs introduced by the preprocessor with semicolon

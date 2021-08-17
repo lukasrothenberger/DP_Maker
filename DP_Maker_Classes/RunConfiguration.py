@@ -10,6 +10,7 @@ class ExecutionMode(Enum):
 
 class RunConfiguration(object):
     target_makefile: str
+    target_project_root: str
     compilers: List[str]
     execution_mode: ExecutionMode
     dp_path: str

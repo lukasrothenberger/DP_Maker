@@ -1,13 +1,14 @@
 """Discopop Makefile Analyzer and Execution Driver
 
 Usage:
-    Makefile_Analyzer --dp-path <path> --dp-build-path <path --exec-mode <mode> [--target <path>] [--compiler <name>]
+    Makefile_Analyzer --dp-path <path> --dp-build-path <path --exec-mode <mode> --target-project <path> [--target-makefile <path>] [--compiler <name>]
 
 Options:
     --exec-mode=<mode>      Specifies the mode of operation. Available values are: [dep, cu_gen, dp_red]
     --dp-path=<path>        Path to DiscoPoP folder
     --dp-build-path=<path>  Path to DiscoPoP build folder
-    --target=<path>         Path of the target Makefile [default: ./Makefile]
+    --target-makefile=<path>    Path of the target Makefile [default: ./Makefile]
+    --target-project=<path>     Root Path of the target Project
     --compiler=<name>       Name of the used compile command (e.g. gcc, clang etc.)
                             If multiple compilers are used, a comma separated list can be supplied (e.g gcc,clang)
                             [default: gcc,clang,g++,clang++]
@@ -24,7 +25,8 @@ from .analyzer import analyze_makefile
 from DP_Maker_Classes.RunConfiguration import ExecutionMode
 
 docopt_schema = Schema({
-    '--target': Use(str),
+    '--target-makefile': Use(str),
+    '--target-project': Use(str),
     '--compiler': Use(str),
     '--dp-path': Use(str),
     '--dp-build-path': Use(str),
@@ -49,7 +51,8 @@ def main():
     except SchemaError as e:
         exit(e)
 
-    target = arguments["--target"]
+    target = arguments["--target-makefile"]
+    target_project_root = arguments[ "--target-project"]
     compilers = arguments["--compiler"].split(",")
     dp_path = arguments["--dp-path"]
     dp_build_path = arguments["--dp-build-path"]
@@ -63,6 +66,7 @@ def main():
 
     run_configuration = RunConfiguration()
     run_configuration.target_makefile = target
+    run_configuration.target_project_root = target_project_root
     run_configuration.compilers = compilers
     run_configuration.execution_mode = execution_mode
     run_configuration.dp_path = dp_path
