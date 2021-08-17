@@ -6,9 +6,10 @@ from .parser import parse_command
 from Helper.compiler_information import CompilerFlagInformation, get_compiler_argument_information
 from Helper.command_preprocessor import preprocess
 from DP_Maker_Classes.Command import Command, CmdType
+from DP_Maker_Classes.RunConfiguration import RunConfiguration, ExecutionMode
 
 
-def analyze_makefile(run_configuration):
+def analyze_makefile(run_configuration: RunConfiguration):
     """Analyzes the makefile at the given path.
     :param run_configuration: Object storing run configuration (paths etc.)"""
     # save starting cwd
@@ -38,8 +39,8 @@ def analyze_makefile(run_configuration):
     print("### PARSED COMMANDS ###")
     print("#######################")
     print()
-    #for cmd in parsed_commands:
-    #    print(cmd)
+    # for cmd in parsed_commands:
+    #     print(cmd)
 
     # instrument commands
     for cmd in parsed_commands:
@@ -50,15 +51,11 @@ def analyze_makefile(run_configuration):
     print("### INSTRUMENTED COMMANDS ###")
     print("#############################")
     print()
-    #for cmd in parsed_commands:
-    #    print(cmd)
-
-    enable_instrumentation = True
-    enable_cu_generation = False
-    enable_dp_reduction = False
+    # for cmd in parsed_commands:
+    #     print(cmd)
 
     # execute Dependency Analysis
-    if enable_instrumentation:
+    if run_configuration.execution_mode is ExecutionMode.DEP_ANALYSIS:
         last_dir = os.getcwd()
         # execute FileMapping
         os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
@@ -82,7 +79,7 @@ def analyze_makefile(run_configuration):
             print("Result: ", stream.readlines())
 
     # execute CUGeneration
-    if enable_cu_generation:
+    if run_configuration.execution_mode is ExecutionMode.CU_GENERATION:
         last_dir = os.getcwd()
         # execute FileMapping
         os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
@@ -105,7 +102,7 @@ def analyze_makefile(run_configuration):
             print("Result: ", stream.readlines())
 
     # execute DP Reduction
-    if enable_dp_reduction:
+    if run_configuration.execution_mode is ExecutionMode.DP_REDUCTION:
         last_dir = os.getcwd()
         # execute FileMapping
         os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
