@@ -89,92 +89,43 @@ def analyze_makefile(run_configuration: RunConfiguration):
     os.system("cd " + run_configuration.target_project_root + " && ./dp-fmap")
     os.system("cd " + tmp_cwd)
 
-    # execute Dependency Analysis
-    if run_configuration.execution_mode is ExecutionMode.DEP_ANALYSIS:
-        last_dir = os.getcwd()
-        # execute FileMapping
-        os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
-        for group in grouped_parsed_commands:
-            cmd_line_str = ""
-            for cmd in group:
-                cmd.prepare_output()
-                if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
-                    last_dir = "" + cmd.exit_dir + cmd.enter_dir
-                cmd_str = str(cmd)
-                # replace DP-Shared Object marker with Instrumentation
+    last_dir = os.getcwd()
+    # execute FileMapping
+    os.system("cp " + run_configuration.dp_path + "/scripts/dp-fmap " + last_dir + "/dp-fmap")
+    os.system("cd " + last_dir + " && ./dp-fmap")
+
+    # write tmp_makefile.txt for selected analysis
+    for group in grouped_parsed_commands:
+        cmd_line_str = ""
+        for cmd in group:
+            cmd.prepare_output()
+            if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
+                last_dir = "" + cmd.exit_dir + cmd.enter_dir
+            cmd_str = str(cmd)
+            # replace DP-Shared Object marker with Instrumentation
+            if run_configuration.execution_mode is ExecutionMode.DEP_ANALYSIS:
                 cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
                                           run_configuration.dp_build_path + "/libi/LLVMDPInstrumentation.so")
-                # replace DP-FMAP marker with path of FileMapping.txt
-                cmd_str = cmd_str.replace("##DPFILEMAPPING##", run_configuration.target_project_root + "/FileMapping.txt")
-                # replace § signs introduced by the preprocessor with whitespaces
-                cmd_str = cmd_str.replace("§", " ")
-                # replace # signs introduced by the preprocessor with semicolon
-                cmd_str = cmd_str.replace("#", ";")
-                if len(cmd_line_str) == 0:
-                    cmd_line_str += "cd " + last_dir
-                    if len(cmd_str) > 0:
-                        cmd_line_str += " && "
-                cmd_line_str += cmd_str + " "
-            tmp_make_file.write("\t" + cmd_line_str + "\n")
-
-    # execute CUGeneration
-    if run_configuration.execution_mode is ExecutionMode.CU_GENERATION:
-        last_dir = os.getcwd()
-        # execute FileMapping
-        os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
-        for group in grouped_parsed_commands:
-            cmd_line_str = ""
-            for cmd in group:
-                cmd.prepare_output()
-                if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
-                    last_dir = "" + cmd.exit_dir + cmd.enter_dir
-                cmd_str = str(cmd)
-                # replace DP-Shared Object marker with Instrumentation
+            elif run_configuration.execution_mode is ExecutionMode.CU_GENERATION:
                 cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
                                           run_configuration.dp_build_path + "/libi/LLVMCUGeneration.so")
-                # replace DP-FMAP marker with path of FileMapping.txt
-                cmd_str = cmd_str.replace("##DPFILEMAPPING##", run_configuration.target_project_root + "/FileMapping.txt")
-                # replace § signs introduced by the preprocessor with whitespaces
-                cmd_str = cmd_str.replace("§", " ")
-                # replace # signs introduced by the preprocessor with semicolon
-                cmd_str = cmd_str.replace("#", ";")
-
-                if len(cmd_line_str) == 0:
-                    cmd_line_str += "cd " + last_dir
-                    if len(cmd_str) > 0:
-                        cmd_line_str += " && "
-                cmd_line_str += cmd_str + " "
-            tmp_make_file.write("\t" + cmd_line_str + "\n")
-
-    # execute DP Reduction
-    if run_configuration.execution_mode is ExecutionMode.DP_REDUCTION:
-        last_dir = os.getcwd()
-        # execute FileMapping
-        os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + last_dir + "/dp-fmap")
-        os.system("cd " + last_dir + " && ./dp-fmap")
-        for group in grouped_parsed_commands:
-            cmd_line_str = ""
-            for cmd in group:
-                cmd.prepare_output()
-                if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
-                    last_dir = "" + cmd.exit_dir + cmd.enter_dir
-                cmd_str = str(cmd)
-                # replace DP-Shared Object marker with Instrumentation
+            elif run_configuration.execution_mode is ExecutionMode.DP_REDUCTION:
                 cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
                                           run_configuration.dp_build_path + "/libi/LLVMDPReduction.so")
-                # replace DP-FMAP marker with path of FileMapping.txt
-                cmd_str = cmd_str.replace("##DPFILEMAPPING##", run_configuration.target_project_root + "/FileMapping.txt")
-                # replace § signs introduced by the preprocessor with whitespaces
-                cmd_str = cmd_str.replace("§", " ")
-                # replace # signs introduced by the preprocessor with semicolon
-                cmd_str = cmd_str.replace("#", ";")
-
-                if len(cmd_line_str) == 0:
-                    cmd_line_str += "cd " + last_dir
-                    if len(cmd_str) > 0:
-                        cmd_line_str += " && "
-                cmd_line_str += cmd_str + " "
-            tmp_make_file.write("\t" + cmd_line_str + "\n")
+            else:
+                raise ValueError("Unrecognized Execution Mode: ", run_configuration.execution_mode)
+            # replace DP-FMAP marker with path of FileMapping.txt
+            cmd_str = cmd_str.replace("##DPFILEMAPPING##", run_configuration.target_project_root + "/FileMapping.txt")
+            # replace § signs introduced by the preprocessor with whitespaces
+            cmd_str = cmd_str.replace("§", " ")
+            # replace # signs introduced by the preprocessor with semicolon
+            cmd_str = cmd_str.replace("#", ";")
+            if len(cmd_line_str) == 0:
+                cmd_line_str += "cd " + last_dir
+                if len(cmd_str) > 0:
+                    cmd_line_str += " && "
+            cmd_line_str += cmd_str + " "
+        tmp_make_file.write("\t" + cmd_line_str + "\n")
 
     tmp_make_file.close()
 
