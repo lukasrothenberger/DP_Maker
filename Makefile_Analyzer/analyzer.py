@@ -7,6 +7,7 @@ from Helper.compiler_information import CompilerFlagInformation, get_compiler_ar
 from Helper.command_preprocessor import preprocess
 from DP_Maker_Classes.Command import Command, CmdType
 from DP_Maker_Classes.RunConfiguration import RunConfiguration, ExecutionMode
+from File_Dependency_Graph.constructor import construct_graph_from_commands
 
 
 def analyze_makefile(run_configuration: RunConfiguration):
@@ -52,7 +53,7 @@ def analyze_makefile(run_configuration: RunConfiguration):
     # get grouped raw commands, split grouped lines into individual commands
     grouped_raw_commands: List[List[str]] = [line.split(";") for line in preprocessed_grouped_lines]
     # parse each individual command
-    grouped_parsed_commands: List[Command] = []
+    grouped_parsed_commands: List[List[Command]] = []
     for raw_cmd_group in grouped_raw_commands:
         parsed_cmd_group: List[Command] = []
         for raw_cmd in raw_cmd_group:
@@ -93,6 +94,9 @@ def analyze_makefile(run_configuration: RunConfiguration):
     # execute FileMapping
     os.system("cp " + run_configuration.dp_path + "/scripts/dp-fmap " + last_dir + "/dp-fmap")
     os.system("cd " + last_dir + " && ./dp-fmap")
+
+    # construct file dependency graph
+    construct_graph_from_commands(grouped_parsed_commands)
 
     # write tmp_makefile.txt for selected analysis
     for group in grouped_parsed_commands:

@@ -1,0 +1,5 @@
+1	/home/lukas/git/DP_Maker/atax_Makefile/atax.c
+2	/home/lukas/git/DP_Maker/atax_Makefile/atax.h
+3	/home/lukas/git/DP_Maker/atax_Makefile/polybench.c
+4	/home/lukas/git/DP_Maker/atax_Makefile/polybench.h
+5	/home/lukas/git/DP_Maker/atax_Makefile/useless.c
