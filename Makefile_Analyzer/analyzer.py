@@ -15,7 +15,6 @@ def analyze_makefile(run_configuration: RunConfiguration):
     # save starting cwd
     starting_cwd = os.getcwd()
     # set cwd to makefile's parent directory
-    print()
     parent_dir = dirname(run_configuration.target_makefile)
     os.chdir(parent_dir)
     # get information on available flags of used compilers
@@ -33,12 +32,9 @@ def analyze_makefile(run_configuration: RunConfiguration):
     grouped_lines: List[str] = []
     line_buffer = ""
     for idx, line in enumerate(raw_lines):
-        line_buffer = line_buffer + line #.replace("\n", "")
+        line_buffer = line_buffer + line  # .replace("\n", "")
         if line_buffer.endswith("\\\n"):
             # preserve line_buffer, replace \\\n at the end of the line with whitespace
-            print()
-            print("line_buffer ends with \\")
-            print("LINE_BUFFER: ", line_buffer)
             line_buffer = line_buffer.replace("\\\n", " ")
         else:
             # remove newline-marker and tabs
@@ -50,17 +46,11 @@ def analyze_makefile(run_configuration: RunConfiguration):
             grouped_lines.append(line_buffer)
             # clear line_buffer
             line_buffer = ""
-    print("\nGROUPED LINES:")
-    print(grouped_lines)
     # preprocess grouped lines
     preprocessed_grouped_lines = [preprocess(line) for line in grouped_lines]
-    print("\nPREPROCESSED LINES:")
-    print(preprocessed_grouped_lines)
 
     # get grouped raw commands, split grouped lines into individual commands
     grouped_raw_commands: List[List[str]] = [line.split(";") for line in preprocessed_grouped_lines]
-    print("\nGROUPED RAW COMMANDS")
-    print(grouped_raw_commands)
     # parse each individual command
     grouped_parsed_commands: List[Command] = []
     for raw_cmd_group in grouped_raw_commands:
@@ -70,7 +60,6 @@ def analyze_makefile(run_configuration: RunConfiguration):
             if len(raw_cmd) == 0:
                 continue
             raw_cmd = preprocess(raw_cmd)
-            print("RAW CMD: ", raw_cmd)
             parsed_cmd_group.append(parse_command(raw_cmd, run_configuration.compilers, compiler_flag_information_dict))
         grouped_parsed_commands.append(parsed_cmd_group)
 
@@ -79,10 +68,6 @@ def analyze_makefile(run_configuration: RunConfiguration):
     print("### PARSED COMMANDS ###")
     print("#######################")
     print()
-    for group in grouped_parsed_commands:
-        print("NEW GROUP")
-        for cmd in group:
-            print(cmd)
 
     # instrument commands
     for group in grouped_parsed_commands:
@@ -94,16 +79,9 @@ def analyze_makefile(run_configuration: RunConfiguration):
     print("### INSTRUMENTED COMMANDS ###")
     print("#############################")
     print()
-    for group in grouped_parsed_commands:
-        print("GROUP")
-        for cmd in group:
-            print(str(cmd))
 
     tmp_make_file = open("tmp_makefile.txt", "w+")
     tmp_make_file.write("all:\n")
-
-    print("TARGET: ", run_configuration.target_makefile)
-    print("DIR: ", dirname(run_configuration.target_makefile))
 
     # create filemapping on parent directory of target Makefile
     tmp_cwd = os.getcwd()
@@ -122,10 +100,6 @@ def analyze_makefile(run_configuration: RunConfiguration):
                 cmd.prepare_output()
                 if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
                     last_dir = "" + cmd.exit_dir + cmd.enter_dir
-                print()
-                print("PWD: ", last_dir)
-                print("ORIG: ", cmd.cmd_line)
-                print("PRE: ", str(cmd))
                 cmd_str = str(cmd)
                 # replace DP-Shared Object marker with Instrumentation
                 cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
@@ -136,15 +110,11 @@ def analyze_makefile(run_configuration: RunConfiguration):
                 cmd_str = cmd_str.replace("§", " ")
                 # replace # signs introduced by the preprocessor with semicolon
                 cmd_str = cmd_str.replace("#", ";")
-                print("Execute: ", "cd " + last_dir+" && " + cmd_str)
-                #tmp_make_file.write("\tcd " + last_dir + " && " + cmd_str + "\n")
                 if len(cmd_line_str) == 0:
                     cmd_line_str += "cd " + last_dir
                     if len(cmd_str) > 0:
                         cmd_line_str += " && "
                 cmd_line_str += cmd_str + " "
-                #stream = os.popen("cd " + last_dir+" && " + cmd_str)
-                #print("Result: ", stream.readlines())
             tmp_make_file.write("\t" + cmd_line_str + "\n")
 
     # execute CUGeneration
@@ -158,10 +128,6 @@ def analyze_makefile(run_configuration: RunConfiguration):
                 cmd.prepare_output()
                 if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
                     last_dir = "" + cmd.exit_dir + cmd.enter_dir
-                print()
-                print("PWD: ", last_dir)
-                print("ORIG: ", cmd.cmd_line)
-                print("PRE: ", str(cmd))
                 cmd_str = str(cmd)
                 # replace DP-Shared Object marker with Instrumentation
                 cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
@@ -173,15 +139,11 @@ def analyze_makefile(run_configuration: RunConfiguration):
                 # replace # signs introduced by the preprocessor with semicolon
                 cmd_str = cmd_str.replace("#", ";")
 
-                print("Execute: ", "cd " + last_dir+" && " + cmd_str)
-                #stream = os.popen("cd " + last_dir+" && " + cmd_str)
                 if len(cmd_line_str) == 0:
                     cmd_line_str += "cd " + last_dir
                     if len(cmd_str) > 0:
                         cmd_line_str += " && "
                 cmd_line_str += cmd_str + " "
-                # tmp_make_file.write("\tcd " + last_dir+" && " + cmd_str + "\n")
-                #print("Result: ", stream.readlines())
             tmp_make_file.write("\t" + cmd_line_str + "\n")
 
     # execute DP Reduction
@@ -196,10 +158,6 @@ def analyze_makefile(run_configuration: RunConfiguration):
                 cmd.prepare_output()
                 if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
                     last_dir = "" + cmd.exit_dir + cmd.enter_dir
-                print()
-                print("PWD: ", last_dir)
-                print("ORIG: ", cmd.cmd_line)
-                print("PRE: ", str(cmd))
                 cmd_str = str(cmd)
                 # replace DP-Shared Object marker with Instrumentation
                 cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
@@ -211,15 +169,11 @@ def analyze_makefile(run_configuration: RunConfiguration):
                 # replace # signs introduced by the preprocessor with semicolon
                 cmd_str = cmd_str.replace("#", ";")
 
-                print("Execute: ", "cd " + last_dir + " && " + cmd_str)
-                #stream = os.popen("cd " + last_dir + " && " + cmd_str)
                 if len(cmd_line_str) == 0:
                     cmd_line_str += "cd " + last_dir
                     if len(cmd_str) > 0:
                         cmd_line_str += " && "
                 cmd_line_str += cmd_str + " "
-                #tmp_make_file.write("\tcd " + last_dir + " && " + cmd_str + "\n")
-                #print("Result: ", stream.readlines())
             tmp_make_file.write("\t" + cmd_line_str + "\n")
 
     tmp_make_file.close()

@@ -23,8 +23,6 @@ def parse_command(cmd: str, compilers: List[str],
     elif raw_cmd_elements[0] in compilers:
         # compiler command
         # group flags and arguments together
-        print()
-        print(raw_cmd_elements)
         modification_found = True
         finished_cmd_elements: List[str] = []
         while modification_found:
@@ -36,9 +34,6 @@ def parse_command(cmd: str, compilers: List[str],
         ret_cmd.compiler_command = raw_cmd_elements[0]
         ret_cmd.flags = finished_cmd_elements
         ret_cmd.non_flag_arguments = raw_cmd_elements[1:]
-        print("--> command: ", ret_cmd.compiler_command)
-        print("--> arguments: ", ret_cmd.non_flag_arguments)
-        print("--> flags: ", ret_cmd.flags)
         return ret_cmd
     else:
         # unknown command, leave as is
