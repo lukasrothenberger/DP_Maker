@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt  # type:ignore
 from networkx.drawing.nx_agraph import graphviz_layout  # type:ignore
 from typing import List, Tuple, Dict
 from enum import Enum
-from DP_Maker_Classes.Command import Command
+from DP_Maker_Classes.Command import Command, CmdType
+from DP_Maker_Classes.RunConfiguration import ExecutionMode
 
 
 class FileDependencyGraph(object):
@@ -28,7 +29,7 @@ class FileDependencyGraph(object):
         nx.draw_networkx_labels(self.graph, pos, labels)
         plt.show()
 
-    def write_makefile(self, makefile):
+    def write_makefile(self, makefile, run_configuration, last_dir):
         """exports the contents of the graph into a makefile"""
         next_free_rule_id = 1
         rule_command_dict: Dict[int, List[Command]] = dict()
@@ -43,18 +44,17 @@ class FileDependencyGraph(object):
         merge_nodes = []
         regular_nodes = []
         for node in self.graph.nodes:
-            is_regular = True
+            if len(self.graph.out_edges(node)) == 1 and len(self.graph.in_edges(node)) == 1:
+                regular_nodes.append(node)
+                continue
             if len(self.graph.out_edges(node)) == 0:
                 entry_nodes.append(node)
-                is_regular = False
+                continue
             if len(self.graph.out_edges(node)) > 0:
                 split_nodes.append(node)
-                is_regular = False
+                continue
             if len(self.graph.in_edges(node)) > 0:
                 merge_nodes.append(node)
-                is_regular = False
-            if is_regular:
-                regular_nodes.append(node)
 
         # give rule_id's to entry nodes
         for cur_node in entry_nodes:
@@ -76,7 +76,6 @@ class FileDependencyGraph(object):
                 rule_command_dict[rule_id] = [predecessor]
                 command_to_rule_dict[predecessor] = rule_id
 
-
         # give rule_id's to split nodes
         for split_node in split_nodes:
             rule_id = next_free_rule_id
@@ -94,17 +93,27 @@ class FileDependencyGraph(object):
                 if node not in command_to_rule_dict:
                     continue
                 # check if only one predecessor exists
-                if len(list(self.graph.predecessors(node))) != 1:
-                    continue
-                # check if predecessor has no rule_id assigned yet (split nodes already have an assigned rule_id)
-                predecessor = list(self.graph.predecessors(node))[0]
-                if predecessor in command_to_rule_dict:
-                    continue
-                # assign rule_id to predecessor
-                command_to_rule_dict[predecessor] = command_to_rule_dict[node]
-                # restart outer loop
-                found_modification = True
-                break
+                if len(list(self.graph.predecessors(node))) == 1:
+                    predecessor = list(self.graph.predecessors(node))[0]
+                    # check if predecessor has rule_id
+                    if predecessor in command_to_rule_dict:
+                        continue
+                    else:
+                        # assign rule_id to predecessor
+                        command_to_rule_dict[predecessor] = command_to_rule_dict[node]
+                        # todo maybe remove
+                        rule_command_dict[command_to_rule_dict[node]].insert(0, predecessor)
+                        # restart outer loop
+                        found_modification = True
+                        break
+
+        # fix nodes which are still without rule by stealing from the successor
+        for node in regular_nodes:
+            if node not in command_to_rule_dict:
+                successor = list(self.graph.successors(node))[0]
+                if successor not in merge_nodes:
+                    command_to_rule_dict[node] = command_to_rule_dict[successor]
+                    rule_command_dict[command_to_rule_dict[node]].insert(0, node)
 
         # set requirements
         for node in self.graph.nodes:
@@ -120,11 +129,57 @@ class FileDependencyGraph(object):
                 if command_to_rule_dict[predecessor] not in rule_requirement_dict[command_to_rule_dict[node]]:
                     rule_requirement_dict[command_to_rule_dict[node]].append(command_to_rule_dict[predecessor])
 
-
         ### write makefile ###
         # write root rule
-        makefile.write("all: "+ " ".join([str(r) for r in rule_requirement_dict[0]]) + "\n")
+        makefile.write("all: " + " ".join([str(r) for r in rule_requirement_dict[0]]) + "\n\n")
+        # remove root rule from requirements dict and rule_command_dict
+        del rule_requirement_dict[0]
+        del rule_command_dict[0]
 
+        # create rule_requirement_dict entries if necessary
+        for rule_id in rule_command_dict:
+            if rule_id not in rule_requirement_dict:
+                rule_requirement_dict[rule_id] = []
 
+        # iterate over rule id's
+        for rule_id in rule_command_dict:
+            # write rule number and requirements
+            makefile.write("" + str(rule_id) + ": " + " ".join([str(r) for r in rule_requirement_dict[rule_id]]) + "\n")
+            # write commands
+            for cmd_idx, cmd in enumerate(rule_command_dict[rule_id]):
+                cmd.prepare_output()
+                if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
+                    last_dir = "" + cmd.exit_dir + cmd.enter_dir
+                cmd_str = str(cmd)
+                # replace DP-Shared Object marker with Instrumentation
+                if run_configuration.execution_mode is ExecutionMode.DEP_ANALYSIS:
+                    cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
+                                              run_configuration.dp_build_path + "/libi/LLVMDPInstrumentation.so")
+                elif run_configuration.execution_mode is ExecutionMode.CU_GENERATION:
+                    cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
+                                              run_configuration.dp_build_path + "/libi/LLVMCUGeneration.so")
+                elif run_configuration.execution_mode is ExecutionMode.DP_REDUCTION:
+                    cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
+                                              run_configuration.dp_build_path + "/libi/LLVMDPReduction.so")
+                else:
+                    raise ValueError("Unrecognized Execution Mode: ", run_configuration.execution_mode)
+                # replace DP-FMAP marker with path of FileMapping.txt
+                cmd_str = cmd_str.replace("##DPFILEMAPPING##",
+                                          run_configuration.target_project_root + "/FileMapping.txt")
+                # replace § signs introduced by the preprocessor with whitespaces
+                cmd_str = cmd_str.replace("§", " ")
+                # replace # signs introduced by the preprocessor with semicolon
+                cmd_str = cmd_str.replace("#", ";")
 
-        makefile.write("asdf\n")
+                # add cd prior to the cmd if it's the beginning of a rule's body or the previous statement belongs to a different group
+                if cmd_idx == 0:
+                    makefile.write("\tcd " + last_dir + " && ")
+                elif rule_command_dict[rule_id][cmd_idx].group_id != rule_command_dict[rule_id][cmd_idx - 1].group_id:
+                    makefile.write("\tcd " + last_dir + " && ")
+
+                makefile.write("\t" + cmd_str)
+                # write \\ to the end of the line if group_id of the current and next cmd are equal
+                if cmd_idx + 1 < len(rule_command_dict[rule_id]):
+                    if cmd.group_id == rule_command_dict[rule_id][cmd_idx + 1].group_id:
+                        makefile.write(" \\")
+                makefile.write("\n")

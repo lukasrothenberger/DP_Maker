@@ -9,18 +9,17 @@ def construct_graph_from_commands(grouped_commands: List[List[Command]]) -> File
 
     compiled_files_dict: Dict[str, Command] = dict()  # maps compiled file to the generating command
     last_command_buffer: Optional[Command] = None
-    for group in grouped_commands:
+    for group_idx, group in enumerate(grouped_commands):
         for cmd in group:
+            cmd.group_id = group_idx
             if cmd.cmd_type == CmdType.COMPILE:
                 if "-c" in cmd.flags:
-                    print("COMP: ", cmd)
                     # cmd is compilation statement
                     # get name of output file:
                     output_file_name = ""
                     for flag in cmd.flags:
                         if flag.startswith("-o "):
                             output_file_name = flag.split(" ")[1]
-                    print("--> ", output_file_name)
                     # add / overwrite entries in compiled_files_dict
                     compiled_files_dict[output_file_name] = cmd
                     # add compilation statements to the graph
@@ -29,7 +28,6 @@ def construct_graph_from_commands(grouped_commands: List[List[Command]]) -> File
                         cmd_graph.graph.add_edge(last_command_buffer, cmd)
                 else:
                     # cmd is linking statement
-                    print("LINK: ", cmd)
                     # get output file name
                     output_file_name = "UNDEF"
                     for flag in cmd.flags:
@@ -50,7 +48,6 @@ def construct_graph_from_commands(grouped_commands: List[List[Command]]) -> File
 
             else:
                 # cmd is not a compile statement
-                print("OTHER: ", cmd)
                 # add node for current cmd
                 cmd_graph.graph.add_node(cmd, data=(FileDependencyGraph.NodeType.OTHER, "Unknown"))
                 if last_command_buffer is not None:
