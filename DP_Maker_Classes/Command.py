@@ -18,6 +18,7 @@ class Command(object):
     non_flag_arguments: List[str] = []
     enter_dir: str = ""
     exit_dir: str = ""
+    group_id: int = -1  # used for exporting to makefile
 
     def __init__(self, cmd_line: str, cmd_type: CmdType):
         self.cmd_line = cmd_line

@@ -1,3 +1,4 @@
+import sys
 from typing import Dict, List
 import os
 import subprocess
@@ -7,6 +8,8 @@ from Helper.compiler_information import CompilerFlagInformation, get_compiler_ar
 from Helper.command_preprocessor import preprocess
 from DP_Maker_Classes.Command import Command, CmdType
 from DP_Maker_Classes.RunConfiguration import RunConfiguration, ExecutionMode
+from File_Dependency_Graph.constructor import construct_graph_from_commands
+from File_Dependency_Graph.graph import FileDependencyGraph
 
 
 def analyze_makefile(run_configuration: RunConfiguration):
@@ -52,7 +55,7 @@ def analyze_makefile(run_configuration: RunConfiguration):
     # get grouped raw commands, split grouped lines into individual commands
     grouped_raw_commands: List[List[str]] = [line.split(";") for line in preprocessed_grouped_lines]
     # parse each individual command
-    grouped_parsed_commands: List[Command] = []
+    grouped_parsed_commands: List[List[Command]] = []
     for raw_cmd_group in grouped_raw_commands:
         parsed_cmd_group: List[Command] = []
         for raw_cmd in raw_cmd_group:
@@ -81,7 +84,7 @@ def analyze_makefile(run_configuration: RunConfiguration):
     print()
 
     tmp_make_file = open("tmp_makefile.mk", "w+")
-    tmp_make_file.write("all:\n")
+    # tmp_make_file.write("all:\n")
 
     # create filemapping on parent directory of target Makefile
     tmp_cwd = os.getcwd()
@@ -94,38 +97,10 @@ def analyze_makefile(run_configuration: RunConfiguration):
     os.system("cp " + run_configuration.dp_path + "/scripts/dp-fmap " + last_dir + "/dp-fmap")
     os.system("cd " + last_dir + " && ./dp-fmap")
 
-    # write tmp_makefile.txt for selected analysis
-    for group in grouped_parsed_commands:
-        cmd_line_str = ""
-        for cmd in group:
-            cmd.prepare_output()
-            if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
-                last_dir = "" + cmd.exit_dir + cmd.enter_dir
-            cmd_str = str(cmd)
-            # replace DP-Shared Object marker with Instrumentation
-            if run_configuration.execution_mode is ExecutionMode.DEP_ANALYSIS:
-                cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
-                                          run_configuration.dp_build_path + "/libi/LLVMDPInstrumentation.so")
-            elif run_configuration.execution_mode is ExecutionMode.CU_GENERATION:
-                cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
-                                          run_configuration.dp_build_path + "/libi/LLVMCUGeneration.so")
-            elif run_configuration.execution_mode is ExecutionMode.DP_REDUCTION:
-                cmd_str = cmd_str.replace("##DPSHAREDOBJECT##",
-                                          run_configuration.dp_build_path + "/libi/LLVMDPReduction.so")
-            else:
-                raise ValueError("Unrecognized Execution Mode: ", run_configuration.execution_mode)
-            # replace DP-FMAP marker with path of FileMapping.txt
-            cmd_str = cmd_str.replace("##DPFILEMAPPING##", run_configuration.target_project_root + "/FileMapping.txt")
-            # replace § signs introduced by the preprocessor with whitespaces
-            cmd_str = cmd_str.replace("§", " ")
-            # replace # signs introduced by the preprocessor with semicolon
-            cmd_str = cmd_str.replace("#", ";")
-            if len(cmd_line_str) == 0:
-                cmd_line_str += "cd " + last_dir
-                if len(cmd_str) > 0:
-                    cmd_line_str += " && "
-            cmd_line_str += cmd_str + " "
-        tmp_make_file.write("\t" + cmd_line_str + "\n")
+    # construct file dependency graph
+    cmd_graph: FileDependencyGraph = construct_graph_from_commands(grouped_parsed_commands)
+    #cmd_graph.plot_graph()
+    cmd_graph.write_makefile(tmp_make_file, run_configuration, last_dir)
 
     tmp_make_file.close()
 
