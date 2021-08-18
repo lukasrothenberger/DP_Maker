@@ -80,7 +80,7 @@ def analyze_makefile(run_configuration: RunConfiguration):
     print("#############################")
     print()
 
-    tmp_make_file = open("tmp_makefile.txt", "w+")
+    tmp_make_file = open("tmp_makefile.mk", "w+")
     tmp_make_file.write("all:\n")
 
     # create filemapping on parent directory of target Makefile
