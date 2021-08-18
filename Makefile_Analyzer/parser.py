@@ -15,8 +15,11 @@ def parse_command(cmd: str, compilers: List[str],
     # filter out empty elements
     raw_cmd_elements = [e for e in raw_cmd_elements if len(e) > 0]
     # check for type of command
-    if raw_cmd_elements[0].startswith("make["):
+    if raw_cmd_elements[0].startswith("make[") or raw_cmd_elements[0].startswith("make:"):
         return __check_for_directory_changes(cmd, raw_cmd_elements)
+    elif raw_cmd_elements[0] == "make":
+        ret_cmd = Command(cmd, CmdType.MAKE)
+        return ret_cmd
     elif raw_cmd_elements[0] in compilers:
         # compiler command
         # group flags and arguments together

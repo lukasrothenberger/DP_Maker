@@ -11,7 +11,7 @@ Options:
     --target-project=<path>     Root Path of the target Project
     --compiler=<name>       Name of the used compile command (e.g. gcc, clang etc.)
                             If multiple compilers are used, a comma separated list can be supplied (e.g gcc,clang)
-                            [default: gcc,clang,g++,clang++]
+                            [default: gcc,clang,g++,clang++,cc]
     -h --help               Show this screen
 """
 import os

@@ -7,6 +7,7 @@ class CmdType(IntEnum):
     COMPILE = 1
     ENTER_DIR = 2
     EXIT_DIR = 3
+    MAKE = 4
 
 
 class Command(object):
@@ -29,6 +30,8 @@ class Command(object):
         if self.cmd_type == CmdType.COMPILE:
             ret_str = self.compiler_command + " " + " ".join(self.non_flag_arguments) + " " + " ".join(self.flags) + ";"
             return ret_str
+        if self.cmd_type == CmdType.MAKE:
+            return ""
         return self.cmd_line + ";"
 
     def prepare_output(self):
