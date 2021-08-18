@@ -1,3 +1,4 @@
+import sys
 from typing import Dict, List
 import os
 import subprocess
@@ -8,6 +9,7 @@ from Helper.command_preprocessor import preprocess
 from DP_Maker_Classes.Command import Command, CmdType
 from DP_Maker_Classes.RunConfiguration import RunConfiguration, ExecutionMode
 from File_Dependency_Graph.constructor import construct_graph_from_commands
+from File_Dependency_Graph.graph import FileDependencyGraph
 
 
 def analyze_makefile(run_configuration: RunConfiguration):
@@ -82,7 +84,7 @@ def analyze_makefile(run_configuration: RunConfiguration):
     print()
 
     tmp_make_file = open("tmp_makefile.mk", "w+")
-    tmp_make_file.write("all:\n")
+    # tmp_make_file.write("all:\n")
 
     # create filemapping on parent directory of target Makefile
     tmp_cwd = os.getcwd()
@@ -96,7 +98,11 @@ def analyze_makefile(run_configuration: RunConfiguration):
     os.system("cd " + last_dir + " && ./dp-fmap")
 
     # construct file dependency graph
-    construct_graph_from_commands(grouped_parsed_commands)
+    cmd_graph: FileDependencyGraph = construct_graph_from_commands(grouped_parsed_commands)
+    #cmd_graph.plot_graph()
+    cmd_graph.write_makefile(tmp_make_file)
+
+    sys.exit(0)
 
     # write tmp_makefile.txt for selected analysis
     for group in grouped_parsed_commands:

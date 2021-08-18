@@ -4,7 +4,7 @@ from typing import Dict, List, Optional
 from DP_Maker_Classes.Command import Command, CmdType
 
 
-def construct_graph_from_commands(grouped_commands: List[List[Command]]):
+def construct_graph_from_commands(grouped_commands: List[List[Command]]) -> FileDependencyGraph:
     cmd_graph = FileDependencyGraph()
 
     compiled_files_dict: Dict[str, Command] = dict()  # maps compiled file to the generating command
@@ -57,6 +57,4 @@ def construct_graph_from_commands(grouped_commands: List[List[Command]]):
                     cmd_graph.graph.add_edge(last_command_buffer, cmd)
                 last_command_buffer = cmd
 
-
-    cmd_graph.plot_graph()
-    sys.exit(0)
+    return cmd_graph
