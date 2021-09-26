@@ -55,7 +55,7 @@ class FileDependencyGraph(object):
     def simplify_graph(self):
         """checks for possible simplifications of the graph"""
         # todo breaks correctness
-        # self.__no_branch_simplification()
+        self.__no_branch_simplification()
         self.__requirement_based_simplification()
         pass
 
@@ -99,7 +99,7 @@ class FileDependencyGraph(object):
                         break
 
 
-    def new_write_makefile(self, makefile, run_configuration, last_dir):
+    def write_makefile(self, makefile, run_configuration, last_dir):
         """exports the contents of the graph into a makefile"""
         for node_id in sorted(self.graph.nodes):
             # check for root node
@@ -112,20 +112,17 @@ class FileDependencyGraph(object):
                 for requirement in root_requirements:
                     makefile.write(" " + str(requirement))
                 makefile.write("\n")
-                continue
-            # use node_id as rule_id
-            rule_id = node_id
-            # gather requirements
-            requirement_node_ids = [source for source, _ in self.graph.in_edges(node_id)]
-            # write rule definition line to makefile
-            makefile.write(str(rule_id) + ":")
-            for requirement in requirement_node_ids:
-                # exclude root node from requirements
-                # todo: more efficient solution: delete edges from root
-                if requirement == -1:
-                    continue
-                makefile.write(" " + str(requirement))
-            makefile.write("\n")
+            else:
+                # regular node
+                # use node_id as rule_id
+                rule_id = node_id
+                # gather requirements
+                requirement_node_ids = [source for source, _ in self.graph.in_edges(node_id)]
+                # write rule definition line to makefile
+                makefile.write(str(rule_id) + ":")
+                for requirement in requirement_node_ids:
+                    makefile.write(" " + str(requirement))
+                makefile.write("\n")
 
             # write commands to makefile
             for cmd_idx, (cmd, cmd_type) in enumerate(self.graph.nodes[node_id]["data"].commands):
