@@ -19,6 +19,7 @@ class Command(object):
     enter_dir: str = ""
     exit_dir: str = ""
     group_id: int = -1  # used for exporting to makefile
+    line_ending: str = ""
 
     def __init__(self, cmd_line: str, cmd_type: CmdType):
         self.cmd_line = cmd_line
@@ -27,13 +28,12 @@ class Command(object):
     def __str__(self):
         if self.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
             # the following works, because either enter_dir or exit_dir will be empty.
-            return "cd " + self.enter_dir + self.exit_dir + ";"
+            return "cd " + self.enter_dir + self.exit_dir + ";" + self.line_ending
         if self.cmd_type == CmdType.COMPILE:
-            ret_str = self.compiler_command + " " + " ".join(self.non_flag_arguments) + " " + " ".join(self.flags) + ";"
-            return ret_str
+            return self.compiler_command + " " + " ".join(self.non_flag_arguments) + " " + " ".join(self.flags) + ";" + self.line_ending
         if self.cmd_type == CmdType.MAKE:
-            return ""
-        return self.cmd_line + ";"
+            return "" + self.line_ending
+        return self.cmd_line + ";" + self.line_ending
 
     def prepare_output(self):
         self.cmd_line = self.cmd_line.replace("$", "$$")

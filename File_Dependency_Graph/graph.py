@@ -58,13 +58,11 @@ class FileDependencyGraph(object):
     def new_write_makefile(self, makefile, run_configuration, last_dir):
         """exports the contents of the graph into a makefile"""
         for node_id in sorted(self.graph.nodes):
-            print("node: ", node_id)
             # check for root node
             if node_id == -1:
                 # root node
                 # get all nodes without successors as requirements
                 root_requirements = [id for id in self.graph.nodes if len(self.graph.out_edges(id)) == 0]
-                print("Root requirements: ", root_requirements)
                 # write first line
                 makefile.write(str(node_id) + ":")
                 for requirement in root_requirements:
@@ -86,11 +84,13 @@ class FileDependencyGraph(object):
             makefile.write("\n")
 
             # write commands to makefile
-            for cmd, cmd_type in self.graph.nodes[node_id]["data"].commands:
+            for cmd_idx, (cmd, cmd_type) in enumerate(self.graph.nodes[node_id]["data"].commands):
                 if cmd is None:
                     # todo marker: could be used to identify root
                     continue
                 cmd.prepare_output()
+                if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
+                    last_dir = "" + cmd.exit_dir + cmd.enter_dir
                 cmd_str = str(cmd)
                 # replace DP-Shared Object marker with Instrumentation
                 if run_configuration.execution_mode is ExecutionMode.DEP_ANALYSIS:
@@ -111,9 +111,15 @@ class FileDependencyGraph(object):
                 cmd_str = cmd_str.replace("§", " ")
                 # replace # signs introduced by the preprocessor with semicolon
                 cmd_str = cmd_str.replace("#", ";")
-                makefile.write("\t" + cmd_str + "\n")
+                makefile.write("\t")
+                # add cd instruction at the beginning of the current command if necessary
+                if cmd_idx > 0:
+                    if not str(self.graph.nodes[node_id]["data"].commands[cmd_idx-1][0]).endswith("\\"):
+                        makefile.write("cd " + last_dir + " && ")
+                else:
+                    makefile.write("cd " + last_dir + " && ")
 
-
+                makefile.write(cmd_str + "\n")
 
 
 

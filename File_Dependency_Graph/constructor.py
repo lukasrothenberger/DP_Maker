@@ -18,8 +18,13 @@ def construct_graph_from_commands(grouped_commands: List[List[Command]]) -> File
     for group_idx, group in enumerate(grouped_commands):
         # all commands from one group are gathered in a single graph node
         group_node = Node()
-        for cmd in group:
+        for cmd_idx, cmd in enumerate(group):
             cmd.group_id = group_idx
+            # set line ending if command is contained in group with >1 element
+            group_len = len(group)
+            if group_len > 1:
+                if cmd_idx < group_len - 1:
+                    cmd.line_ending += " \\"
             if cmd.cmd_type == CmdType.COMPILE:
                 if "-c" in cmd.flags:
                     # cmd is compilation statement
