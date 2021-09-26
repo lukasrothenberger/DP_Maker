@@ -16,19 +16,22 @@ class GraphCommandType(Enum):
 
 
 class Node(object):
+    node_id: int
     commands: List[Tuple[(Optional[Command], GraphCommandType)]]
     consumed_files: List[str]
     produced_files: List[str]
 
     def __init__(self):
+        self.node_id = -42  # -42 acts as a dummy for the initialization
         self.commands = []
         self.consumed_files = []
         self.produced_files = []
 
     def __str__(self):
             return_str = ""
-            for cmd, cmd_type in self.commands:
-                return_str += str(cmd_type) + ", "
+            #for cmd, cmd_type in self.commands:
+            #    return_str += str(cmd_type) + ", "
+            return_str += str(self.node_id)
             return return_str
 
 
@@ -50,9 +53,49 @@ class FileDependencyGraph(object):
 
 
     def simplify_graph(self):
-        """TODO"""
-        # todo
+        """checks for possible simplifications of the graph"""
+        self.__no_branch_simplification()
+        self.__requirement_based_simplification()
         pass
+
+
+    def __requirement_based_simplification(self):
+        """creates direct edges from requirement producing to consuming nodes.
+        removes redundant edges if possible.
+        the abstract purpose of this pass is to reduce the average length of paths through the graph,
+        potentially resulting in a better parallel performance of the makefile."""
+        # todo
+
+
+    def __no_branch_simplification(self):
+        """combines two nodes, if the predecessor has exactly one successor, and the successor has exactly
+        one predecessor."""
+        combination_found = True
+        while combination_found:
+            combination_found = False
+            for node in self.graph.nodes:
+                if len(self.graph.out_edges(node)) == 1:
+                    __, successor_node = list(self.graph.out_edges(node))[0]
+                    if len(self.graph.in_edges(successor_node)) == 1:
+                        # combination possible
+                        # append commands of successor to the first node
+                        self.graph.nodes[node]["data"].commands += self.graph.nodes[successor_node]["data"].commands
+                        # combine produced files
+                        self.graph.nodes[node]["data"].produced_files += self.graph.nodes[successor_node]["data"].produced_files
+                        # no need to combine consumed files, as the successor only has a requirement to the preceeding node
+                        # redirect child edges of successor
+                        to_be_removed = []
+                        for src, dest in self.graph.out_edges(successor_node):
+                            # create new edge
+                            self.graph.add_edge(node, dest)
+                            # mark old edge for removal
+                            to_be_removed.append((src, dest))
+                        for edge in to_be_removed:
+                            self.graph.remove_edge(edge[0], edge[1])
+                        # remove successor node
+                        self.graph.remove_node(successor_node)
+                        combination_found = True
+                        break
 
 
     def new_write_makefile(self, makefile, run_configuration, last_dir):

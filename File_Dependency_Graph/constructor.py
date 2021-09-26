@@ -12,12 +12,14 @@ def construct_graph_from_commands(grouped_commands: List[List[Command]]) -> File
     last_node_id: int = -1
     # construct root node
     root_node = Node()
+    root_node.node_id = -1
     root_node.commands.append((None, GraphCommandType.ROOT))
     cmd_graph.graph.add_node(-1, data=root_node)
 
     for group_idx, group in enumerate(grouped_commands):
         # all commands from one group are gathered in a single graph node
         group_node = Node()
+        group_node.node_id = group_idx
         for cmd_idx, cmd in enumerate(group):
             cmd.group_id = group_idx
             # set line ending if command is contained in group with >1 element
