@@ -108,21 +108,20 @@ class FileDependencyGraph(object):
                 # get all nodes without successors as requirements
                 root_requirements = [id for id in self.graph.nodes if len(self.graph.out_edges(id)) == 0]
                 # write first line
-                makefile.write(str(node_id) + ":")
+                makefile.write("all:")
                 for requirement in root_requirements:
                     makefile.write(" " + str(requirement))
                 makefile.write("\n")
-            else:
-                # regular node
-                # use node_id as rule_id
-                rule_id = node_id
-                # gather requirements
-                requirement_node_ids = [source for source, _ in self.graph.in_edges(node_id)]
-                # write rule definition line to makefile
-                makefile.write(str(rule_id) + ":")
-                for requirement in requirement_node_ids:
-                    makefile.write(" " + str(requirement))
-                makefile.write("\n")
+
+            # use node_id as rule_id
+            rule_id = node_id
+            # gather requirements
+            requirement_node_ids = [source for source, _ in self.graph.in_edges(node_id)]
+            # write rule definition line to makefile
+            makefile.write(str(rule_id) + ":")
+            for requirement in requirement_node_ids:
+                makefile.write(" " + str(requirement))
+            makefile.write("\n")
 
             # write commands to makefile
             for cmd_idx, (cmd, cmd_type) in enumerate(self.graph.nodes[node_id]["data"].commands):
