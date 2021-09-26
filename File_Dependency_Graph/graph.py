@@ -8,16 +8,35 @@ from DP_Maker_Classes.Command import Command, CmdType
 from DP_Maker_Classes.RunConfiguration import ExecutionMode
 
 
+class GraphCommandType(Enum):
+    COMPILE = "compile"
+    LINK = "link"
+    OTHER = "other"
+    ROOT = "root"
+
+
+class Node(object):
+    commands: List[Tuple[(Command, GraphCommandType)]]
+    consumed_files: List[str]
+    produced_files: List[str]
+
+    def __init__(self):
+        self.commands = []
+        self.consumed_files = []
+        self.produced_files = []
+
+    def __str__(self):
+            return_str = ""
+            for cmd, cmd_type in self.commands:
+                return_str += str(cmd_type) + ", "
+            return return_str
+
+
 class FileDependencyGraph(object):
     graph: nx.DiGraph
 
     def __init__(self):
         self.graph = nx.DiGraph()
-
-    class NodeType(Enum):
-        COMPILE = "compile"
-        LINK = "link"
-        OTHER = "other"
 
     def plot_graph(self):
         plt.subplot(121)
@@ -25,7 +44,7 @@ class FileDependencyGraph(object):
         nx.draw(self.graph, pos, with_labels=False, arrows=True, font_weight='bold')
         labels = {}
         for node in self.graph.nodes:
-            labels[node] = str(self.graph.nodes[node]["data"][1])
+            labels[node] = str(self.graph.nodes[node]["data"])
         nx.draw_networkx_labels(self.graph, pos, labels)
         plt.show()
 
