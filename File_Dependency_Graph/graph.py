@@ -54,7 +54,8 @@ class FileDependencyGraph(object):
 
     def simplify_graph(self):
         """checks for possible simplifications of the graph"""
-        self.__no_branch_simplification()
+        # todo breaks correctness
+        # self.__no_branch_simplification()
         self.__requirement_based_simplification()
         pass
 
