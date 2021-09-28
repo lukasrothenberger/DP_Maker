@@ -55,8 +55,16 @@ class FileDependencyGraph(object):
     def simplify_graph(self):
         """checks for possible simplifications of the graph"""
         # todo breaks correctness
+        # remove nodes from the graph (might be moved to the end)
         self.__no_branch_simplification()
+
+        # graph optimization to generate better parallelizable makefiles
+        # todo create "successor" edges
+        # todo add direct requirement edges (from producer to consumer), find by upwards traversing
+        # remove redundant edges
+        # remove successor edges, if possible
         self.__requirement_based_simplification()
+        
         pass
 
 
