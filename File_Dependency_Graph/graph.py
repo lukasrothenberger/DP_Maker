@@ -2,10 +2,37 @@ import networkx as nx  # type:ignore
 import matplotlib.pyplot as plt  # type:ignore
 
 from networkx.drawing.nx_agraph import graphviz_layout  # type:ignore
-from typing import List, Tuple, Dict
+from typing import List, Tuple, Dict, Optional
 from enum import Enum
 from DP_Maker_Classes.Command import Command, CmdType
 from DP_Maker_Classes.RunConfiguration import ExecutionMode
+
+
+class GraphCommandType(Enum):
+    COMPILE = "compile"
+    LINK = "link"
+    OTHER = "other"
+    ROOT = "root"
+
+
+class Node(object):
+    node_id: int
+    commands: List[Tuple[(Optional[Command], GraphCommandType)]]
+    consumed_files: List[str]
+    produced_files: List[str]
+
+    def __init__(self):
+        self.node_id = -42  # -42 acts as a dummy for the initialization
+        self.commands = []
+        self.consumed_files = []
+        self.produced_files = []
+
+    def __str__(self):
+            return_str = ""
+            #for cmd, cmd_type in self.commands:
+            #    return_str += str(cmd_type) + ", "
+            return_str += str(self.node_id)
+            return return_str
 
 
 class FileDependencyGraph(object):
@@ -14,139 +41,159 @@ class FileDependencyGraph(object):
     def __init__(self):
         self.graph = nx.DiGraph()
 
-    class NodeType(Enum):
-        COMPILE = "compile"
-        LINK = "link"
-        OTHER = "other"
-
     def plot_graph(self):
         plt.subplot(121)
         pos = nx.fruchterman_reingold_layout(self.graph)
-        nx.draw(self.graph, pos, with_labels=False, arrows=True, font_weight='bold')
+        edges = self.graph.edges()
+        colors = ["green" if self.graph[u][v]["type"] == "successor" else "red" for u, v in edges] # [self.graph[u][v]['color'] for u, v in edges]
+        nx.draw(self.graph, pos, with_labels=False, arrows=True, font_weight='bold', edge_color=colors)
         labels = {}
         for node in self.graph.nodes:
-            labels[node] = str(self.graph.nodes[node]["data"][1])
+            labels[node] = str(self.graph.nodes[node]["data"])
         nx.draw_networkx_labels(self.graph, pos, labels)
         plt.show()
 
-    def write_makefile(self, makefile, run_configuration, last_dir):
-        """exports the contents of the graph into a makefile"""
-        next_free_rule_id = 1
-        rule_command_dict: Dict[int, List[Command]] = dict()
-        rule_requirement_dict: Dict[int, List[int]] = dict()
-        rule_command_dict[0] = []
-        rule_requirement_dict[0] = []
-        command_to_rule_dict: Dict[Command, int] = dict()
 
-        # get nodes of different types:
-        entry_nodes = []
-        split_nodes = []
-        merge_nodes = []
-        regular_nodes = []
+    def simplify_graph(self):
+        """checks for possible simplifications of the graph"""
+        # todo breaks correctness
+        # remove nodes from the graph
+        # self.__no_branch_simplification()
+
+        # graph optimization to generate better parallelizable makefiles
+        self.__add_requirement_edges()
+        # remove successor edges, if possible
+        self.__remove_successor_edges()
+        pass
+
+
+    def __remove_successor_edges(self):
+        """removes successor type edges from the graph"""
+        to_be_removed = []
+        for edge in self.graph.edges:
+            if self.graph[edge[0]][edge[1]]["type"] == "successor":
+                # if target node has any incoming or outgoing requirement edge, the current successor edge can be removed
+                edge_can_be_removed = False
+                # check incoming edges
+                for in_edge in self.graph.in_edges(edge[1]):
+                    if self.graph[in_edge[0]][in_edge[1]]["type"] == "requirement":
+                        edge_can_be_removed = True
+                        break
+                # check outgoing edges
+                if not edge_can_be_removed:
+                    for out_edge in self.graph.out_edges(edge[1]):
+                        if self.graph[out_edge[0]][out_edge[1]]["type"] == "requirement":
+                            edge_can_be_removed = True
+                            break
+                # remove edge if possible
+                if edge_can_be_removed:
+                    to_be_removed.append(edge)
+        for edge in to_be_removed:
+            self.graph.remove_edge(edge[0], edge[1])
+
+
+    def __add_requirement_edges(self):
+        """creates requirement type edges from producing to consuming nodes"""
+        # iterate over all nodes in graph
         for node in self.graph.nodes:
-            if len(self.graph.out_edges(node)) == 1 and len(self.graph.in_edges(node)) == 1:
-                regular_nodes.append(node)
+            # iterate over consumed files
+            for consumed_file in self.graph.nodes[node]["data"].consumed_files:
+                # search for producing nodes by upwards-search through the graph
+                for predecessor, _ in self.graph.in_edges(node):
+                    self.__recursive_add_requirement_edges(predecessor, consumed_file, node, [])
+
+
+    def __recursive_add_requirement_edges(self, root_node, file, target, visited):
+        """recursively checks for nodes producing the specified file and creates requirement edges to the target node."""
+        if file in self.graph.nodes[root_node]["data"].produced_files:
+            # producer has been found
+            self.graph.add_edge(root_node, target, type="requirement")
+            return
+        visited.append(root_node)
+        # traverse upwards
+        # iteratively, if only one predecessor exists, recursively if multiple exist
+        while len(self.graph.in_edges(root_node)) == 1:
+            root_node = list(self.graph.in_edges(root_node))[0][0]
+            if file in self.graph.nodes[root_node]["data"].produced_files:
+                # producer has been found
+                self.graph.add_edge(root_node, target, type="requirement")
+                return
+            visited.append(root_node)
+
+        for predecessor, _ in self.graph.in_edges(root_node):
+            if predecessor in visited:
                 continue
-            if len(self.graph.out_edges(node)) == 0:
-                entry_nodes.append(node)
-                continue
-            if len(self.graph.out_edges(node)) > 0:
-                split_nodes.append(node)
-                continue
-            if len(self.graph.in_edges(node)) > 0:
-                merge_nodes.append(node)
+            self.__recursive_add_requirement_edges(predecessor, file, target, visited)
 
-        # give rule_id's to entry nodes
-        for cur_node in entry_nodes:
-            rule_id = next_free_rule_id
-            next_free_rule_id += 1
-            # root nodes have no requirements
-            rule_requirement_dict[rule_id] = []
-            rule_command_dict[rule_id] = [cur_node]
-            # add root nodes as requirements to rule 0
-            rule_requirement_dict[0].append(rule_id)
-            command_to_rule_dict[cur_node] = rule_id
 
-        # give rule_id's to merge predecessors
-        for merge_node in merge_nodes:
-            for predecessor in self.graph.predecessors(merge_node):
-                # give each predecessor a rule id
-                rule_id = next_free_rule_id
-                next_free_rule_id += 1
-                rule_command_dict[rule_id] = [predecessor]
-                command_to_rule_dict[predecessor] = rule_id
+    def __requirement_based_simplification(self):
+        """creates direct edges from requirement producing to consuming nodes.
+        removes redundant edges if possible.
+        the abstract purpose of this pass is to reduce the average length of paths through the graph,
+        potentially resulting in a better parallel performance of the makefile."""
+        # todo
 
-        # give rule_id's to split nodes
-        for split_node in split_nodes:
-            rule_id = next_free_rule_id
-            next_free_rule_id += 1
-            rule_command_dict[rule_id] = [split_node]
-            command_to_rule_dict[split_node] = rule_id
 
-        # escalate rule id's from already assigned nodes to such with no assigned rule id
-        # todo not efficient, can probably be improved
-        found_modification = True
-        while found_modification:
-            found_modification = False
+    def __no_branch_simplification(self):
+        """combines two nodes, if the predecessor has exactly one successor, and the successor has exactly
+        one predecessor."""
+        combination_found = True
+        while combination_found:
+            combination_found = False
             for node in self.graph.nodes:
-                # check if rule assigned
-                if node not in command_to_rule_dict:
-                    continue
-                # check if only one predecessor exists
-                if len(list(self.graph.predecessors(node))) == 1:
-                    predecessor = list(self.graph.predecessors(node))[0]
-                    # check if predecessor has rule_id
-                    if predecessor in command_to_rule_dict:
-                        continue
-                    else:
-                        # assign rule_id to predecessor
-                        command_to_rule_dict[predecessor] = command_to_rule_dict[node]
-                        # todo maybe remove
-                        rule_command_dict[command_to_rule_dict[node]].insert(0, predecessor)
-                        # restart outer loop
-                        found_modification = True
+                if len(self.graph.out_edges(node)) == 1:
+                    __, successor_node = list(self.graph.out_edges(node))[0]
+                    if len(self.graph.in_edges(successor_node)) == 1:
+                        # combination possible
+                        # append commands of successor to the first node
+                        self.graph.nodes[node]["data"].commands += self.graph.nodes[successor_node]["data"].commands
+                        # combine produced files
+                        self.graph.nodes[node]["data"].produced_files += self.graph.nodes[successor_node]["data"].produced_files
+                        # no need to combine consumed files, as the successor only has a requirement to the preceeding node
+                        # redirect child edges of successor
+                        to_be_removed = []
+                        for src, dest in self.graph.out_edges(successor_node):
+                            # create new edge
+                            self.graph.add_edge(node, dest, type="successor")
+                            # mark old edge for removal
+                            to_be_removed.append((src, dest))
+                        for edge in to_be_removed:
+                            self.graph.remove_edge(edge[0], edge[1])
+                        # remove successor node
+                        self.graph.remove_node(successor_node)
+                        combination_found = True
                         break
 
-        # fix nodes which are still without rule by stealing from the successor
-        for node in regular_nodes:
-            if node not in command_to_rule_dict:
-                successor = list(self.graph.successors(node))[0]
-                if successor not in merge_nodes:
-                    command_to_rule_dict[node] = command_to_rule_dict[successor]
-                    rule_command_dict[command_to_rule_dict[node]].insert(0, node)
 
-        # set requirements
-        for node in self.graph.nodes:
-            for predecessor in self.graph.predecessors(node):
-                # check if predecessor belongs to different rule
-                if command_to_rule_dict[node] == command_to_rule_dict[predecessor]:
+    def write_makefile(self, makefile, run_configuration, last_dir):
+        """exports the contents of the graph into a makefile"""
+        for node_id in sorted(self.graph.nodes):
+            # check for root node
+            if node_id == -1:
+                # root node
+                # get all nodes without successors as requirements
+                root_requirements = [id for id in self.graph.nodes if len(self.graph.out_edges(id)) == 0]
+                # write first line
+                makefile.write("all:")
+                for requirement in root_requirements:
+                    makefile.write(" " + str(requirement))
+                makefile.write("\n")
+
+            # use node_id as rule_id
+            rule_id = node_id
+            # gather requirements
+            requirement_node_ids = [source for source, _ in self.graph.in_edges(node_id)]
+            # write rule definition line to makefile
+            makefile.write(str(rule_id) + ":")
+            for requirement in requirement_node_ids:
+                makefile.write(" " + str(requirement))
+            makefile.write("\n")
+
+            # write commands to makefile
+            for cmd_idx, (cmd, cmd_type) in enumerate(self.graph.nodes[node_id]["data"].commands):
+                if cmd is None:
+                    # todo marker: could be used to identify root
                     continue
-                # predecessor belongs to different rule
-                # create requirement list in not already existing
-                if command_to_rule_dict[node] not in rule_requirement_dict:
-                    rule_requirement_dict[command_to_rule_dict[node]] = []
-                # add requirement if not already existing
-                if command_to_rule_dict[predecessor] not in rule_requirement_dict[command_to_rule_dict[node]]:
-                    rule_requirement_dict[command_to_rule_dict[node]].append(command_to_rule_dict[predecessor])
-
-        ### write makefile ###
-        # write root rule
-        makefile.write("all: " + " ".join([str(r) for r in rule_requirement_dict[0]]) + "\n\n")
-        # remove root rule from requirements dict and rule_command_dict
-        del rule_requirement_dict[0]
-        del rule_command_dict[0]
-
-        # create rule_requirement_dict entries if necessary
-        for rule_id in rule_command_dict:
-            if rule_id not in rule_requirement_dict:
-                rule_requirement_dict[rule_id] = []
-
-        # iterate over rule id's
-        for rule_id in rule_command_dict:
-            # write rule number and requirements
-            makefile.write("" + str(rule_id) + ": " + " ".join([str(r) for r in rule_requirement_dict[rule_id]]) + "\n")
-            # write commands
-            for cmd_idx, cmd in enumerate(rule_command_dict[rule_id]):
                 cmd.prepare_output()
                 if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
                     last_dir = "" + cmd.exit_dir + cmd.enter_dir
@@ -170,16 +217,12 @@ class FileDependencyGraph(object):
                 cmd_str = cmd_str.replace("§", " ")
                 # replace # signs introduced by the preprocessor with semicolon
                 cmd_str = cmd_str.replace("#", ";")
+                makefile.write("\t")
+                # add cd instruction at the beginning of the current command if necessary
+                if cmd_idx > 0:
+                    if not str(self.graph.nodes[node_id]["data"].commands[cmd_idx-1][0]).endswith("\\"):
+                        makefile.write("cd " + last_dir + " && ")
+                else:
+                    makefile.write("cd " + last_dir + " && ")
 
-                # add cd prior to the cmd if it's the beginning of a rule's body or the previous statement belongs to a different group
-                if cmd_idx == 0:
-                    makefile.write("\tcd " + last_dir + " && ")
-                elif rule_command_dict[rule_id][cmd_idx].group_id != rule_command_dict[rule_id][cmd_idx - 1].group_id:
-                    makefile.write("\tcd " + last_dir + " && ")
-
-                makefile.write("\t" + cmd_str)
-                # write \\ to the end of the line if group_id of the current and next cmd are equal
-                if cmd_idx + 1 < len(rule_command_dict[rule_id]):
-                    if cmd.group_id == rule_command_dict[rule_id][cmd_idx + 1].group_id:
-                        makefile.write(" \\")
-                makefile.write("\n")
+                makefile.write(cmd_str + "\n")

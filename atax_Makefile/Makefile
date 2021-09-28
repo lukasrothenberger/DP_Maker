@@ -20,3 +20,4 @@ clean:
 	rm -f *.txt
 	rm -f *.xml
 	rm -f dp-fmap
+	rm -f *.mk

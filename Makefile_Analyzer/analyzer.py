@@ -99,8 +99,11 @@ def analyze_makefile(run_configuration: RunConfiguration):
 
     # construct file dependency graph
     cmd_graph: FileDependencyGraph = construct_graph_from_commands(grouped_parsed_commands)
-    #cmd_graph.plot_graph()
+    cmd_graph.plot_graph()
+    cmd_graph.simplify_graph()
+    cmd_graph.plot_graph()
     cmd_graph.write_makefile(tmp_make_file, run_configuration, last_dir)
+
 
     tmp_make_file.close()
 
