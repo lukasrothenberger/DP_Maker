@@ -1,2 +1,4 @@
 __pycache__
 atax_Makefile/*.ll
+.mypy_cache
+.idea
