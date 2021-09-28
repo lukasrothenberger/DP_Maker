@@ -58,15 +58,72 @@ class FileDependencyGraph(object):
         """checks for possible simplifications of the graph"""
         # todo breaks correctness
         # remove nodes from the graph
-        self.__no_branch_simplification()
+        # self.__no_branch_simplification()
 
         # graph optimization to generate better parallelizable makefiles
-        # todo add direct requirement edges (from producer to consumer), find by upwards traversing
-        # remove redundant edges
+        self.__add_requirement_edges()
         # remove successor edges, if possible
-        self.__requirement_based_simplification()
-        
+        self.__remove_successor_edges()
         pass
+
+
+    def __remove_successor_edges(self):
+        """removes successor type edges from the graph"""
+        to_be_removed = []
+        for edge in self.graph.edges:
+            if self.graph[edge[0]][edge[1]]["type"] == "successor":
+                # if target node has any incoming or outgoing requirement edge, the current successor edge can be removed
+                edge_can_be_removed = False
+                # check incoming edges
+                for in_edge in self.graph.in_edges(edge[1]):
+                    if self.graph[in_edge[0]][in_edge[1]]["type"] == "requirement":
+                        edge_can_be_removed = True
+                        break
+                # check outgoing edges
+                if not edge_can_be_removed:
+                    for out_edge in self.graph.out_edges(edge[1]):
+                        if self.graph[out_edge[0]][out_edge[1]]["type"] == "requirement":
+                            edge_can_be_removed = True
+                            break
+                # remove edge if possible
+                if edge_can_be_removed:
+                    to_be_removed.append(edge)
+        for edge in to_be_removed:
+            self.graph.remove_edge(edge[0], edge[1])
+
+
+    def __add_requirement_edges(self):
+        """creates requirement type edges from producing to consuming nodes"""
+        # iterate over all nodes in graph
+        for node in self.graph.nodes:
+            # iterate over consumed files
+            for consumed_file in self.graph.nodes[node]["data"].consumed_files:
+                # search for producing nodes by upwards-search through the graph
+                for predecessor, _ in self.graph.in_edges(node):
+                    self.__recursive_add_requirement_edges(predecessor, consumed_file, node, [])
+
+
+    def __recursive_add_requirement_edges(self, root_node, file, target, visited):
+        """recursively checks for nodes producing the specified file and creates requirement edges to the target node."""
+        if file in self.graph.nodes[root_node]["data"].produced_files:
+            # producer has been found
+            self.graph.add_edge(root_node, target, type="requirement")
+            return
+        visited.append(root_node)
+        # traverse upwards
+        # iteratively, if only one predecessor exists, recursively if multiple exist
+        while len(self.graph.in_edges(root_node)) == 1:
+            root_node = list(self.graph.in_edges(root_node))[0][0]
+            if file in self.graph.nodes[root_node]["data"].produced_files:
+                # producer has been found
+                self.graph.add_edge(root_node, target, type="requirement")
+                return
+            visited.append(root_node)
+
+        for predecessor, _ in self.graph.in_edges(root_node):
+            if predecessor in visited:
+                continue
+            self.__recursive_add_requirement_edges(predecessor, file, target, visited)
 
 
     def __requirement_based_simplification(self):

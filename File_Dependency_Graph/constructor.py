@@ -35,6 +35,9 @@ def construct_graph_from_commands(grouped_commands: List[List[Command]]) -> File
                     for flag in cmd.flags:
                         if flag.startswith("-o "):
                             output_file_name = flag.split(" ")[1]
+                    # add output file to produces files of the node
+                    if output_file_name != "":
+                        group_node.produced_files.append(output_file_name)
                     # add / overwrite entries in compiled_files_dict
                     compiled_files_dict[output_file_name] = group_idx
                     # add compilation statements to the graph node
@@ -46,6 +49,10 @@ def construct_graph_from_commands(grouped_commands: List[List[Command]]) -> File
                     for flag in cmd.flags:
                         if flag.startswith("-o "):
                             output_file_name = flag.split(" ")[1]
+                    # add output file to produces files of the node
+                    if output_file_name != "":
+                        group_node.produced_files.append(output_file_name)
+                    # add / overwrite entries in compiled_files_dict
                     compiled_files_dict[output_file_name] = group_idx
                     # add graph node for link statement
                     group_node.commands.append((cmd, GraphCommandType.LINK))
