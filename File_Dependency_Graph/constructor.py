@@ -57,7 +57,7 @@ def construct_graph_from_commands(grouped_commands: List[List[Command]]) -> File
                                 group_node.consumed_files.append(input_file)
                                 producing_node_id = compiled_files_dict[input_file]
                                 # add edges to the graph
-                                cmd_graph.graph.add_edge(producing_node_id, group_idx)
+                                cmd_graph.graph.add_edge(producing_node_id, group_idx, type="successor")
 
             else:
                 # cmd is not a compile statement
@@ -66,7 +66,7 @@ def construct_graph_from_commands(grouped_commands: List[List[Command]]) -> File
         # add node to the graph
         cmd_graph.graph.add_node(group_idx, data=group_node)
         # add edge from previously created node
-        cmd_graph.graph.add_edge(last_node_id, group_idx)
+        cmd_graph.graph.add_edge(last_node_id, group_idx, type="successor")
         # update last_node_id
         last_node_id = group_idx
 

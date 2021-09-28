@@ -44,7 +44,9 @@ class FileDependencyGraph(object):
     def plot_graph(self):
         plt.subplot(121)
         pos = nx.fruchterman_reingold_layout(self.graph)
-        nx.draw(self.graph, pos, with_labels=False, arrows=True, font_weight='bold')
+        edges = self.graph.edges()
+        colors = ["green" if self.graph[u][v]["type"] == "successor" else "red" for u, v in edges] # [self.graph[u][v]['color'] for u, v in edges]
+        nx.draw(self.graph, pos, with_labels=False, arrows=True, font_weight='bold', edge_color=colors)
         labels = {}
         for node in self.graph.nodes:
             labels[node] = str(self.graph.nodes[node]["data"])
@@ -55,11 +57,10 @@ class FileDependencyGraph(object):
     def simplify_graph(self):
         """checks for possible simplifications of the graph"""
         # todo breaks correctness
-        # remove nodes from the graph (might be moved to the end)
+        # remove nodes from the graph
         self.__no_branch_simplification()
 
         # graph optimization to generate better parallelizable makefiles
-        # todo create "successor" edges
         # todo add direct requirement edges (from producer to consumer), find by upwards traversing
         # remove redundant edges
         # remove successor edges, if possible
@@ -96,7 +97,7 @@ class FileDependencyGraph(object):
                         to_be_removed = []
                         for src, dest in self.graph.out_edges(successor_node):
                             # create new edge
-                            self.graph.add_edge(node, dest)
+                            self.graph.add_edge(node, dest, type="successor")
                             # mark old edge for removal
                             to_be_removed.append((src, dest))
                         for edge in to_be_removed:
