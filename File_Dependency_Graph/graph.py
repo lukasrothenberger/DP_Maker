@@ -192,7 +192,6 @@ class FileDependencyGraph(object):
             # write commands to makefile
             for cmd_idx, (cmd, cmd_type) in enumerate(self.graph.nodes[node_id]["data"].commands):
                 if cmd is None:
-                    # todo marker: could be used to identify root
                     continue
                 cmd.prepare_output()
                 if cmd.cmd_type in [CmdType.EXIT_DIR, CmdType.ENTER_DIR]:
@@ -226,3 +225,29 @@ class FileDependencyGraph(object):
                     makefile.write("cd " + last_dir + " && ")
 
                 makefile.write(cmd_str + "\n")
+
+                # add llvm-link instruction to the makefile, if the execution mode is DEP
+                if run_configuration.execution_mode is ExecutionMode.DEP_ANALYSIS:
+                    # if cmd is link type, add llvm-link instruction to the makefile
+                    if cmd_type == GraphCommandType.LINK:
+                        makefile.write("\t")
+                        # add cd instruction at the beginning of the current command if necessary
+                        if cmd_idx > 0:
+                            if not str(self.graph.nodes[node_id]["data"].commands[cmd_idx - 1][0]).endswith("\\"):
+                                makefile.write("cd " + last_dir + " && ")
+                        else:
+                            makefile.write("cd " + last_dir + " && ")
+
+                        # add llvm-link instruction # todo: replace llvm-link with parameter (path to llvm-link)
+                        makefile.write("llvm-link -S -o ")
+                        # write produced file
+                        produced_file = self.graph.nodes[node_id]["data"].produced_files[0]
+                        produced_file = produced_file+"_dp_inst.ll"
+                        makefile.write(produced_file+" ")
+                        # write consumed files
+                        makefile.write(" ".join(self.graph.nodes[node_id]["data"].consumed_files))
+                        makefile.write(";\n")
+
+
+
+
