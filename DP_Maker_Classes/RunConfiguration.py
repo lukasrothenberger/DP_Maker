@@ -21,7 +21,7 @@ class RunConfiguration(object):
 
     def __str__(self):
         return  "########################" + "\n" + \
-                "### RUN COFIGURATION ###" + "\n" + \
+                "### RUN CONFIGURATION ###" + "\n" + \
                 "\ttarget: " + self.target_makefile + "\n" + \
                 "\tcompilers: " + str(self.compilers) + "\n" + \
                 "\texecution mode: " + str(self.execution_mode) + "\n" + \
