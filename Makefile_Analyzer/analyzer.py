@@ -97,11 +97,11 @@ def analyze_makefile(run_configuration: RunConfiguration):
     os.system("cp " + run_configuration.dp_path + "/scripts/dp-fmap " + last_dir + "/dp-fmap")
     os.system("cd " + last_dir + " && ./dp-fmap")
 
-    # construct file dependency graph
+    # construct file dependency graph and write makefile
     cmd_graph: FileDependencyGraph = construct_graph_from_commands(grouped_parsed_commands)
-    cmd_graph.plot_graph()
+    # cmd_graph.plot_graph()
     cmd_graph.simplify_graph()
-    cmd_graph.plot_graph()
+    # cmd_graph.plot_graph()
     cmd_graph.write_makefile(tmp_make_file, run_configuration, last_dir)
 
 
