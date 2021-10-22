@@ -15,6 +15,9 @@ class RunConfiguration(object):
     execution_mode: ExecutionMode
     dp_path: str
     dp_build_path: str
+    clang_bin: str
+    clangxx_bin: str
+    llvm_link_bin: str
 
     def __init__(self):
         pass
@@ -27,4 +30,7 @@ class RunConfiguration(object):
                 "\texecution mode: " + str(self.execution_mode) + "\n" + \
                 "\tdp_path: " + self.dp_path + "\n" + \
                 "\tdp_build_path: " + self.dp_build_path + "\n" + \
+                "\tclang_bin: " + self.clang_bin + "\n" + \
+                "\tclangxx_bin: " + self.clangxx_bin + "\n" + \
+                "\tllvm_link_bin: " + self.llvm_link_bin + "\n" + \
                 "########################" + "\n"

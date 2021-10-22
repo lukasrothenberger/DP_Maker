@@ -1,12 +1,16 @@
 """Discopop Makefile Analyzer and Execution Driver
 
 Usage:
-    Makefile_Analyzer --dp-path <path> --dp-build-path <path --exec-mode <mode> --target-project <path> [--target-makefile <path>] [--compiler <name>]
+    Makefile_Analyzer --dp-path <path> --dp-build-path <path> --exec-mode <mode> --target-project <path> \
+    [--target-makefile <path>] [--compiler <name>] [--clang-bin <path>] [--clang++-bin <path>] [--llvm-link-bin <path>]
 
 Options:
     --exec-mode=<mode>      Specifies the mode of operation. Available values are: [dep, cu_gen, dp_red]
     --dp-path=<path>        Path to DiscoPoP folder
     --dp-build-path=<path>  Path to DiscoPoP build folder
+    --clang-bin=<path>      Path to clang executable. [default: clang]
+    --clang++-bin=<path>    Path to clang++ executable. [default: clang++]
+    --llvm-link-bin=<path>  Path to llvm-link executable. [default: llvm-link]
     --target-makefile=<path>    Path of the target Makefile [default: ./Makefile]
     --target-project=<path>     Root Path of the target Project
     --compiler=<name>       Name of the used compile command (e.g. gcc, clang etc.)
@@ -30,6 +34,9 @@ docopt_schema = Schema({
     '--compiler': Use(str),
     '--dp-path': Use(str),
     '--dp-build-path': Use(str),
+    '--clang-bin': Use(str),
+    '--clang++-bin': Use(str),
+    '--llvm-link-bin': Use(str),
     '--exec-mode': Use(str)
 })
 
@@ -56,6 +63,9 @@ def main():
     compilers = arguments["--compiler"].split(",")
     dp_path = arguments["--dp-path"]
     dp_build_path = arguments["--dp-build-path"]
+    clang_bin = arguments["--clang-bin"]
+    clangxx_bin = arguments["--clang++-bin"]
+    llvm_link_bin = arguments["--llvm-link-bin"]
     execution_mode = arguments["--exec-mode"]
 
     try:
@@ -71,6 +81,9 @@ def main():
     run_configuration.execution_mode = execution_mode
     run_configuration.dp_path = dp_path
     run_configuration.dp_build_path = dp_build_path
+    run_configuration.clang_bin = clang_bin
+    run_configuration.clangxx_bin = clangxx_bin
+    run_configuration.llvm_link_bin = llvm_link_bin
     print(str(run_configuration))
 
     analyze_makefile(run_configuration)

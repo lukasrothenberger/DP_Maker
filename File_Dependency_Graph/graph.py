@@ -239,7 +239,7 @@ class FileDependencyGraph(object):
                             makefile.write("cd " + last_dir + " && ")
 
                         # add llvm-link instruction # todo: replace llvm-link with parameter (path to llvm-link)
-                        makefile.write("llvm-link -S -o ")
+                        makefile.write(run_configuration.llvm_link_bin + " -S -o ")
                         # write produced file
                         produced_file = self.graph.nodes[node_id]["data"].produced_files[0]
                         produced_file = produced_file+"_dp_inst.ll"

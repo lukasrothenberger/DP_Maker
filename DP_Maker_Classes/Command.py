@@ -51,7 +51,7 @@ class Command(object):
             # check if single file is compiled or multiple files are linked
             if "-c" in self.flags:
                 # single file is compiled
-                self.compiler_command = "clang"
+                self.compiler_command = run_configuration.clang_bin
                 # append DiscoPoP compiler flags
                 self.flags.append("-g -O0 -S -emit-llvm -fno-discard-value-names -Xclang -load -Xclang ##DPSHAREDOBJECT## -mllvm -fm-path -mllvm ##DPFILEMAPPING##")
                 # change file type of output file
@@ -76,7 +76,7 @@ class Command(object):
                     self.flags.append("-o " + file_name[:file_name.rfind(".")]+".ll")
             else:
                 # multiple files are linked
-                self.compiler_command = "clang++"
+                self.compiler_command = run_configuration.clangxx_bin
                 self.flags.append("-L"+run_configuration.dp_build_path+"/rtlib -lDiscoPoP_RT -lpthread")
                 for idx, arg in enumerate(self.non_flag_arguments):
                     if arg.endswith(".o"):
