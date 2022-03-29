@@ -1,0 +1,3 @@
+[submodule "examples/lulesh/LULESH"]
+	path = examples/lulesh/LULESH
+	url = https://github.com/LLNL/LULESH.git
