@@ -21,3 +21,4 @@ clean:
 	rm -f *.xml
 	rm -f dp-fmap
 	rm -f *.mk
+	rm -f *.png

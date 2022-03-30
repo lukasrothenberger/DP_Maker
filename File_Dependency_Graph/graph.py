@@ -41,7 +41,7 @@ class FileDependencyGraph(object):
     def __init__(self):
         self.graph = nx.DiGraph()
 
-    def plot_graph(self):
+    def plot_graph(self, *, writeFile=False):
         plt.subplot(121)
         pos = nx.fruchterman_reingold_layout(self.graph)
         edges = self.graph.edges()
@@ -52,6 +52,8 @@ class FileDependencyGraph(object):
             labels[node] = str(self.graph.nodes[node]["data"])
         nx.draw_networkx_labels(self.graph, pos, labels)
         plt.show()
+        if writeFile:
+            plt.savefig("Graph.png", format="PNG")
 
 
     def simplify_graph(self):
