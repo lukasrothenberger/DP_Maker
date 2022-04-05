@@ -86,24 +86,18 @@ def analyze_makefile(run_configuration: RunConfiguration):
     tmp_make_file = open("tmp_makefile.mk", "w+")
     # tmp_make_file.write("all:\n")
 
-    # create filemapping on parent directory of target Makefile
+    # create FileMapping.txt
     tmp_cwd = os.getcwd()
-    os.system("cp "+run_configuration.dp_path+"/scripts/dp-fmap " + run_configuration.target_project_root + "/dp-fmap")
-    os.system("cd " + run_configuration.target_project_root + " && ./dp-fmap")
-    os.system("cd " + tmp_cwd)
-
-    last_dir = os.getcwd()
-    # execute FileMapping
-    os.system("cp " + run_configuration.dp_path + "/scripts/dp-fmap " + last_dir + "/dp-fmap")
-    os.system("cd " + last_dir + " && ./dp-fmap")
+    os.chdir(run_configuration.target_project_root)
+    os.system(run_configuration.dp_path + "/scripts/dp-fmap")
+    os.chdir(tmp_cwd)
 
     # construct file dependency graph and write makefile
     cmd_graph: FileDependencyGraph = construct_graph_from_commands(grouped_parsed_commands)
     # cmd_graph.plot_graph()
     cmd_graph.simplify_graph()
     cmd_graph.plot_graph(writeFile=True)
-    cmd_graph.write_makefile(tmp_make_file, run_configuration, last_dir)
-
+    cmd_graph.write_makefile(tmp_make_file, run_configuration, tmp_cwd)
 
     tmp_make_file.close()
 
