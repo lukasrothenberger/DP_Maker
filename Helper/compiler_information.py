@@ -1,4 +1,5 @@
 import os
+import subprocess
 from typing import List
 
 
@@ -26,8 +27,9 @@ def get_compiler_argument_information(compiler_cmd: str) -> List[CompilerFlagInf
     res_list: List[CompilerFlagInformation] = []
     # get help screen from compile-command
     get_help_command = "LANGUAGE=en " + compiler_cmd + " --help -v"
-    stream = os.popen(get_help_command)
-    for line in stream.readlines():
+    stream = subprocess.Popen(get_help_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+    out,err = stream.communicate()
+    for line in out.splitlines():
         # split at spaces
         split_line = line.split(" ")
         split_line = [e for e in split_line if len(e) > 0]

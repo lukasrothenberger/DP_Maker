@@ -23,8 +23,7 @@ class RunConfiguration(object):
         pass
 
     def __str__(self):
-        return  "########################" + "\n" + \
-                "### RUN CONFIGURATION ###" + "\n" + \
+        return  "### RUN CONFIGURATION ###" + "\n" + \
                 "\ttarget: " + self.target_makefile + "\n" + \
                 "\tcompilers: " + str(self.compilers) + "\n" + \
                 "\texecution mode: " + str(self.execution_mode) + "\n" + \
@@ -33,4 +32,4 @@ class RunConfiguration(object):
                 "\tclang_bin: " + self.clang_bin + "\n" + \
                 "\tclangxx_bin: " + self.clangxx_bin + "\n" + \
                 "\tllvm_link_bin: " + self.llvm_link_bin + "\n" + \
-                "########################" + "\n"
+                "########################"

@@ -19,7 +19,7 @@ Options:
     -h --help               Show this screen
 """
 import os
-import sys
+import logging
 
 from docopt import docopt  # type:ignore
 from schema import SchemaError, Schema, Use  # type:ignore
@@ -52,6 +52,17 @@ def get_path(base_path: str, file_name: str) -> str:
 
 
 def main():
+    # configure logging
+    logger = logging.getLogger("DP_Maker")
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.DEBUG)
+    console_handler.setFormatter(logging.Formatter("[%(levelname)s/%(module)s/%(lineno)s]::%(message)s"))
+    logger.addHandler(console_handler)
+    logger.setLevel(logging.DEBUG)
+
+    logger.info("STARTED Makefile Analyzer")
+
+    # read arguments and create RunConfiguration
     arguments = docopt(__doc__)
     try:
         arguments = docopt_schema.validate(arguments)
@@ -84,9 +95,13 @@ def main():
     run_configuration.clang_bin = clang_bin
     run_configuration.clangxx_bin = clangxx_bin
     run_configuration.llvm_link_bin = llvm_link_bin
-    print(str(run_configuration))
 
+    logger.info("\n%s", run_configuration)
+
+    # run the analyzer with the provided configuration
     analyze_makefile(run_configuration)
+
+    logger.info("STOPPED Makefile Analyzer")
 
 
 if __name__ == "__main__":

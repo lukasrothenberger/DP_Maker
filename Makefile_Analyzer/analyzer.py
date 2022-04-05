@@ -1,7 +1,6 @@
-import sys
 from typing import Dict, List
 import os
-import subprocess
+import logging
 from os.path import dirname
 from .parser import parse_command
 from Helper.compiler_information import CompilerFlagInformation, get_compiler_argument_information
@@ -10,6 +9,8 @@ from DP_Maker_Classes.Command import Command, CmdType
 from DP_Maker_Classes.RunConfiguration import RunConfiguration, ExecutionMode
 from File_Dependency_Graph.constructor import construct_graph_from_commands
 from File_Dependency_Graph.graph import FileDependencyGraph
+
+logger = logging.getLogger("DP_Maker")
 
 
 def analyze_makefile(run_configuration: RunConfiguration):
@@ -66,22 +67,14 @@ def analyze_makefile(run_configuration: RunConfiguration):
             parsed_cmd_group.append(parse_command(raw_cmd, run_configuration.compilers, compiler_flag_information_dict))
         grouped_parsed_commands.append(parsed_cmd_group)
 
-    print()
-    print("#######################")
-    print("### PARSED COMMANDS ###")
-    print("#######################")
-    print()
+    logger.info("########## PARSED COMMANDS ###")
 
     # instrument commands
     for group in grouped_parsed_commands:
         for cmd in group:
             cmd.add_discopop_instrumentation(run_configuration)
 
-    print()
-    print("#############################")
-    print("### INSTRUMENTED COMMANDS ###")
-    print("#############################")
-    print()
+    logger.info("########## INSTRUMENTED COMMANDS ###")
 
     tmp_make_file = open("tmp_makefile.mk", "w+")
     # tmp_make_file.write("all:\n")
@@ -94,9 +87,9 @@ def analyze_makefile(run_configuration: RunConfiguration):
 
     # construct file dependency graph and write makefile
     cmd_graph: FileDependencyGraph = construct_graph_from_commands(grouped_parsed_commands)
-    # cmd_graph.plot_graph()
+    # cmd_graph.plot_graph(writeFile=true)
     cmd_graph.simplify_graph()
-    cmd_graph.plot_graph(writeFile=True)
+    #cmd_graph.plot_graph(writeFile=true)
     cmd_graph.write_makefile(tmp_make_file, run_configuration, tmp_cwd)
 
     tmp_make_file.close()

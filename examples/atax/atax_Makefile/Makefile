@@ -1,4 +1,5 @@
 test: atax.o polybench.o
+	echo "building atax"
 	gcc atax.o polybench.o -o out
 	
 atax.o: useless.o

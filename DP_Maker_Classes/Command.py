@@ -1,5 +1,8 @@
+import logging
 from typing import List, Optional
 from enum import IntEnum
+
+logger = logging.getLogger("DP_Maker")
 
 
 class CmdType(IntEnum):
@@ -40,6 +43,7 @@ class Command(object):
 
     def add_discopop_instrumentation(self, run_configuration):
         if self.cmd_type in [CmdType.ENTER_DIR, CmdType.EXIT_DIR, CmdType.UNKNOWN]:
+            logger.debug(f"skipping {str(self.cmd_type)}: {self}")
             return
         if self.cmd_type == CmdType.COMPILE:
             # remove -fopenmp if it exists
@@ -51,6 +55,7 @@ class Command(object):
             # check if single file is compiled or multiple files are linked
             if "-c" in self.flags:
                 # single file is compiled
+                logger.debug(f"adding dp flags to COMPILE command: {self}")
                 self.compiler_command = run_configuration.clang_bin
                 # append DiscoPoP compiler flags
                 self.flags.append("-g -O0 -S -emit-llvm -fno-discard-value-names -Xclang -load -Xclang ##DPSHAREDOBJECT## -mllvm -fm-path -mllvm ##DPFILEMAPPING##")
@@ -76,6 +81,7 @@ class Command(object):
                     self.flags.append("-o " + file_name[:file_name.rfind(".")]+".ll")
             else:
                 # multiple files are linked
+                logger.debug(f"adding dp flags to LINK command: {self}")
                 self.compiler_command = run_configuration.clangxx_bin
                 self.flags.append("-L"+run_configuration.dp_build_path+"/rtlib -lDiscoPoP_RT -lpthread")
                 for idx, arg in enumerate(self.non_flag_arguments):
