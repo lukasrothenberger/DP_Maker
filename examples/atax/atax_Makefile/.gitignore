@@ -1,12 +1,1 @@
-FileMapping.txt
-*.ll
-Data.xml
-DP_CUIDCounter.txt
-Graph.png
-loop_counter_output.txt
-OriginalVariables.txt
-out
-out_dep.txt
-pop.txt
-reduction.txt
-tmp_makefile.mk
+discopop
