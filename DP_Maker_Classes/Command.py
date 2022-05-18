@@ -46,11 +46,14 @@ class Command(object):
             logger.debug(f"skipping {str(self.cmd_type)}: {self}")
             return
         if self.cmd_type == CmdType.COMPILE:
-            # remove -fopenmp if it exists
+            # remove -fopenmp and other unwanted flags if they exist
+            tmp_flags: List[str] = []
             for idx, flag in enumerate(self.flags):
-                if flag == "-fopenmp":
-                    self.flags.pop(idx)
-                    break
+                if flag == "-fopenmp" or flag == "-O3" or flag == "-I." or flag == "-Wall" or flag == "-g":
+                    continue
+                else:
+                    tmp_flags.append(flag)
+            self.flags = tmp_flags
 
             # check if single file is compiled or multiple files are linked
             if "-c" in self.flags:
