@@ -1,0 +1,8 @@
+1	/home/goerlibe/discopop/DP_Maker/examples/starbench_tinyjpeg/tinyjpeg/conv_yuvbgr.c
+2	/home/goerlibe/discopop/DP_Maker/examples/starbench_tinyjpeg/tinyjpeg/huffman.c
+3	/home/goerlibe/discopop/DP_Maker/examples/starbench_tinyjpeg/tinyjpeg/jidctflt.c
+4	/home/goerlibe/discopop/DP_Maker/examples/starbench_tinyjpeg/tinyjpeg/loadjpeg.c
+5	/home/goerlibe/discopop/DP_Maker/examples/starbench_tinyjpeg/tinyjpeg/tinyjpeg-internal.h
+6	/home/goerlibe/discopop/DP_Maker/examples/starbench_tinyjpeg/tinyjpeg/tinyjpeg-parse.c
+7	/home/goerlibe/discopop/DP_Maker/examples/starbench_tinyjpeg/tinyjpeg/tinyjpeg.c
+8	/home/goerlibe/discopop/DP_Maker/examples/starbench_tinyjpeg/tinyjpeg/tinyjpeg.h

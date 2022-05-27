@@ -1,0 +1,752 @@
+START 4:214
+4:177 BGN loop 718
+4:181 END loop
+2:123 BGN loop 0
+2:123 END loop
+2:196 BGN loop 0
+2:196 END loop
+6:528 BGN loop 437
+6:534 END loop
+1:55 BGN loop 8
+1:100 END loop
+2:126 BGN loop 4
+2:133 END loop
+6:139 BGN loop 16
+6:144 END loop
+2:164 BGN loop 0
+2:164 END loop
+6:249 BGN loop 8
+6:255 END loop
+2:119 BGN loop 1
+2:135 END loop
+6:250 BGN loop 8
+6:253 END loop
+6:453 BGN loop 0
+6:456 END loop
+6:385 BGN loop 16
+6:390 END loop
+6:267 BGN loop 1
+6:280 END loop
+6:141 BGN loop 5
+6:143 END loop
+6:534 BGN loop 0
+6:537 END loop
+2:108 BGN loop 0
+2:108 END loop
+3:51 BGN loop 8
+3:141 END loop
+6:379 BGN loop 1
+6:407 END loop
+2:201 BGN loop 64
+2:203 END loop
+6:446 BGN loop 10
+6:491 END loop
+4:244 BGN loop 10
+4:247 END loop
+6:159 BGN loop 7
+6:164 END loop
+7:73 BGN loop 4
+7:87 END loop
+4:228 BGN loop 1
+4:235 END loop
+6:526 BGN loop 59
+6:545 END loop
+6:172 BGN loop 87
+6:205 END loop
+6:147 BGN loop 7
+6:153 END loop
+4:170 BGN loop 3
+7:69 END loop
+6:157 BGN loop 12
+6:171 END loop
+6:307 BGN loop 3
+6:323 END loop
+6:189 BGN loop 28
+6:192 END loop
+6:347 BGN loop 3
+6:363 END loop
+2:209 BGN loop 4
+2:215 END loop
+2:173 BGN loop 7
+2:201 END loop
+6:197 BGN loop 53
+6:199 END loop
+3:143 BGN loop 8
+3:196 END loop
+1:54 BGN loop 8
+1:104 END loop
+4:248 BGN func 4:204
+7:107 BGN func 1:118
+7:106 BGN func 3:221
+7:105 BGN func 2:238
+2:175 BGN func 2:101
+1:98 BGN func 1:18
+4:172 BGN func 7:52
+4:171 BGN func 6:558
+3:203 BGN func 3:36
+6:560 BGN func 6:513
+7:97 BGN func 2:225
+3:202 BGN func 3:36
+2:219 BGN func 2:143
+6:291 BGN func 6:103
+4:163 BGN func 7:89
+7:99 BGN func 1:106
+6:470 BGN func 6:334
+4:133 BGN func 4:52
+4:164 BGN func 4:61
+6:398 BGN func 6:127
+1:72 BGN func 1:18
+4:141 BGN func 6:602
+6:462 BGN func 6:284
+2:210 BGN func 2:143
+6:400 BGN func 6:127
+1:74 BGN func 1:18
+6:475 BGN func 6:368
+4:184 BGN func 6:605
+3:185 BGN func 3:17
+4:245 BGN func 4:112
+1:73 BGN func 1:18
+6:595 BGN func 6:437
+4:186 BGN func 4:78
+3:187 BGN func 3:17
+4:145 BGN func 6:583
+4:185 BGN func 7:104
+3:186 BGN func 3:17
+1:90 BGN func 1:18
+6:466 BGN func 6:257
+2:157 BGN func 2:101
+3:205 BGN func 3:36
+7:74 BGN func 2:206
+1:80 BGN func 1:18
+6:277 BGN func 6:231
+7:98 BGN func 3:209
+6:480 BGN func 6:411
+3:190 BGN func 3:17
+3:200 BGN func 3:36
+3:183 BGN func 3:17
+1:88 BGN func 1:18
+6:562 BGN func 6:519
+3:184 BGN func 3:17
+2:215 BGN func 2:143
+1:89 BGN func 1:18
+3:188 BGN func 3:17
+3:189 BGN func 3:17
+3:201 BGN func 3:36
+7:75 BGN func 3:198
+1:81 BGN func 1:18
+3:206 BGN func 3:36
+7:76 BGN func 1:40
+1:82 BGN func 1:18
+1:96 BGN func 1:18
+1:97 BGN func 1:18
+4:176 BGN func 4:87
+4:178 BGN func 4:102
+1:26 END func
+1:104 END func
+1:115 END func
+1:120 END func
+2:135 END func
+2:204 END func
+2:223 END func
+2:235 END func
+2:240 END func
+3:31 END func
+3:196 END func
+3:207 END func
+3:218 END func
+3:223 END func
+4:58 END func
+4:75 END func
+4:81 END func
+4:100 END func
+4:107 END func
+4:188 END func
+4:208 END func
+6:117 END func
+6:205 END func
+6:255 END func
+6:282 END func
+6:332 END func
+6:366 END func
+6:409 END func
+6:435 END func
+6:511 END func
+6:517 END func
+6:552 END func
+6:575 END func
+6:598 END func
+6:602 END func
+6:608 END func
+7:87 END func
+7:101 END func
+7:109 END func
+4:138 NOM  RAW 4:130|fp
+6:491 NOM  RAW 6:477|dht_marker_found
+1:115 NOM  RAW 1:107|cc
+1:52 NOM  INIT *|offset_to_next_row RAW 1:108|cc.addr RAW 1:40|cc.addr RAW 1:72|cc.addr RAW 1:80|cc.addr RAW 1:88|cc.addr RAW 1:96|cc.addr WAR 1:102|offset_to_next_row WAR 2:108|offset_to_next_row WAR 2:164|offset_to_next_row WAR 2:196|offset_to_next_row WAR 6:528|offset_to_next_row WAR 6:537|offset_to_next_row
+6:198 NOM  RAW 6:196|slowtable65 RAW 6:198|slowtable65 WAR 6:198|slowtable65
+4:131 NOM  RAW 4:130|fp
+4:244 NOM  INIT *|i RAW 1:72|i RAW 4:244|i WAR 4:244|i
+6:477 NOM  WAW 6:442|dht_marker_found WAW 6:477|dht_marker_found
+6:510 NOM  INIT *|retval WAW 1:72|retval
+7:79 NOM  RAW 1:72|mcus_posx RAW 1:80|mcus_posx RAW 1:88|mcus_posx RAW 1:96|mcus_posx RAW 7:70|mcus_posx RAW 7:79|mcus_posx WAR 7:79|mcus_posx
+7:82 NOM  WAR 7:80|mcus_posx
+6:539 NOM  WAR 6:526|rst_marker_found WAR 6:528|rst_marker_found
+3:135 NOM  RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:79|wsptr WAR 3:135|wsptr
+4:87 NOM  WAR 7:73|wc.addr
+7:61 NOM  INIT *|mcus_posx WAR 6:528|mcus_posx WAW 7:82|mcus_posx
+4:103 NOM  RAW 1:89|wc.addr RAW 1:97|wc.addr RAW 4:102|wc.addr WAR 4:106|bytes_per_mcu_line WAW 1:74|bytes_per_mcu_line
+4:178 NOM  RAW 1:72|wc
+7:54 NOM  RAW 1:72|jdc.addr RAW 1:73|jdc.addr RAW 1:80|jdc.addr RAW 1:81|jdc.addr RAW 1:88|jdc.addr RAW 1:89|jdc.addr RAW 1:96|jdc.addr RAW 1:97|jdc.addr RAW 7:52|jdc.addr RAW 7:98|jdc.addr WAR 6:528|ic WAR 6:597|ic WAR 7:75|ic
+6:187 NOM  INIT *|repeat RAW 6:176|code_size WAW 1:72|repeat WAW 6:189|repeat
+6:332 NOM  RAW 6:331|retval
+4:99 NOM  RAW 1:90|wc.addr RAW 1:98|wc.addr RAW 4:87|wc.addr
+1:84 NOM  RAW 1:72|Y RAW 1:73|Y RAW 1:74|Y RAW 1:76|Y RAW 1:80|Y RAW 1:81|Y RAW 1:82|Y RAW 1:88|Y RAW 1:89|Y RAW 1:90|Y RAW 1:96|Y RAW 1:97|Y RAW 1:98|Y RAW 3:183|Y RAW 3:186|Y RAW 3:187|Y RAW 3:189|Y WAR 1:79|y WAW 1:82|y
+6:159 NOM  RAW 6:142|hz RAW 6:144|hz RAW 6:155|hz RAW 6:156|nbits RAW 6:162|hz RAW 6:165|nbits
+6:374 NOM  INIT *|length RAW 1:80|stream.addr RAW 1:82|stream.addr RAW 1:88|stream.addr RAW 1:90|stream.addr RAW 1:96|stream.addr RAW 1:98|stream.addr RAW 6:368|stream.addr WAR 2:202|length WAR 6:379|length
+4:57 NOM  RAW 4:52|fp.addr
+7:89 NOM  WAR 4:57|jpc.addr WAR 6:595|rgb_data.addr
+4:94 NOM  RAW 1:90|wc.addr RAW 1:98|wc.addr RAW 4:87|wc.addr WAW 1:80|targaheader
+6:103 NOM  INIT *|stream.addr WAR 3:156|stream.addr
+2:101 NOM  WAR 2:113|huffman_table.addr WAR 2:114|hdata.addr WAR 2:124|huffman_table.addr WAR 2:128|hdata.addr WAR 2:164|hdata.addr WAR 2:196|hdata.addr WAR 2:196|huffman_table.addr WAR 6:175|hdata.addr WAR 6:175|huffman_table.addr WAR 6:528|hdata.addr WAR 6:528|huffman_table.addr WAW 1:73|hdata.addr WAW 1:74|huffman_table.addr WAW 1:81|hdata.addr WAW 1:82|huffman_table.addr WAW 1:89|hdata.addr WAW 1:90|huffman_table.addr WAW 1:97|hdata.addr WAW 1:98|huffman_table.addr
+3:104 NOM  RAW 1:72|quantptr RAW 1:73|quantptr RAW 1:74|quantptr RAW 1:80|quantptr RAW 1:81|quantptr RAW 1:82|quantptr RAW 1:88|quantptr RAW 1:89|quantptr RAW 1:90|quantptr RAW 1:96|quantptr RAW 1:97|quantptr RAW 1:98|quantptr RAW 2:202|inptr RAW 3:133|inptr RAW 3:134|quantptr RAW 3:43|inptr RAW 3:49|quantptr RAW 3:77|inptr RAW 3:78|quantptr WAR 2:202|tmp5 WAR 3:129|tmp5 WAR 3:188|tmp5
+3:193 NOM  RAW 3:141|wsptr RAW 3:193|wsptr WAR 3:193|wsptr
+6:540 NOM  RAW 6:537|marker
+6:199 NOM  RAW 6:175|code RAW 6:196|slowtable65 RAW 6:198|slowtable65 WAR 6:197|slowtable65
+2:129 NOM  RAW 1:72|slowtable RAW 1:73|slowtable RAW 1:74|slowtable RAW 1:80|slowtable RAW 1:81|slowtable RAW 1:82|slowtable RAW 1:88|slowtable RAW 1:89|slowtable RAW 1:90|slowtable RAW 1:96|slowtable RAW 1:97|slowtable RAW 1:98|slowtable RAW 2:124|slowtable RAW 2:131|slowtable WAR 2:108|retval WAR 2:135|retval
+7:105 NOM  RAW 1:73|jdc.addr RAW 1:90|jdc.addr RAW 7:104|jdc.addr
+3:210 NOM  WAR 2:235|ic
+6:148 NOM  INIT *|table.addr RAW 6:127|table.addr RAW 6:147|i WAW 1:73|table.addr WAW 1:80|table.addr WAW 1:82|table.addr WAW 1:88|table.addr WAW 1:89|table.addr WAW 1:90|table.addr WAW 1:96|table.addr WAW 1:97|table.addr WAW 1:98|table.addr
+3:117 NOM  RAW 3:111|z12 RAW 3:116|z5 WAR 3:97|tmp10
+6:249 NOM  INIT *|i RAW 6:249|i WAR 3:143|i WAR 6:249|i
+6:110 NOM  INIT *|nr_components RAW 1:74|stream.addr RAW 1:90|stream.addr RAW 6:103|stream.addr WAR 3:166|nr_components
+6:282 NOM  RAW 6:281|retval
+6:448 NOM  RAW 1:72|stream.addr RAW 1:88|stream.addr RAW 1:90|stream.addr RAW 1:96|stream.addr RAW 1:98|stream.addr RAW 6:437|stream.addr RAW 6:488|stream.addr WAR 6:448|stream.addr
+3:178 NOM  INIT *|tmp5 RAW 3:171|tmp11 RAW 3:177|tmp6 WAR 2:202|tmp5 WAR 3:129|tmp5 WAR 3:188|tmp5
+6:437 NOM  INIT *|jpc.addr INIT *|stream.addr WAW 1:72|jpc.addr WAW 1:81|stream.addr
+3:94 NOM  RAW 3:86|tmp1 RAW 3:88|tmp3 RAW 3:93|tmp13 WAR 2:108|tmp12 WAR 2:196|tmp12 WAR 3:120|tmp12 WAR 3:177|tmp12 WAW 1:73|tmp12 WAW 1:81|tmp12 WAW 1:89|tmp12 WAW 1:97|tmp12
+6:498 NOM  RAW 6:318|jpc.addr RAW 6:437|jpc.addr
+6:299 NOM  RAW 6:295|nr_components
+6:197 NOM  RAW 6:148|slowtable65 RAW 6:196|slowtable65 RAW 6:198|slowtable65 RAW 6:199|slowtable65 RAW 6:201|slowtable65
+4:79 NOM  RAW 1:90|wc.addr RAW 1:98|wc.addr RAW 4:78|wc.addr
+2:185 NOM  RAW 2:179|count_0
+4:116 NOM  INIT *|jdc WAR 4:185|jdc
+4:134 NOM  INIT *|buf RAW 4:133|length_of_file WAR 4:181|buf
+7:70 NOM  RAW 6:565|jtask.addr RAW 7:52|jtask.addr WAW 7:61|mcus_posx
+1:47 NOM  INIT *|p RAW 1:40|cc.addr RAW 7:69|cc.addr RAW 7:78|cc.addr WAR 2:108|p WAR 2:196|p WAR 6:528|p WAW 1:101|p
+1:92 NOM  RAW 1:72|Y RAW 1:73|Y RAW 1:74|Y RAW 1:76|Y RAW 1:80|Y RAW 1:81|Y RAW 1:82|Y RAW 1:88|Y RAW 1:89|Y RAW 1:90|Y RAW 1:96|Y RAW 1:97|Y RAW 1:98|Y RAW 3:184|Y RAW 3:185|Y RAW 3:188|Y RAW 3:190|Y WAR 1:87|y WAW 1:90|y
+6:549 NOM  RAW 6:519|jpc.addr RAW 6:548|jpc.addr WAR 6:549|jpc.addr
+6:384 NOM  WAR 6:307|count WAR 6:405|count
+4:151 NOM  INIT *|mcus_in_height RAW 4:141|jpc RAW 6:326|jpc WAR 4:177|mcus_in_height
+3:17 NOM  INIT *|shift.addr INIT *|x.addr WAR 2:108|shift.addr WAR 2:108|x.addr WAR 2:164|shift.addr WAR 2:196|shift.addr WAR 2:196|x.addr WAR 3:21|shift.addr WAR 3:23|shift.addr WAR 3:25|x.addr WAR 3:27|x.addr WAR 3:30|x.addr WAR 6:528|shift.addr WAR 6:528|x.addr WAW 1:72|x.addr WAW 1:74|shift.addr WAW 1:80|x.addr WAW 1:82|shift.addr WAW 1:88|x.addr WAW 1:90|shift.addr WAW 1:96|x.addr WAW 1:98|shift.addr
+3:166 NOM  INIT *|z10 RAW 3:124|wsptr RAW 3:125|wsptr RAW 3:126|wsptr RAW 3:127|wsptr RAW 3:128|wsptr RAW 3:129|wsptr RAW 3:130|wsptr RAW 3:131|wsptr RAW 3:141|wsptr RAW 3:193|wsptr RAW 3:68|wsptr RAW 3:69|wsptr RAW 3:70|wsptr RAW 3:71|wsptr RAW 3:72|wsptr RAW 3:73|wsptr RAW 3:74|wsptr RAW 3:75|wsptr WAR 2:108|z10 WAR 3:118|z10 WAR 3:175|z10 WAR 6:528|z10 WAW 1:73|z10 WAW 1:81|z10 WAW 1:89|z10 WAW 1:97|z10
+6:521 NOM  INIT *|rst_marker_found WAR 2:108|rst_marker_found WAR 6:526|rst_marker_found WAW 1:72|rst_marker_found WAW 1:80|rst_marker_found WAW 1:88|rst_marker_found WAW 1:96|rst_marker_found
+6:592 NOM  INIT *|jpc.addr RAW 6:583|jpc.addr RAW 6:583|size.addr WAR 6:571|jpc.addr WAW 1:90|jpc.addr
+6:317 NOM  INIT *|c RAW 6:309|sampling_factor RAW 6:311|c WAW 1:74|c WAW 1:81|c WAW 1:88|c WAW 1:90|c WAW 1:96|c WAW 1:97|c
+2:128 NOM  RAW 2:101|hdata.addr RAW 2:108|hdata.addr RAW 2:114|hdata.addr RAW 2:121|nbits RAW 2:123|hdata.addr RAW 2:128|hdata.addr RAW 2:164|hdata.addr RAW 2:196|hdata.addr WAR 2:128|hdata.addr
+3:184 NOM  INIT *|outptr RAW 3:158|tmp0 RAW 3:170|tmp7 RAW 3:194|outptr RAW 3:44|outptr WAR 1:61|outptr WAR 1:62|outptr WAR 1:76|outptr WAR 1:92|outptr WAR 2:108|outptr WAR 2:123|outptr WAR 2:164|outptr WAR 2:196|outptr WAR 6:528|outptr WAR 6:537|outptr WAW 1:72|outptr WAW 1:73|outptr WAW 1:74|outptr WAW 1:80|outptr WAW 1:81|outptr WAW 1:82|outptr WAW 1:88|outptr WAW 1:89|outptr WAW 1:90|outptr WAW 1:96|outptr WAW 1:97|outptr WAW 1:98|outptr
+4:207 NOM  RAW 1:81|finish.addr RAW 4:204|start.addr RAW 4:206|msec WAR 4:207|msec
+2:108 NOM  INIT *|c RAW 1:101|hdata.addr RAW 1:102|hdata.addr RAW 1:18|hdata.addr RAW 1:25|hdata.addr RAW 1:40|hdata.addr RAW 1:52|hdata.addr RAW 1:54|hdata.addr RAW 1:55|hdata.addr RAW 1:61|hdata.addr RAW 1:62|hdata.addr RAW 1:63|hdata.addr RAW 1:64|hdata.addr RAW 1:65|hdata.addr RAW 1:72|hdata.addr RAW 1:73|hdata.addr RAW 1:74|hdata.addr RAW 1:80|hdata.addr RAW 1:81|hdata.addr RAW 1:82|hdata.addr RAW 1:88|hdata.addr RAW 1:89|hdata.addr RAW 1:90|hdata.addr RAW 1:92|hdata.addr RAW 1:93|hdata.addr RAW 1:94|hdata.addr RAW 1:95|hdata.addr RAW 1:96|hdata.addr RAW 1:97|hdata.addr RAW 1:98|hdata.addr RAW 2:101|hdata.addr RAW 2:108|c RAW 2:108|hdata.addr RAW 2:110|hdata.addr RAW 2:113|hdata.addr RAW 2:114|hdata.addr RAW 2:115|hdata.addr RAW 2:119|hdata.addr RAW 2:121|hdata.addr RAW 2:123|hdata.addr RAW 2:124|hdata.addr RAW 2:128|hdata.addr RAW 2:131|hdata.addr RAW 2:143|hdata.addr RAW 2:150|hdata.addr RAW 2:157|hdata.addr RAW 2:162|hdata.addr RAW 2:164|hdata.addr RAW 2:165|hdata.addr RAW 2:166|hdata.addr RAW 2:168|hdata.addr RAW 2:172|hdata.addr RAW 2:175|hdata.addr RAW 2:178|hdata.addr RAW 2:179|hdata.addr RAW 2:196|hdata.addr RAW 2:197|hdata.addr RAW 2:201|hdata.addr RAW 2:202|hdata.addr RAW 2:203|hdata.addr RAW 2:206|hdata.addr RAW 2:209|hdata.addr RAW 2:222|hdata.addr RAW 3:124|hdata.addr RAW 3:125|hdata.addr RAW 3:126|hdata.addr RAW 3:127|hdata.addr RAW 3:128|hdata.addr RAW 3:129|hdata.addr RAW 3:130|hdata.addr RAW 3:131|hdata.addr RAW 3:143|hdata.addr RAW 3:155|hdata.addr RAW 3:158|hdata.addr RAW 3:159|hdata.addr RAW 3:160|hdata.addr RAW 3:161|hdata.addr RAW 3:165|hdata.addr RAW 3:166|hdata.addr RAW 3:167|hdata.addr RAW 3:168|hdata.addr RAW 3:170|hdata.addr RAW 3:171|hdata.addr RAW 3:173|hdata.addr RAW 3:174|hdata.addr RAW 3:175|hdata.addr RAW 3:177|hdata.addr RAW 3:178|hdata.addr RAW 3:179|hdata.addr RAW 3:17|hdata.addr RAW 3:183|hdata.addr RAW 3:184|hdata.addr RAW 3:185|hdata.addr RAW 3:186|hdata.addr RAW 3:187|hdata.addr RAW 3:188|hdata.addr RAW 3:189|hdata.addr RAW 3:190|hdata.addr RAW 3:193|hdata.addr RAW 3:194|hdata.addr RAW 3:24|hdata.addr RAW 3:30|hdata.addr RAW 3:36|hdata.addr RAW 3:66|hdata.addr RAW 3:68|hdata.addr RAW 3:69|hdata.addr RAW 3:70|hdata.addr RAW 3:71|hdata.addr RAW 3:72|hdata.addr RAW 3:73|hdata.addr RAW 3:74|hdata.addr RAW 3:75|hdata.addr RAW 3:77|hdata.addr RAW 3:78|hdata.addr RAW 4:170|hdata.addr RAW 6:513|hdata.addr RAW 6:515|hdata.addr RAW 6:516|hdata.addr RAW 6:519|hdata.addr RAW 6:537|hdata.addr RAW 6:539|hdata.addr RAW 6:547|hdata.addr RAW 6:549|hdata.addr RAW 6:551|hdata.addr RAW 6:558|hdata.addr RAW 6:564|hdata.addr RAW 6:565|hdata.addr RAW 6:566|hdata.addr RAW 6:568|hdata.addr RAW 6:569|hdata.addr RAW 6:570|hdata.addr RAW 6:571|hdata.addr RAW 6:573|hdata.addr RAW 6:574|hdata.addr RAW 7:52|hdata.addr RAW 7:53|hdata.addr RAW 7:54|hdata.addr RAW 7:55|hdata.addr RAW 7:57|hdata.addr RAW 7:58|hdata.addr RAW 7:63|hdata.addr RAW 7:64|hdata.addr RAW 7:66|hdata.addr RAW 7:67|hdata.addr RAW 7:71|hdata.addr RAW 7:73|hdata.addr RAW 7:78|hdata.addr RAW 7:79|hdata.addr WAR 2:108|c WAR 2:108|hcode WAR 2:108|hdata.addr WAR 2:110|hcode WAR 2:127|hcode WAR 2:196|c WAR 6:175|hcode WAR 6:528|c WAR 6:528|hcode WAW 1:72|hcode WAW 1:73|c WAW 1:80|hcode WAW 1:81|c WAW 1:88|hcode WAW 1:89|c WAW 1:96|hcode WAW 1:97|c
+2:121 NOM  RAW 2:119|extra_nbits WAR 2:108|nbits WAR 2:123|nbits WAR 2:128|nbits WAR 2:196|nbits WAR 6:528|nbits WAW 1:73|nbits WAW 1:81|nbits WAW 1:89|nbits WAW 1:97|nbits
+3:175 NOM  RAW 3:166|z10 RAW 3:173|z5 WAR 3:161|tmp12
+2:126 NOM  RAW 1:72|slowtable RAW 1:73|slowtable RAW 1:74|slowtable RAW 1:80|slowtable RAW 1:81|slowtable RAW 1:82|slowtable RAW 1:88|slowtable RAW 1:89|slowtable RAW 1:90|slowtable RAW 1:96|slowtable RAW 1:97|slowtable RAW 1:98|slowtable RAW 2:124|slowtable RAW 2:131|slowtable
+3:90 NOM  RAW 3:85|tmp0 RAW 3:87|tmp2 WAR 2:202|tmp10 WAR 3:122|tmp10 WAR 3:179|tmp10
+6:108 NOM  INIT *|height RAW 1:81|stream.addr RAW 1:82|stream.addr RAW 1:97|stream.addr RAW 1:98|stream.addr RAW 6:103|stream.addr WAR 3:153|height
+6:504 NOM  RAW 6:318|jpc.addr RAW 6:437|jpc.addr
+1:81 NOM  INIT *|p RAW 1:78|g RAW 1:80|p WAR 1:26|p WAR 1:51|p WAR 1:55|p WAR 1:61|p WAR 1:62|p WAR 1:65|p WAR 1:67|p WAR 1:76|p WAR 1:78|p WAR 1:81|p WAR 1:84|p WAR 1:92|p WAR 2:108|p WAR 2:110|p WAR 2:113|p WAR 2:114|p WAR 2:115|p WAR 2:123|p WAR 2:126|p WAR 2:127|p WAR 2:128|p WAR 2:129|p WAR 2:135|p WAR 2:157|p WAR 2:164|p WAR 2:168|p WAR 2:175|p WAR 2:181|p WAR 2:196|p WAR 2:201|p WAR 2:202|p WAR 2:223|p WAR 3:103|p WAR 3:104|p WAR 3:105|p WAR 3:106|p WAR 3:143|p WAR 3:153|p WAR 3:156|p WAR 3:166|p WAR 3:168|p WAR 3:171|p WAR 3:175|p WAR 3:177|p WAR 3:184|p WAR 3:186|p WAR 3:190|p WAR 3:206|p WAR 3:31|p WAR 3:44|p WAR 3:61|p WAR 3:62|p WAR 3:63|p WAR 3:64|p WAR 3:66|p WAR 3:85|p WAR 3:86|p WAR 3:87|p WAR 3:88|p WAR 4:170|p WAR 4:171|p WAR 4:67|p WAR 6:174|p WAR 6:176|p WAR 6:197|p WAR 6:251|p WAR 6:264|p WAR 6:294|p WAR 6:309|p WAR 6:348|p WAR 6:355|p WAR 6:380|p WAR 6:386|p WAR 6:456|p WAR 6:457|p WAR 6:501|p WAR 6:504|p WAR 6:528|p WAR 6:537|p WAR 6:549|p WAR 6:552|p WAR 6:566|p WAR 6:568|p WAR 6:569|p WAR 6:570|p WAR 6:573|p WAR 6:574|p WAR 7:105|p WAR 7:106|p WAR 7:53|p WAR 7:54|p WAR 7:63|p WAR 7:69|p WAR 7:73|p WAR 7:74|p WAR 7:76|p WAR 7:80|p WAR 7:83|p WAW 1:109|p WAW 1:62|p WAW 1:73|p WAW 1:81|p WAW 1:89|p WAW 1:97|p WAW 2:114|p WAW 2:166|p WAW 2:231|p WAW 2:232|p WAW 2:233|p WAW 3:183|p WAW 3:184|p WAW 3:185|p WAW 3:186|p WAW 3:187|p WAW 3:188|p WAW 3:189|p WAW 3:190|p WAW 3:216|p WAW 3:77|p WAW 4:66|p WAW 4:72|p WAW 6:148|p WAW 6:180|p WAW 6:190|p WAW 6:199|p WAW 6:200|p WAW 6:201|p WAW 6:251|p WAW 6:319|p WAW 6:360|p WAW 6:361|p WAW 6:549|p WAW 6:564|p WAW 7:95|p
+6:516 NOM  INIT *|jpc.addr RAW 6:513|jpc.addr WAR 2:108|jpc.addr WAR 2:196|jpc.addr WAR 6:574|jpc.addr WAW 1:73|jpc.addr WAW 1:74|jpc.addr WAW 1:81|jpc.addr WAW 1:82|jpc.addr WAW 1:89|jpc.addr WAW 1:90|jpc.addr WAW 1:97|jpc.addr WAW 1:98|jpc.addr
+6:295 NOM  RAW 1:74|stream.addr RAW 1:90|stream.addr RAW 6:284|stream.addr WAR 6:277|nr_components
+7:75 NOM  RAW 1:72|ic RAW 1:72|yuvdata RAW 1:74|idata RAW 1:80|ic RAW 1:80|yuvdata RAW 1:82|idata RAW 1:88|ic RAW 1:88|yuvdata RAW 1:90|idata RAW 1:96|ic RAW 1:96|yuvdata RAW 1:98|idata RAW 7:54|ic RAW 7:57|idata RAW 7:58|yuvdata
+6:294 NOM  INIT *|width RAW 1:72|stream.addr RAW 1:73|stream.addr RAW 1:88|stream.addr RAW 1:89|stream.addr RAW 6:284|stream.addr WAR 2:179|width
+6:472 NOM  WAR 6:446|sos_marker_found
+4:222 NOM  RAW 4:214|argc.addr
+4:204 NOM  WAW 1:74|finish.addr WAW 1:81|start.addr
+2:124 NOM  RAW 2:101|huffman_table.addr RAW 2:119|extra_nbits WAR 2:108|slowtable WAR 2:126|slowtable WAR 2:129|slowtable WAR 6:528|slowtable WAW 1:74|slowtable WAW 1:82|slowtable WAW 1:90|slowtable WAW 1:98|slowtable
+6:500 NOM  RAW 6:317|jpc.addr RAW 6:437|jpc.addr
+2:123 NOM  RAW 1:72|hdata.addr RAW 1:73|hdata.addr RAW 1:74|hdata.addr RAW 1:80|hdata.addr RAW 1:81|hdata.addr RAW 1:82|hdata.addr RAW 1:88|hdata.addr RAW 1:89|hdata.addr RAW 1:90|hdata.addr RAW 1:96|hdata.addr RAW 1:97|hdata.addr RAW 1:98|hdata.addr RAW 2:101|hdata.addr RAW 2:108|hdata.addr RAW 2:114|hdata.addr RAW 2:121|nbits RAW 2:123|c47 RAW 2:123|hdata.addr RAW 2:164|hdata.addr RAW 2:166|hdata.addr RAW 2:196|hdata.addr RAW 2:202|hdata.addr RAW 2:206|hdata.addr RAW 3:168|hdata.addr RAW 3:183|hdata.addr RAW 3:184|hdata.addr RAW 3:185|hdata.addr RAW 3:186|hdata.addr RAW 3:187|hdata.addr RAW 3:188|hdata.addr RAW 3:189|hdata.addr RAW 3:190|hdata.addr RAW 3:72|hdata.addr RAW 3:73|hdata.addr RAW 6:558|hdata.addr RAW 6:565|hdata.addr RAW 6:569|hdata.addr WAR 2:108|c47 WAR 2:110|hcode WAR 2:123|c47 WAR 2:123|hdata.addr WAR 2:127|hcode WAR 2:196|c47 WAR 6:528|c47 WAW 1:74|c47 WAW 1:82|c47 WAW 1:90|c47 WAW 1:98|c47 WAW 2:123|hcode
+1:70 NOM  INIT *|b RAW 1:65|add_b RAW 1:67|y WAR 1:96|b WAR 2:108|b WAR 2:196|b WAR 6:528|b WAR 6:537|b WAW 1:96|b
+3:129 NOM  RAW 3:121|tmp5 RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:79|wsptr RAW 3:99|tmp2 WAR 2:108|wsptr WAR 2:123|wsptr WAR 2:164|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+7:94 NOM  INIT *|jdc RAW 6:325|jpc.addr RAW 7:89|jpc.addr RAW 7:90|jdc WAR 7:80|jdc WAW 1:80|jdc WAW 1:88|jdc
+6:402 NOM  RAW 6:374|length WAR 6:402|length
+4:154 NOM  INIT *|rgb_data RAW 4:148|width RAW 4:149|height WAR 4:182|rgb_data
+4:141 NOM  INIT *|jpc WAR 4:184|jpc
+3:130 NOM  RAW 3:122|tmp4 RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:79|wsptr RAW 3:97|tmp3 WAR 2:108|wsptr WAR 2:164|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+6:331 NOM  WAR 6:282|retval
+6:318 NOM  INIT *|c RAW 6:309|sampling_factor RAW 6:311|c WAW 1:72|c WAW 1:81|c WAW 1:88|c WAW 1:90|c WAW 1:97|c WAW 1:98|c
+6:157 NOM  RAW 6:142|hz RAW 6:144|hz RAW 6:155|hz RAW 6:162|hz
+3:106 NOM  RAW 1:72|quantptr RAW 1:73|quantptr RAW 1:74|quantptr RAW 1:80|quantptr RAW 1:81|quantptr RAW 1:82|quantptr RAW 1:88|quantptr RAW 1:89|quantptr RAW 1:90|quantptr RAW 1:96|quantptr RAW 1:97|quantptr RAW 1:98|quantptr RAW 2:202|inptr RAW 3:133|inptr RAW 3:134|quantptr RAW 3:43|inptr RAW 3:49|quantptr RAW 3:77|inptr RAW 3:78|quantptr WAR 2:202|tmp7 WAR 3:125|tmp7 WAR 3:184|tmp7
+4:228 NOM  RAW 4:214|argv.addr RAW 4:225|current_argument RAW 4:232|current_argument
+6:534 NOM  RAW 1:25|stream RAW 1:52|stream RAW 1:72|stream RAW 1:73|stream RAW 1:74|stream RAW 1:80|stream RAW 1:81|stream RAW 1:82|stream RAW 1:88|stream RAW 1:89|stream RAW 1:90|stream RAW 1:95|stream RAW 1:96|stream RAW 1:97|stream RAW 1:98|stream RAW 2:143|stream RAW 2:196|stream RAW 2:202|stream RAW 3:183|stream RAW 3:184|stream RAW 3:185|stream RAW 3:186|stream RAW 3:187|stream RAW 3:188|stream RAW 3:189|stream RAW 3:190|stream RAW 3:68|stream RAW 3:69|stream RAW 3:72|stream RAW 3:75|stream RAW 6:528|stream RAW 7:83|stream
+1:21 NOM  WAR 1:26|retval
+2:239 NOM  RAW 2:238|hc.addr
+1:65 NOM  INIT *|add_b RAW 1:61|cb WAR 1:95|add_b WAR 2:108|add_b WAR 2:164|add_b WAR 2:196|add_b WAR 6:528|add_b WAW 1:96|add_b
+6:570 NOM  INIT *|task.addr RAW 6:363|jpc.addr RAW 6:547|jpc.addr RAW 6:558|jpc.addr RAW 6:558|task.addr WAR 2:108|task.addr WAR 6:528|task.addr WAW 1:90|task.addr WAW 1:98|task.addr WAW 2:108|task.addr
+1:20 NOM  RAW 1:18|i.addr
+6:560 NOM  RAW 6:558|jpc.addr
+7:55 NOM  INIT *|cc RAW 1:72|jdc.addr RAW 1:74|jdc.addr RAW 1:80|jdc.addr RAW 1:82|jdc.addr RAW 1:88|jdc.addr RAW 1:90|jdc.addr RAW 1:96|jdc.addr RAW 1:98|jdc.addr RAW 7:52|jdc.addr RAW 7:99|jdc.addr WAR 6:528|cc WAR 7:83|cc
+6:301 NOM  RAW 6:293|height
+6:565 NOM  INIT *|task.addr RAW 1:73|jpc.addr RAW 1:74|jpc.addr RAW 1:81|jpc.addr RAW 1:82|jpc.addr RAW 1:89|jpc.addr RAW 1:90|jpc.addr RAW 1:97|jpc.addr RAW 1:98|jpc.addr RAW 6:325|jpc.addr RAW 6:424|jpc.addr RAW 6:558|jpc.addr RAW 6:558|task.addr RAW 6:558|tasknum.addr WAR 6:528|task.addr WAR 7:70|task.addr WAW 1:74|task.addr WAW 1:82|task.addr WAW 1:90|task.addr WAW 1:98|task.addr
+4:73 NOM  INIT *|wc RAW 4:61|rgb_data.addr RAW 4:64|wc WAW 4:106|wc
+2:233 NOM  INIT *|hc RAW 2:225|jpc.addr RAW 2:226|hc RAW 6:325|jpc.addr WAW 1:72|hc WAW 1:81|hc WAW 1:88|hc WAW 1:97|hc
+4:72 NOM  INIT *|wc RAW 4:61|rgb_data.addr RAW 4:64|wc WAW 1:73|wc WAW 1:89|wc
+3:212 NOM  RAW 3:209|jpc.addr RAW 3:210|ic
+4:214 NOM  INIT *|argc.addr INIT *|argv.addr INIT *|retval
+3:218 NOM  RAW 3:210|ic
+3:127 NOM  RAW 3:120|tmp6 RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:79|wsptr RAW 3:98|tmp1 WAR 2:108|wsptr WAR 2:164|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+6:161 NOM  INIT *|hc RAW 6:153|code RAW 6:154|hc RAW 6:161|code RAW 6:161|hc RAW 6:164|code WAR 2:110|hc WAR 2:113|hc WAR 2:114|hc WAR 2:115|hc WAR 2:135|hc WAR 6:161|code WAR 6:161|hc WAR 6:175|hc WAW 1:72|hc WAW 1:74|hc WAW 1:81|hc
+7:92 NOM  INIT *|jdc RAW 6:324|jpc.addr RAW 7:89|jpc.addr RAW 7:90|jdc WAW 1:82|jdc WAW 1:90|jdc
+3:177 NOM  INIT *|tmp6 RAW 3:170|tmp7 RAW 3:175|tmp12 WAR 2:202|tmp6 WAR 3:127|tmp6 WAR 3:186|tmp6
+4:92 NOM  RAW 1:89|wc.addr RAW 4:87|wc.addr WAW 1:73|targaheader
+3:97 NOM  RAW 3:90|tmp10 RAW 3:93|tmp13 WAR 3:94|tmp3
+3:108 NOM  RAW 3:104|tmp5 RAW 3:105|tmp6 WAR 2:108|z13 WAR 2:164|z13 WAR 2:196|z13 WAR 3:114|z13 WAR 3:171|z13 WAW 1:73|z13 WAW 1:81|z13 WAW 1:89|z13 WAW 1:97|z13
+3:214 NOM  INIT *|ic RAW 3:209|jpc.addr RAW 3:210|ic RAW 6:323|jpc.addr WAW 1:90|ic WAW 1:98|ic
+6:458 NOM  INIT *|next_chunck RAW 6:456|stream.addr RAW 6:457|chuck_len WAR 6:488|next_chunck WAW 1:81|next_chunck
+3:25 NOM  RAW 3:24|x.addr
+1:108 NOM  INIT *|cc RAW 1:106|jpc.addr RAW 1:107|cc RAW 6:323|jpc.addr WAR 1:52|cc
+6:501 NOM  RAW 6:317|jpc.addr RAW 6:437|jpc.addr
+6:537 NOM  INIT *|marker RAW 1:25|stream RAW 1:52|stream RAW 1:72|stream RAW 1:73|stream RAW 1:74|stream RAW 1:80|stream RAW 1:81|stream RAW 1:82|stream RAW 1:88|stream RAW 1:89|stream RAW 1:90|stream RAW 1:95|stream RAW 1:96|stream RAW 1:97|stream RAW 1:98|stream RAW 2:143|stream RAW 2:196|stream RAW 2:202|stream RAW 3:183|stream RAW 3:184|stream RAW 3:185|stream RAW 3:186|stream RAW 3:187|stream RAW 3:188|stream RAW 3:189|stream RAW 3:190|stream RAW 3:68|stream RAW 3:69|stream RAW 3:72|stream RAW 3:75|stream RAW 6:528|stream RAW 7:83|stream WAR 2:108|marker WAR 2:196|marker WAR 6:528|marker WAR 6:537|stream WAR 6:538|marker WAR 6:542|marker WAW 1:74|marker WAW 1:82|marker WAW 1:90|marker WAW 1:98|marker
+6:385 NOM  RAW 6:385|i WAR 6:325|i WAR 6:385|i
+2:201 NOM  RAW 2:201|j WAR 2:108|j WAR 2:173|j WAR 2:201|j
+4:71 NOM  INIT *|wc RAW 4:64|wc WAR 4:79|wc
+4:235 NOM  RAW 4:214|argc.addr RAW 4:232|current_argument
+3:131 NOM  RAW 3:122|tmp4 RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:79|wsptr RAW 3:97|tmp3 WAR 2:108|wsptr WAR 2:123|wsptr WAR 2:164|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+1:25 NOM  RAW 1:18|i.addr WAR 1:26|retval WAR 2:108|retval WAR 2:164|retval WAR 2:196|retval WAR 6:176|retval WAR 6:528|retval WAR 6:537|retval WAW 1:73|retval WAW 1:81|retval WAW 1:89|retval WAW 1:97|retval
+1:82 NOM  INIT *|p RAW 1:77|r RAW 1:81|p WAR 1:54|p WAR 1:61|p WAR 1:62|p WAR 1:67|p WAR 1:76|p WAR 1:77|p WAR 1:79|p WAR 1:82|p WAR 1:84|p WAR 1:92|p WAR 2:108|p WAR 2:110|p WAR 2:113|p WAR 2:114|p WAR 2:123|p WAR 2:124|p WAR 2:126|p WAR 2:127|p WAR 2:129|p WAR 2:150|p WAR 2:157|p WAR 2:162|p WAR 2:164|p WAR 2:168|p WAR 2:175|p WAR 2:196|p WAR 2:202|p WAR 2:204|p WAR 2:209|p WAR 3:103|p WAR 3:104|p WAR 3:105|p WAR 3:106|p WAR 3:153|p WAR 3:156|p WAR 3:166|p WAR 3:168|p WAR 3:174|p WAR 3:175|p WAR 3:178|p WAR 3:184|p WAR 3:186|p WAR 3:190|p WAR 3:203|p WAR 3:21|p WAR 3:23|p WAR 3:49|p WAR 3:61|p WAR 3:62|p WAR 3:63|p WAR 3:64|p WAR 3:66|p WAR 3:75|p WAR 3:85|p WAR 3:86|p WAR 3:87|p WAR 3:88|p WAR 4:171|p WAR 4:172|p WAR 4:239|p WAR 6:174|p WAR 6:175|p WAR 6:176|p WAR 6:251|p WAR 6:264|p WAR 6:295|p WAR 6:310|p WAR 6:349|p WAR 6:374|p WAR 6:386|p WAR 6:417|p WAR 6:448|p WAR 6:457|p WAR 6:528|p WAR 6:537|p WAR 6:538|p WAR 6:566|p WAR 6:568|p WAR 6:570|p WAR 6:571|p WAR 6:574|p WAR 7:53|p WAR 7:55|p WAR 7:63|p WAR 7:66|p WAR 7:70|p WAR 7:73|p WAR 7:74|p WAR 7:75|p WAW 1:74|p WAW 1:76|p WAW 1:82|p WAW 1:90|p WAW 1:98|p WAW 2:108|p WAW 2:166|p WAW 3:183|p WAW 3:184|p WAW 3:185|p WAW 3:186|p WAW 3:187|p WAW 3:188|p WAW 3:189|p WAW 3:190|p WAW 3:194|p WAW 3:78|p WAW 6:180|p WAW 6:568|p
+4:156 NOM  RAW 4:141|jpc RAW 6:424|jpc
+6:361 NOM  INIT *|jpc.addr RAW 6:334|jpc.addr RAW 6:347|i RAW 6:349|table WAW 1:74|jpc.addr WAW 1:81|jpc.addr WAW 1:88|jpc.addr WAW 1:90|jpc.addr WAW 1:96|jpc.addr WAW 1:97|jpc.addr
+4:149 NOM  INIT *|height RAW 4:141|jpc RAW 6:324|jpc WAW 1:81|height
+4:106 NOM  RAW 1:82|wc.addr RAW 1:98|wc.addr RAW 4:102|wc.addr RAW 4:103|bytes_per_mcu_line RAW 4:106|wc.addr WAR 4:106|wc.addr
+3:161 NOM  INIT *|tmp2 RAW 3:153|tmp11 RAW 3:156|tmp12 WAR 2:202|tmp2 WAR 3:129|tmp2 WAR 3:188|tmp2
+2:111 NOM  RAW 2:110|value
+1:112 NOM  INIT *|cc RAW 1:106|jpc.addr RAW 1:107|cc RAW 6:326|jpc.addr WAR 7:73|cc
+6:190 NOM  INIT *|table.addr RAW 6:127|table.addr RAW 6:174|val RAW 6:188|code RAW 6:190|code WAR 2:110|table.addr WAR 6:190|code WAW 1:72|table.addr WAW 1:73|table.addr WAW 1:74|table.addr WAW 1:80|table.addr WAW 1:81|table.addr WAW 1:82|table.addr WAW 1:88|table.addr WAW 1:89|table.addr WAW 1:90|table.addr WAW 1:96|table.addr WAW 1:97|table.addr WAW 1:98|table.addr
+6:247 NOM  INIT *|zz WAW 1:81|zz WAW 6:251|zz
+4:64 NOM  WAR 6:141|wc
+3:70 NOM  INIT *|wsptr RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:66|dcval RAW 3:79|wsptr WAR 2:108|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAR 6:528|wsptr WAR 6:537|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+6:319 NOM  INIT *|jpc.addr RAW 6:284|jpc.addr RAW 6:307|i RAW 6:310|Q_table WAW 1:88|jpc.addr WAW 1:89|jpc.addr WAW 1:90|jpc.addr WAW 1:96|jpc.addr WAW 1:97|jpc.addr WAW 1:98|jpc.addr
+6:379 NOM  RAW 6:374|length RAW 6:404|length
+2:228 NOM  RAW 2:225|jpc.addr RAW 2:226|hc
+3:114 NOM  RAW 3:108|z13 RAW 3:110|z11 WAR 3:99|tmp11
+3:124 NOM  RAW 3:113|tmp7 RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:79|wsptr RAW 3:96|tmp0 WAR 2:108|wsptr WAR 2:164|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+1:88 NOM  INIT *|p2 RAW 1:102|p2 RAW 1:48|p2 RAW 1:72|p2 RAW 1:80|p2 RAW 1:87|b RAW 1:98|p2 WAR 1:102|p2 WAR 1:115|p2 WAR 1:119|p2 WAR 1:25|p2 WAR 1:48|p2 WAR 1:52|p2 WAR 1:61|p2 WAR 1:62|p2 WAR 1:64|p2 WAR 1:67|p2 WAR 1:76|p2 WAR 1:84|p2 WAR 1:87|p2 WAR 1:88|p2 WAR 1:92|p2 WAR 2:108|p2 WAR 2:110|p2 WAR 2:113|p2 WAR 2:114|p2 WAR 2:123|p2 WAR 2:126|p2 WAR 2:127|p2 WAR 2:129|p2 WAR 2:157|p2 WAR 2:164|p2 WAR 2:168|p2 WAR 2:175|p2 WAR 2:179|p2 WAR 2:183|p2 WAR 2:196|p2 WAR 2:202|p2 WAR 2:231|p2 WAR 3:103|p2 WAR 3:104|p2 WAR 3:105|p2 WAR 3:106|p2 WAR 3:153|p2 WAR 3:156|p2 WAR 3:159|p2 WAR 3:166|p2 WAR 3:168|p2 WAR 3:171|p2 WAR 3:179|p2 WAR 3:188|p2 WAR 3:194|p2 WAR 3:205|p2 WAR 3:30|p2 WAR 3:43|p2 WAR 3:61|p2 WAR 3:62|p2 WAR 3:63|p2 WAR 3:64|p2 WAR 3:66|p2 WAR 3:85|p2 WAR 3:86|p2 WAR 3:87|p2 WAR 3:88|p2 WAR 4:145|p2 WAR 4:158|p2 WAR 4:164|p2 WAR 4:244|p2 WAR 4:245|p2 WAR 6:141|p2 WAR 6:172|p2 WAR 6:175|p2 WAR 6:176|p2 WAR 6:197|p2 WAR 6:250|p2 WAR 6:251|p2 WAR 6:313|p2 WAR 6:355|p2 WAR 6:458|p2 WAR 6:491|p2 WAR 6:504|p2 WAR 6:506|p2 WAR 6:511|p2 WAR 6:516|p2 WAR 6:526|p2 WAR 6:528|p2 WAR 6:537|p2 WAR 6:547|p2 WAR 6:566|p2 WAR 6:569|p2 WAR 6:571|p2 WAR 6:573|p2 WAR 7:54|p2 WAR 7:55|p2 WAR 7:69|p2 WAR 7:71|p2 WAR 7:73|p2 WAR 7:75|p2 WAR 7:76|p2 WAR 7:78|p2 WAR 7:80|p2 WAW 1:52|p2 WAW 1:61|p2 WAW 1:72|p2 WAW 1:80|p2 WAW 1:88|p2 WAW 1:96|p2 WAW 2:166|p2 WAW 3:183|p2 WAW 3:184|p2 WAW 3:185|p2 WAW 3:186|p2 WAW 3:187|p2 WAW 3:188|p2 WAW 3:189|p2 WAW 3:190|p2 WAW 3:193|p2 WAW 4:164|p2 WAW 4:68|p2 WAW 6:148|p2 WAW 6:180|p2 WAW 6:189|p2 WAW 6:190|p2 WAW 6:199|p2 WAW 6:200|p2 WAW 6:201|p2 WAW 6:251|p2 WAW 6:360|p2 WAW 6:549|p2 WAW 6:571|p2
+6:337 NOM  RAW 1:89|stream.addr RAW 1:97|stream.addr RAW 6:334|stream.addr WAR 6:307|nr_components
+6:526 NOM  RAW 6:521|rst_marker_found RAW 6:539|rst_marker_found
+3:62 NOM  RAW 2:202|inptr RAW 3:133|inptr RAW 3:43|inptr RAW 3:77|inptr
+3:77 NOM  RAW 3:133|inptr RAW 3:43|inptr RAW 3:77|inptr WAR 3:77|inptr
+6:513 NOM  INIT *|jpc.addr WAR 2:108|jpc.addr WAR 2:196|jpc.addr WAR 6:516|jpc.addr WAR 6:528|jpc.addr WAW 1:72|jpc.addr WAW 1:80|jpc.addr WAW 1:88|jpc.addr WAW 1:96|jpc.addr
+3:79 NOM  RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:79|wsptr WAR 3:79|wsptr
+2:231 NOM  INIT *|hc RAW 1:80|jpc.addr RAW 1:96|jpc.addr RAW 2:225|jpc.addr RAW 2:226|hc WAW 1:72|hc WAW 1:81|hc WAW 1:88|hc WAW 1:97|hc
+1:48 NOM  INIT *|p2 RAW 1:108|cc.addr RAW 1:40|cc.addr RAW 1:72|cc.addr RAW 1:80|cc.addr RAW 1:88|cc.addr RAW 1:96|cc.addr RAW 7:69|cc.addr RAW 7:78|cc.addr WAR 2:108|p2 WAR 6:528|p2 WAW 1:102|p2
+6:165 NOM  RAW 6:156|nbits RAW 6:165|nbits WAR 6:165|nbits
+6:306 NOM  RAW 6:284|stream.addr WAR 6:306|stream.addr
+4:58 NOM  RAW 4:56|pos
+2:196 NOM  RAW 1:101|hdata.addr RAW 1:18|hdata.addr RAW 1:25|hdata.addr RAW 1:40|hdata.addr RAW 1:52|hdata.addr RAW 1:61|hdata.addr RAW 1:62|hdata.addr RAW 1:63|hdata.addr RAW 1:64|hdata.addr RAW 1:65|hdata.addr RAW 1:72|hdata.addr RAW 1:73|hdata.addr RAW 1:74|hdata.addr RAW 1:80|hdata.addr RAW 1:81|hdata.addr RAW 1:82|hdata.addr RAW 1:88|hdata.addr RAW 1:89|hdata.addr RAW 1:90|hdata.addr RAW 1:92|hdata.addr RAW 1:94|hdata.addr RAW 1:95|hdata.addr RAW 1:96|hdata.addr RAW 1:97|hdata.addr RAW 1:98|hdata.addr RAW 2:101|hdata.addr RAW 2:108|hdata.addr RAW 2:110|hdata.addr RAW 2:113|hdata.addr RAW 2:114|hdata.addr RAW 2:119|hdata.addr RAW 2:121|hdata.addr RAW 2:123|hdata.addr RAW 2:128|hdata.addr RAW 2:143|hdata.addr RAW 2:157|hdata.addr RAW 2:164|hdata.addr RAW 2:165|hdata.addr RAW 2:166|hdata.addr RAW 2:175|hdata.addr RAW 2:178|hdata.addr RAW 2:178|size_val RAW 2:179|hdata.addr RAW 2:190|hdata.addr RAW 2:190|j RAW 2:196|DCT RAW 2:196|c107 RAW 2:196|hdata.addr RAW 2:202|hdata.addr RAW 2:203|hdata.addr RAW 2:206|hdata.addr RAW 2:209|hdata.addr RAW 2:222|hdata.addr RAW 3:124|hdata.addr RAW 3:125|hdata.addr RAW 3:126|hdata.addr RAW 3:127|hdata.addr RAW 3:128|hdata.addr RAW 3:129|hdata.addr RAW 3:130|hdata.addr RAW 3:131|hdata.addr RAW 3:159|hdata.addr RAW 3:161|hdata.addr RAW 3:165|hdata.addr RAW 3:166|hdata.addr RAW 3:167|hdata.addr RAW 3:168|hdata.addr RAW 3:171|hdata.addr RAW 3:175|hdata.addr RAW 3:17|hdata.addr RAW 3:183|hdata.addr RAW 3:184|hdata.addr RAW 3:185|hdata.addr RAW 3:186|hdata.addr RAW 3:187|hdata.addr RAW 3:188|hdata.addr RAW 3:189|hdata.addr RAW 3:190|hdata.addr RAW 3:194|hdata.addr RAW 3:24|hdata.addr RAW 3:30|hdata.addr RAW 3:36|hdata.addr RAW 3:66|hdata.addr RAW 3:68|hdata.addr RAW 3:69|hdata.addr RAW 3:70|hdata.addr RAW 3:71|hdata.addr RAW 3:72|hdata.addr RAW 3:73|hdata.addr RAW 3:74|hdata.addr RAW 3:75|hdata.addr RAW 3:78|hdata.addr RAW 4:170|hdata.addr RAW 6:513|hdata.addr RAW 6:515|hdata.addr RAW 6:516|hdata.addr RAW 6:537|hdata.addr RAW 6:547|hdata.addr RAW 6:551|hdata.addr RAW 6:566|hdata.addr RAW 6:568|hdata.addr RAW 6:569|hdata.addr RAW 6:571|hdata.addr RAW 7:52|hdata.addr RAW 7:53|hdata.addr RAW 7:55|hdata.addr RAW 7:57|hdata.addr RAW 7:63|hdata.addr RAW 7:64|hdata.addr RAW 7:66|hdata.addr RAW 7:71|hdata.addr RAW 7:73|hdata.addr RAW 7:78|hdata.addr RAW 7:79|hdata.addr WAR 2:108|DCT WAR 2:108|c107 WAR 2:164|DCT WAR 2:196|DCT WAR 2:196|c107 WAR 2:196|hdata.addr WAR 2:202|DCT WAR 3:184|DCT WAR 3:186|DCT WAR 3:188|DCT WAR 3:190|DCT WAR 3:194|DCT WAR 3:43|DCT WAR 3:44|DCT WAR 3:49|DCT WAR 6:528|c107 WAW 1:72|DCT WAW 1:73|DCT WAW 1:73|c107 WAW 1:74|DCT WAW 1:80|DCT WAW 1:81|DCT WAW 1:81|c107 WAW 1:82|DCT WAW 1:88|DCT WAW 1:89|DCT WAW 1:89|c107 WAW 1:90|DCT WAW 1:96|DCT WAW 1:97|DCT WAW 1:97|c107 WAW 1:98|DCT
+3:103 NOM  RAW 1:72|quantptr RAW 1:73|quantptr RAW 1:74|quantptr RAW 1:80|quantptr RAW 1:81|quantptr RAW 1:82|quantptr RAW 1:88|quantptr RAW 1:89|quantptr RAW 1:90|quantptr RAW 1:96|quantptr RAW 1:97|quantptr RAW 1:98|quantptr RAW 2:202|inptr RAW 3:133|inptr RAW 3:134|quantptr RAW 3:43|inptr RAW 3:49|quantptr RAW 3:77|inptr RAW 3:78|quantptr WAR 2:202|tmp4 WAR 3:131|tmp4 WAR 3:190|tmp4
+4:238 NOM  INIT *|input_filename RAW 4:214|argv.addr RAW 4:232|current_argument
+6:267 NOM  RAW 6:264|dqt_block_end RAW 6:265|stream.addr RAW 6:278|stream.addr
+6:349 NOM  RAW 1:88|stream.addr RAW 1:89|stream.addr RAW 1:90|stream.addr RAW 1:96|stream.addr RAW 1:97|stream.addr RAW 1:98|stream.addr RAW 6:348|stream.addr WAR 6:326|table WAR 6:349|stream.addr WAR 6:361|table
+1:18 NOM  WAR 1:20|i.addr WAR 1:22|i.addr WAR 1:25|i.addr WAR 2:108|i.addr WAR 2:196|i.addr WAR 6:176|i.addr WAR 6:528|i.addr WAW 1:72|i.addr WAW 1:80|i.addr WAW 1:88|i.addr WAW 1:96|i.addr
+6:250 NOM  INIT *|j RAW 6:250|j WAR 6:250|j WAW 1:72|j
+6:308 NOM  INIT *|cid RAW 1:72|stream.addr RAW 1:80|stream.addr RAW 1:88|stream.addr RAW 1:96|stream.addr RAW 6:306|stream.addr RAW 6:310|stream.addr WAR 6:308|stream.addr WAR 6:313|cid WAW 1:72|cid
+4:68 NOM  INIT *|wc RAW 4:61|jpc.addr RAW 4:64|wc RAW 6:424|jpc.addr WAW 1:80|wc WAW 1:96|wc
+3:72 NOM  INIT *|wsptr RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:66|dcval RAW 3:79|wsptr WAR 2:108|wsptr WAR 2:123|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAR 6:141|wsptr WAR 6:172|wsptr WAR 6:196|wsptr WAR 6:199|wsptr WAR 6:200|wsptr WAR 6:528|wsptr WAR 6:537|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr WAW 6:165|wsptr
+6:174 NOM  INIT *|val RAW 1:72|vals.addr RAW 1:73|vals.addr RAW 1:74|vals.addr RAW 1:80|vals.addr RAW 1:81|vals.addr RAW 1:82|vals.addr RAW 1:88|vals.addr RAW 1:89|vals.addr RAW 1:90|vals.addr RAW 1:96|vals.addr RAW 1:97|vals.addr RAW 1:98|vals.addr RAW 6:127|vals.addr RAW 6:172|i WAR 3:168|val WAR 6:190|val WAR 6:200|val
+4:186 NOM  RAW 1:72|wc
+2:131 NOM  RAW 2:124|slowtable RAW 2:131|slowtable WAR 2:131|slowtable
+3:205 NOM  RAW 1:72|ic.addr RAW 1:80|ic.addr RAW 1:88|ic.addr RAW 1:96|ic.addr RAW 3:198|ic.addr RAW 3:198|idata.addr RAW 3:198|yuvdata.addr
+4:93 NOM  RAW 1:90|wc.addr RAW 1:98|wc.addr RAW 4:87|wc.addr WAW 1:74|targaheader
+3:189 NOM  INIT *|outptr RAW 3:159|tmp3 RAW 3:179|tmp4 RAW 3:194|outptr RAW 3:44|outptr WAR 1:61|outptr WAR 1:62|outptr WAR 1:67|outptr WAR 1:84|outptr WAR 2:108|outptr WAR 2:123|outptr WAR 2:164|outptr WAR 2:196|outptr WAR 6:528|outptr WAR 6:537|outptr WAW 1:72|outptr WAW 1:73|outptr WAW 1:74|outptr WAW 1:80|outptr WAW 1:81|outptr WAW 1:82|outptr WAW 1:88|outptr WAW 1:89|outptr WAW 1:90|outptr WAW 1:96|outptr WAW 1:97|outptr WAW 1:98|outptr
+3:20 NOM  RAW 3:19|x.addr
+3:105 NOM  RAW 1:72|quantptr RAW 1:73|quantptr RAW 1:74|quantptr RAW 1:80|quantptr RAW 1:81|quantptr RAW 1:82|quantptr RAW 1:88|quantptr RAW 1:89|quantptr RAW 1:90|quantptr RAW 1:96|quantptr RAW 1:97|quantptr RAW 1:98|quantptr RAW 2:202|inptr RAW 3:133|inptr RAW 3:134|quantptr RAW 3:43|inptr RAW 3:49|quantptr RAW 3:77|inptr RAW 3:78|quantptr WAR 2:202|tmp6 WAR 3:127|tmp6 WAR 3:186|tmp6
+2:119 NOM  RAW 2:119|extra_nbits WAR 2:108|extra_nbits WAR 2:119|extra_nbits WAR 2:124|extra_nbits WAR 2:196|extra_nbits WAR 6:528|extra_nbits WAW 1:74|extra_nbits WAW 1:82|extra_nbits WAW 1:90|extra_nbits WAW 1:98|extra_nbits
+3:222 NOM  RAW 3:221|ic.addr
+6:528 NOM  RAW 1:100|stream RAW 1:101|stream RAW 1:102|stream RAW 1:18|stream RAW 1:25|stream RAW 1:40|stream RAW 1:52|stream RAW 1:54|stream RAW 1:55|stream RAW 1:61|stream RAW 1:62|stream RAW 1:63|stream RAW 1:64|stream RAW 1:65|stream RAW 1:72|stream RAW 1:73|stream RAW 1:74|stream RAW 1:80|stream RAW 1:81|stream RAW 1:82|stream RAW 1:88|stream RAW 1:89|stream RAW 1:90|stream RAW 1:92|stream RAW 1:93|stream RAW 1:94|stream RAW 1:95|stream RAW 1:96|stream RAW 1:97|stream RAW 1:98|stream RAW 2:101|stream RAW 2:108|stream RAW 2:110|stream RAW 2:113|stream RAW 2:114|stream RAW 2:115|stream RAW 2:119|stream RAW 2:121|stream RAW 2:123|stream RAW 2:124|stream RAW 2:131|stream RAW 2:143|stream RAW 2:150|stream RAW 2:157|stream RAW 2:164|stream RAW 2:166|stream RAW 2:175|stream RAW 2:178|stream RAW 2:179|stream RAW 2:196|stream RAW 2:201|stream RAW 2:202|stream RAW 2:203|stream RAW 2:209|stream RAW 2:222|stream RAW 3:143|stream RAW 3:155|stream RAW 3:158|stream RAW 3:159|stream RAW 3:160|stream RAW 3:161|stream RAW 3:165|stream RAW 3:166|stream RAW 3:167|stream RAW 3:168|stream RAW 3:170|stream RAW 3:171|stream RAW 3:173|stream RAW 3:174|stream RAW 3:175|stream RAW 3:177|stream RAW 3:178|stream RAW 3:179|stream RAW 3:17|stream RAW 3:183|stream RAW 3:184|stream RAW 3:185|stream RAW 3:186|stream RAW 3:187|stream RAW 3:188|stream RAW 3:189|stream RAW 3:190|stream RAW 3:193|stream RAW 3:194|stream RAW 3:24|stream RAW 3:30|stream RAW 3:36|stream RAW 3:66|stream RAW 3:68|stream RAW 3:69|stream RAW 3:70|stream RAW 3:71|stream RAW 3:72|stream RAW 3:73|stream RAW 3:74|stream RAW 3:75|stream RAW 3:77|stream RAW 3:78|stream RAW 4:170|stream RAW 6:513|stream RAW 6:515|stream RAW 6:516|stream RAW 6:519|stream RAW 6:521|stream RAW 6:523|stream RAW 6:528|stream RAW 6:537|stream RAW 6:547|stream RAW 6:549|stream RAW 6:551|stream RAW 6:558|stream RAW 6:564|stream RAW 6:565|stream RAW 6:566|stream RAW 6:568|stream RAW 6:569|stream RAW 6:571|stream RAW 7:53|stream RAW 7:54|stream RAW 7:55|stream RAW 7:57|stream RAW 7:58|stream RAW 7:63|stream RAW 7:64|stream RAW 7:66|stream RAW 7:73|stream RAW 7:81|stream RAW 7:82|stream RAW 7:83|stream WAR 6:528|stream
+3:213 NOM  RAW 3:209|jpc.addr RAW 3:210|ic
+1:22 NOM  RAW 1:18|i.addr
+3:75 NOM  INIT *|wsptr RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:66|dcval RAW 3:79|wsptr WAR 2:108|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAR 6:528|wsptr WAR 6:537|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+3:159 NOM  INIT *|tmp3 RAW 3:152|tmp10 RAW 3:155|tmp13 WAR 2:202|tmp3 WAR 3:131|tmp3 WAR 3:190|tmp3
+4:229 NOM  WAW 4:220|benchmark_mode
+6:420 NOM  RAW 6:417|length
+6:405 NOM  RAW 6:386|stream.addr RAW 6:387|count WAR 6:405|stream.addr
+6:387 NOM  RAW 6:384|count RAW 6:385|i RAW 6:386|huff_bits RAW 6:387|count WAR 6:387|count
+3:24 NOM  RAW 3:21|x.addr RAW 3:23|x.addr WAR 3:24|x.addr
+3:30 NOM  INIT *|retval RAW 3:24|x.addr WAR 2:108|retval WAR 2:196|retval WAR 3:31|retval WAR 6:528|retval WAW 1:73|retval WAW 1:81|retval WAW 1:89|retval WAW 1:97|retval
+4:133 NOM  INIT *|length_of_file RAW 4:130|fp WAW 1:72|length_of_file
+2:183 NOM  RAW 2:179|count_0
+1:111 NOM  INIT *|cc RAW 1:106|jpc.addr RAW 1:107|cc RAW 6:325|jpc.addr WAW 1:90|cc WAW 1:98|cc
+2:202 NOM  INIT *|DCT_out.addr RAW 1:72|DCT RAW 1:72|zigzag RAW 1:73|DCT RAW 1:73|zigzag RAW 1:74|DCT RAW 1:74|zigzag RAW 1:80|DCT RAW 1:80|zigzag RAW 1:81|DCT RAW 1:81|zigzag RAW 1:82|DCT RAW 1:82|zigzag RAW 1:88|DCT RAW 1:88|zigzag RAW 1:89|DCT RAW 1:89|zigzag RAW 1:90|DCT RAW 1:90|zigzag RAW 1:96|DCT RAW 1:96|zigzag RAW 1:97|DCT RAW 1:97|zigzag RAW 1:98|DCT RAW 1:98|zigzag RAW 2:143|DCT_out.addr RAW 2:165|DCT RAW 2:168|DCT RAW 2:196|DCT RAW 2:201|j RAW 3:158|DCT RAW 3:159|DCT RAW 3:160|DCT RAW 3:161|DCT RAW 3:170|DCT RAW 3:177|DCT RAW 3:178|DCT RAW 3:179|DCT RAW 3:36|DCT RAW 6:380|DCT RAW 6:383|DCT RAW 6:386|DCT RAW 6:404|DCT WAR 2:108|DCT_out.addr WAR 2:123|DCT_out.addr WAR 2:164|DCT_out.addr WAR 2:196|DCT_out.addr WAR 3:103|DCT_out.addr WAR 3:104|DCT_out.addr WAR 3:105|DCT_out.addr WAR 3:106|DCT_out.addr WAR 3:61|DCT_out.addr WAR 3:62|DCT_out.addr WAR 3:63|DCT_out.addr WAR 3:64|DCT_out.addr WAR 3:66|DCT_out.addr WAR 3:85|DCT_out.addr WAR 3:86|DCT_out.addr WAR 3:87|DCT_out.addr WAR 3:88|DCT_out.addr WAR 6:528|DCT_out.addr WAR 6:537|DCT_out.addr WAW 1:72|DCT_out.addr WAW 1:73|DCT_out.addr WAW 1:74|DCT_out.addr WAW 1:80|DCT_out.addr WAW 1:81|DCT_out.addr WAW 1:82|DCT_out.addr WAW 1:88|DCT_out.addr WAW 1:89|DCT_out.addr WAW 1:90|DCT_out.addr WAW 1:96|DCT_out.addr WAW 1:97|DCT_out.addr WAW 1:98|DCT_out.addr
+6:593 NOM  INIT *|jpc.addr RAW 6:583|jpc.addr RAW 6:591|jpc.addr RAW 6:592|jpc.addr WAR 6:569|jpc.addr WAW 1:88|jpc.addr
+6:293 NOM  INIT *|height RAW 1:81|stream.addr RAW 1:82|stream.addr RAW 1:97|stream.addr RAW 1:98|stream.addr RAW 6:284|stream.addr WAR 2:162|height
+6:462 NOM  RAW 6:437|jpc.addr RAW 6:456|stream.addr
+6:470 NOM  RAW 6:437|jpc.addr RAW 6:456|stream.addr
+6:457 NOM  INIT *|chuck_len RAW 1:73|stream.addr RAW 1:74|stream.addr RAW 1:80|stream.addr RAW 1:82|stream.addr RAW 1:88|stream.addr RAW 1:89|stream.addr RAW 1:90|stream.addr RAW 1:96|stream.addr RAW 1:97|stream.addr RAW 1:98|stream.addr RAW 6:456|stream.addr WAR 6:458|chuck_len WAW 1:72|chuck_len
+7:101 NOM  RAW 7:90|jdc
+6:138 NOM  INIT *|hz WAR 6:157|hz WAW 1:81|hz
+3:167 NOM  INIT *|z11 RAW 3:124|wsptr RAW 3:125|wsptr RAW 3:126|wsptr RAW 3:127|wsptr RAW 3:128|wsptr RAW 3:129|wsptr RAW 3:130|wsptr RAW 3:131|wsptr RAW 3:141|wsptr RAW 3:193|wsptr RAW 3:68|wsptr RAW 3:69|wsptr RAW 3:70|wsptr RAW 3:71|wsptr RAW 3:72|wsptr RAW 3:73|wsptr RAW 3:74|wsptr RAW 3:75|wsptr WAR 2:108|z11 WAR 3:114|z11 WAR 3:171|z11 WAR 6:528|z11 WAW 1:72|z11 WAW 1:80|z11 WAW 1:88|z11 WAW 1:96|z11
+7:64 NOM  INIT *|bytes_per_mcu WAR 6:528|bytes_per_mcu WAR 7:78|bytes_per_mcu
+6:334 NOM  WAR 6:424|jpc.addr WAR 6:424|stream.addr
+6:605 NOM  WAR 4:106|jpc.addr
+4:185 NOM  RAW 1:74|jdc
+7:106 NOM  RAW 1:80|jdc.addr RAW 1:88|jdc.addr RAW 1:97|jdc.addr RAW 7:104|jdc.addr
+2:163 NOM  RAW 2:162|huff_code
+3:98 NOM  RAW 3:91|tmp11 RAW 3:94|tmp12 WAR 3:94|tmp1
+6:573 NOM  INIT *|task.addr RAW 6:515|jpc.addr RAW 6:558|jpc.addr RAW 6:558|task.addr WAR 6:528|task.addr WAW 1:97|task.addr WAW 2:114|task.addr
+1:106 NOM  WAR 3:216|jpc.addr WAR 3:218|rgb_data.addr
+6:571 NOM  INIT *|task.addr RAW 1:72|jpc.addr RAW 1:74|jpc.addr RAW 1:80|jpc.addr RAW 1:82|jpc.addr RAW 1:88|jpc.addr RAW 1:90|jpc.addr RAW 1:96|jpc.addr RAW 1:98|jpc.addr RAW 6:558|jpc.addr RAW 6:558|task.addr RAW 6:592|jpc.addr WAR 6:528|task.addr WAW 1:72|task.addr WAW 1:80|task.addr WAW 1:88|task.addr WAW 1:96|task.addr WAW 6:571|task.addr
+6:366 NOM  RAW 6:365|retval
+2:235 NOM  RAW 2:226|hc
+6:561 NOM  RAW 6:558|tasknum.addr
+6:424 NOM  INIT *|jpc.addr RAW 1:89|stream.addr RAW 1:90|stream.addr RAW 1:97|stream.addr RAW 1:98|stream.addr RAW 6:411|jpc.addr RAW 6:411|stream.addr WAR 6:566|jpc.addr WAW 1:89|jpc.addr
+3:73 NOM  INIT *|wsptr RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:66|dcval RAW 3:79|wsptr WAR 2:108|wsptr WAR 2:123|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAR 4:75|wsptr WAR 6:174|wsptr WAR 6:528|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+6:368 NOM  WAR 6:326|jpc.addr WAR 6:398|jpc.addr WAR 6:400|jpc.addr WAW 6:310|stream.addr WAW 6:405|stream.addr
+6:400 NOM  RAW 6:368|jpc.addr RAW 6:380|index RAW 6:386|stream.addr
+6:324 NOM  INIT *|jpc.addr RAW 6:284|jpc.addr RAW 6:293|height WAW 1:88|jpc.addr WAW 1:96|jpc.addr
+6:175 NOM  RAW 6:161|huffcode RAW 6:172|i WAR 6:199|code WAW 6:164|code WAW 6:190|code
+6:251 NOM  INIT *|qtable.addr RAW 1:72|build_quantization_table.aanscalefactor RAW 1:72|zz RAW 1:73|zz RAW 1:74|build_quantization_table.aanscalefactor RAW 1:74|zz RAW 1:80|zz RAW 1:81|build_quantization_table.aanscalefactor RAW 1:81|zz RAW 1:82|zz RAW 1:88|build_quantization_table.aanscalefactor RAW 1:88|ref_table.addr RAW 1:88|zz RAW 1:89|ref_table.addr RAW 1:89|zz RAW 1:90|build_quantization_table.aanscalefactor RAW 1:90|ref_table.addr RAW 1:90|zz RAW 1:96|ref_table.addr RAW 1:96|zz RAW 1:97|build_quantization_table.aanscalefactor RAW 1:97|ref_table.addr RAW 1:97|zz RAW 1:98|ref_table.addr RAW 1:98|zz RAW 6:231|qtable.addr RAW 6:231|ref_table.addr RAW 6:247|zz RAW 6:249|i RAW 6:250|j RAW 6:251|qtable.addr RAW 6:251|zz WAR 6:251|qtable.addr WAR 6:251|zz WAW 1:72|qtable.addr WAW 1:74|qtable.addr WAW 1:81|qtable.addr WAW 1:88|qtable.addr WAW 1:89|qtable.addr WAW 1:90|qtable.addr WAW 1:96|qtable.addr WAW 1:97|qtable.addr WAW 1:98|qtable.addr
+6:109 NOM  INIT *|width RAW 1:72|stream.addr RAW 1:73|stream.addr RAW 1:88|stream.addr RAW 1:89|stream.addr RAW 6:103|stream.addr WAR 3:166|width
+1:61 NOM  INIT *|cb RAW 1:50|Cb RAW 1:61|Cb RAW 1:72|Cb RAW 1:73|Cb RAW 1:74|Cb RAW 1:80|Cb RAW 1:81|Cb RAW 1:82|Cb RAW 1:88|Cb RAW 1:89|Cb RAW 1:90|Cb RAW 1:96|Cb RAW 1:97|Cb RAW 1:98|Cb RAW 3:183|Cb RAW 3:184|Cb RAW 3:185|Cb RAW 3:186|Cb RAW 3:187|Cb RAW 3:188|Cb RAW 3:189|Cb RAW 3:190|Cb WAR 1:61|Cb WAR 1:65|cb WAR 2:108|cb WAR 2:196|cb WAR 6:528|cb WAW 1:73|cb WAW 1:81|cb WAW 1:89|cb WAW 1:97|cb
+7:107 NOM  RAW 1:82|jdc.addr RAW 1:90|jdc.addr RAW 7:104|jdc.addr
+3:71 NOM  INIT *|wsptr RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:66|dcval RAW 3:79|wsptr WAR 2:108|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAR 6:528|wsptr WAR 6:537|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+2:181 NOM  RAW 2:178|size_val
+3:126 NOM  RAW 3:120|tmp6 RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:79|wsptr RAW 3:98|tmp1 WAR 2:108|wsptr WAR 2:164|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+2:225 NOM  INIT *|jpc.addr WAW 1:81|jpc.addr
+3:87 NOM  RAW 1:72|quantptr RAW 1:73|quantptr RAW 1:74|quantptr RAW 1:80|quantptr RAW 1:81|quantptr RAW 1:82|quantptr RAW 1:88|quantptr RAW 1:89|quantptr RAW 1:90|quantptr RAW 1:96|quantptr RAW 1:97|quantptr RAW 1:98|quantptr RAW 2:202|inptr RAW 3:133|inptr RAW 3:134|quantptr RAW 3:43|inptr RAW 3:49|quantptr RAW 3:77|inptr RAW 3:78|quantptr WAR 2:202|tmp2 WAR 3:129|tmp2 WAR 3:188|tmp2
+6:363 NOM  INIT *|jpc.addr RAW 6:334|jpc.addr RAW 6:349|stream.addr WAR 6:570|jpc.addr WAW 1:97|jpc.addr
+7:52 NOM  WAR 6:574|jdc.addr WAR 6:574|jtask.addr
+6:503 NOM  RAW 6:318|jpc.addr RAW 6:437|jpc.addr
+6:398 NOM  RAW 6:368|jpc.addr RAW 6:380|index RAW 6:386|stream.addr
+2:204 NOM  RAW 2:203|retval
+4:130 NOM  INIT *|fp RAW 4:112|infilename.addr WAW 1:72|fp
+3:85 NOM  RAW 1:72|quantptr RAW 1:73|quantptr RAW 1:74|quantptr RAW 1:80|quantptr RAW 1:81|quantptr RAW 1:82|quantptr RAW 1:88|quantptr RAW 1:89|quantptr RAW 1:90|quantptr RAW 1:96|quantptr RAW 1:97|quantptr RAW 1:98|quantptr RAW 2:202|inptr RAW 3:133|inptr RAW 3:134|quantptr RAW 3:43|inptr RAW 3:49|quantptr RAW 3:77|inptr RAW 3:78|quantptr WAR 2:202|tmp0 WAR 3:125|tmp0 WAR 3:184|tmp0
+1:67 NOM  INIT *|y RAW 1:100|Y RAW 1:49|Y RAW 1:72|Y RAW 1:73|Y RAW 1:74|Y RAW 1:76|Y RAW 1:80|Y RAW 1:81|Y RAW 1:82|Y RAW 1:88|Y RAW 1:89|Y RAW 1:90|Y RAW 1:96|Y RAW 1:97|Y RAW 1:98|Y RAW 3:183|Y RAW 3:186|Y RAW 3:187|Y RAW 3:189|Y WAR 1:67|Y WAR 1:95|y WAR 2:108|y WAR 2:196|y WAR 6:528|y WAW 1:98|y
+2:191 NOM  RAW 2:190|j
+4:232 NOM  RAW 4:225|current_argument WAR 4:232|current_argument
+6:164 NOM  RAW 6:161|code RAW 6:164|code WAR 6:164|code
+2:110 NOM  RAW 1:72|huffman_table.addr RAW 1:73|huffman_table.addr RAW 1:74|huffman_table.addr RAW 1:80|huffman_table.addr RAW 1:81|huffman_table.addr RAW 1:82|huffman_table.addr RAW 1:88|huffman_table.addr RAW 1:89|huffman_table.addr RAW 1:90|huffman_table.addr RAW 1:96|huffman_table.addr RAW 1:97|huffman_table.addr RAW 1:98|huffman_table.addr RAW 2:101|huffman_table.addr RAW 2:108|hcode RAW 6:190|huffman_table.addr WAR 2:108|value WAR 2:111|value WAR 2:115|value WAR 2:196|value WAR 6:175|value WAR 6:528|value WAW 1:73|value WAW 1:81|value WAW 1:89|value WAW 1:97|value
+6:348 NOM  RAW 1:88|stream.addr RAW 1:89|stream.addr RAW 1:90|stream.addr RAW 1:96|stream.addr RAW 1:97|stream.addr RAW 1:98|stream.addr RAW 6:346|stream.addr RAW 6:349|stream.addr WAR 6:348|stream.addr WAR 6:355|cid WAR 6:385|cid
+1:72 NOM  INIT *|p RAW 1:101|p RAW 1:47|p RAW 1:70|b RAW 1:82|p RAW 1:90|p RAW 1:98|p WAR 1:102|p WAR 1:112|p WAR 1:25|p WAR 1:48|p WAR 1:52|p WAR 1:61|p WAR 1:62|p WAR 1:64|p WAR 1:67|p WAR 1:70|p WAR 1:72|p WAR 1:76|p WAR 1:84|p WAR 1:92|p WAR 2:108|p WAR 2:110|p WAR 2:113|p WAR 2:114|p WAR 2:123|p WAR 2:126|p WAR 2:127|p WAR 2:129|p WAR 2:157|p WAR 2:164|p WAR 2:168|p WAR 2:175|p WAR 2:179|p WAR 2:183|p WAR 2:196|p WAR 2:202|p WAR 3:103|p WAR 3:104|p WAR 3:105|p WAR 3:106|p WAR 3:153|p WAR 3:156|p WAR 3:159|p WAR 3:166|p WAR 3:168|p WAR 3:171|p WAR 3:179|p WAR 3:188|p WAR 3:194|p WAR 3:205|p WAR 3:30|p WAR 3:43|p WAR 3:61|p WAR 3:62|p WAR 3:63|p WAR 3:64|p WAR 3:66|p WAR 3:85|p WAR 3:86|p WAR 3:87|p WAR 3:88|p WAR 4:66|p WAR 4:67|p WAR 6:174|p WAR 6:176|p WAR 6:197|p WAR 6:251|p WAR 6:269|p WAR 6:297|p WAR 6:308|p WAR 6:348|p WAR 6:355|p WAR 6:374|p WAR 6:386|p WAR 6:417|p WAR 6:448|p WAR 6:456|p WAR 6:457|p WAR 6:498|p WAR 6:501|p WAR 6:505|p WAR 6:516|p WAR 6:526|p WAR 6:528|p WAR 6:537|p WAR 6:547|p WAR 6:566|p WAR 6:569|p WAR 6:571|p WAR 6:573|p WAR 6:588|p WAR 7:106|p WAR 7:107|p WAR 7:54|p WAR 7:55|p WAR 7:71|p WAR 7:73|p WAR 7:75|p WAR 7:76|p WAR 7:78|p WAR 7:80|p WAW 1:102|p WAW 1:48|p WAW 1:52|p WAW 1:61|p WAW 1:72|p WAW 1:80|p WAW 1:88|p WAW 1:96|p WAW 1:98|p WAW 2:166|p WAW 2:231|p WAW 2:233|p WAW 3:183|p WAW 3:184|p WAW 3:185|p WAW 3:186|p WAW 3:187|p WAW 3:188|p WAW 3:189|p WAW 3:190|p WAW 3:193|p WAW 3:215|p WAW 4:68|p WAW 6:148|p WAW 6:180|p WAW 6:190|p WAW 6:199|p WAW 6:200|p WAW 6:201|p WAW 6:251|p WAW 6:319|p WAW 6:360|p WAW 6:361|p WAW 6:549|p WAW 6:571|p WAW 7:92|p
+1:79 NOM  RAW 1:65|add_b RAW 1:72|add_b RAW 1:76|y WAR 1:72|b WAW 1:72|b
+2:135 NOM  RAW 2:115|retval RAW 2:129|retval
+6:284 NOM  WAR 6:267|stream.addr WAR 6:276|jpc.addr
+4:163 NOM  RAW 4:141|jpc RAW 4:154|rgb_data WAW 4:116|jdc
+2:226 NOM  INIT *|hc WAW 1:74|hc
+6:273 NOM  RAW 6:269|qi
+4:91 NOM  RAW 1:89|wc.addr RAW 4:87|wc.addr WAR 6:566|targaheader WAW 1:72|targaheader
+6:162 NOM  RAW 6:155|hz RAW 6:162|hz WAR 6:162|hz
+4:158 NOM  RAW 4:141|jpc RAW 4:150|mcus_in_width RAW 4:151|mcus_in_height RAW 6:424|jpc
+2:159 NOM  RAW 2:157|retcode
+7:95 NOM  INIT *|jdc RAW 6:326|jpc.addr RAW 7:89|jpc.addr RAW 7:90|jdc WAW 1:73|jdc WAW 1:97|jdc
+2:143 NOM  INIT *|component.addr INIT *|hc.addr INIT *|hdata.addr WAR 2:108|component.addr WAR 2:108|hc.addr WAR 2:108|hdata.addr WAR 2:150|component.addr WAR 2:150|hc.addr WAR 2:164|hc.addr WAR 2:175|hdata.addr WAR 2:196|component.addr WAR 2:196|hdata.addr WAR 2:202|DCT_out.addr WAR 6:363|DCT_out.addr WAR 6:528|DCT_out.addr WAR 6:528|component.addr WAR 6:528|hc.addr WAR 6:528|hdata.addr WAR 6:537|hc.addr WAW 1:72|hdata.addr WAW 1:74|DCT_out.addr WAW 1:74|component.addr WAW 1:74|hc.addr WAW 1:80|hdata.addr WAW 1:82|DCT_out.addr WAW 1:82|component.addr WAW 1:82|hc.addr WAW 1:88|hdata.addr WAW 1:90|DCT_out.addr WAW 1:90|component.addr WAW 1:90|hc.addr WAW 1:96|hdata.addr WAW 1:98|DCT_out.addr WAW 1:98|component.addr WAW 1:98|hc.addr
+3:134 NOM  RAW 3:134|quantptr RAW 3:49|quantptr RAW 3:78|quantptr WAR 3:134|quantptr
+1:80 NOM  INIT *|p RAW 1:74|p RAW 1:79|b WAR 1:102|p WAR 1:25|p WAR 1:48|p WAR 1:52|p WAR 1:61|p WAR 1:62|p WAR 1:64|p WAR 1:67|p WAR 1:76|p WAR 1:79|p WAR 1:80|p WAR 1:84|p WAR 1:92|p WAR 2:108|p WAR 2:110|p WAR 2:113|p WAR 2:114|p WAR 2:123|p WAR 2:126|p WAR 2:127|p WAR 2:129|p WAR 2:157|p WAR 2:164|p WAR 2:168|p WAR 2:175|p WAR 2:179|p WAR 2:183|p WAR 2:196|p WAR 2:202|p WAR 3:103|p WAR 3:104|p WAR 3:105|p WAR 3:106|p WAR 3:153|p WAR 3:156|p WAR 3:159|p WAR 3:166|p WAR 3:168|p WAR 3:171|p WAR 3:179|p WAR 3:188|p WAR 3:194|p WAR 3:205|p WAR 3:30|p WAR 3:43|p WAR 3:61|p WAR 3:62|p WAR 3:63|p WAR 3:64|p WAR 3:66|p WAR 3:85|p WAR 3:86|p WAR 3:87|p WAR 3:88|p WAR 4:138|p WAR 4:244|p WAR 6:172|p WAR 6:174|p WAR 6:175|p WAR 6:176|p WAR 6:250|p WAR 6:251|p WAR 6:269|p WAR 6:294|p WAR 6:308|p WAR 6:349|p WAR 6:374|p WAR 6:386|p WAR 6:448|p WAR 6:456|p WAR 6:506|p WAR 6:511|p WAR 6:516|p WAR 6:526|p WAR 6:528|p WAR 6:537|p WAR 6:547|p WAR 6:566|p WAR 6:569|p WAR 6:571|p WAR 6:573|p WAR 7:54|p WAR 7:55|p WAR 7:71|p WAR 7:73|p WAR 7:75|p WAR 7:76|p WAR 7:78|p WAR 7:80|p WAW 1:102|p WAW 1:48|p WAW 1:52|p WAW 1:61|p WAW 1:72|p WAW 1:80|p WAW 1:88|p WAW 1:96|p WAW 1:98|p WAW 2:166|p WAW 3:183|p WAW 3:184|p WAW 3:185|p WAW 3:186|p WAW 3:187|p WAW 3:188|p WAW 3:189|p WAW 3:190|p WAW 3:193|p WAW 4:164|p WAW 6:180|p WAW 6:549|p WAW 6:571|p
+6:456 NOM  INIT *|marker RAW 1:73|stream.addr RAW 1:81|stream.addr RAW 1:88|stream.addr RAW 1:89|stream.addr RAW 1:96|stream.addr RAW 1:97|stream.addr RAW 6:448|stream.addr WAR 6:456|stream.addr WAR 6:459|marker WAW 1:74|marker
+6:146 NOM  RAW 6:127|table.addr
+6:408 NOM  WAR 6:332|retval WAR 6:409|retval
+6:459 NOM  RAW 6:456|marker
+4:95 NOM  WAW 1:82|targaheader
+1:109 NOM  INIT *|cc RAW 1:106|jpc.addr RAW 1:107|cc RAW 6:324|jpc.addr WAW 1:89|cc WAW 1:97|cc
+3:121 NOM  RAW 3:114|tmp11 RAW 3:120|tmp6 WAR 3:109|tmp5
+1:86 NOM  RAW 1:64|add_g RAW 1:73|add_g RAW 1:81|add_g RAW 1:84|y WAR 1:81|g WAW 1:81|g
+4:225 NOM  INIT *|current_argument
+1:101 NOM  RAW 1:52|offset_to_next_row RAW 1:72|offset_to_next_row RAW 1:80|offset_to_next_row RAW 1:82|p RAW 1:88|offset_to_next_row RAW 1:90|p RAW 1:96|offset_to_next_row RAW 1:98|p WAR 1:101|p
+3:96 NOM  RAW 3:90|tmp10 RAW 3:93|tmp13 WAR 3:91|tmp0
+4:75 NOM  RAW 4:64|wc
+6:505 NOM  RAW 6:317|jpc.addr RAW 6:437|jpc.addr
+3:216 NOM  INIT *|ic RAW 3:209|jpc.addr RAW 3:210|ic RAW 6:424|jpc.addr WAW 1:89|ic WAW 1:97|ic
+1:87 NOM  RAW 1:65|add_b RAW 1:72|add_b RAW 1:80|add_b RAW 1:84|y WAR 1:80|b WAW 1:80|b
+6:591 NOM  INIT *|jpc.addr RAW 6:583|buf.addr RAW 6:583|jpc.addr WAR 6:568|jpc.addr WAW 1:97|jpc.addr
+6:325 NOM  INIT *|jpc.addr RAW 6:284|jpc.addr RAW 6:294|width WAR 6:566|jpc.addr WAW 1:97|jpc.addr
+6:574 NOM  INIT *|task.addr RAW 6:516|jpc.addr RAW 6:558|jpc.addr RAW 6:558|task.addr WAR 2:114|task.addr WAR 6:528|task.addr WAW 1:90|task.addr
+6:392 NOM  RAW 6:380|index
+2:230 NOM  RAW 2:225|jpc.addr RAW 2:226|hc
+1:110 NOM  INIT *|cc RAW 1:106|jpc.addr RAW 1:107|cc RAW 6:424|jpc.addr WAW 1:90|cc WAW 1:98|cc
+6:176 NOM  INIT *|code_size RAW 6:142|huffsize RAW 6:172|i WAR 3:156|code_size WAR 6:188|code_size WAR 6:196|code_size
+3:28 NOM  WAR 3:31|retval
+3:200 NOM  RAW 1:74|ic.addr RAW 1:82|ic.addr RAW 1:90|ic.addr RAW 1:98|ic.addr RAW 3:198|ic.addr RAW 3:198|idata.addr RAW 3:198|yuvdata.addr
+1:23 NOM  WAR 1:26|retval
+4:170 NOM  INIT *|i RAW 1:73|ntasks RAW 1:74|i RAW 1:81|ntasks RAW 1:82|i RAW 1:89|ntasks RAW 1:90|i RAW 1:97|ntasks RAW 1:98|i RAW 4:157|ntasks RAW 4:170|i WAR 4:170|i WAR 4:177|i
+3:187 NOM  INIT *|outptr RAW 3:161|tmp2 RAW 3:178|tmp5 RAW 3:194|outptr RAW 3:44|outptr WAR 1:61|outptr WAR 1:62|outptr WAR 1:67|outptr WAR 1:84|outptr WAR 2:108|outptr WAR 2:123|outptr WAR 2:164|outptr WAR 2:196|outptr WAR 6:528|outptr WAR 6:537|outptr WAW 1:72|outptr WAW 1:73|outptr WAW 1:74|outptr WAW 1:80|outptr WAW 1:81|outptr WAW 1:82|outptr WAW 1:88|outptr WAW 1:89|outptr WAW 1:90|outptr WAW 1:96|outptr WAW 1:97|outptr WAW 1:98|outptr
+7:71 NOM  RAW 6:566|jtask.addr RAW 7:52|jtask.addr WAW 7:62|mcus_posy
+6:154 NOM  INIT *|hc WAW 1:74|hc WAW 6:161|hc
+2:157 NOM  RAW 1:72|c RAW 1:73|c RAW 1:74|c RAW 1:80|c RAW 1:81|c RAW 1:82|c RAW 1:88|c RAW 1:89|c RAW 1:90|c RAW 1:96|c RAW 1:97|c RAW 1:98|c RAW 2:143|hdata.addr RAW 2:150|c WAR 2:108|retcode WAR 2:162|retcode WAR 2:196|retcode WAR 6:361|retcode WAR 6:528|retcode WAW 1:74|retcode WAW 1:82|retcode WAW 1:90|retcode WAW 1:98|retcode
+1:51 NOM  INIT *|Cr RAW 1:40|yuv.addr WAR 2:108|Cr WAR 2:164|Cr WAR 2:196|Cr WAR 6:528|Cr WAW 1:62|Cr WAW 1:73|Cr WAW 1:81|Cr WAW 1:89|Cr WAW 1:97|Cr
+3:88 NOM  RAW 1:72|quantptr RAW 1:73|quantptr RAW 1:74|quantptr RAW 1:80|quantptr RAW 1:81|quantptr RAW 1:82|quantptr RAW 1:88|quantptr RAW 1:89|quantptr RAW 1:90|quantptr RAW 1:96|quantptr RAW 1:97|quantptr RAW 1:98|quantptr RAW 2:202|inptr RAW 3:133|inptr RAW 3:134|quantptr RAW 3:43|inptr RAW 3:49|quantptr RAW 3:77|inptr RAW 3:78|quantptr WAR 2:202|tmp3 WAR 3:131|tmp3 WAR 3:190|tmp3
+6:188 NOM  RAW 6:175|code RAW 6:176|code_size WAR 6:188|code
+3:120 NOM  RAW 3:113|tmp7 RAW 3:118|tmp12 WAR 3:109|tmp6
+3:21 NOM  RAW 3:17|shift.addr RAW 3:19|x.addr WAR 3:21|x.addr
+6:595 NOM  INIT *|ret RAW 6:583|jpc.addr RAW 6:591|jpc.addr WAR 7:75|ret
+3:63 NOM  RAW 2:202|inptr RAW 3:133|inptr RAW 3:43|inptr RAW 3:77|inptr
+7:73 NOM  INIT *|j RAW 1:112|cc RAW 1:72|cc RAW 1:72|jdc.addr RAW 1:73|cc RAW 1:73|j RAW 1:74|jdc.addr RAW 1:74|mcus_posy RAW 1:80|cc RAW 1:80|jdc.addr RAW 1:81|cc RAW 1:81|j RAW 1:82|jdc.addr RAW 1:82|mcus_posy RAW 1:88|cc RAW 1:88|jdc.addr RAW 1:89|cc RAW 1:89|j RAW 1:90|jdc.addr RAW 1:90|mcus_posy RAW 1:96|cc RAW 1:96|jdc.addr RAW 1:97|cc RAW 1:97|j RAW 1:98|jdc.addr RAW 1:98|mcus_posy RAW 7:52|jdc.addr RAW 7:55|cc RAW 7:71|mcus_posy RAW 7:73|j RAW 7:93|jdc.addr WAR 6:528|j WAR 7:73|j
+3:116 NOM  RAW 3:109|z10 RAW 3:111|z12 WAR 2:108|z5 WAR 3:118|z5 WAR 3:175|z5 WAW 1:74|z5 WAW 1:82|z5 WAW 1:90|z5 WAW 1:98|z5
+2:168 NOM  RAW 1:72|c RAW 1:73|c RAW 1:74|c RAW 1:80|c RAW 1:81|c RAW 1:82|c RAW 1:88|c RAW 1:89|c RAW 1:90|c RAW 1:96|c RAW 1:97|c RAW 1:98|c RAW 2:150|c RAW 2:166|c RAW 7:67|c WAR 2:202|DCT WAR 3:179|DCT WAW 1:72|DCT WAW 1:80|DCT WAW 1:88|DCT WAW 1:96|DCT
+4:105 NOM  RAW 1:82|wc.addr RAW 1:90|wc.addr RAW 1:98|wc.addr RAW 4:102|wc.addr RAW 4:103|bytes_per_mcu_line RAW 4:106|wc.addr
+3:27 NOM  RAW 3:24|x.addr
+3:68 NOM  INIT *|wsptr RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:66|dcval RAW 3:79|wsptr WAR 2:108|wsptr WAR 2:164|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAR 6:110|wsptr WAR 6:176|wsptr WAR 6:528|wsptr WAR 6:537|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr WAW 6:109|wsptr
+6:538 NOM  RAW 1:72|jpc.addr RAW 1:73|jpc.addr RAW 1:80|jpc.addr RAW 1:81|jpc.addr RAW 1:88|jpc.addr RAW 1:89|jpc.addr RAW 1:96|jpc.addr RAW 1:97|jpc.addr RAW 6:519|jpc.addr RAW 6:537|marker RAW 6:549|jpc.addr
+4:80 NOM  RAW 4:78|wc.addr
+2:127 NOM  RAW 1:72|slowtable RAW 1:73|slowtable RAW 1:74|slowtable RAW 1:80|slowtable RAW 1:81|slowtable RAW 1:82|slowtable RAW 1:88|slowtable RAW 1:89|slowtable RAW 1:90|slowtable RAW 1:96|slowtable RAW 1:97|slowtable RAW 1:98|slowtable RAW 2:123|hcode RAW 2:124|slowtable RAW 2:131|slowtable
+2:229 NOM  RAW 2:225|jpc.addr RAW 2:226|hc
+6:411 NOM  WAR 6:398|jpc.addr WAW 6:405|stream.addr
+6:360 NOM  INIT *|jpc.addr RAW 6:334|jpc.addr RAW 6:347|i RAW 6:349|table WAW 1:72|jpc.addr WAW 1:74|jpc.addr WAW 1:88|jpc.addr WAW 1:89|jpc.addr WAW 1:90|jpc.addr WAW 1:97|jpc.addr
+3:141 NOM  WAW 3:135|wsptr WAW 3:79|wsptr
+3:168 NOM  INIT *|z12 RAW 3:124|wsptr RAW 3:125|wsptr RAW 3:126|wsptr RAW 3:127|wsptr RAW 3:128|wsptr RAW 3:129|wsptr RAW 3:130|wsptr RAW 3:131|wsptr RAW 3:141|wsptr RAW 3:193|wsptr RAW 3:68|wsptr RAW 3:69|wsptr RAW 3:70|wsptr RAW 3:71|wsptr RAW 3:72|wsptr RAW 3:73|wsptr RAW 3:74|wsptr RAW 3:75|wsptr WAR 2:108|z12 WAR 3:117|z12 WAR 3:174|z12 WAR 6:528|z12 WAW 1:74|z12 WAW 1:82|z12 WAW 1:90|z12 WAW 1:98|z12
+4:145 NOM  RAW 4:133|length_of_file RAW 4:134|buf RAW 4:141|jpc
+6:144 NOM  INIT *|hz RAW 6:142|hz WAR 6:172|hz WAR 6:176|hz WAW 1:72|hz
+3:74 NOM  INIT *|wsptr RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:66|dcval RAW 3:79|wsptr WAR 2:108|wsptr WAR 2:164|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAR 6:528|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+3:111 NOM  RAW 3:103|tmp4 RAW 3:106|tmp7 WAR 2:108|z12 WAR 2:123|z12 WAR 2:196|z12 WAR 3:117|z12 WAR 3:174|z12 WAW 1:74|z12 WAW 1:82|z12 WAW 1:90|z12 WAW 1:98|z12
+6:156 NOM  INIT *|nbits RAW 6:142|hz RAW 6:155|hz WAR 3:153|nbits WAW 6:165|nbits
+1:95 NOM  RAW 1:65|add_b RAW 1:72|add_b RAW 1:80|add_b RAW 1:88|add_b RAW 1:92|y WAR 1:88|b WAW 1:88|b
+1:94 NOM  RAW 1:64|add_g RAW 1:73|add_g RAW 1:81|add_g RAW 1:89|add_g RAW 1:92|y WAR 1:89|g WAW 1:89|g
+3:36 NOM  INIT *|Q_table.addr INIT *|input_buf.addr INIT *|output_buf.addr INIT *|stride.addr WAR 2:202|Q_table.addr WAR 2:202|input_buf.addr WAR 2:202|output_buf.addr WAR 2:202|stride.addr WAR 3:194|stride.addr WAR 3:43|input_buf.addr WAR 3:44|output_buf.addr WAR 3:49|Q_table.addr
+2:190 NOM  RAW 2:172|j RAW 2:179|count_0 RAW 2:186|j RAW 2:197|j WAR 2:190|j
+4:96 NOM  WAW 1:74|targaheader
+6:506 NOM  RAW 6:317|jpc.addr RAW 6:437|jpc.addr
+7:91 NOM  INIT *|jdc RAW 6:323|jpc.addr RAW 7:89|jpc.addr RAW 7:90|jdc WAR 7:83|jdc WAW 1:73|jdc WAW 1:97|jdc
+2:238 NOM  WAW 1:72|hc.addr
+3:128 NOM  RAW 3:121|tmp5 RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:79|wsptr RAW 3:99|tmp2 WAR 2:108|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+4:97 NOM  WAR 7:74|targaheader
+4:112 NOM  INIT *|infilename.addr INIT *|outfilename.addr WAW 1:74|outfilename.addr WAW 1:81|infilename.addr
+6:291 NOM  RAW 6:284|stream.addr
+6:497 NOM  RAW 6:318|jpc.addr RAW 6:437|jpc.addr
+6:417 NOM  RAW 1:88|stream.addr RAW 1:90|stream.addr RAW 1:96|stream.addr RAW 1:98|stream.addr RAW 6:411|stream.addr WAR 6:405|length
+3:158 NOM  INIT *|tmp0 RAW 3:152|tmp10 RAW 3:155|tmp13 WAR 2:202|tmp0 WAR 3:125|tmp0 WAR 3:184|tmp0
+6:142 NOM  INIT *|hz RAW 6:138|hz RAW 6:139|i RAW 6:142|hz WAR 1:25|hz WAR 1:26|hz WAR 3:153|hz WAR 3:168|hz WAR 3:75|hz WAR 6:142|hz WAR 6:172|hz WAR 6:176|hz WAW 1:72|hz WAW 1:73|hz WAW 1:74|hz WAW 1:80|hz WAW 1:81|hz WAW 1:82|hz WAW 6:107|hz WAW 6:108|hz WAW 6:110|hz
+4:177 NOM  RAW 1:74|mcus_in_height RAW 4:177|i WAR 4:170|i WAR 4:177|i
+1:55 NOM  INIT *|j RAW 1:55|j RAW 1:73|j RAW 1:81|j RAW 1:89|j RAW 1:97|j WAR 1:55|j WAR 2:108|j WAR 2:196|j WAR 6:528|j
+6:297 NOM  RAW 1:80|stream.addr RAW 1:96|stream.addr RAW 6:284|stream.addr
+6:201 NOM  INIT *|slowtable65 RAW 6:196|slowtable65 RAW 6:198|slowtable65 WAW 1:72|slowtable65 WAW 1:73|slowtable65 WAW 1:74|slowtable65 WAW 1:80|slowtable65 WAW 1:81|slowtable65 WAW 1:82|slowtable65 WAW 1:88|slowtable65 WAW 1:89|slowtable65 WAW 1:90|slowtable65 WAW 1:96|slowtable65 WAW 1:97|slowtable65 WAW 1:98|slowtable65
+6:171 NOM  INIT *|next_free_entry WAW 1:81|next_free_entry WAW 6:171|next_free_entry
+6:397 NOM  RAW 6:380|index
+3:31 NOM  RAW 3:26|retval RAW 3:28|retval RAW 3:30|retval
+3:50 NOM  INIT *|wsptr WAR 2:108|wsptr WAR 6:528|wsptr WAW 1:72|wsptr WAW 1:80|wsptr WAW 1:88|wsptr WAW 1:96|wsptr WAW 3:193|wsptr
+6:588 NOM  RAW 1:89|buf.addr RAW 1:96|buf.addr RAW 1:97|buf.addr RAW 6:583|buf.addr
+6:314 NOM  RAW 6:310|Q_table
+6:566 NOM  INIT *|task.addr RAW 1:73|jpc.addr RAW 1:74|jpc.addr RAW 1:81|jpc.addr RAW 1:82|jpc.addr RAW 1:89|jpc.addr RAW 1:90|jpc.addr RAW 1:97|jpc.addr RAW 1:98|jpc.addr RAW 6:325|jpc.addr RAW 6:424|jpc.addr RAW 6:558|jpc.addr RAW 6:558|task.addr RAW 6:558|tasknum.addr WAR 6:528|task.addr WAR 7:71|task.addr WAW 1:72|task.addr WAW 1:80|task.addr WAW 1:88|task.addr WAW 1:96|task.addr
+4:181 NOM  RAW 1:74|buf
+6:309 NOM  RAW 1:73|stream.addr RAW 1:81|stream.addr RAW 1:89|stream.addr RAW 1:97|stream.addr RAW 6:308|stream.addr WAR 6:267|sampling_factor WAR 6:309|stream.addr WAR 6:318|sampling_factor
+6:353 NOM  RAW 6:349|table
+1:102 NOM  RAW 1:52|offset_to_next_row RAW 1:72|offset_to_next_row RAW 1:80|offset_to_next_row RAW 1:88|offset_to_next_row RAW 1:96|offset_to_next_row RAW 1:98|p2 WAR 1:102|p2
+2:113 NOM  RAW 1:72|huffman_table.addr RAW 1:73|huffman_table.addr RAW 1:74|huffman_table.addr RAW 1:80|huffman_table.addr RAW 1:81|huffman_table.addr RAW 1:82|huffman_table.addr RAW 1:88|huffman_table.addr RAW 1:89|huffman_table.addr RAW 1:90|huffman_table.addr RAW 1:96|huffman_table.addr RAW 1:97|huffman_table.addr RAW 1:98|huffman_table.addr RAW 2:101|huffman_table.addr RAW 2:110|value RAW 6:180|huffman_table.addr WAR 2:108|code_size WAR 2:114|code_size WAR 2:123|code_size WAR 2:196|code_size WAR 6:175|code_size WAR 6:528|code_size WAW 1:72|code_size WAW 1:80|code_size WAW 1:88|code_size WAW 1:96|code_size
+3:173 NOM  INIT *|z5 RAW 3:166|z10 RAW 3:168|z12 WAR 2:108|z5 WAR 3:118|z5 WAR 3:175|z5 WAR 6:528|z5 WAW 1:74|z5 WAW 1:82|z5 WAW 1:90|z5 WAW 1:98|z5
+1:96 NOM  INIT *|p2 RAW 1:90|p2 RAW 1:95|b WAR 1:102|p2 WAR 1:115|p2 WAR 1:25|p2 WAR 1:48|p2 WAR 1:52|p2 WAR 1:61|p2 WAR 1:62|p2 WAR 1:64|p2 WAR 1:67|p2 WAR 1:76|p2 WAR 1:84|p2 WAR 1:92|p2 WAR 1:95|p2 WAR 1:96|p2 WAR 2:108|p2 WAR 2:110|p2 WAR 2:113|p2 WAR 2:114|p2 WAR 2:123|p2 WAR 2:126|p2 WAR 2:127|p2 WAR 2:129|p2 WAR 2:157|p2 WAR 2:164|p2 WAR 2:168|p2 WAR 2:175|p2 WAR 2:179|p2 WAR 2:183|p2 WAR 2:196|p2 WAR 2:202|p2 WAR 3:103|p2 WAR 3:104|p2 WAR 3:105|p2 WAR 3:106|p2 WAR 3:153|p2 WAR 3:156|p2 WAR 3:159|p2 WAR 3:166|p2 WAR 3:168|p2 WAR 3:171|p2 WAR 3:179|p2 WAR 3:188|p2 WAR 3:194|p2 WAR 3:205|p2 WAR 3:30|p2 WAR 3:43|p2 WAR 3:61|p2 WAR 3:62|p2 WAR 3:63|p2 WAR 3:64|p2 WAR 3:66|p2 WAR 3:85|p2 WAR 3:86|p2 WAR 3:87|p2 WAR 3:88|p2 WAR 4:145|p2 WAR 4:158|p2 WAR 4:164|p2 WAR 4:245|p2 WAR 6:141|p2 WAR 6:175|p2 WAR 6:176|p2 WAR 6:251|p2 WAR 6:313|p2 WAR 6:458|p2 WAR 6:491|p2 WAR 6:516|p2 WAR 6:526|p2 WAR 6:528|p2 WAR 6:537|p2 WAR 6:547|p2 WAR 6:566|p2 WAR 6:569|p2 WAR 6:571|p2 WAR 6:573|p2 WAR 7:54|p2 WAR 7:55|p2 WAR 7:71|p2 WAR 7:73|p2 WAR 7:75|p2 WAR 7:76|p2 WAR 7:78|p2 WAR 7:80|p2 WAW 1:52|p2 WAW 1:61|p2 WAW 1:72|p2 WAW 1:80|p2 WAW 1:88|p2 WAW 1:96|p2 WAW 2:166|p2 WAW 3:183|p2 WAW 3:184|p2 WAW 3:185|p2 WAW 3:186|p2 WAW 3:187|p2 WAW 3:188|p2 WAW 3:189|p2 WAW 3:190|p2 WAW 3:193|p2 WAW 4:94|p2 WAW 6:180|p2 WAW 6:189|p2 WAW 6:549|p2 WAW 6:571|p2
+2:150 NOM  RAW 2:143|component.addr RAW 2:143|hc.addr WAR 2:108|c WAR 2:175|c WAR 6:141|c WAR 6:528|c WAW 1:74|c WAW 1:82|c WAW 1:90|c WAW 1:98|c
+6:511 NOM  RAW 6:510|retval
+6:523 NOM  INIT *|stream RAW 1:73|jpc.addr RAW 1:74|jpc.addr RAW 1:81|jpc.addr RAW 1:82|jpc.addr RAW 1:89|jpc.addr RAW 1:90|jpc.addr RAW 1:97|jpc.addr RAW 1:98|jpc.addr RAW 6:363|jpc.addr RAW 6:519|jpc.addr RAW 6:547|jpc.addr WAR 2:108|stream WAR 2:196|stream WAR 6:547|stream WAW 1:72|stream WAW 1:80|stream WAW 1:88|stream WAW 1:96|stream
+3:206 NOM  RAW 1:73|ic.addr RAW 1:81|ic.addr RAW 1:89|ic.addr RAW 1:97|ic.addr RAW 3:198|ic.addr RAW 3:198|idata.addr RAW 3:198|yuvdata.addr
+4:172 NOM  RAW 1:74|jdc RAW 1:82|jdc RAW 1:90|jdc RAW 1:98|jdc RAW 4:163|jdc
+1:78 NOM  RAW 1:64|add_g RAW 1:73|add_g RAW 1:76|y WAR 1:73|g WAW 1:73|g
+4:157 NOM  INIT *|ntasks RAW 4:141|jpc RAW 4:150|mcus_in_width RAW 4:151|mcus_in_height RAW 6:424|jpc WAR 4:170|ntasks
+6:390 NOM  RAW 6:387|count
+6:542 NOM  RAW 6:537|marker
+1:69 NOM  INIT *|g RAW 1:64|add_g RAW 1:67|y WAR 1:97|g WAR 2:108|g WAR 2:164|g WAR 2:196|g WAR 6:528|g WAW 1:97|g
+3:113 NOM  RAW 3:108|z13 RAW 3:110|z11 WAR 3:111|tmp7
+7:83 NOM  RAW 1:72|jdc.addr RAW 1:73|bytes_per_blocklines RAW 1:73|cc RAW 1:73|jdc.addr RAW 1:74|jdc.addr RAW 1:80|jdc.addr RAW 1:81|bytes_per_blocklines RAW 1:81|cc RAW 1:81|jdc.addr RAW 1:82|jdc.addr RAW 1:88|jdc.addr RAW 1:89|bytes_per_blocklines RAW 1:89|cc RAW 1:89|jdc.addr RAW 1:90|jdc.addr RAW 1:96|jdc.addr RAW 1:97|bytes_per_blocklines RAW 1:97|cc RAW 1:97|jdc.addr RAW 1:98|jdc.addr RAW 7:52|jdc.addr RAW 7:55|cc RAW 7:63|bytes_per_blocklines RAW 7:78|cc RAW 7:91|jdc.addr WAR 7:83|cc
+3:93 NOM  RAW 3:86|tmp1 RAW 3:88|tmp3 WAR 2:108|tmp13 WAR 2:196|tmp13 WAR 3:159|tmp13 WAR 3:97|tmp13 WAW 1:72|tmp13 WAW 1:80|tmp13 WAW 1:88|tmp13 WAW 1:96|tmp13
+3:152 NOM  RAW 3:124|wsptr RAW 3:125|wsptr RAW 3:126|wsptr RAW 3:127|wsptr RAW 3:128|wsptr RAW 3:129|wsptr RAW 3:130|wsptr RAW 3:131|wsptr RAW 3:141|wsptr RAW 3:193|wsptr RAW 3:68|wsptr RAW 3:69|wsptr RAW 3:70|wsptr RAW 3:71|wsptr RAW 3:72|wsptr RAW 3:73|wsptr RAW 3:74|wsptr RAW 3:75|wsptr WAR 2:202|tmp10 WAR 3:122|tmp10 WAR 3:179|tmp10
+1:26 NOM  RAW 1:21|retval RAW 1:23|retval RAW 1:25|retval
+6:172 NOM  RAW 6:142|huffsize RAW 6:144|huffsize RAW 6:172|i WAR 6:147|i WAR 6:172|i
+3:109 NOM  RAW 3:104|tmp5 RAW 3:105|tmp6 WAR 2:108|z10 WAR 2:164|z10 WAR 2:196|z10 WAR 3:118|z10 WAR 3:175|z10 WAW 1:73|z10 WAW 1:81|z10 WAW 1:89|z10 WAW 1:97|z10
+7:66 NOM  INIT *|i RAW 7:66|i WAR 6:528|i WAR 7:66|i WAW 1:74|i WAW 1:82|i WAW 1:90|i WAW 1:98|i
+3:110 NOM  RAW 3:103|tmp4 RAW 3:106|tmp7 WAR 2:108|z11 WAR 2:196|z11 WAR 3:114|z11 WAR 3:171|z11 WAW 1:72|z11 WAW 1:80|z11 WAW 1:88|z11 WAW 1:96|z11
+3:143 NOM  RAW 3:143|ctr WAR 3:143|ctr WAR 3:51|ctr
+6:180 NOM  INIT *|table.addr RAW 6:127|table.addr RAW 6:174|val RAW 6:176|code_size WAR 2:113|table.addr WAW 1:72|table.addr WAW 1:73|table.addr WAW 1:74|table.addr WAW 1:80|table.addr WAW 1:81|table.addr WAW 1:82|table.addr WAW 1:88|table.addr WAW 1:89|table.addr WAW 1:90|table.addr WAW 1:96|table.addr WAW 1:97|table.addr WAW 1:98|table.addr
+6:475 NOM  RAW 6:437|jpc.addr RAW 6:456|stream.addr
+6:127 NOM  INIT *|bits.addr INIT *|table.addr INIT *|vals.addr WAR 3:153|vals.addr WAR 3:156|bits.addr WAR 3:156|table.addr WAR 6:141|bits.addr WAR 6:174|vals.addr WAR 6:190|table.addr WAR 6:196|table.addr
+4:220 NOM  INIT *|benchmark_mode
+4:184 NOM  RAW 1:81|jpc
+6:278 NOM  RAW 6:269|stream.addr WAR 6:278|stream.addr
+4:150 NOM  INIT *|mcus_in_width RAW 4:141|jpc RAW 6:325|jpc WAW 1:72|mcus_in_width
+3:99 NOM  RAW 3:91|tmp11 RAW 3:94|tmp12 WAR 3:91|tmp2
+6:383 NOM  WAR 6:318|huff_bits WAW 6:383|huff_bits
+6:441 NOM  INIT *|sos_marker_found WAW 1:81|sos_marker_found
+2:166 NOM  RAW 2:150|c RAW 2:165|DCT WAR 2:165|c
+3:165 NOM  INIT *|z13 RAW 3:124|wsptr RAW 3:125|wsptr RAW 3:126|wsptr RAW 3:127|wsptr RAW 3:128|wsptr RAW 3:129|wsptr RAW 3:130|wsptr RAW 3:131|wsptr RAW 3:141|wsptr RAW 3:193|wsptr RAW 3:68|wsptr RAW 3:69|wsptr RAW 3:70|wsptr RAW 3:71|wsptr RAW 3:72|wsptr RAW 3:73|wsptr RAW 3:74|wsptr RAW 3:75|wsptr WAR 2:108|z13 WAR 3:114|z13 WAR 3:171|z13 WAR 6:528|z13 WAW 1:73|z13 WAW 1:81|z13 WAW 1:89|z13 WAW 1:97|z13
+7:69 NOM  INIT *|cc RAW 1:113|cc RAW 1:73|cc RAW 1:81|cc RAW 1:89|cc RAW 1:97|cc RAW 6:565|jtask.addr RAW 6:566|jtask.addr RAW 7:52|jtask.addr RAW 7:55|cc RAW 7:63|bytes_per_blocklines RAW 7:64|bytes_per_mcu WAR 6:528|cc WAR 6:537|cc WAW 7:83|cc
+3:174 NOM  RAW 3:168|z12 RAW 3:173|z5 WAR 3:159|tmp10
+6:488 NOM  RAW 6:458|next_chunck WAR 6:458|stream.addr WAR 6:462|stream.addr WAR 6:466|stream.addr WAR 6:470|stream.addr WAR 6:475|stream.addr WAR 6:480|stream.addr
+7:99 NOM  INIT *|jdc RAW 7:89|jpc.addr RAW 7:89|rgb_data.addr RAW 7:90|jdc WAR 7:107|jdc WAW 1:82|jdc WAW 1:90|jdc
+6:551 NOM  INIT *|retval WAR 6:528|retval WAR 6:537|retval WAR 6:552|retval WAW 1:73|retval WAW 1:81|retval WAW 1:89|retval WAW 1:97|retval
+6:323 NOM  INIT *|jpc.addr RAW 6:284|jpc.addr RAW 6:294|width WAW 1:90|jpc.addr WAW 1:98|jpc.addr
+4:164 NOM  INIT *|wc RAW 4:112|outfilename.addr RAW 4:141|jpc RAW 4:154|rgb_data WAR 4:186|wc
+6:530 NOM  RAW 1:72|jpc.addr RAW 1:73|jpc.addr RAW 1:80|jpc.addr RAW 1:81|jpc.addr RAW 1:88|jpc.addr RAW 1:89|jpc.addr RAW 1:96|jpc.addr RAW 1:97|jpc.addr RAW 6:519|jpc.addr RAW 6:528|stream RAW 6:593|jpc.addr
+3:215 NOM  INIT *|ic RAW 3:209|jpc.addr RAW 3:210|ic RAW 6:324|jpc.addr WAW 1:88|ic WAW 1:96|ic
+6:107 NOM  INIT *|precision RAW 1:80|stream.addr RAW 1:96|stream.addr RAW 6:103|stream.addr WAR 3:156|precision
+3:202 NOM  RAW 1:74|ic.addr RAW 1:82|ic.addr RAW 1:90|ic.addr RAW 1:98|ic.addr RAW 3:198|ic.addr RAW 3:198|idata.addr RAW 3:198|yuvdata.addr
+4:148 NOM  INIT *|width RAW 4:141|jpc RAW 6:323|jpc WAW 1:74|width
+4:61 NOM  WAR 7:101|rgb_data.addr WAR 7:99|jpc.addr WAR 7:99|outfilename.addr
+6:303 NOM  RAW 6:294|width
+3:221 NOM  WAR 2:239|ic.addr
+6:403 NOM  RAW 6:402|length WAR 6:403|length
+3:183 NOM  INIT *|outptr RAW 3:158|tmp0 RAW 3:170|tmp7 RAW 3:194|outptr RAW 3:44|outptr WAR 1:61|outptr WAR 1:62|outptr WAR 1:67|outptr WAR 1:84|outptr WAR 2:108|outptr WAR 2:123|outptr WAR 2:164|outptr WAR 2:196|outptr WAR 6:528|outptr WAR 6:537|outptr WAW 1:72|outptr WAW 1:73|outptr WAW 1:74|outptr WAW 1:80|outptr WAW 1:81|outptr WAW 1:82|outptr WAW 1:88|outptr WAW 1:89|outptr WAW 1:90|outptr WAW 1:96|outptr WAW 1:97|outptr WAW 1:98|outptr
+4:78 NOM  WAR 7:108|wc.addr
+6:346 NOM  RAW 6:334|stream.addr WAR 6:346|stream.addr
+1:90 NOM  INIT *|p2 RAW 1:85|r RAW 1:89|p2 WAR 1:113|p2 WAR 1:54|p2 WAR 1:61|p2 WAR 1:62|p2 WAR 1:67|p2 WAR 1:76|p2 WAR 1:84|p2 WAR 1:85|p2 WAR 1:87|p2 WAR 1:90|p2 WAR 1:92|p2 WAR 2:108|p2 WAR 2:110|p2 WAR 2:113|p2 WAR 2:114|p2 WAR 2:123|p2 WAR 2:124|p2 WAR 2:126|p2 WAR 2:127|p2 WAR 2:129|p2 WAR 2:150|p2 WAR 2:157|p2 WAR 2:162|p2 WAR 2:164|p2 WAR 2:168|p2 WAR 2:175|p2 WAR 2:196|p2 WAR 2:202|p2 WAR 2:204|p2 WAR 2:209|p2 WAR 3:103|p2 WAR 3:104|p2 WAR 3:105|p2 WAR 3:106|p2 WAR 3:153|p2 WAR 3:156|p2 WAR 3:166|p2 WAR 3:168|p2 WAR 3:174|p2 WAR 3:175|p2 WAR 3:178|p2 WAR 3:184|p2 WAR 3:186|p2 WAR 3:190|p2 WAR 3:203|p2 WAR 3:21|p2 WAR 3:23|p2 WAR 3:49|p2 WAR 3:61|p2 WAR 3:62|p2 WAR 3:63|p2 WAR 3:64|p2 WAR 3:66|p2 WAR 3:75|p2 WAR 3:85|p2 WAR 3:86|p2 WAR 3:87|p2 WAR 3:88|p2 WAR 4:106|p2 WAR 4:145|p2 WAR 4:154|p2 WAR 4:158|p2 WAR 4:164|p2 WAR 4:171|p2 WAR 4:172|p2 WAR 6:141|p2 WAR 6:175|p2 WAR 6:176|p2 WAR 6:197|p2 WAR 6:251|p2 WAR 6:355|p2 WAR 6:459|p2 WAR 6:505|p2 WAR 6:528|p2 WAR 6:537|p2 WAR 6:538|p2 WAR 6:566|p2 WAR 6:568|p2 WAR 6:570|p2 WAR 6:571|p2 WAR 6:574|p2 WAR 7:53|p2 WAR 7:55|p2 WAR 7:63|p2 WAR 7:66|p2 WAR 7:70|p2 WAR 7:73|p2 WAR 7:74|p2 WAR 7:75|p2 WAW 1:74|p2 WAW 1:82|p2 WAW 1:90|p2 WAW 1:98|p2 WAW 2:108|p2 WAW 2:166|p2 WAW 2:232|p2 WAW 3:183|p2 WAW 3:184|p2 WAW 3:185|p2 WAW 3:186|p2 WAW 3:187|p2 WAW 3:188|p2 WAW 3:189|p2 WAW 3:190|p2 WAW 3:194|p2 WAW 3:78|p2 WAW 4:73|p2 WAW 4:93|p2 WAW 4:96|p2 WAW 6:148|p2 WAW 6:161|p2 WAW 6:180|p2 WAW 6:190|p2 WAW 6:199|p2 WAW 6:200|p2 WAW 6:201|p2 WAW 6:251|p2 WAW 6:360|p2 WAW 6:361|p2 WAW 6:568|p2
+6:453 NOM  RAW 1:73|stream.addr RAW 1:81|stream.addr RAW 1:88|stream.addr RAW 1:89|stream.addr RAW 1:96|stream.addr RAW 1:97|stream.addr RAW 6:448|stream.addr
+6:404 NOM  RAW 6:387|count RAW 6:403|length WAR 6:404|length
+6:552 NOM  RAW 6:551|retval
+3:171 NOM  RAW 3:165|z13 RAW 3:167|z11 WAR 3:161|tmp11
+3:19 NOM  RAW 3:17|shift.addr RAW 3:17|x.addr WAR 3:19|x.addr
+2:165 NOM  RAW 1:72|c RAW 1:73|c RAW 1:74|c RAW 1:80|c RAW 1:81|c RAW 1:82|c RAW 1:88|c RAW 1:89|c RAW 1:90|c RAW 1:96|c RAW 1:97|c RAW 1:98|c RAW 2:150|c RAW 2:164|DCT RAW 2:166|c RAW 7:67|c WAR 2:165|DCT
+6:597 NOM  INIT *|retval RAW 6:595|ret WAW 1:81|retval
+3:156 NOM  INIT *|tmp12 RAW 3:124|wsptr RAW 3:125|wsptr RAW 3:126|wsptr RAW 3:127|wsptr RAW 3:128|wsptr RAW 3:129|wsptr RAW 3:130|wsptr RAW 3:131|wsptr RAW 3:141|wsptr RAW 3:155|tmp13 RAW 3:193|wsptr RAW 3:68|wsptr RAW 3:69|wsptr RAW 3:70|wsptr RAW 3:71|wsptr RAW 3:72|wsptr RAW 3:73|wsptr RAW 3:74|wsptr RAW 3:75|wsptr WAR 2:108|tmp12 WAR 3:120|tmp12 WAR 3:177|tmp12 WAR 6:528|tmp12 WAW 1:73|tmp12 WAW 1:81|tmp12 WAW 1:89|tmp12 WAW 1:97|tmp12
+7:58 NOM  INIT *|yuvdata RAW 7:52|jdc.addr WAR 6:528|yuvdata WAR 7:76|yuvdata WAW 1:72|yuvdata WAW 1:96|yuvdata
+6:568 NOM  INIT *|task.addr RAW 1:73|jpc.addr RAW 1:74|jpc.addr RAW 1:81|jpc.addr RAW 1:82|jpc.addr RAW 1:89|jpc.addr RAW 1:90|jpc.addr RAW 1:97|jpc.addr RAW 1:98|jpc.addr RAW 6:558|jpc.addr RAW 6:558|task.addr RAW 6:591|jpc.addr WAR 6:528|task.addr WAW 1:74|task.addr WAW 1:82|task.addr WAW 1:90|task.addr WAW 1:98|task.addr WAW 6:568|task.addr
+4:176 NOM  RAW 1:72|wc
+6:347 NOM  RAW 6:337|nr_components RAW 6:347|i WAR 6:347|i WAR 6:420|i
+1:93 NOM  RAW 1:63|add_r RAW 1:74|add_r RAW 1:82|add_r RAW 1:90|add_r RAW 1:92|y WAR 1:90|r WAW 1:90|r
+7:57 NOM  INIT *|idata RAW 7:52|jdc.addr WAR 6:528|idata WAR 7:75|idata WAW 1:74|idata WAW 1:98|idata
+7:53 NOM  RAW 1:73|jdc.addr RAW 1:74|jdc.addr RAW 1:81|jdc.addr RAW 1:82|jdc.addr RAW 1:89|jdc.addr RAW 1:90|jdc.addr RAW 1:97|jdc.addr RAW 1:98|jdc.addr RAW 7:52|jdc.addr RAW 7:97|jdc.addr WAR 4:73|hc WAR 6:528|hc WAR 7:74|hc
+7:63 NOM  INIT *|bytes_per_blocklines RAW 1:73|jdc.addr RAW 1:74|jdc.addr RAW 1:81|jdc.addr RAW 1:82|jdc.addr RAW 1:89|jdc.addr RAW 1:90|jdc.addr RAW 1:97|jdc.addr RAW 1:98|jdc.addr RAW 7:52|jdc.addr RAW 7:91|jdc.addr WAR 6:528|bytes_per_blocklines WAR 7:83|bytes_per_blocklines
+7:108 NOM  RAW 7:104|jdc.addr
+3:64 NOM  RAW 2:202|inptr RAW 3:133|inptr RAW 3:43|inptr RAW 3:77|inptr
+6:562 NOM  RAW 6:558|jpc.addr
+7:67 NOM  INIT *|hc RAW 7:53|hc RAW 7:66|i WAR 2:168|hc WAR 6:528|hc WAW 1:72|hc WAW 1:73|hc WAW 1:74|hc WAW 1:80|hc WAW 1:81|hc WAW 1:82|hc WAW 1:88|hc WAW 1:90|hc WAW 1:97|hc
+4:208 NOM  RAW 4:207|msec
+2:222 NOM  INIT *|retval WAR 2:108|retval WAR 2:196|retval WAR 2:223|retval WAR 6:528|retval WAW 1:73|retval WAW 1:81|retval WAW 1:89|retval WAW 1:97|retval
+6:153 NOM  INIT *|code WAR 3:166|code WAR 6:199|code WAW 6:190|code
+4:55 NOM  RAW 4:52|fp.addr
+6:446 NOM  RAW 6:441|sos_marker_found RAW 6:472|sos_marker_found
+2:206 NOM  INIT *|hc.addr INIT *|hdata.addr INIT *|idata.addr WAR 1:51|hc.addr WAR 6:528|hc.addr WAR 6:528|hdata.addr WAR 6:528|idata.addr WAW 1:100|hdata.addr WAW 1:61|idata.addr WAW 1:72|idata.addr WAW 1:73|hc.addr WAW 1:80|idata.addr WAW 1:81|hc.addr WAW 1:88|idata.addr WAW 1:89|hc.addr WAW 1:96|idata.addr WAW 1:97|hc.addr
+6:265 NOM  RAW 6:257|stream.addr WAR 6:265|stream.addr
+2:209 NOM  INIT *|i RAW 2:209|i WAR 2:108|i WAR 2:209|i WAR 6:528|i WAW 1:74|i WAW 1:82|i WAW 1:90|i WAW 1:98|i
+2:210 NOM  RAW 2:206|hc.addr RAW 2:206|hdata.addr RAW 2:206|idata.addr RAW 2:209|i
+7:90 NOM  WAR 6:591|jdc
+3:91 NOM  RAW 3:85|tmp0 RAW 3:87|tmp2 WAR 2:108|tmp11 WAR 2:123|tmp11 WAR 2:164|tmp11 WAR 2:196|tmp11 WAR 3:121|tmp11 WAR 3:178|tmp11 WAW 1:74|tmp11 WAW 1:82|tmp11 WAW 1:90|tmp11 WAW 1:98|tmp11
+1:49 NOM  RAW 1:40|yuv.addr WAR 3:206|Y
+2:114 NOM  RAW 1:73|hdata.addr RAW 1:74|hdata.addr RAW 1:81|hdata.addr RAW 1:82|hdata.addr RAW 1:89|hdata.addr RAW 1:90|hdata.addr RAW 1:97|hdata.addr RAW 1:98|hdata.addr RAW 2:101|hdata.addr RAW 2:108|hdata.addr RAW 2:113|code_size RAW 2:114|hdata.addr RAW 2:164|hdata.addr RAW 2:196|hdata.addr WAR 2:114|hdata.addr
+6:257 NOM  INIT *|jpc.addr INIT *|stream.addr WAR 2:202|stream.addr WAR 6:267|stream.addr WAR 6:276|jpc.addr WAW 1:81|jpc.addr
+4:245 NOM  RAW 1:72|output_filename RAW 1:81|input_filename RAW 4:238|input_filename RAW 4:239|output_filename
+6:277 NOM  RAW 6:269|stream.addr RAW 6:276|table
+4:249 NOM  RAW 4:248|elapsed
+3:198 NOM  INIT *|ic.addr WAR 1:52|ic.addr WAR 2:108|ic.addr WAR 2:108|idata.addr WAR 2:108|yuvdata.addr WAR 2:196|ic.addr WAR 2:219|idata.addr WAR 2:219|yuvdata.addr WAR 6:528|ic.addr WAW 1:72|ic.addr WAW 1:80|ic.addr WAW 1:88|ic.addr WAW 1:96|ic.addr
+3:160 NOM  INIT *|tmp1 RAW 3:153|tmp11 RAW 3:156|tmp12 WAR 2:202|tmp1 WAR 3:127|tmp1 WAR 3:186|tmp1
+3:44 NOM  RAW 3:36|output_buf.addr WAR 2:108|outptr WAR 2:164|outptr WAR 2:196|outptr WAR 6:251|outptr WAR 6:528|outptr WAW 1:74|outptr WAW 1:82|outptr WAW 1:90|outptr WAW 1:98|outptr WAW 3:194|outptr
+1:40 NOM  WAR 3:206|cc.addr WAR 3:206|yuv.addr
+2:203 NOM  INIT *|retval WAR 2:108|retval WAR 2:196|retval WAR 2:204|retval WAR 6:528|retval WAW 1:74|retval WAW 1:82|retval WAW 1:90|retval WAW 1:98|retval
+1:100 NOM  RAW 1:76|Y RAW 1:82|Y RAW 1:90|Y RAW 1:98|Y WAR 1:100|Y
+3:49 NOM  INIT *|quantptr RAW 3:36|Q_table.addr WAR 2:108|quantptr WAR 2:196|quantptr WAR 6:528|quantptr WAW 1:74|quantptr WAW 1:82|quantptr WAW 1:90|quantptr WAW 1:98|quantptr WAW 3:134|quantptr WAW 3:78|quantptr
+6:231 NOM  INIT *|qtable.addr INIT *|ref_table.addr WAR 6:251|ref_table.addr WAW 3:194|ref_table.addr WAW 3:77|qtable.addr WAW 6:251|qtable.addr
+3:66 NOM  RAW 1:72|quantptr RAW 1:73|quantptr RAW 1:74|quantptr RAW 1:80|quantptr RAW 1:81|quantptr RAW 1:82|quantptr RAW 1:88|quantptr RAW 1:89|quantptr RAW 1:90|quantptr RAW 1:96|quantptr RAW 1:97|quantptr RAW 1:98|quantptr RAW 2:202|inptr RAW 3:133|inptr RAW 3:134|quantptr RAW 3:43|inptr RAW 3:49|quantptr RAW 3:77|inptr RAW 3:78|quantptr WAR 2:108|dcval WAR 2:164|dcval WAR 2:196|dcval WAR 3:75|dcval WAR 6:176|dcval WAR 6:528|dcval WAW 1:74|dcval WAW 1:82|dcval WAW 1:90|dcval WAW 1:98|dcval
+3:69 NOM  INIT *|wsptr RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:66|dcval RAW 3:79|wsptr WAR 2:108|wsptr WAR 2:164|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAR 6:528|wsptr WAR 6:537|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+2:223 NOM  RAW 2:222|retval
+4:182 NOM  RAW 1:72|rgb_data
+2:232 NOM  INIT *|hc RAW 2:225|jpc.addr RAW 2:226|hc RAW 6:424|jpc.addr WAW 1:74|hc WAW 1:81|hc WAW 1:90|hc WAW 1:97|hc
+6:442 NOM  INIT *|dht_marker_found WAW 1:72|dht_marker_found
+7:93 NOM  INIT *|jdc RAW 6:424|jpc.addr RAW 7:89|jpc.addr RAW 7:90|jdc WAR 7:73|jdc WAW 1:82|jdc WAW 1:90|jdc
+3:78 NOM  RAW 3:134|quantptr RAW 3:49|quantptr RAW 3:78|quantptr WAR 3:78|quantptr
+1:85 NOM  RAW 1:63|add_r RAW 1:74|add_r RAW 1:82|add_r RAW 1:84|y WAR 1:82|r WAW 1:82|r
+3:153 NOM  INIT *|tmp11 RAW 3:124|wsptr RAW 3:125|wsptr RAW 3:126|wsptr RAW 3:127|wsptr RAW 3:128|wsptr RAW 3:129|wsptr RAW 3:130|wsptr RAW 3:131|wsptr RAW 3:141|wsptr RAW 3:193|wsptr RAW 3:68|wsptr RAW 3:69|wsptr RAW 3:70|wsptr RAW 3:71|wsptr RAW 3:72|wsptr RAW 3:73|wsptr RAW 3:74|wsptr RAW 3:75|wsptr WAR 2:108|tmp11 WAR 3:121|tmp11 WAR 3:178|tmp11 WAR 6:528|tmp11 WAW 1:74|tmp11 WAW 1:82|tmp11 WAW 1:90|tmp11 WAW 1:98|tmp11
+7:78 NOM  RAW 1:72|bytes_per_mcu RAW 1:72|cc RAW 1:73|cc RAW 1:80|bytes_per_mcu RAW 1:80|cc RAW 1:81|cc RAW 1:88|bytes_per_mcu RAW 1:88|cc RAW 1:89|cc RAW 1:96|bytes_per_mcu RAW 1:96|cc RAW 1:97|cc RAW 7:55|cc RAW 7:64|bytes_per_mcu RAW 7:69|cc RAW 7:78|cc WAR 7:78|cc
+3:188 NOM  INIT *|outptr RAW 3:161|tmp2 RAW 3:178|tmp5 RAW 3:194|outptr RAW 3:44|outptr WAR 1:61|outptr WAR 1:62|outptr WAR 1:76|outptr WAR 1:92|outptr WAR 2:108|outptr WAR 2:123|outptr WAR 2:164|outptr WAR 2:196|outptr WAR 6:528|outptr WAR 6:537|outptr WAW 1:72|outptr WAW 1:73|outptr WAW 1:74|outptr WAW 1:80|outptr WAW 1:81|outptr WAW 1:82|outptr WAW 1:88|outptr WAW 1:89|outptr WAW 1:90|outptr WAW 1:96|outptr WAW 1:97|outptr WAW 1:98|outptr
+3:203 NOM  RAW 1:74|ic.addr RAW 1:82|ic.addr RAW 1:90|ic.addr RAW 1:98|ic.addr RAW 3:198|ic.addr RAW 3:198|idata.addr RAW 3:198|yuvdata.addr
+7:98 NOM  INIT *|jdc RAW 7:89|jpc.addr RAW 7:90|jdc WAR 7:106|jdc WAW 1:80|jdc WAW 1:88|jdc
+7:81 NOM  RAW 1:74|mcus_posy RAW 1:82|mcus_posy RAW 1:90|mcus_posy RAW 1:98|mcus_posy RAW 7:71|mcus_posy WAR 7:81|mcus_posy
+3:186 NOM  INIT *|outptr RAW 3:160|tmp1 RAW 3:177|tmp6 RAW 3:194|outptr RAW 3:44|outptr WAR 1:61|outptr WAR 1:62|outptr WAR 1:67|outptr WAR 1:84|outptr WAR 2:108|outptr WAR 2:123|outptr WAR 2:164|outptr WAR 2:196|outptr WAR 6:528|outptr WAR 6:537|outptr WAW 1:72|outptr WAW 1:73|outptr WAW 1:74|outptr WAW 1:80|outptr WAW 1:81|outptr WAW 1:82|outptr WAW 1:88|outptr WAW 1:89|outptr WAW 1:90|outptr WAW 1:96|outptr WAW 1:97|outptr WAW 1:98|outptr
+6:598 NOM  RAW 6:597|retval
+1:98 NOM  INIT *|p2 RAW 1:93|r RAW 1:97|p2 WAR 1:113|p2 WAR 1:54|p2 WAR 1:61|p2 WAR 1:62|p2 WAR 1:67|p2 WAR 1:76|p2 WAR 1:84|p2 WAR 1:92|p2 WAR 1:93|p2 WAR 1:95|p2 WAR 1:98|p2 WAR 2:108|p2 WAR 2:110|p2 WAR 2:113|p2 WAR 2:114|p2 WAR 2:123|p2 WAR 2:124|p2 WAR 2:126|p2 WAR 2:127|p2 WAR 2:129|p2 WAR 2:150|p2 WAR 2:157|p2 WAR 2:162|p2 WAR 2:164|p2 WAR 2:168|p2 WAR 2:175|p2 WAR 2:196|p2 WAR 2:202|p2 WAR 2:204|p2 WAR 2:209|p2 WAR 3:103|p2 WAR 3:104|p2 WAR 3:105|p2 WAR 3:106|p2 WAR 3:153|p2 WAR 3:156|p2 WAR 3:166|p2 WAR 3:168|p2 WAR 3:174|p2 WAR 3:175|p2 WAR 3:178|p2 WAR 3:184|p2 WAR 3:186|p2 WAR 3:190|p2 WAR 3:203|p2 WAR 3:21|p2 WAR 3:23|p2 WAR 3:49|p2 WAR 3:61|p2 WAR 3:62|p2 WAR 3:63|p2 WAR 3:64|p2 WAR 3:66|p2 WAR 3:75|p2 WAR 3:85|p2 WAR 3:86|p2 WAR 3:87|p2 WAR 3:88|p2 WAR 4:145|p2 WAR 4:154|p2 WAR 4:158|p2 WAR 4:164|p2 WAR 4:171|p2 WAR 4:172|p2 WAR 4:239|p2 WAR 6:141|p2 WAR 6:175|p2 WAR 6:176|p2 WAR 6:251|p2 WAR 6:459|p2 WAR 6:528|p2 WAR 6:537|p2 WAR 6:538|p2 WAR 6:566|p2 WAR 6:568|p2 WAR 6:570|p2 WAR 6:571|p2 WAR 6:574|p2 WAR 7:53|p2 WAR 7:55|p2 WAR 7:63|p2 WAR 7:66|p2 WAR 7:70|p2 WAR 7:73|p2 WAR 7:74|p2 WAR 7:75|p2 WAW 1:74|p2 WAW 1:82|p2 WAW 1:90|p2 WAW 1:98|p2 WAW 2:108|p2 WAW 2:166|p2 WAW 3:183|p2 WAW 3:184|p2 WAW 3:185|p2 WAW 3:186|p2 WAW 3:187|p2 WAW 3:188|p2 WAW 3:189|p2 WAW 3:190|p2 WAW 3:194|p2 WAW 3:78|p2 WAW 4:214|p2 WAW 4:95|p2 WAW 6:161|p2 WAW 6:180|p2 WAW 6:568|p2
+2:162 NOM  RAW 2:157|retcode WAR 2:108|huff_code WAR 2:179|huff_code WAR 6:355|huff_code WAR 6:528|huff_code WAW 1:72|huff_code WAW 1:80|huff_code WAW 1:88|huff_code WAW 1:96|huff_code
+2:173 NOM  RAW 2:172|j RAW 2:186|j RAW 2:197|j
+2:175 NOM  RAW 1:72|c RAW 1:73|c RAW 1:74|c RAW 1:80|c RAW 1:81|c RAW 1:82|c RAW 1:88|c RAW 1:89|c RAW 1:90|c RAW 1:96|c RAW 1:97|c RAW 1:98|c RAW 2:143|hdata.addr RAW 2:150|c WAR 2:108|huff_code WAR 2:163|huff_code WAR 2:164|huff_code WAR 2:179|huff_code WAR 2:196|huff_code
+6:269 NOM  INIT *|qi RAW 1:88|stream.addr RAW 1:96|stream.addr RAW 6:265|stream.addr WAR 6:269|stream.addr WAR 6:276|qi WAW 1:81|qi
+3:190 NOM  INIT *|outptr RAW 3:159|tmp3 RAW 3:179|tmp4 RAW 3:194|outptr RAW 3:44|outptr WAR 1:61|outptr WAR 1:62|outptr WAR 1:76|outptr WAR 1:92|outptr WAR 2:108|outptr WAR 2:123|outptr WAR 2:164|outptr WAR 2:196|outptr WAR 6:528|outptr WAR 6:537|outptr WAW 1:72|outptr WAW 1:73|outptr WAW 1:74|outptr WAW 1:80|outptr WAW 1:81|outptr WAW 1:82|outptr WAW 1:88|outptr WAW 1:89|outptr WAW 1:90|outptr WAW 1:96|outptr WAW 1:97|outptr WAW 1:98|outptr
+1:62 NOM  INIT *|cr RAW 1:51|Cr RAW 1:62|Cr RAW 1:72|Cr RAW 1:73|Cr RAW 1:74|Cr RAW 1:80|Cr RAW 1:81|Cr RAW 1:82|Cr RAW 1:88|Cr RAW 1:89|Cr RAW 1:90|Cr RAW 1:96|Cr RAW 1:97|Cr RAW 1:98|Cr RAW 3:183|Cr RAW 3:184|Cr RAW 3:185|Cr RAW 3:186|Cr RAW 3:187|Cr RAW 3:188|Cr RAW 3:189|Cr RAW 3:190|Cr WAR 1:62|Cr WAR 1:64|cr WAR 2:108|cr WAR 2:164|cr WAR 2:196|cr WAR 6:528|cr WAW 1:72|cr WAW 1:80|cr WAW 1:88|cr WAW 1:96|cr
+7:62 NOM  INIT *|mcus_posy WAR 6:528|mcus_posy WAW 7:81|mcus_posy
+6:326 NOM  INIT *|jpc.addr RAW 6:284|jpc.addr RAW 6:293|height WAW 1:90|jpc.addr WAW 1:98|jpc.addr
+2:219 NOM  RAW 2:206|hc.addr RAW 2:206|hdata.addr RAW 2:206|idata.addr
+4:248 NOM  WAW 1:72|elapsed
+6:355 NOM  RAW 6:313|jpc.addr RAW 6:334|jpc.addr RAW 6:347|i RAW 6:348|cid
+3:155 NOM  INIT *|tmp13 RAW 3:124|wsptr RAW 3:125|wsptr RAW 3:126|wsptr RAW 3:127|wsptr RAW 3:128|wsptr RAW 3:129|wsptr RAW 3:130|wsptr RAW 3:131|wsptr RAW 3:141|wsptr RAW 3:193|wsptr RAW 3:68|wsptr RAW 3:69|wsptr RAW 3:70|wsptr RAW 3:71|wsptr RAW 3:72|wsptr RAW 3:73|wsptr RAW 3:74|wsptr RAW 3:75|wsptr WAR 2:108|tmp13 WAR 3:159|tmp13 WAR 3:97|tmp13 WAR 6:528|tmp13 WAW 1:72|tmp13 WAW 1:80|tmp13 WAW 1:88|tmp13 WAW 1:96|tmp13
+6:466 NOM  RAW 6:437|jpc.addr RAW 6:456|stream.addr
+3:185 NOM  INIT *|outptr RAW 3:160|tmp1 RAW 3:177|tmp6 RAW 3:194|outptr RAW 3:44|outptr WAR 1:61|outptr WAR 1:62|outptr WAR 1:76|outptr WAR 1:92|outptr WAR 2:108|outptr WAR 2:123|outptr WAR 2:164|outptr WAR 2:196|outptr WAR 6:528|outptr WAR 6:537|outptr WAW 1:72|outptr WAW 1:73|outptr WAW 1:74|outptr WAW 1:80|outptr WAW 1:81|outptr WAW 1:82|outptr WAW 1:88|outptr WAW 1:89|outptr WAW 1:90|outptr WAW 1:96|outptr WAW 1:97|outptr WAW 1:98|outptr
+1:107 NOM  INIT *|cc WAW 1:72|cc
+7:80 NOM  RAW 1:72|jdc.addr RAW 1:73|jdc.addr RAW 1:80|jdc.addr RAW 1:81|jdc.addr RAW 1:88|jdc.addr RAW 1:89|jdc.addr RAW 1:96|jdc.addr RAW 1:97|jdc.addr RAW 7:52|jdc.addr RAW 7:79|mcus_posx RAW 7:94|jdc.addr
+1:54 NOM  INIT *|i RAW 1:54|i RAW 1:74|i RAW 1:82|i RAW 1:90|i RAW 1:98|i WAR 1:54|i WAR 2:108|i WAR 6:528|i
+6:313 NOM  INIT *|c RAW 6:308|cid RAW 6:311|c WAW 1:72|c WAW 1:74|c WAW 1:81|c WAW 1:88|c WAW 1:90|c WAW 1:97|c
+1:113 NOM  INIT *|cc RAW 1:106|rgb_data.addr RAW 1:107|cc WAR 7:69|cc WAW 1:97|cc
+3:201 NOM  RAW 1:74|ic.addr RAW 1:82|ic.addr RAW 1:90|ic.addr RAW 1:98|ic.addr RAW 3:198|ic.addr RAW 3:198|idata.addr RAW 3:198|yuvdata.addr
+1:73 NOM  INIT *|p RAW 1:69|g RAW 1:72|p WAR 1:26|p WAR 1:51|p WAR 1:55|p WAR 1:61|p WAR 1:62|p WAR 1:65|p WAR 1:67|p WAR 1:69|p WAR 1:73|p WAR 1:76|p WAR 1:84|p WAR 1:92|p WAR 2:108|p WAR 2:110|p WAR 2:113|p WAR 2:114|p WAR 2:115|p WAR 2:123|p WAR 2:126|p WAR 2:127|p WAR 2:128|p WAR 2:129|p WAR 2:135|p WAR 2:157|p WAR 2:164|p WAR 2:168|p WAR 2:175|p WAR 2:181|p WAR 2:196|p WAR 2:201|p WAR 2:202|p WAR 2:223|p WAR 3:103|p WAR 3:104|p WAR 3:105|p WAR 3:106|p WAR 3:143|p WAR 3:153|p WAR 3:156|p WAR 3:166|p WAR 3:168|p WAR 3:171|p WAR 3:175|p WAR 3:177|p WAR 3:184|p WAR 3:186|p WAR 3:190|p WAR 3:206|p WAR 3:31|p WAR 3:44|p WAR 3:61|p WAR 3:62|p WAR 3:63|p WAR 3:64|p WAR 3:66|p WAR 3:85|p WAR 3:86|p WAR 3:87|p WAR 3:88|p WAR 4:170|p WAR 4:171|p WAR 4:241|p WAR 6:174|p WAR 6:175|p WAR 6:176|p WAR 6:251|p WAR 6:264|p WAR 6:293|p WAR 6:309|p WAR 6:337|p WAR 6:349|p WAR 6:363|p WAR 6:366|p WAR 6:380|p WAR 6:386|p WAR 6:424|p WAR 6:456|p WAR 6:528|p WAR 6:537|p WAR 6:549|p WAR 6:552|p WAR 6:566|p WAR 6:568|p WAR 6:569|p WAR 6:570|p WAR 6:573|p WAR 6:574|p WAR 6:588|p WAR 7:53|p WAR 7:54|p WAR 7:63|p WAR 7:69|p WAR 7:73|p WAR 7:74|p WAR 7:76|p WAR 7:80|p WAW 1:62|p WAW 1:73|p WAW 1:81|p WAW 1:89|p WAW 1:97|p WAW 2:114|p WAW 2:166|p WAW 3:183|p WAW 3:184|p WAW 3:185|p WAW 3:186|p WAW 3:187|p WAW 3:188|p WAW 3:189|p WAW 3:190|p WAW 3:77|p WAW 6:180|p WAW 6:251|p WAW 6:549|p WAW 6:564|p
+6:155 NOM  WAR 6:144|hz
+2:215 NOM  RAW 2:206|hc.addr RAW 2:206|hdata.addr RAW 2:206|idata.addr
+3:61 NOM  RAW 2:202|inptr RAW 3:133|inptr RAW 3:43|inptr RAW 3:77|inptr
+6:141 NOM  INIT *|j RAW 6:127|bits.addr RAW 6:139|i RAW 6:141|j RAW 6:386|bits.addr WAR 3:153|j WAR 6:141|j
+7:97 NOM  INIT *|jdc RAW 7:89|jpc.addr RAW 7:90|jdc WAR 7:105|jdc WAW 1:73|jdc WAW 1:97|jdc
+6:281 NOM  INIT *|retval WAR 6:282|retval WAW 1:81|retval
+6:386 NOM  INIT *|huff_bits RAW 1:72|stream.addr RAW 1:73|stream.addr RAW 1:74|stream.addr RAW 1:80|stream.addr RAW 1:81|stream.addr RAW 1:82|stream.addr RAW 1:88|stream.addr RAW 1:89|stream.addr RAW 1:90|stream.addr RAW 1:96|stream.addr RAW 1:97|stream.addr RAW 1:98|stream.addr RAW 6:380|stream.addr RAW 6:385|i RAW 6:386|stream.addr WAR 2:202|huff_bits WAR 6:141|huff_bits WAR 6:318|huff_bits WAR 6:319|huff_bits WAR 6:386|stream.addr WAW 1:73|huff_bits WAW 1:80|huff_bits WAW 1:82|huff_bits
+1:74 NOM  INIT *|p RAW 1:68|r RAW 1:73|p WAR 1:112|p WAR 1:54|p WAR 1:61|p WAR 1:62|p WAR 1:67|p WAR 1:68|p WAR 1:70|p WAR 1:74|p WAR 1:76|p WAR 1:84|p WAR 1:92|p WAR 2:108|p WAR 2:110|p WAR 2:113|p WAR 2:114|p WAR 2:123|p WAR 2:124|p WAR 2:126|p WAR 2:127|p WAR 2:129|p WAR 2:150|p WAR 2:157|p WAR 2:162|p WAR 2:164|p WAR 2:168|p WAR 2:175|p WAR 2:196|p WAR 2:202|p WAR 2:204|p WAR 2:209|p WAR 3:103|p WAR 3:104|p WAR 3:105|p WAR 3:106|p WAR 3:153|p WAR 3:156|p WAR 3:166|p WAR 3:168|p WAR 3:174|p WAR 3:175|p WAR 3:178|p WAR 3:184|p WAR 3:186|p WAR 3:190|p WAR 3:203|p WAR 3:21|p WAR 3:23|p WAR 3:49|p WAR 3:61|p WAR 3:62|p WAR 3:63|p WAR 3:64|p WAR 3:66|p WAR 3:75|p WAR 3:85|p WAR 3:86|p WAR 3:87|p WAR 3:88|p WAR 4:171|p WAR 4:172|p WAR 4:66|p WAR 6:174|p WAR 6:176|p WAR 6:197|p WAR 6:251|p WAR 6:264|p WAR 6:293|p WAR 6:310|p WAR 6:348|p WAR 6:355|p WAR 6:374|p WAR 6:386|p WAR 6:424|p WAR 6:448|p WAR 6:498|p WAR 6:503|p WAR 6:506|p WAR 6:528|p WAR 6:537|p WAR 6:538|p WAR 6:566|p WAR 6:568|p WAR 6:570|p WAR 6:571|p WAR 6:574|p WAR 7:105|p WAR 7:107|p WAR 7:53|p WAR 7:55|p WAR 7:63|p WAR 7:66|p WAR 7:70|p WAR 7:73|p WAR 7:74|p WAR 7:75|p WAR 7:83|p WAW 1:110|p WAW 1:111|p WAW 1:67|p WAW 1:74|p WAW 1:82|p WAW 1:90|p WAW 1:98|p WAW 2:108|p WAW 2:166|p WAW 2:232|p WAW 3:183|p WAW 3:184|p WAW 3:185|p WAW 3:186|p WAW 3:187|p WAW 3:188|p WAW 3:189|p WAW 3:190|p WAW 3:194|p WAW 3:214|p WAW 3:78|p WAW 4:67|p WAW 4:71|p WAW 4:73|p WAW 6:148|p WAW 6:180|p WAW 6:190|p WAW 6:199|p WAW 6:200|p WAW 6:201|p WAW 6:251|p WAW 6:319|p WAW 6:360|p WAW 6:361|p WAW 6:568|p WAW 7:92|p WAW 7:95|p
+3:170 NOM  INIT *|tmp7 RAW 3:165|z13 RAW 3:167|z11 WAR 2:202|tmp7 WAR 3:125|tmp7 WAR 3:184|tmp7
+3:23 NOM  RAW 3:17|shift.addr RAW 3:19|x.addr WAR 3:23|x.addr
+6:375 NOM  RAW 6:368|stream.addr WAR 6:375|stream.addr
+6:147 NOM  RAW 6:147|i WAR 6:139|i WAR 6:147|i
+1:63 NOM  INIT *|add_r RAW 1:62|cr WAR 1:93|add_r WAR 2:108|add_r WAR 2:196|add_r WAR 6:528|add_r WAW 1:98|add_r
+4:135 NOM  RAW 4:134|buf
+6:380 NOM  INIT *|index RAW 1:73|stream.addr RAW 1:89|stream.addr RAW 1:97|stream.addr RAW 6:375|stream.addr WAR 2:202|index WAR 6:380|stream.addr WAR 6:398|index WAR 6:400|index
+6:548 NOM  RAW 1:72|jpc.addr RAW 1:73|jpc.addr RAW 1:80|jpc.addr RAW 1:81|jpc.addr RAW 1:88|jpc.addr RAW 1:89|jpc.addr RAW 1:96|jpc.addr RAW 1:97|jpc.addr RAW 6:519|jpc.addr RAW 6:549|jpc.addr WAR 6:548|jpc.addr
+4:142 NOM  RAW 4:141|jpc
+1:68 NOM  INIT *|r RAW 1:63|add_r RAW 1:67|y WAR 1:98|r WAR 2:108|r WAR 2:196|r WAR 6:528|r WAW 1:98|r
+1:76 NOM  RAW 1:67|Y RAW 1:72|Y RAW 1:73|Y RAW 1:74|Y RAW 1:80|Y RAW 1:81|Y RAW 1:82|Y RAW 1:88|Y RAW 1:89|Y RAW 1:90|Y RAW 1:96|Y RAW 1:97|Y RAW 1:98|Y RAW 3:184|Y RAW 3:185|Y RAW 3:188|Y RAW 3:190|Y WAR 1:70|y WAR 1:76|Y WAW 1:74|y
+3:86 NOM  RAW 1:72|quantptr RAW 1:73|quantptr RAW 1:74|quantptr RAW 1:80|quantptr RAW 1:81|quantptr RAW 1:82|quantptr RAW 1:88|quantptr RAW 1:89|quantptr RAW 1:90|quantptr RAW 1:96|quantptr RAW 1:97|quantptr RAW 1:98|quantptr RAW 2:202|inptr RAW 3:133|inptr RAW 3:134|quantptr RAW 3:43|inptr RAW 3:49|quantptr RAW 3:77|inptr RAW 3:78|quantptr WAR 2:202|tmp1 WAR 3:127|tmp1 WAR 3:186|tmp1
+4:206 NOM  RAW 1:72|start.addr RAW 4:204|start.addr WAW 1:72|msec
+3:26 NOM  WAR 3:31|retval
+3:118 NOM  RAW 3:109|z10 RAW 3:116|z5 WAR 3:99|tmp12
+1:64 NOM  INIT *|add_g RAW 1:61|cb RAW 1:62|cr WAR 1:94|add_g WAR 2:108|add_g WAR 2:196|add_g WAR 6:528|add_g WAW 1:97|add_g
+4:52 NOM  INIT *|fp.addr WAR 4:80|fp.addr
+4:102 NOM  WAR 4:106|wc.addr WAR 4:99|wc.addr
+2:186 NOM  RAW 2:172|j RAW 2:186|j RAW 2:197|j WAR 2:186|j
+4:67 NOM  INIT *|wc RAW 4:61|jpc.addr RAW 4:64|wc RAW 6:324|jpc.addr WAR 4:94|wc
+4:66 NOM  INIT *|wc RAW 4:61|jpc.addr RAW 4:64|wc RAW 6:323|jpc.addr WAR 4:103|wc
+3:133 NOM  RAW 3:133|inptr RAW 3:43|inptr RAW 3:77|inptr WAR 3:133|inptr
+6:189 NOM  RAW 6:187|repeat RAW 6:189|repeat WAR 6:189|repeat
+2:179 NOM  INIT *|count_0 RAW 2:175|huff_code WAR 2:108|count_0 WAR 2:183|count_0 WAR 2:185|count_0 WAR 2:190|count_0 WAR 2:196|count_0 WAR 6:528|count_0 WAW 1:72|count_0 WAW 1:80|count_0 WAW 1:88|count_0 WAW 1:96|count_0
+6:519 NOM  INIT *|jpc.addr WAR 2:108|jpc.addr WAR 2:164|jpc.addr WAR 6:549|jpc.addr WAW 1:73|jpc.addr WAW 1:81|jpc.addr WAW 1:89|jpc.addr WAW 1:97|jpc.addr
+1:89 NOM  INIT *|p2 RAW 1:86|g RAW 1:88|p2 WAR 1:112|p2 WAR 1:26|p2 WAR 1:51|p2 WAR 1:55|p2 WAR 1:61|p2 WAR 1:62|p2 WAR 1:65|p2 WAR 1:67|p2 WAR 1:76|p2 WAR 1:84|p2 WAR 1:86|p2 WAR 1:89|p2 WAR 1:92|p2 WAR 2:108|p2 WAR 2:110|p2 WAR 2:113|p2 WAR 2:114|p2 WAR 2:115|p2 WAR 2:123|p2 WAR 2:126|p2 WAR 2:127|p2 WAR 2:128|p2 WAR 2:129|p2 WAR 2:135|p2 WAR 2:157|p2 WAR 2:164|p2 WAR 2:168|p2 WAR 2:175|p2 WAR 2:181|p2 WAR 2:196|p2 WAR 2:201|p2 WAR 2:202|p2 WAR 2:223|p2 WAR 3:103|p2 WAR 3:104|p2 WAR 3:105|p2 WAR 3:106|p2 WAR 3:143|p2 WAR 3:153|p2 WAR 3:156|p2 WAR 3:166|p2 WAR 3:168|p2 WAR 3:171|p2 WAR 3:175|p2 WAR 3:177|p2 WAR 3:184|p2 WAR 3:186|p2 WAR 3:190|p2 WAR 3:206|p2 WAR 3:31|p2 WAR 3:44|p2 WAR 3:61|p2 WAR 3:62|p2 WAR 3:63|p2 WAR 3:64|p2 WAR 3:66|p2 WAR 3:85|p2 WAR 3:86|p2 WAR 3:87|p2 WAR 3:88|p2 WAR 4:130|p2 WAR 4:154|p2 WAR 4:170|p2 WAR 4:171|p2 WAR 4:235|p2 WAR 4:245|p2 WAR 6:141|p2 WAR 6:157|p2 WAR 6:175|p2 WAR 6:176|p2 WAR 6:201|p2 WAR 6:251|p2 WAR 6:347|p2 WAR 6:446|p2 WAR 6:488|p2 WAR 6:528|p2 WAR 6:537|p2 WAR 6:549|p2 WAR 6:552|p2 WAR 6:566|p2 WAR 6:568|p2 WAR 6:569|p2 WAR 6:570|p2 WAR 6:573|p2 WAR 6:574|p2 WAR 6:592|p2 WAR 6:598|p2 WAR 7:53|p2 WAR 7:54|p2 WAR 7:63|p2 WAR 7:69|p2 WAR 7:73|p2 WAR 7:74|p2 WAR 7:76|p2 WAR 7:80|p2 WAW 1:62|p2 WAW 1:73|p2 WAW 1:81|p2 WAW 1:89|p2 WAW 1:97|p2 WAW 2:114|p2 WAW 2:166|p2 WAW 3:183|p2 WAW 3:184|p2 WAW 3:185|p2 WAW 3:186|p2 WAW 3:187|p2 WAW 3:188|p2 WAW 3:189|p2 WAW 3:190|p2 WAW 3:77|p2 WAW 4:92|p2 WAW 6:171|p2 WAW 6:180|p2 WAW 6:488|p2 WAW 6:549|p2 WAW 6:564|p2
+4:239 NOM  INIT *|output_filename RAW 4:214|argv.addr RAW 4:232|current_argument
+4:171 NOM  RAW 1:73|jpc RAW 1:81|jpc RAW 1:89|jpc RAW 1:97|jpc RAW 4:141|jpc RAW 4:170|i
+6:196 NOM  INIT *|slowtable65 RAW 6:127|table.addr RAW 6:176|code_size WAR 6:201|slowtable65 WAW 1:81|slowtable65
+1:50 NOM  RAW 1:40|yuv.addr WAR 2:108|Cb WAR 2:219|Cb
+1:77 NOM  RAW 1:63|add_r RAW 1:74|add_r RAW 1:76|y WAR 1:74|r WAW 1:74|r
+4:70 NOM  RAW 4:61|outfilename.addr
+2:172 NOM  INIT *|j WAR 2:108|j WAR 2:201|j WAR 6:528|j WAW 1:73|j WAW 1:81|j WAW 1:89|j WAW 1:97|j
+7:76 NOM  RAW 1:72|yuvdata RAW 1:73|cc RAW 1:80|yuvdata RAW 1:81|cc RAW 1:88|yuvdata RAW 1:89|cc RAW 1:96|yuvdata RAW 1:97|cc RAW 7:55|cc RAW 7:58|yuvdata
+6:271 NOM  RAW 6:269|qi
+3:51 NOM  RAW 3:51|ctr WAR 2:108|ctr WAR 3:143|ctr WAR 3:51|ctr WAR 6:249|ctr WAR 6:528|ctr WAW 1:73|ctr WAW 1:81|ctr WAW 1:89|ctr WAW 1:97|ctr
+6:607 NOM  RAW 6:605|jpc.addr
+3:122 NOM  RAW 3:117|tmp10 RAW 3:121|tmp5 WAR 3:111|tmp4
+6:365 NOM  WAR 6:435|retval
+6:480 NOM  RAW 6:437|jpc.addr RAW 6:456|stream.addr
+4:137 NOM  RAW 4:130|fp RAW 4:133|length_of_file RAW 4:134|buf
+6:311 NOM  INIT *|c RAW 6:284|jpc.addr RAW 6:307|i WAR 2:202|c WAR 6:318|c
+7:104 NOM  WAR 6:607|jdc.addr
+3:125 NOM  RAW 3:113|tmp7 RAW 3:135|wsptr RAW 3:50|wsptr RAW 3:79|wsptr RAW 3:96|tmp0 WAR 2:108|wsptr WAR 2:164|wsptr WAR 2:196|wsptr WAR 3:153|wsptr WAR 3:156|wsptr WAR 3:166|wsptr WAR 3:168|wsptr WAW 1:72|wsptr WAW 1:73|wsptr WAW 1:74|wsptr WAW 1:80|wsptr WAW 1:81|wsptr WAW 1:82|wsptr WAW 1:88|wsptr WAW 1:89|wsptr WAW 1:90|wsptr WAW 1:96|wsptr WAW 1:97|wsptr WAW 1:98|wsptr
+3:209 NOM  WAR 2:233|jpc.addr
+6:435 NOM  RAW 6:434|retval
+6:181 NOM  RAW 6:176|code_size
+6:342 NOM  RAW 6:337|nr_components
+4:241 NOM  RAW 4:229|benchmark_mode
+6:515 NOM  INIT *|jpc.addr RAW 6:513|jpc.addr WAR 2:108|jpc.addr WAR 2:196|jpc.addr WAR 6:573|jpc.addr WAW 1:72|jpc.addr WAW 1:73|jpc.addr WAW 1:80|jpc.addr WAW 1:81|jpc.addr WAW 1:88|jpc.addr WAW 1:89|jpc.addr WAW 1:96|jpc.addr WAW 1:97|jpc.addr
+6:310 NOM  INIT *|Q_table RAW 1:82|stream.addr RAW 1:90|stream.addr RAW 1:98|stream.addr RAW 6:309|stream.addr WAR 2:202|Q_table WAR 6:310|stream.addr WAR 6:319|Q_table
+6:139 NOM  INIT *|i RAW 6:139|i WAR 3:166|i WAR 6:139|i WAR 6:172|i
+1:97 NOM  INIT *|p2 RAW 1:94|g RAW 1:96|p2 WAR 1:112|p2 WAR 1:26|p2 WAR 1:51|p2 WAR 1:55|p2 WAR 1:61|p2 WAR 1:62|p2 WAR 1:65|p2 WAR 1:67|p2 WAR 1:76|p2 WAR 1:84|p2 WAR 1:92|p2 WAR 1:94|p2 WAR 1:97|p2 WAR 2:108|p2 WAR 2:110|p2 WAR 2:113|p2 WAR 2:114|p2 WAR 2:115|p2 WAR 2:123|p2 WAR 2:126|p2 WAR 2:127|p2 WAR 2:128|p2 WAR 2:129|p2 WAR 2:135|p2 WAR 2:157|p2 WAR 2:164|p2 WAR 2:168|p2 WAR 2:175|p2 WAR 2:181|p2 WAR 2:196|p2 WAR 2:201|p2 WAR 2:202|p2 WAR 2:223|p2 WAR 3:103|p2 WAR 3:104|p2 WAR 3:105|p2 WAR 3:106|p2 WAR 3:143|p2 WAR 3:153|p2 WAR 3:156|p2 WAR 3:166|p2 WAR 3:168|p2 WAR 3:171|p2 WAR 3:175|p2 WAR 3:177|p2 WAR 3:184|p2 WAR 3:186|p2 WAR 3:190|p2 WAR 3:206|p2 WAR 3:31|p2 WAR 3:44|p2 WAR 3:61|p2 WAR 3:62|p2 WAR 3:63|p2 WAR 3:64|p2 WAR 3:66|p2 WAR 3:85|p2 WAR 3:86|p2 WAR 3:87|p2 WAR 3:88|p2 WAR 4:130|p2 WAR 4:154|p2 WAR 4:170|p2 WAR 4:171|p2 WAR 4:245|p2 WAR 6:141|p2 WAR 6:157|p2 WAR 6:175|p2 WAR 6:176|p2 WAR 6:197|p2 WAR 6:201|p2 WAR 6:251|p2 WAR 6:347|p2 WAR 6:355|p2 WAR 6:363|p2 WAR 6:366|p2 WAR 6:446|p2 WAR 6:488|p2 WAR 6:503|p2 WAR 6:506|p2 WAR 6:528|p2 WAR 6:537|p2 WAR 6:549|p2 WAR 6:552|p2 WAR 6:566|p2 WAR 6:568|p2 WAR 6:569|p2 WAR 6:570|p2 WAR 6:573|p2 WAR 6:574|p2 WAR 6:592|p2 WAR 6:598|p2 WAR 7:53|p2 WAR 7:54|p2 WAR 7:63|p2 WAR 7:69|p2 WAR 7:73|p2 WAR 7:74|p2 WAR 7:76|p2 WAR 7:80|p2 WAW 1:62|p2 WAW 1:73|p2 WAW 1:81|p2 WAW 1:89|p2 WAW 1:97|p2 WAW 2:114|p2 WAW 2:166|p2 WAW 2:231|p2 WAW 2:233|p2 WAW 3:183|p2 WAW 3:184|p2 WAW 3:185|p2 WAW 3:186|p2 WAW 3:187|p2 WAW 3:188|p2 WAW 3:189|p2 WAW 3:190|p2 WAW 3:77|p2 WAW 4:72|p2 WAW 6:148|p2 WAW 6:171|p2 WAW 6:180|p2 WAW 6:190|p2 WAW 6:199|p2 WAW 6:200|p2 WAW 6:201|p2 WAW 6:251|p2 WAW 6:361|p2 WAW 6:488|p2 WAW 6:549|p2 WAW 6:564|p2
+2:164 NOM  INIT *|DCT RAW 1:25|hdata.addr RAW 1:52|hdata.addr RAW 1:62|hdata.addr RAW 1:65|hdata.addr RAW 1:72|hdata.addr RAW 1:73|hdata.addr RAW 1:74|hdata.addr RAW 1:80|hdata.addr RAW 1:81|hdata.addr RAW 1:82|hdata.addr RAW 1:88|hdata.addr RAW 1:89|hdata.addr RAW 1:90|hdata.addr RAW 1:94|hdata.addr RAW 1:96|hdata.addr RAW 1:97|hdata.addr RAW 1:98|hdata.addr RAW 2:108|hdata.addr RAW 2:114|hdata.addr RAW 2:115|hdata.addr RAW 2:143|hdata.addr RAW 2:162|huff_code RAW 2:164|DCT RAW 2:164|c4 RAW 2:164|hdata.addr RAW 2:166|hdata.addr RAW 2:196|hdata.addr RAW 2:202|hdata.addr RAW 2:209|hdata.addr RAW 3:127|hdata.addr RAW 3:129|hdata.addr RAW 3:131|hdata.addr RAW 3:165|hdata.addr RAW 3:171|hdata.addr RAW 3:183|hdata.addr RAW 3:184|hdata.addr RAW 3:185|hdata.addr RAW 3:186|hdata.addr RAW 3:187|hdata.addr RAW 3:188|hdata.addr RAW 3:189|hdata.addr RAW 3:190|hdata.addr RAW 3:194|hdata.addr RAW 3:36|hdata.addr RAW 3:66|hdata.addr RAW 3:68|hdata.addr RAW 3:69|hdata.addr RAW 3:72|hdata.addr RAW 3:73|hdata.addr RAW 3:74|hdata.addr RAW 3:75|hdata.addr RAW 6:516|hdata.addr RAW 6:565|hdata.addr RAW 6:569|hdata.addr RAW 7:63|hdata.addr RAW 7:78|hdata.addr RAW 7:79|hdata.addr WAR 2:108|DCT WAR 2:108|c4 WAR 2:164|DCT WAR 2:164|c4 WAR 2:164|hdata.addr WAR 2:196|c4 WAR 2:202|DCT WAR 3:179|DCT WAR 6:528|DCT WAR 6:528|c4 WAW 1:72|DCT WAW 1:74|c4 WAW 1:80|DCT WAW 1:82|c4 WAW 1:88|DCT WAW 1:90|c4 WAW 1:96|DCT WAW 1:98|c4
+6:409 NOM  RAW 6:408|retval
+3:194 NOM  RAW 3:194|outptr RAW 3:36|stride.addr RAW 3:44|outptr WAR 3:194|outptr
+6:434 NOM  WAR 6:409|retval
+2:178 NOM  INIT *|size_val RAW 2:175|huff_code WAR 2:108|size_val WAR 2:181|size_val WAR 2:196|size_val WAR 6:528|size_val WAW 1:73|size_val WAW 1:81|size_val WAW 1:89|size_val WAW 1:97|size_val
+6:547 NOM  RAW 6:519|jpc.addr RAW 6:537|stream WAR 6:523|jpc.addr WAR 6:528|jpc.addr
+6:307 NOM  RAW 6:295|nr_components RAW 6:307|i WAR 6:276|i WAR 6:307|i
+6:564 NOM  INIT *|task.addr RAW 6:558|task.addr RAW 6:558|tasknum.addr WAR 6:528|task.addr WAW 1:73|task.addr WAW 1:81|task.addr WAW 1:89|task.addr WAW 1:97|task.addr WAW 6:564|task.addr
+6:276 NOM  INIT *|table RAW 6:257|jpc.addr RAW 6:269|qi WAR 6:277|table WAW 1:81|table
+6:558 NOM  INIT *|tasknum.addr WAR 2:108|task.addr WAR 2:108|tasknum.addr WAR 2:123|tasknum.addr WAR 2:196|tasknum.addr WAR 4:68|jpc.addr WAR 4:70|task.addr WAR 6:566|tasknum.addr WAR 7:73|jpc.addr WAR 7:74|task.addr WAW 1:72|tasknum.addr WAW 1:80|tasknum.addr WAW 1:88|tasknum.addr WAW 1:96|tasknum.addr WAW 4:91|tasknum.addr
+6:569 NOM  INIT *|task.addr RAW 1:72|jpc.addr RAW 1:73|jpc.addr RAW 1:80|jpc.addr RAW 1:81|jpc.addr RAW 1:88|jpc.addr RAW 1:89|jpc.addr RAW 1:96|jpc.addr RAW 1:97|jpc.addr RAW 6:558|jpc.addr RAW 6:558|task.addr RAW 6:593|jpc.addr WAR 2:108|task.addr WAR 6:528|task.addr
+4:56 NOM  INIT *|pos RAW 4:52|fp.addr WAW 4:97|pos
+2:115 NOM  RAW 2:110|value WAR 2:108|retval WAR 2:135|retval WAR 2:164|retval WAR 6:175|retval WAR 6:528|retval WAW 1:73|retval WAW 1:81|retval WAW 1:89|retval WAW 1:97|retval
+6:351 NOM  RAW 6:349|table
+7:74 NOM  RAW 1:73|jtask.addr RAW 1:74|hc RAW 1:74|idata RAW 1:81|jtask.addr RAW 1:82|hc RAW 1:82|idata RAW 1:89|jtask.addr RAW 1:90|hc RAW 1:90|idata RAW 1:97|jtask.addr RAW 1:98|hc RAW 1:98|idata RAW 7:52|jtask.addr RAW 7:53|hc RAW 7:57|idata
+3:179 NOM  INIT *|tmp4 RAW 3:174|tmp10 RAW 3:178|tmp5 WAR 2:202|tmp4 WAR 3:131|tmp4 WAR 3:190|tmp4
+2:197 NOM  RAW 2:190|j WAR 2:197|j
+6:583 NOM  INIT *|buf.addr INIT *|size.addr WAR 4:58|jpc.addr WAR 7:74|buf.addr WAW 1:81|size.addr
+3:43 NOM  RAW 3:36|input_buf.addr WAR 2:108|inptr WAR 6:528|inptr WAW 1:73|inptr WAW 1:81|inptr WAW 1:89|inptr WAW 1:97|inptr WAW 3:133|inptr WAW 3:77|inptr WAW 6:251|inptr
+6:200 NOM  INIT *|slowtable65 RAW 6:174|val RAW 6:196|slowtable65 RAW 6:198|slowtable65 WAW 1:72|slowtable65 WAW 1:73|slowtable65 WAW 1:74|slowtable65 WAW 1:80|slowtable65 WAW 1:81|slowtable65 WAW 1:82|slowtable65 WAW 1:88|slowtable65 WAW 1:89|slowtable65 WAW 1:90|slowtable65 WAW 1:96|slowtable65 WAW 1:97|slowtable65 WAW 1:98|slowtable65
+1:119 NOM  RAW 1:118|cc.addr
+6:264 NOM  INIT *|dqt_block_end RAW 1:89|stream.addr RAW 1:90|stream.addr RAW 1:97|stream.addr RAW 1:98|stream.addr RAW 6:257|stream.addr WAR 2:175|dqt_block_end WAR 6:267|dqt_block_end
+1:118 NOM  WAR 3:222|cc.addr
+4:254 END program

@@ -1,0 +1,2 @@
+# ignore output.tga, as it is too large (377MB)
+discopop/output.tga
