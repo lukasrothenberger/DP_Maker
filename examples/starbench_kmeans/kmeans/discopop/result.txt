@@ -1,0 +1,9 @@
+
+---- kMeans Clustering ----
+Input file:     color
+numObjs       = 17695
+numCoords     = 9
+numClusters   = 5
+threshold     = 0.0010
+I/O time           =     0.0943 sec
+Computation timing =     8.7502 sec

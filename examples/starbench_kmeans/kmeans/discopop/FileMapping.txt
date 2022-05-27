@@ -1,0 +1,5 @@
+1	/home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/file_io.c
+2	/home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+3	/home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.h
+4	/home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/main.c
+5	/home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/wtime.c

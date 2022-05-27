@@ -1,0 +1,408 @@
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/file_io.c
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+index, array_index: i*numCoords + k i][k
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+index, array_index: i i
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+index, array_index: i*numCoords + k i][k
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_kmeans/kmeans/kmeans.c
+67
+149
+152
+153
+92
+94
+115
+118
+130
+135
+137
+72
+82
+59
+100
+118
+156
+157
+161
+178
+184
+188
+196
+197
+40
+77
+125
+127
+Reduction at: 1:57
+Start line: 1:92
+End line: 1:109
+pragma: #pragma omp parallel for
+private: ['len', 'lineLen']
+shared: ['ret', 'line', 'infile45']
+first private: []
+reduction: []
+last private: []
+
+Reduction at: 2:114
+Start line: 2:72
+End line: 2:84
+pragma: #pragma omp parallel for
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Reduction at: 2:121
+Start line: 2:82
+End line: 2:83
+pragma: #pragma omp parallel for
+private: []
+shared: []
+first private: ['index', 'i']
+reduction: []
+last private: []
+
+Reduction at: 2:132
+Start line: 2:59
+End line: 2:67
+pragma: #pragma omp parallel for
+private: ['i']
+shared: []
+first private: []
+reduction: ['>:min_dist']
+last private: ['index']
+
+Reduction at: 2:205
+Start line: 2:184
+End line: 2:193
+pragma: #pragma omp parallel for
+private: ['i', 'k']
+shared: ['newClusterSize']
+first private: []
+reduction: ['+:newClusters']
+last private: []
+
+Reduction at: 2:208
+Start line: 2:188
+End line: 2:191
+pragma: #pragma omp parallel for
+private: ['k']
+shared: []
+first private: ['i']
+reduction: ['+:newClusters']
+last private: []
+
+Reduction at: 2:236
+Start line: 2:40
+End line: 2:41
+pragma: #pragma omp parallel for
+private: ['i']
+shared: []
+first private: []
+reduction: ['+:ans']
+last private: []
+
+
+Do-all at: 1:37
+Start line: 1:152
+End line: 1:156
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['j', 'i']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:40
+Start line: 1:153
+End line: 1:155
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['j']
+shared: []
+first private: ['i']
+reduction: []
+last private: []
+
+Do-all at: 1:60
+Start line: 1:94
+End line: 1:105
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['len', 'lineLen']
+shared: ['ret', 'line', 'infile45']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:77
+Start line: 1:115
+End line: 1:116
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['lineLen']
+shared: ['infile45', 'line']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:81
+Start line: 1:118
+End line: 1:118
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:92
+Start line: 1:130
+End line: 1:131
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: ['objects']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:97
+Start line: 1:135
+End line: 1:139
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i', 'lineLen', 'j']
+shared: ['objects', 'line', 'infile45']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:102
+Start line: 1:137
+End line: 1:138
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['j', 'i']
+shared: ['objects']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 2:166
+Start line: 2:118
+End line: 2:119
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: ['ptr']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 2:177
+Start line: 2:156
+End line: 2:158
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['j', 'i']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 2:180
+Start line: 2:157
+End line: 2:158
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['j']
+shared: []
+first private: ['i']
+reduction: []
+last private: []
+
+Do-all at: 2:187
+Start line: 2:161
+End line: 2:162
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 2:202
+Start line: 2:178
+End line: 2:206
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 2:215
+Start line: 2:196
+End line: 2:204
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i', 'j']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 2:218
+Start line: 2:197
+End line: 2:201
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['j']
+shared: []
+first private: ['i', 'newClusterSize']
+reduction: []
+last private: []
+
+Do-all at: 4:243
+Start line: 4:77
+End line: 4:90
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['opt']
+shared: ['outfile', 'filename']
+first private: []
+reduction: []
+last private: ['isBinaryFile']
+
+Do-all at: 4:268
+Start line: 4:125
+End line: 4:130
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['j', 'l']
+shared: ['clusters', 'fp']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:271
+Start line: 4:127
+End line: 4:128
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['j', 'l']
+shared: ['clusters', 'fp']
+first private: []
+reduction: []
+last private: []
+
+
+Geometric decomposition at: 2:112
+Start line: 2:71
+End line: 2:85
+Type: Geometric Decomposition Pattern
+Do-All loops: ['2:114', '2:236', '2:121']
+Reduction loops: ['2:132']
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['clusters.addr', 'membership.addr', 'numClusters.addr', 'numObjs.addr', 'numCoords.addr', 'objects.addr']
+	first private: ['i']
+	reduction: ['local_newClusterSize.addr', 'local_newClusters.addr']
+	last private: []
+
+Geometric decomposition at: 2:128
+Start line: 2:52
+End line: 2:68
+Type: Geometric Decomposition Pattern
+Do-All loops: ['2:236']
+Reduction loops: ['2:132']
+	Number of tasks: 2
+	Chunk limits: 1
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['numClusters.addr', 'object.addr', 'numCoords.addr', 'clusters.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 2:157
+Start line: 2:110
+End line: 2:120
+Type: Geometric Decomposition Pattern
+Do-All loops: ['2:166']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: []
+	first private: ['height.addr', 'width.addr', 'i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 2:234
+Start line: 2:36
+End line: 2:43
+Type: Geometric Decomposition Pattern
+Do-All loops: ['2:236']
+Reduction loops: []
+	Number of tasks: 2
+	Chunk limits: 1
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['coord2.addr', 'coord1.addr', 'numdims.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+Time taken for pattern detection: 0.27207159996032715

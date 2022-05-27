@@ -1,0 +1,11 @@
+ FileID : 1 Loop Line Number : 92 Reduction Line Number : 109 Variable Name : numObjs.addr Operation Name : +
+ FileID : 2 Loop Line Number : 82 Reduction Line Number : 83 Variable Name : local_newClusters.addr Operation Name : +
+ FileID : 2 Loop Line Number : 72 Reduction Line Number : 81 Variable Name : local_newClusterSize.addr Operation Name : +
+ FileID : 2 Loop Line Number : 72 Reduction Line Number : 83 Variable Name : local_newClusters.addr Operation Name : +
+ FileID : 2 Loop Line Number : 72 Reduction Line Number : 76 Variable Name : delta Operation Name : +
+ FileID : 2 Loop Line Number : 59 Reduction Line Number : 64 Variable Name : min_dist Operation Name : >
+ FileID : 2 Loop Line Number : 188 Reduction Line Number : 189 Variable Name : newClusters Operation Name : +
+ FileID : 2 Loop Line Number : 184 Reduction Line Number : 186 Variable Name : newClusterSize Operation Name : +
+ FileID : 2 Loop Line Number : 184 Reduction Line Number : 189 Variable Name : newClusters Operation Name : +
+ FileID : 2 Loop Line Number : 179 Reduction Line Number : 206 Variable Name : loop Operation Name : +
+ FileID : 2 Loop Line Number : 40 Reduction Line Number : 41 Variable Name : ans Operation Name : +

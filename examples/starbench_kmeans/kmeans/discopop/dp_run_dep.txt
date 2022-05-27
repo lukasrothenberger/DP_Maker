@@ -1,0 +1,177 @@
+START 4:55
+2:197 BGN loop 9
+2:203 END loop
+2:196 BGN loop 5
+2:205 END loop
+2:82 BGN loop 9
+2:84 END loop
+4:77 BGN loop 3
+4:94 END loop
+2:188 BGN loop 9
+2:193 END loop
+2:72 BGN loop 17695
+2:85 END loop
+2:59 BGN loop 4
+2:68 END loop
+2:184 BGN loop 5
+2:196 END loop
+1:67 BGN loop 17694
+1:70 END loop
+1:152 BGN loop 17695
+1:157 END loop
+2:161 BGN loop 17695
+2:165 END loop
+1:153 BGN loop 9
+1:156 END loop
+2:100 BGN loop 4
+2:102 END loop
+2:157 BGN loop 9
+2:158 END loop
+2:156 BGN loop 5
+2:161 END loop
+2:40 BGN loop 9
+2:43 END loop
+1:149 BGN loop 17694
+1:152 END loop
+2:179 BGN loop 24
+2:212 END loop
+2:58 BGN func 2:36
+2:60 BGN func 2:36
+2:73 BGN func 2:52
+2:181 BGN func 2:71
+2:169 BGN func 2:92
+2:153 BGN func 2:92
+4:110 BGN func 2:128
+4:99 BGN func 1:36
+1:160 END func
+2:43 END func
+2:68 END func
+2:85 END func
+2:102 END func
+2:218 END func
+2:199 NOM  RAW 2:101|clusters RAW 2:101|newClusters RAW 2:153|clusters RAW 2:165|newClusterSize RAW 2:169|newClusters RAW 2:186|newClusterSize RAW 2:189|newClusters RAW 2:196|i RAW 2:197|j RAW 2:97|clusters RAW 2:97|newClusters WAR 2:41|clusters
+2:72 NOM  RAW 2:71|numObjs.addr RAW 2:72|i WAR 2:72|i WAW 1:154|i
+4:70 NOM  INIT *|numClusters
+2:197 NOM  RAW 2:128|numCoords.addr RAW 2:197|j WAR 2:157|j WAR 2:197|j
+1:71 NOM  RAW 1:58|len RAW 1:70|numBytesRead
+4:77 NOM  INIT *|opt RAW 4:55|argc.addr RAW 4:55|argv.addr WAR 4:78|opt
+2:187 NOM  RAW 2:171|local_newClusterSize RAW 2:184|i WAR 2:186|local_newClusterSize
+2:57 NOM  WAR 2:68|index WAR 2:83|index WAW 1:154|index
+1:58 NOM  INIT *|len RAW 1:36|numCoords.addr RAW 1:36|numObjs.addr
+2:189 NOM  INIT *|newClusters RAW 2:101|newClusters RAW 2:128|numCoords.addr RAW 2:169|newClusters RAW 2:174|local_newClusters RAW 2:184|i RAW 2:188|k RAW 2:200|newClusters RAW 2:83|local_newClusters RAW 2:97|newClusters WAR 2:189|newClusters
+2:165 NOM  INIT *|newClusterSize RAW 2:128|numClusters.addr
+2:188 NOM  RAW 2:128|numCoords.addr RAW 2:188|k WAR 2:188|k WAR 2:83|k
+2:52 NOM  INIT *|clusters.addr INIT *|numCoords.addr INIT *|object.addr WAR 2:59|numClusters.addr WAR 2:60|clusters.addr WAR 2:60|numCoords.addr WAR 2:60|object.addr WAR 2:83|numClusters.addr WAW 1:154|numClusters.addr
+2:179 NOM  WAR 1:154|delta WAR 2:206|delta
+2:162 NOM  INIT *|membership.addr RAW 2:128|membership.addr RAW 2:161|i
+1:36 NOM  INIT *|filename.addr INIT *|isBinaryFile.addr INIT *|numCoords.addr INIT *|numObjs.addr
+1:154 NOM  INIT *|objects_d RAW 1:147|objects RAW 1:147|objects_d RAW 1:148|objects_d RAW 1:150|objects_d RAW 1:152|i RAW 1:153|j RAW 1:153|objects RAW 1:154|objects_d RAW 1:36|objects RAW 1:58|objects RAW 1:59|objects RAW 1:68|objects RAW 1:70|objects RAW 4:71|objects RAW 4:74|objects RAW 4:77|objects RAW 4:79|objects RAW 4:81|objects WAR 1:150|objects_d WAR 1:154|objects_d WAW 4:55|objects_d
+2:41 NOM  RAW 1:152|coord1.addr RAW 1:154|coord1.addr RAW 2:128|coord1.addr RAW 2:136|coord1.addr RAW 2:158|coord1.addr RAW 2:158|coord2.addr RAW 2:161|coord1.addr RAW 2:188|coord1.addr RAW 2:196|coord1.addr RAW 2:199|coord1.addr RAW 2:199|coord2.addr RAW 2:206|coord1.addr RAW 2:36|coord1.addr RAW 2:36|coord2.addr RAW 2:38|ans RAW 2:40|coord1.addr RAW 2:40|i RAW 2:41|ans RAW 2:52|coord1.addr RAW 2:57|coord1.addr RAW 2:65|coord1.addr RAW 2:71|coord1.addr RAW 2:72|coord1.addr RAW 2:82|coord1.addr RAW 2:83|coord1.addr RAW 2:92|coord1.addr WAR 2:41|ans
+1:153 NOM  INIT *|j RAW 1:150|numCoords.addr RAW 1:153|j RAW 1:36|numCoords.addr WAR 1:153|j
+2:63 NOM  RAW 2:58|min_dist RAW 2:60|dist RAW 2:64|min_dist
+2:190 NOM  RAW 2:128|numCoords.addr RAW 2:174|local_newClusters RAW 2:184|i RAW 2:188|k WAR 2:189|local_newClusters
+1:52 NOM  INIT *|numBytesRead RAW 1:36|numObjs.addr RAW 1:48|infile
+4:99 NOM  INIT *|objects RAW 4:79|filename RAW 4:81|isBinaryFile
+2:68 NOM  RAW 2:57|index RAW 2:65|index
+1:53 NOM  RAW 1:52|numBytesRead
+2:81 NOM  INIT *|local_newClusterSize.addr RAW 2:187|local_newClusterSize.addr RAW 2:71|local_newClusterSize.addr RAW 2:73|index RAW 2:81|local_newClusterSize.addr WAR 2:81|local_newClusterSize.addr
+4:117 NOM  RAW 4:104|clustering_timing RAW 4:116|timing WAR 4:117|clustering_timing
+2:60 NOM  INIT *|dist RAW 2:101|clusters.addr RAW 2:52|clusters.addr RAW 2:52|numCoords.addr RAW 2:52|object.addr RAW 2:59|i WAR 2:63|dist WAR 2:64|dist
+2:101 NOM  INIT *|ptr RAW 2:100|i RAW 2:101|ptr RAW 2:92|width.addr RAW 2:95|ptr RAW 2:97|ptr
+4:146 NOM  RAW 4:71|threshold
+1:149 NOM  RAW 1:149|i RAW 1:36|numObjs.addr WAR 1:149|i WAR 1:67|i
+1:148 NOM  INIT *|objects_d RAW 1:147|objects_d RAW 1:58|len
+4:113 NOM  RAW 1:148|objects RAW 4:99|objects
+2:153 NOM  INIT *|clusters
+4:139 NOM  INIT *|t1 RAW 1:150|* RAW 4:103|io_timing RAW 4:116|timing WAR 4:139|io_timing
+2:97 NOM  INIT *|ptr RAW 2:92|height.addr RAW 2:92|width.addr RAW 2:95|ptr
+2:215 NOM  RAW 2:169|newClusters RAW 2:97|newClusters
+4:149 NOM  RAW 4:117|clustering_timing
+4:74 NOM  INIT *|outfile
+2:76 NOM  RAW 2:179|delta RAW 2:76|delta WAR 2:76|delta
+1:150 NOM  INIT *|objects_d RAW 1:147|objects_d RAW 1:148|objects_d RAW 1:149|i RAW 1:150|numCoords.addr RAW 1:150|objects_d RAW 1:36|numCoords.addr WAW 4:83|objects_d
+2:36 NOM  INIT *|coord1.addr INIT *|coord2.addr WAR 1:154|numdims.addr WAR 2:40|numdims.addr WAR 2:41|coord1.addr WAR 2:41|coord2.addr WAR 2:83|numdims.addr
+4:144 NOM  RAW 1:150|numCoords
+2:100 NOM  RAW 2:100|i RAW 2:92|height.addr WAR 2:100|i WAW 1:154|i
+1:68 NOM  INIT *|objects RAW 1:36|numCoords.addr RAW 1:59|objects RAW 1:60|objects RAW 1:67|i RAW 1:68|objects
+2:92 NOM  INIT *|width.addr WAR 2:100|height.addr WAR 2:101|width.addr WAW 1:154|height.addr
+4:122 NOM  RAW 4:74|outfile
+4:83 NOM  WAW 4:70|numClusters
+2:158 NOM  INIT *|clusters RAW 1:150|objects.addr RAW 1:154|objects.addr RAW 2:101|clusters RAW 2:128|objects.addr RAW 2:153|clusters RAW 2:156|i RAW 2:157|j RAW 2:97|clusters WAW 1:154|clusters
+2:184 NOM  RAW 2:128|numClusters.addr RAW 2:184|i WAR 2:184|i WAR 2:83|i
+1:147 NOM  INIT *|objects_d RAW 1:36|numObjs.addr
+2:212 NOM  RAW 2:171|local_newClusterSize
+2:83 NOM  INIT *|local_newClusters.addr RAW 1:148|objects.addr RAW 1:150|objects.addr RAW 1:152|objects.addr RAW 1:154|local_newClusters.addr RAW 1:154|objects.addr RAW 2:128|objects.addr RAW 2:158|objects.addr RAW 2:161|objects.addr RAW 2:188|objects.addr RAW 2:190|local_newClusters.addr RAW 2:196|objects.addr RAW 2:199|objects.addr RAW 2:206|objects.addr RAW 2:36|objects.addr RAW 2:40|objects.addr RAW 2:52|objects.addr RAW 2:65|objects.addr RAW 2:71|local_newClusters.addr RAW 2:71|numCoords.addr RAW 2:71|objects.addr RAW 2:72|i RAW 2:72|objects.addr RAW 2:73|index RAW 2:76|objects.addr RAW 2:82|j RAW 2:82|objects.addr RAW 2:83|local_newClusters.addr RAW 2:83|objects.addr RAW 2:92|objects.addr WAR 2:83|local_newClusters.addr
+1:62 NOM  RAW 1:59|objects RAW 1:60|objects
+2:40 NOM  RAW 2:36|numdims.addr RAW 2:40|i WAR 1:154|i WAR 2:40|i WAR 2:83|i
+1:47 NOM  RAW 1:36|filename.addr
+2:75 NOM  RAW 2:162|membership.addr RAW 2:71|membership.addr RAW 2:72|i RAW 2:73|index RAW 2:79|membership.addr
+2:161 NOM  RAW 2:128|numObjs.addr RAW 2:161|i WAR 2:156|i WAR 2:161|i
+2:203 NOM  RAW 2:165|newClusterSize RAW 2:196|i WAR 2:199|newClusterSize
+4:106 NOM  INIT *|membership
+2:171 NOM  RAW 2:128|numClusters.addr WAR 1:160|local_newClusterSize
+2:38 NOM  INIT *|ans WAR 2:43|ans
+4:142 NOM  RAW 4:79|filename
+2:156 NOM  RAW 2:128|numClusters.addr RAW 2:156|i WAR 2:156|i WAW 1:154|i
+2:174 NOM  INIT *|local_newClusters RAW 2:128|numClusters.addr
+2:200 NOM  RAW 2:101|newClusters RAW 2:169|newClusters RAW 2:196|i RAW 2:197|j RAW 2:97|newClusters WAR 2:199|newClusters
+2:172 NOM  RAW 2:171|local_newClusterSize
+4:104 NOM  INIT *|clustering_timing
+4:103 NOM  RAW 4:96|io_timing WAR 4:103|io_timing
+4:94 NOM  RAW 4:79|filename
+2:96 NOM  RAW 2:95|ptr
+1:54 NOM  RAW 1:36|numCoords.addr RAW 1:48|infile WAR 1:53|numBytesRead
+2:95 NOM  INIT *|ptr RAW 2:92|height.addr WAR 2:102|ptr
+2:82 NOM  RAW 2:71|numCoords.addr RAW 2:82|j WAR 2:41|j WAR 2:82|j WAW 1:154|j
+2:71 NOM  INIT *|clusters.addr INIT *|local_newClusterSize.addr INIT *|local_newClusters.addr INIT *|membership.addr INIT *|objects.addr WAR 2:100|numObjs.addr WAR 2:102|numCoords.addr WAR 2:72|numObjs.addr WAR 2:73|clusters.addr WAR 2:73|numClusters.addr WAR 2:79|membership.addr WAR 2:81|local_newClusterSize.addr WAR 2:82|numCoords.addr WAR 2:83|local_newClusters.addr WAR 2:83|objects.addr WAW 1:154|numClusters.addr
+2:206 NOM  RAW 2:128|threshold.addr RAW 2:205|delta RAW 2:206|loop WAR 2:206|loop
+4:110 NOM  INIT *|clusters
+2:213 NOM  RAW 2:174|local_newClusters
+1:152 NOM  RAW 1:152|i RAW 1:36|numObjs.addr WAR 1:149|i WAR 1:152|i
+4:116 NOM  RAW 1:150|* WAR 4:104|timing
+2:205 NOM  RAW 2:128|numObjs.addr RAW 2:76|delta WAR 2:205|delta
+2:186 NOM  INIT *|newClusterSize RAW 2:165|newClusterSize RAW 2:171|local_newClusterSize RAW 2:184|i RAW 2:203|newClusterSize RAW 2:81|local_newClusterSize WAR 2:186|newClusterSize
+2:157 NOM  INIT *|j RAW 2:128|numCoords.addr RAW 2:157|j WAR 2:157|j
+4:102 NOM  INIT *|timing RAW 1:150|*
+2:102 NOM  RAW 2:95|ptr
+2:43 NOM  RAW 2:41|ans
+2:98 NOM  RAW 2:95|ptr RAW 2:97|ptr
+2:218 NOM  RAW 2:153|clusters
+2:58 NOM  INIT *|min_dist RAW 2:52|clusters.addr RAW 2:52|numCoords.addr RAW 2:52|object.addr RAW 2:97|clusters.addr WAR 2:63|min_dist WAW 2:64|min_dist
+2:181 NOM  RAW 2:128|membership.addr RAW 2:128|numClusters.addr RAW 2:128|numCoords.addr RAW 2:128|numObjs.addr RAW 2:128|objects.addr RAW 2:153|clusters RAW 2:171|local_newClusterSize RAW 2:174|local_newClusters
+1:45 NOM  RAW 1:36|isBinaryFile.addr
+1:70 NOM  RAW 1:48|infile RAW 1:58|len RAW 1:59|objects RAW 1:60|objects WAR 1:55|numBytesRead
+2:136 NOM  WAW 1:154|loop
+4:114 NOM  RAW 4:99|objects
+4:55 NOM  INIT *|argc.addr INIT *|argv.addr INIT *|retval
+4:73 NOM  INIT *|filename
+2:79 NOM  RAW 2:71|membership.addr RAW 2:72|i RAW 2:73|index WAR 2:75|membership.addr
+4:148 NOM  RAW 4:139|io_timing
+2:198 NOM  RAW 2:165|newClusterSize RAW 2:186|newClusterSize RAW 2:196|i
+4:135 NOM  RAW 4:110|clusters
+4:78 NOM  RAW 4:77|opt
+1:73 NOM  RAW 1:48|infile
+4:96 NOM  INIT *|io_timing
+1:59 NOM  INIT *|objects RAW 1:36|numObjs.addr
+4:72 NOM  INIT *|isBinaryFile
+2:73 NOM  INIT *|index RAW 1:148|objects.addr RAW 1:150|objects.addr RAW 1:154|objects.addr RAW 2:71|clusters.addr RAW 2:71|numClusters.addr RAW 2:71|numCoords.addr RAW 2:71|objects.addr RAW 2:72|i RAW 2:76|objects.addr WAR 2:83|index
+4:71 NOM  INIT *|threshold
+2:128 NOM  WAR 1:152|numObjs.addr WAR 1:153|membership.addr WAR 1:154|numCoords.addr WAR 1:154|objects.addr WAR 1:158|threshold.addr WAW 1:154|is_perform_atomic.addr WAW 1:154|numClusters.addr
+4:145 NOM  RAW 1:150|numClusters
+2:169 NOM  INIT *|newClusters RAW 2:128|numClusters.addr
+1:60 NOM  INIT *|objects RAW 1:58|len RAW 1:59|objects
+2:216 NOM  RAW 2:169|newClusters
+2:59 NOM  INIT *|i RAW 2:52|numClusters.addr RAW 2:59|i WAR 2:59|i
+1:48 NOM  INIT *|infile RAW 1:36|filename.addr
+4:79 NOM  WAW 4:73|filename
+2:196 NOM  RAW 2:128|numClusters.addr RAW 2:196|i WAR 2:184|i WAR 2:196|i
+4:134 NOM  RAW 2:97|clusters RAW 4:110|clusters
+2:64 NOM  RAW 2:60|dist WAR 2:63|min_dist
+2:65 NOM  RAW 2:59|i WAR 2:41|index WAW 2:57|index WAW 2:65|index
+1:55 NOM  RAW 1:54|numBytesRead
+4:81 NOM  WAW 4:72|isBinaryFile
+1:157 NOM  RAW 1:60|objects
+4:120 NOM  RAW 4:106|membership
+1:67 NOM  INIT *|i RAW 1:36|numObjs.addr RAW 1:67|i WAR 1:67|i
+2:217 NOM  RAW 2:165|newClusterSize
+4:151 END program
