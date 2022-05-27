@@ -1,0 +1,102 @@
+34
+49
+55
+145
+151
+251
+Do-all at: 2:5
+Start line: 2:34
+End line: 2:38
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 2:20
+Start line: 2:55
+End line: 2:60
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:108
+Start line: 1:145
+End line: 1:169
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:111
+Start line: 1:151
+End line: 1:163
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:135
+Start line: 1:251
+End line: 1:258
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['opt']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+
+Geometric decomposition at: 1:106
+Start line: 1:145
+End line: 1:170
+Type: Geometric Decomposition Pattern
+Do-All loops: ['1:108', '1:111']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['args.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 1:133
+Start line: 1:239
+End line: 1:307
+Type: Geometric Decomposition Pattern
+Do-All loops: ['1:135', '1:108', '1:111']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['argv.addr', 'argc.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+Time taken for pattern detection: 0.11869978904724121
