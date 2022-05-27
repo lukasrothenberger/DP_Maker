@@ -49,7 +49,7 @@ class Command(object):
             # remove -fopenmp and other unwanted flags if they exist
             tmp_flags: List[str] = []
             for idx, flag in enumerate(self.flags):
-                if flag == "-fopenmp" or flag == "-O3" or flag == "-I." or flag == "-Wall" or flag == "-g":
+                if flag in ["-fopenmp", "-ffast-math", "-O3", "-O2", "-I.", "-Wall", "-g"]:
                     continue
                 else:
                     tmp_flags.append(flag)
