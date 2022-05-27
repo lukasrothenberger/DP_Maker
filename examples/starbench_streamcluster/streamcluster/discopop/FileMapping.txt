@@ -1,0 +1,4 @@
+1	/home/goerlibe/discopop/DP_Maker/examples/starbench_streamcluster/streamcluster/streamcluster.c
+2	/home/goerlibe/discopop/DP_Maker/examples/starbench_streamcluster/streamcluster/streamcluster.h
+3	/home/goerlibe/discopop/DP_Maker/examples/starbench_streamcluster/streamcluster/util.c
+4	/home/goerlibe/discopop/DP_Maker/examples/starbench_streamcluster/streamcluster/util.h

@@ -1,0 +1,13 @@
+ FileID : 3 Loop Line Number : 66 Reduction Line Number : 67 Variable Name : result Operation Name : +
+ FileID : 1 Loop Line Number : 57 Reduction Line Number : 58 Variable Name : pspeedy.totalcost Operation Name : +
+ FileID : 1 Loop Line Number : 40 Reduction Line Number : 43 Variable Name : kcenter.addr Operation Name : +
+ FileID : 1 Loop Line Number : 158 Reduction Line Number : 167 Variable Name : number_of_centers_to_close Operation Name : +
+ FileID : 1 Loop Line Number : 158 Reduction Line Number : 168 Variable Name : cost_of_opening_x Operation Name : -
+ FileID : 1 Loop Line Number : 127 Reduction Line Number : 151 Variable Name : lower Operation Name : +
+ FileID : 1 Loop Line Number : 127 Reduction Line Number : 139 Variable Name : cost_of_opening_x Operation Name : +
+ FileID : 1 Loop Line Number : 112 Reduction Line Number : 114 Variable Name : count Operation Name : +
+ FileID : 1 Loop Line Number : 236 Reduction Line Number : 238 Variable Name : change Operation Name : +
+ FileID : 1 Loop Line Number : 279 Reduction Line Number : 280 Variable Name : accumweight Operation Name : +
+ FileID : 1 Loop Line Number : 356 Reduction Line Number : 358 Variable Name : hiz Operation Name : >
+ FileID : 1 Loop Line Number : 327 Reduction Line Number : 328 Variable Name : hiz Operation Name : +
+ FileID : 1 Loop Line Number : 483 Reduction Line Number : 488 Variable Name : count Operation Name : +

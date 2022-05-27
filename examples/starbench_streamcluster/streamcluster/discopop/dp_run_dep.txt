@@ -1,0 +1,414 @@
+START 1:655
+1:521 BGN loop 7
+1:525 END loop
+1:336 BGN loop 7
+1:340 END loop
+1:451 BGN loop 100
+1:455 END loop
+1:231 BGN loop 1
+1:242 END loop
+1:44 BGN loop 100
+1:51 END loop
+1:529 BGN loop 64
+1:532 END loop
+1:57 BGN loop 100
+1:61 END loop
+1:293 BGN loop 6
+1:301 END loop
+3:40 BGN loop 99
+3:46 END loop
+3:66 BGN loop 64
+3:68 END loop
+1:605 BGN loop 100
+1:608 END loop
+1:458 BGN loop 100
+1:467 END loop
+1:576 BGN loop 200
+1:580 END loop
+1:525 BGN loop 7
+1:535 END loop
+1:112 BGN loop 100
+1:119 END loop
+1:32 BGN loop 100
+1:38 END loop
+1:327 BGN loop 53
+1:331 END loop
+1:356 BGN loop 1
+1:371 END loop
+1:483 BGN loop 100
+1:491 END loop
+1:484 BGN loop 64
+1:487 END loop
+1:425 BGN loop 53
+1:439 END loop
+1:596 BGN loop 0
+1:635 END loop
+1:586 BGN loop 50
+1:591 END loop
+1:350 BGN loop 1
+1:356 END loop
+1:279 BGN loop 99
+1:282 END loop
+1:284 BGN loop 32
+1:304 END loop
+1:372 BGN loop 100
+1:376 END loop
+1:378 BGN loop 4
+1:413 END loop
+1:430 BGN loop 64
+1:435 END loop
+3:53 BGN loop 32
+3:59 END loop
+1:196 BGN loop 100
+1:201 END loop
+1:236 BGN loop 69
+1:240 END loop
+1:40 BGN loop 99
+1:55 END loop
+1:158 BGN loop 100
+1:173 END loop
+1:127 BGN loop 100
+1:158 END loop
+1:186 BGN loop 100
+1:196 END loop
+1:639 BGN func 1:472
+1:629 BGN func 1:495
+1:614 BGN func 1:420
+1:707 BGN func 1:545
+1:388 BGN func 1:220
+1:192 BGN func 3:62
+1:128 BGN func 3:62
+1:238 BGN func 1:80
+1:640 BGN func 1:420
+1:379 BGN func 1:220
+1:371 BGN func 1:245
+1:703 BGN func 1:557
+1:599 BGN func 1:495
+1:362 BGN func 1:26
+1:473 BGN func 1:310
+1:328 BGN func 3:62
+1:345 BGN func 3:36
+1:33 BGN func 3:62
+1:346 BGN func 1:26
+1:596 BGN func 1:481
+1:45 BGN func 3:62
+1:641 BGN func 1:514
+1:235 BGN func 3:49
+1:612 BGN func 1:472
+1:351 BGN func 1:26
+1:622 BGN func 1:443
+1:361 BGN func 3:36
+1:61 END func
+1:210 END func
+1:242 END func
+1:307 END func
+1:417 END func
+1:439 END func
+1:470 END func
+1:474 END func
+1:491 END func
+1:496 END func
+1:538 END func
+1:549 END func
+1:653 END func
+3:46 END func
+3:59 END func
+3:68 END func
+1:249 NOM  RAW 1:245|kmin.addr WAR 1:248|numfeasible
+1:248 NOM  RAW 1:245|kmin.addr RAW 1:247|numfeasible
+1:363 NOM  RAW 1:358|i WAR 1:363|i
+3:55 NOM  INIT *|temp RAW 1:301|intarray.addr RAW 3:49|intarray.addr RAW 3:53|i RAW 3:56|intarray.addr RAW 3:57|intarray.addr WAR 1:127|temp WAR 3:57|temp
+1:235 NOM  RAW 1:220|feasible.addr RAW 1:220|numfeasible.addr
+1:348 NOM  INIT *|i
+3:40 NOM  INIT *|i RAW 1:604|points.addr RAW 3:36|points.addr RAW 3:40|i WAR 3:40|i
+1:605 NOM  INIT *|i59 RAW 1:604|points RAW 1:605|i59 WAR 1:605|i59
+1:61 NOM  RAW 1:58|pspeedy.totalcost
+1:583 NOM  RAW 1:557|centersize.addr
+1:352 NOM  RAW 1:348|i WAR 1:352|i
+1:247 NOM  RAW 1:245|points.addr RAW 1:604|points.addr WAR 1:34|numfeasible
+1:357 NOM  RAW 1:352|i
+1:484 NOM  INIT *|k RAW 1:481|dim.addr RAW 1:484|k WAR 1:484|k
+1:45 NOM  INIT *|distance36 RAW 1:26|points.addr RAW 1:40|pspeedy.i RAW 1:44|k29 RAW 1:571|points.addr RAW 1:573|points.addr WAR 1:46|distance36 WAR 1:47|distance36
+1:334 NOM  RAW 1:310|kmax.addr RAW 1:310|points.addr RAW 1:604|points.addr
+1:591 NOM  INIT *|IDoffset
+1:346 NOM  INIT *|cost RAW 1:310|points.addr
+1:643 NOM  RAW 1:561|block
+1:616 NOM  RAW 1:414|kfinal RAW 1:557|centersize.addr RAW 1:584|centers
+3:49 NOM  INIT *|intarray.addr INIT *|length.addr WAR 1:128|intarray.addr WAR 3:53|length.addr
+1:483 NOM  INIT *|i RAW 1:481|num.addr RAW 1:481|stream.addr RAW 1:483|i RAW 1:487|stream.addr RAW 1:695|stream.addr WAR 1:483|i
+1:703 NOM  RAW 1:657|outfilename RAW 1:683|kmin RAW 1:684|kmax RAW 1:685|dim RAW 1:687|chunksize RAW 1:688|clustersize
+1:162 NOM  RAW 1:160|low
+1:167 NOM  RAW 1:167|number_of_centers_to_close RAW 1:83|number_of_centers_to_close WAR 1:167|number_of_centers_to_close
+1:210 NOM  RAW 1:179|pgain.gl_cost_of_opening_x RAW 1:207|pgain.gl_cost_of_opening_x
+1:467 NOM  RAW 1:443|centers.addr RAW 1:463|k WAR 1:455|centers.addr
+1:240 NOM  RAW 1:220|cost.addr RAW 1:238|change RAW 1:240|cost.addr WAR 1:240|cost.addr
+1:392 NOM  RAW 1:205|pkmedian.k RAW 1:310|kmax.addr
+1:529 NOM  INIT *|k RAW 1:514|centers.addr RAW 1:529|k RAW 1:581|centers.addr WAR 1:529|k
+1:532 NOM  RAW 1:515|fp
+1:707 NOM  INIT *|ctime_msec
+1:433 NOM  RAW 1:420|points.addr RAW 1:425|i RAW 1:429|relweight RAW 1:430|ii RAW 1:485|points.addr RAW 1:573|points.addr RAW 1:577|points.addr
+1:685 NOM  INIT *|dim RAW 1:655|argv.addr
+1:428 NOM  INIT *|relweight RAW 1:193|points.addr RAW 1:420|points.addr RAW 1:425|i RAW 1:435|points.addr RAW 1:573|points.addr RAW 1:606|points.addr WAR 1:433|relweight
+1:469 NOM  RAW 1:448|is_a_median
+1:667 NOM  RAW 1:655|argc.addr
+1:127 NOM  RAW 1:127|i RAW 1:604|points.addr RAW 1:80|points.addr WAR 1:127|i WAR 3:57|i
+1:596 NOM  INIT *|numRead RAW 1:557|chunksize.addr RAW 1:557|dim.addr RAW 1:557|stream.addr RAW 1:561|block
+1:626 NOM  RAW 1:608|switch_membership
+1:622 NOM  RAW 1:563|centerIDs RAW 1:591|IDoffset
+1:197 NOM  RAW 1:114|center_table RAW 1:125|gl_lower RAW 1:161|gl_lower RAW 1:196|i156 RAW 1:198|is_center RAW 1:202|is_center RAW 1:373|is_center RAW 1:609|is_center RAW 1:610|center_table
+1:481 NOM  INIT *|dest.addr INIT *|dim.addr INIT *|num.addr INIT *|stream.addr
+1:709 NOM  RAW 1:707|ctime_msec
+3:66 NOM  INIT *|i RAW 3:62|dim.addr RAW 3:66|i WAR 1:238|i WAR 3:66|i
+1:488 NOM  RAW 1:482|count RAW 1:488|count WAR 1:488|count
+1:196 NOM  INIT *|i156 RAW 1:196|i156 RAW 1:604|points.addr RAW 1:80|points.addr WAR 1:196|i156
+1:38 NOM  INIT *|kcenter.addr RAW 1:26|kcenter.addr WAR 1:350|kcenter.addr WAR 1:356|kcenter.addr
+1:535 NOM  RAW 1:515|fp
+1:577 NOM  INIT *|points RAW 1:557|dim.addr RAW 1:561|block RAW 1:573|points RAW 1:576|i
+1:58 NOM  RAW 1:26|points.addr RAW 1:34|points.addr RAW 1:47|points.addr RAW 1:55|pspeedy.totalcost RAW 1:573|points.addr RAW 1:57|k81 RAW 1:58|pspeedy.totalcost WAR 1:58|pspeedy.totalcost
+1:188 NOM  RAW 1:138|switch_membership RAW 1:186|i111 RAW 1:187|close_center RAW 1:608|switch_membership
+1:99 NOM  INIT *|cost_of_opening_x WAR 1:174|cost_of_opening_x
+1:238 NOM  RAW 1:220|feasible.addr RAW 1:220|k.addr RAW 1:220|points.addr RAW 1:220|z.addr RAW 1:232|change RAW 1:237|x RAW 1:238|change RAW 3:56|feasible.addr RAW 3:57|feasible.addr WAR 1:238|change
+1:459 NOM  RAW 1:448|is_a_median RAW 1:452|is_a_median RAW 1:458|i
+1:207 NOM  WAR 1:184|pgain.gl_cost_of_opening_x
+1:584 NOM  INIT *|centers
+3:67 NOM  RAW 1:485|p1 RAW 1:485|p2 RAW 3:65|result RAW 3:66|i RAW 3:67|result WAR 3:67|result
+1:472 NOM  WAR 1:462|kfinal.addr WAR 1:462|kmax.addr WAR 1:467|kmin.addr WAR 1:483|kmax.addr WAR 1:483|kmin.addr WAR 1:491|kfinal.addr WAR 1:496|points.addr
+1:342 NOM  RAW 1:340|cost WAR 1:417|retval
+1:94 NOM  RAW 1:90|stride RAW 1:92|cl WAR 1:94|stride
+1:562 NOM  INIT *|centerBlock RAW 1:557|centersize.addr RAW 1:557|dim.addr
+1:178 NOM  RAW 1:101|pgain.work_mem RAW 1:103|pgain.gl_number_of_centers_to_close RAW 1:173|pgain.work_mem RAW 1:96|K WAR 1:178|pgain.gl_number_of_centers_to_close
+1:231 NOM  RAW 1:220|cost.addr RAW 1:220|e.addr RAW 1:228|change RAW 1:238|change RAW 1:240|cost.addr
+1:288 NOM  INIT *|r RAW 1:245|points.addr RAW 1:604|points.addr WAR 1:301|r
+1:323 NOM  INIT *|ptDimension RAW 1:310|points.addr RAW 1:571|points.addr RAW 1:581|points.addr WAR 1:328|ptDimension
+1:103 NOM  INIT *|pgain.gl_number_of_centers_to_close WAR 1:205|pgain.gl_number_of_centers_to_close WAW 1:178|pgain.gl_number_of_centers_to_close
+1:432 NOM  RAW 1:193|points.addr RAW 1:420|points.addr RAW 1:425|i RAW 1:430|ii RAW 1:431|points.addr RAW 1:573|points.addr RAW 1:577|points.addr WAR 1:432|points.addr
+1:435 NOM  RAW 1:193|points.addr RAW 1:420|points.addr RAW 1:425|i RAW 1:435|points.addr RAW 1:573|points.addr RAW 1:606|points.addr WAR 1:435|points.addr
+1:42 NOM  RAW 1:41|to_open
+1:608 NOM  INIT *|switch_membership RAW 1:604|points
+1:443 NOM  WAR 1:425|centers.addr WAR 1:425|points.addr WAR 1:430|centerIDs.addr WAR 1:473|offset.addr
+1:597 NOM  RAW 1:596|numRead
+1:123 NOM  INIT *|lower RAW 1:101|pgain.work_mem WAR 1:151|lower
+1:26 NOM  WAR 1:55|kcenter.addr WAR 1:55|z.addr WAR 1:57|points.addr WAR 3:40|points.addr WAR 3:44|kcenter.addr WAR 3:68|z.addr
+1:647 NOM  RAW 1:582|centers
+1:373 NOM  INIT *|is_center RAW 1:310|points.addr RAW 1:35|points.addr RAW 1:372|i56 RAW 1:48|points.addr RAW 1:573|points.addr RAW 1:609|is_center WAW 1:373|is_center
+1:448 NOM  INIT *|is_a_median RAW 1:443|points.addr RAW 1:604|points.addr
+1:462 NOM  INIT *|centerIDs.addr RAW 1:443|centerIDs.addr RAW 1:443|offset.addr RAW 1:455|k RAW 1:458|i RAW 1:463|k
+1:652 NOM  RAW 1:637|center_table
+3:68 NOM  RAW 3:67|result
+1:279 NOM  INIT *|i28 RAW 1:245|points.addr RAW 1:279|i28 RAW 1:604|points.addr WAR 1:279|i28
+1:310 NOM  INIT *|kfinal.addr INIT *|kmax.addr INIT *|kmin.addr INIT *|points.addr WAR 1:388|points.addr WAR 1:407|kmax.addr WAR 1:407|kmin.addr WAR 1:414|kfinal.addr
+1:209 NOM  RAW 1:101|pgain.work_mem
+1:168 NOM  RAW 1:139|cost_of_opening_x RAW 1:160|low RAW 1:168|cost_of_opening_x RAW 1:99|cost_of_opening_x WAR 1:168|cost_of_opening_x
+1:351 NOM  RAW 1:310|points.addr RAW 1:332|z WAW 1:346|cost
+1:191 NOM  RAW 1:186|i111 RAW 1:573|points.addr RAW 1:606|points.addr RAW 1:80|points.addr WAR 1:130|points.addr
+1:644 NOM  RAW 1:562|centerBlock
+1:686 NOM  INIT *|n RAW 1:655|argv.addr
+1:658 NOM  INIT *|infilename
+1:304 NOM  RAW 1:275|accumweight
+1:125 NOM  INIT *|gl_lower RAW 1:101|pgain.work_mem RAW 1:90|stride RAW 1:94|stride WAR 1:161|gl_lower WAR 1:197|gl_lower
+1:514 NOM  WAR 1:425|centerIDs.addr WAR 1:425|centers.addr WAR 1:473|outfile.addr
+1:296 NOM  RAW 1:294|k WAR 1:294|r
+1:287 NOM  INIT *|l WAR 1:293|l
+1:648 NOM  RAW 1:573|points
+1:637 NOM  RAW 1:467|centers WAR 1:627|center_table
+1:41 NOM  INIT *|to_open RAW 1:26|points.addr RAW 1:26|z.addr RAW 1:34|points.addr RAW 1:40|pspeedy.i RAW 1:47|points.addr RAW 1:573|points.addr WAR 1:42|to_open
+1:345 NOM  RAW 1:310|points.addr
+1:114 NOM  INIT *|center_table RAW 1:111|count RAW 1:112|i6 RAW 1:114|count RAW 1:610|center_table WAR 1:114|count WAR 1:161|center_table WAR 1:197|center_table
+1:277 NOM  INIT *|accumweight RAW 1:245|points.addr RAW 1:275|accumweight RAW 1:573|points.addr RAW 1:606|points.addr
+1:463 NOM  RAW 1:455|k RAW 1:463|k WAR 1:463|k
+1:378 NOM  INIT *|lastcost RAW 1:362|cost RAW 1:402|cost WAW 1:378|lastcost
+1:623 NOM  RAW 1:591|IDoffset RAW 1:596|numRead WAR 1:623|IDoffset
+1:331 NOM  WAW 1:321|loz
+1:46 NOM  RAW 1:26|points.addr RAW 1:34|points.addr RAW 1:44|k29 RAW 1:45|distance36 RAW 1:47|points.addr RAW 1:573|points.addr RAW 1:606|points.addr
+1:563 NOM  INIT *|centerIDs RAW 1:557|centersize.addr RAW 1:557|dim.addr
+1:545 NOM  WAR 1:629|start.addr WAR 1:639|finish.addr
+1:588 NOM  INIT *|centers RAW 1:582|centers RAW 1:586|i27
+1:187 NOM  INIT *|close_center RAW 1:114|center_table RAW 1:125|gl_lower RAW 1:161|gl_lower RAW 1:186|i111 RAW 1:193|points.addr RAW 1:35|points.addr RAW 1:48|points.addr RAW 1:573|points.addr RAW 1:610|center_table RAW 1:80|points.addr WAR 1:188|close_center WAW 1:187|close_center
+1:417 NOM  RAW 1:342|retval RAW 1:416|retval
+1:576 NOM  INIT *|i RAW 1:557|chunksize.addr RAW 1:576|i WAR 1:576|i
+1:44 NOM  INIT *|k29 RAW 1:26|points.addr RAW 1:44|k29 RAW 1:604|points.addr WAR 1:44|k29
+1:338 NOM  INIT *|points.addr RAW 1:310|points.addr RAW 1:336|kk13 RAW 1:582|points.addr
+1:636 NOM  RAW 1:467|centers WAR 1:625|is_center
+1:159 NOM  RAW 1:158|i64 RAW 1:198|is_center RAW 1:202|is_center RAW 1:373|is_center RAW 1:609|is_center
+1:651 NOM  RAW 1:636|is_center
+1:641 NOM  RAW 1:557|outfile.addr RAW 1:563|centerIDs
+1:549 NOM  RAW 1:548|msec
+1:414 NOM  INIT *|kfinal.addr RAW 1:205|pkmedian.k RAW 1:310|kfinal.addr
+3:62 NOM  INIT *|dim.addr WAR 1:307|dim.addr WAR 3:66|dim.addr
+1:487 NOM  RAW 1:481|stream.addr RAW 1:487|stream.addr RAW 1:695|stream.addr WAR 1:487|stream.addr
+1:242 NOM  RAW 1:240|cost.addr
+3:42 NOM  RAW 1:573|points.addr RAW 3:36|points.addr RAW 3:40|i
+3:56 NOM  RAW 1:301|intarray.addr RAW 3:49|intarray.addr RAW 3:53|i RAW 3:54|j RAW 3:56|intarray.addr RAW 3:57|intarray.addr WAR 3:55|intarray.addr WAR 3:56|intarray.addr
+1:173 NOM  INIT *|pgain.work_mem RAW 1:101|pgain.work_mem RAW 1:167|number_of_centers_to_close RAW 1:83|number_of_centers_to_close RAW 1:96|K WAR 1:178|pgain.work_mem
+1:341 NOM  RAW 1:205|pkmedian.k RAW 1:310|kfinal.addr WAR 1:616|kfinal.addr
+1:565 NOM  RAW 1:561|block
+1:520 NOM  RAW 1:467|centers.addr RAW 1:514|centers.addr WAR 1:458|is_a_median
+1:132 NOM  RAW 1:128|x_cost RAW 1:130|current_cost
+1:327 NOM  INIT *|kk RAW 1:310|points.addr RAW 1:327|kk RAW 1:467|points.addr RAW 1:604|points.addr WAR 1:327|kk
+1:694 NOM  RAW 1:686|n
+1:401 NOM  RAW 1:331|loz RAW 1:358|z RAW 1:401|hiz RAW 1:401|z WAR 1:358|hiz WAR 1:401|z WAR 1:407|hiz
+1:35 NOM  INIT *|points.addr RAW 1:26|points.addr RAW 1:32|k RAW 1:573|points.addr WAW 1:35|points.addr WAW 1:48|points.addr
+3:54 NOM  INIT *|j RAW 3:49|length.addr RAW 3:53|i WAR 1:90|j WAR 3:57|j
+1:627 NOM  RAW 1:610|center_table
+1:416 NOM  INIT *|retval RAW 1:388|cost
+1:322 NOM  INIT *|numberOfPoints RAW 1:310|points.addr RAW 1:467|points.addr RAW 1:604|points.addr WAW 1:322|numberOfPoints
+1:90 NOM  INIT *|stride RAW 1:205|numcenters.addr RAW 1:43|numcenters.addr RAW 1:80|numcenters.addr WAR 1:125|stride
+1:233 NOM  INIT *|numberOfPoints RAW 1:220|points.addr RAW 1:604|points.addr WAW 1:233|numberOfPoints
+1:496 NOM  RAW 1:487|stream.addr RAW 1:495|stream.addr
+1:695 NOM  INIT *|stream RAW 1:686|n
+1:293 NOM  RAW 1:287|l RAW 1:288|r RAW 1:296|r RAW 1:298|l
+1:280 NOM  INIT *|accumweight RAW 1:245|points.addr RAW 1:275|accumweight RAW 1:277|accumweight RAW 1:279|i28 RAW 1:280|accumweight RAW 1:573|points.addr RAW 1:606|points.addr
+1:250 NOM  INIT *|feasible.addr RAW 1:245|feasible.addr RAW 1:249|numfeasible
+1:232 NOM  WAR 1:231|change
+1:610 NOM  INIT *|center_table RAW 1:604|points
+1:604 NOM  RAW 1:596|numRead WAW 1:572|points
+1:683 NOM  INIT *|kmin RAW 1:655|argv.addr
+1:380 NOM  RAW 1:310|kmax.addr RAW 1:358|z RAW 1:362|cost RAW 1:401|z RAW 1:402|cost
+1:372 NOM  INIT *|i56 RAW 1:310|points.addr RAW 1:372|i56 RAW 1:604|points.addr WAR 1:372|i56
+1:635 NOM  RAW 1:467|centers WAR 1:626|switch_membership
+1:278 NOM  WAR 1:47|totalweight
+1:306 NOM  RAW 1:249|numfeasible WAR 3:66|retval
+1:269 NOM  RAW 1:245|points.addr RAW 1:249|numfeasible RAW 1:604|points.addr
+1:690 NOM  RAW 1:655|argv.addr RAW 1:657|outfilename
+1:32 NOM  INIT *|k RAW 1:26|points.addr RAW 1:32|k RAW 1:604|points.addr WAR 1:32|k
+1:388 NOM  RAW 1:250|pkmedian.feasible RAW 1:310|points.addr RAW 1:371|pkmedian.numfeasible WAR 1:389|cost
+1:398 NOM  RAW 1:205|pkmedian.k RAW 1:310|kmin.addr
+1:186 NOM  INIT *|i111 RAW 1:186|i111 RAW 1:604|points.addr RAW 1:80|points.addr WAR 1:186|i111
+1:43 NOM  RAW 1:26|kcenter.addr RAW 1:38|kcenter.addr RAW 1:43|kcenter.addr WAR 1:43|kcenter.addr
+1:461 NOM  RAW 1:435|points.addr RAW 1:443|centers.addr RAW 1:443|points.addr RAW 1:455|k RAW 1:458|i RAW 1:463|k RAW 1:573|points.addr RAW 1:582|centers.addr WAW 1:588|centers.addr
+1:609 NOM  INIT *|is_center RAW 1:604|points
+1:537 NOM  RAW 1:520|is_a_median
+1:340 NOM  WAR 1:416|cost
+1:491 NOM  RAW 1:488|count
+1:586 NOM  INIT *|i27 RAW 1:557|centersize.addr RAW 1:586|i27 WAR 1:586|i27
+1:112 NOM  INIT *|i6 RAW 1:112|i6 RAW 1:604|points.addr RAW 1:80|points.addr WAR 1:112|i6
+1:547 NOM  RAW 1:545|finish.addr RAW 1:545|start.addr WAR 1:639|msec
+1:295 NOM  RAW 1:275|accumweight RAW 1:280|accumweight RAW 1:285|w RAW 1:294|k
+3:53 NOM  INIT *|i RAW 3:49|length.addr RAW 3:53|i WAR 1:176|i WAR 3:53|i
+1:119 NOM  RAW 1:604|points.addr RAW 1:608|switch_membership RAW 1:80|points.addr
+1:657 NOM  INIT *|outfilename
+1:612 NOM  RAW 1:557|kmax.addr RAW 1:557|kmin.addr
+1:160 NOM  INIT *|low RAW 1:101|pgain.work_mem RAW 1:114|center_table RAW 1:151|pgain.work_mem RAW 1:158|i64 RAW 1:610|center_table RAW 1:80|z.addr WAR 1:162|low WAR 1:168|low
+1:83 NOM  INIT *|number_of_centers_to_close WAR 1:173|number_of_centers_to_close
+1:711 NOM  RAW 1:657|outfilename
+1:431 NOM  RAW 1:193|points.addr RAW 1:420|points.addr RAW 1:425|i RAW 1:429|relweight RAW 1:430|ii RAW 1:432|points.addr RAW 1:485|points.addr RAW 1:573|points.addr RAW 1:577|points.addr WAR 1:431|points.addr
+1:460 NOM  RAW 1:443|centers.addr RAW 1:443|points.addr RAW 1:455|k RAW 1:458|i RAW 1:463|k RAW 1:571|points.addr RAW 1:573|points.addr RAW 1:577|points.addr RAW 1:582|centers.addr RAW 1:587|centers.addr
+1:645 NOM  RAW 1:563|centerIDs
+1:179 NOM  RAW 1:101|pgain.work_mem RAW 1:174|pgain.work_mem RAW 1:176|pgain.gl_cost_of_opening_x RAW 1:96|K WAR 1:179|pgain.gl_cost_of_opening_x
+1:689 NOM  RAW 1:655|argv.addr RAW 1:658|infilename
+1:429 NOM  RAW 1:420|points.addr RAW 1:425|i RAW 1:428|relweight RAW 1:573|points.addr RAW 1:606|points.addr WAR 1:429|relweight
+1:362 NOM  RAW 1:310|points.addr RAW 1:358|z WAW 1:351|cost
+1:684 NOM  INIT *|kmax RAW 1:655|argv.addr
+1:655 NOM  INIT *|argc.addr INIT *|argv.addr INIT *|retval
+1:350 NOM  RAW 1:310|kmin.addr RAW 1:348|i RAW 1:352|i RAW 1:43|pkmedian.k
+1:150 NOM  INIT *|assign RAW 1:127|i RAW 1:193|points.addr RAW 1:35|points.addr RAW 1:48|points.addr RAW 1:573|points.addr RAW 1:80|points.addr WAR 1:151|assign
+1:307 NOM  RAW 1:306|retval
+1:275 NOM  RAW 1:245|points.addr RAW 1:604|points.addr WAR 1:44|accumweight
+1:581 NOM  INIT *|centers RAW 1:557|dim.addr
+1:321 NOM  INIT *|hiz INIT *|loz WAR 1:407|hiz WAR 1:407|loz
+1:384 NOM  RAW 1:205|pkmedian.k RAW 1:310|kmax.addr RAW 1:310|kmin.addr
+1:485 NOM  INIT *|dest.addr RAW 1:481|dest.addr RAW 1:481|dim.addr RAW 1:483|i RAW 1:484|k
+1:407 NOM  RAW 1:205|pkmedian.k RAW 1:310|kmax.addr RAW 1:310|kmin.addr RAW 1:331|loz RAW 1:401|hiz
+1:629 NOM  RAW 1:557|stream.addr
+1:184 NOM  RAW 1:179|pgain.gl_cost_of_opening_x
+1:530 NOM  RAW 1:514|centers.addr RAW 1:515|fp RAW 1:525|i7 RAW 1:529|k RAW 1:582|centers.addr RAW 1:587|centers.addr
+1:193 NOM  RAW 1:186|i111 RAW 1:573|points.addr RAW 1:80|points.addr RAW 1:80|x.addr WAR 1:187|points.addr
+1:571 NOM  INIT *|points RAW 1:557|dim.addr
+1:236 NOM  INIT *|i RAW 1:220|iter.addr RAW 1:236|i WAR 1:236|i
+1:516 NOM  RAW 1:515|fp
+1:201 NOM  RAW 1:604|points.addr RAW 1:80|points.addr RAW 1:80|x.addr
+3:36 NOM  WAR 1:57|points.addr WAR 3:66|points.addr
+1:336 NOM  INIT *|kk13 RAW 1:310|points.addr RAW 1:336|kk13 RAW 1:467|points.addr WAR 1:336|kk13
+1:712 NOM  RAW 1:658|infilename
+1:198 NOM  RAW 1:196|i156 RAW 1:609|is_center WAR 1:197|is_center
+1:522 NOM  INIT *|is_a_median RAW 1:337|centers.addr RAW 1:514|centers.addr RAW 1:520|is_a_median RAW 1:521|i RAW 1:582|centers.addr
+1:528 NOM  RAW 1:461|centers.addr RAW 1:514|centers.addr RAW 1:515|fp RAW 1:525|i7 RAW 1:582|centers.addr
+1:527 NOM  RAW 1:462|centerIDs.addr RAW 1:514|centerIDs.addr RAW 1:515|fp RAW 1:525|i7
+1:220 NOM  INIT *|numfeasible.addr WAR 1:231|e.addr WAR 1:236|iter.addr WAR 1:237|numfeasible.addr WAR 1:238|feasible.addr WAR 1:238|k.addr WAR 1:238|points.addr WAR 1:238|z.addr WAR 1:242|cost.addr WAR 1:288|feasible.addr WAR 1:293|e.addr WAR 1:295|iter.addr WAR 1:301|z.addr WAR 1:304|cost.addr WAR 1:306|k.addr WAR 1:57|points.addr
+1:526 NOM  RAW 1:520|is_a_median RAW 1:522|is_a_median RAW 1:525|i7
+1:495 NOM  WAR 1:458|stream.addr WAR 1:485|stream.addr
+1:525 NOM  RAW 1:467|centers.addr RAW 1:514|centers.addr RAW 1:525|i7 WAR 1:467|i7 WAR 1:525|i7
+1:587 NOM  INIT *|centers RAW 1:557|dim.addr RAW 1:562|centerBlock RAW 1:582|centers RAW 1:586|i27
+1:161 NOM  INIT *|gl_lower RAW 1:114|center_table RAW 1:125|gl_lower RAW 1:158|i64 RAW 1:160|low RAW 1:610|center_table WAR 1:197|gl_lower WAW 1:161|gl_lower
+1:371 NOM  INIT *|pkmedian.numfeasible RAW 1:310|kmin.addr RAW 1:310|points.addr
+1:420 NOM  WAR 1:473|points.addr
+1:34 NOM  INIT *|points.addr RAW 1:26|points.addr RAW 1:32|k RAW 1:33|distance RAW 1:573|points.addr RAW 1:606|points.addr WAR 1:58|points.addr
+3:57 NOM  RAW 3:49|intarray.addr RAW 3:54|j RAW 3:55|temp WAR 3:56|intarray.addr WAW 3:56|intarray.addr
+1:361 NOM  RAW 1:310|points.addr
+1:389 NOM  RAW 1:310|kmax.addr RAW 1:379|cost RAW 1:401|z
+1:521 NOM  INIT *|i RAW 1:467|centers.addr RAW 1:514|centers.addr RAW 1:521|i WAR 1:521|i
+1:383 NOM  RAW 1:205|pkmedian.k RAW 1:310|kmax.addr RAW 1:310|kmin.addr
+1:451 NOM  RAW 1:443|points.addr RAW 1:451|i RAW 1:604|points.addr WAR 1:451|i WAR 1:484|i
+1:599 NOM  RAW 1:557|chunksize.addr RAW 1:557|stream.addr RAW 1:596|numRead
+1:332 NOM  INIT *|z RAW 1:328|hiz RAW 1:331|loz WAR 1:389|z
+1:202 NOM  INIT *|is_center RAW 1:609|is_center RAW 1:80|x.addr WAR 1:197|is_center
+1:205 NOM  RAW 1:178|pgain.gl_number_of_centers_to_close RAW 1:205|numcenters.addr RAW 1:43|numcenters.addr RAW 1:80|numcenters.addr WAR 1:205|numcenters.addr
+3:65 NOM  INIT *|result WAR 1:55|result WAR 3:68|result
+1:328 NOM  RAW 1:310|points.addr RAW 1:321|hiz RAW 1:323|ptDimension RAW 1:327|kk RAW 1:328|hiz RAW 1:461|points.addr RAW 1:573|points.addr RAW 1:582|points.addr RAW 1:606|points.addr WAR 1:328|hiz
+1:138 NOM  INIT *|switch_membership RAW 1:127|i RAW 1:608|switch_membership WAR 1:188|switch_membership WAW 1:138|switch_membership
+1:574 NOM  RAW 1:557|chunksize.addr
+1:294 NOM  INIT *|k RAW 1:287|l RAW 1:288|r RAW 1:296|r RAW 1:298|l WAR 1:296|k WAR 1:298|k
+1:425 NOM  RAW 1:420|points.addr RAW 1:425|i RAW 1:467|points.addr RAW 1:604|points.addr WAR 1:425|i WAR 1:473|i
+1:557 NOM  INIT *|centersize.addr INIT *|chunksize.addr INIT *|dim.addr INIT *|kmax.addr INIT *|kmin.addr INIT *|outfile.addr INIT *|stream.addr
+1:358 NOM  RAW 1:331|loz RAW 1:332|z RAW 1:358|hiz WAR 1:332|hiz WAR 1:357|i WAR 1:358|z
+1:452 NOM  INIT *|is_a_median RAW 1:193|points.addr RAW 1:443|points.addr RAW 1:448|is_a_median RAW 1:451|i RAW 1:573|points.addr WAW 1:452|is_a_median
+1:413 NOM  RAW 1:250|pkmedian.feasible
+1:430 NOM  RAW 1:420|points.addr RAW 1:430|ii RAW 1:571|points.addr WAR 1:430|ii WAR 1:473|ii
+1:687 NOM  INIT *|chunksize RAW 1:655|argv.addr
+1:298 NOM  RAW 1:294|k WAR 1:294|l
+1:289 NOM  RAW 1:275|accumweight RAW 1:277|accumweight RAW 1:285|w
+1:573 NOM  INIT *|points
+3:41 NOM  INIT *|j RAW 1:604|points.addr RAW 3:36|points.addr RAW 3:40|i WAR 1:55|j WAR 3:44|j
+3:44 NOM  RAW 1:573|points.addr RAW 3:36|points.addr RAW 3:41|j
+1:40 NOM  INIT *|pspeedy.i RAW 1:26|points.addr RAW 1:40|pspeedy.i RAW 1:604|points.addr WAR 1:40|pspeedy.i
+1:48 NOM  RAW 1:26|points.addr RAW 1:40|pspeedy.i RAW 1:44|k29 RAW 1:573|points.addr WAW 1:35|points.addr WAW 1:48|points.addr
+1:515 NOM  RAW 1:514|outfile.addr WAR 1:473|fp
+1:337 NOM  INIT *|points.addr RAW 1:310|points.addr RAW 1:336|kk13 RAW 1:582|points.addr
+1:245 NOM  WAR 1:32|kmin.addr WAR 1:55|feasible.addr WAR 3:40|points.addr
+1:80 NOM  INIT *|points.addr WAR 1:128|x.addr WAR 1:158|points.addr WAR 1:176|z.addr WAR 1:201|points.addr WAR 1:202|x.addr WAR 1:205|numcenters.addr WAR 1:90|numcenters.addr WAR 3:53|z.addr WAR 3:57|numcenters.addr WAR 3:57|x.addr
+1:237 NOM  RAW 1:220|numfeasible.addr RAW 1:236|i WAR 1:238|x WAR 1:284|x
+1:55 NOM  INIT *|pspeedy.totalcost RAW 1:26|kcenter.addr RAW 1:26|z.addr RAW 1:43|kcenter.addr WAR 1:61|pspeedy.totalcost
+1:427 NOM  RAW 1:193|points.addr RAW 1:337|points.addr RAW 1:420|points.addr RAW 1:425|i RAW 1:573|points.addr RAW 1:582|points.addr
+1:192 NOM  RAW 1:186|i111 RAW 1:571|points.addr RAW 1:573|points.addr RAW 1:80|points.addr RAW 1:80|x.addr
+1:482 NOM  INIT *|count
+1:101 NOM  INIT *|pgain.work_mem RAW 1:90|stride RAW 1:94|stride WAR 1:209|pgain.work_mem
+1:606 NOM  INIT *|points RAW 1:573|points RAW 1:605|i59
+1:93 NOM  RAW 1:90|stride RAW 1:92|cl
+1:561 NOM  INIT *|block RAW 1:557|chunksize.addr RAW 1:557|dim.addr
+1:92 NOM  INIT *|cl WAR 1:93|cl WAR 1:94|cl
+1:47 NOM  RAW 1:26|points.addr RAW 1:44|k29 RAW 1:45|distance36 RAW 1:573|points.addr RAW 1:606|points.addr WAR 1:46|points.addr
+1:176 NOM  RAW 1:80|z.addr WAW 1:102|pgain.gl_cost_of_opening_x
+1:301 NOM  INIT *|feasible.addr RAW 1:245|feasible.addr RAW 1:250|feasible.addr RAW 1:284|i49 RAW 1:296|r
+1:473 NOM  RAW 1:472|kfinal.addr RAW 1:472|kmax.addr RAW 1:472|kmin.addr RAW 1:472|points.addr
+1:174 NOM  INIT *|pgain.work_mem RAW 1:101|pgain.work_mem RAW 1:139|cost_of_opening_x RAW 1:168|cost_of_opening_x RAW 1:96|K WAR 1:179|pgain.work_mem
+1:688 NOM  INIT *|clustersize RAW 1:655|argv.addr
+1:650 NOM  RAW 1:635|switch_membership
+1:33 NOM  INIT *|distance RAW 1:26|points.addr RAW 1:32|k RAW 1:571|points.addr RAW 1:573|points.addr WAR 1:34|distance
+1:572 NOM  INIT *|points RAW 1:557|chunksize.addr
+1:356 NOM  RAW 1:310|kmin.addr RAW 1:43|pkmedian.k
+1:282 NOM  RAW 1:245|points.addr RAW 1:280|accumweight RAW 1:604|points.addr WAW 1:278|totalweight
+1:284 NOM  INIT *|i49 RAW 1:249|numfeasible RAW 1:284|i49 WAR 1:284|i49
+1:285 NOM  RAW 1:282|totalweight WAR 1:295|w WAR 1:57|w
+1:158 NOM  INIT *|i64 RAW 1:158|i64 RAW 1:604|points.addr RAW 1:80|points.addr WAR 1:158|i64
+1:102 NOM  INIT *|pgain.gl_cost_of_opening_x WAR 1:210|pgain.gl_cost_of_opening_x
+1:96 NOM  INIT *|K RAW 1:90|stride RAW 1:94|stride WAR 1:179|K
+1:582 NOM  INIT *|centers
+1:379 NOM  RAW 1:250|pkmedian.feasible RAW 1:310|points.addr RAW 1:371|pkmedian.numfeasible WAR 1:380|cost
+1:111 NOM  INIT *|count WAW 1:114|count
+1:639 NOM  RAW 1:557|kmax.addr RAW 1:557|kmin.addr
+1:228 NOM  INIT *|change RAW 1:220|cost.addr WAR 1:231|change
+1:625 NOM  RAW 1:609|is_center
+1:458 NOM  RAW 1:443|points.addr RAW 1:458|i RAW 1:604|points.addr WAR 1:451|i WAR 1:458|i
+1:129 NOM  RAW 1:127|i RAW 1:573|points.addr RAW 1:606|points.addr RAW 1:80|points.addr
+1:113 NOM  RAW 1:112|i6 RAW 1:198|is_center RAW 1:202|is_center RAW 1:373|is_center RAW 1:609|is_center
+1:120 NOM  RAW 1:101|pgain.work_mem RAW 1:90|stride RAW 1:94|stride
+1:128 NOM  INIT *|x_cost RAW 1:127|i RAW 1:571|points.addr RAW 1:573|points.addr RAW 1:80|points.addr RAW 1:80|x.addr WAR 1:139|x_cost WAR 1:151|x_cost
+1:402 NOM  RAW 1:205|pkmedian.k RAW 1:379|cost RAW 1:401|hiz RAW 1:401|z WAR 1:402|cost
+3:43 NOM  RAW 1:573|points.addr RAW 3:36|points.addr RAW 3:40|i RAW 3:41|j
+1:151 NOM  INIT *|lower RAW 1:114|center_table RAW 1:123|lower RAW 1:128|x_cost RAW 1:130|current_cost RAW 1:150|assign RAW 1:151|lower RAW 1:610|center_table WAR 1:151|lower
+1:130 NOM  INIT *|current_cost RAW 1:127|i RAW 1:191|points.addr RAW 1:34|points.addr RAW 1:47|points.addr RAW 1:573|points.addr RAW 1:80|points.addr WAR 1:139|current_cost WAR 1:151|current_cost
+1:548 NOM  RAW 1:545|finish.addr RAW 1:545|start.addr RAW 1:547|msec WAR 1:548|msec
+1:57 NOM  INIT *|k81 RAW 1:26|points.addr RAW 1:57|k81 RAW 1:604|points.addr WAR 1:57|k81
+1:455 NOM  INIT *|k RAW 1:443|centers.addr RAW 1:584|centers.addr
+1:139 NOM  RAW 1:128|x_cost RAW 1:130|current_cost RAW 1:139|cost_of_opening_x RAW 1:99|cost_of_opening_x WAR 1:139|cost_of_opening_x
+1:714 END program
