@@ -1,0 +1,5 @@
+1	/home/goerlibe/discopop/DP_Maker/examples/starbench_rotate/rotate/image.cpp
+2	/home/goerlibe/discopop/DP_Maker/examples/starbench_rotate/rotate/image.h
+3	/home/goerlibe/discopop/DP_Maker/examples/starbench_rotate/rotate/program.cpp
+4	/home/goerlibe/discopop/DP_Maker/examples/starbench_rotate/rotate/rotation_engine.cpp
+5	/home/goerlibe/discopop/DP_Maker/examples/starbench_rotate/rotate/rotation_engine.h

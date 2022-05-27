@@ -1,0 +1,193 @@
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_rotate/rotate/rotation_engine.cpp
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_rotate/rotate/rotation_engine.cpp
+61
+202
+208
+80
+99
+229
+138
+139
+151
+162
+242
+243
+309
+323
+Reduction at: 4:273
+Start line: 4:309
+End line: 4:312
+pragma: #pragma omp parallel for
+private: []
+shared: []
+first private: []
+reduction: ['>:max']
+last private: []
+
+Reduction at: 4:282
+Start line: 4:323
+End line: 4:326
+pragma: #pragma omp parallel for
+private: []
+shared: []
+first private: []
+reduction: ['>:min']
+last private: []
+
+
+Do-all at: 1:33
+Start line: 1:61
+End line: 1:63
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:47
+Start line: 1:202
+End line: 1:204
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:53
+Start line: 1:208
+End line: 1:211
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:67
+Start line: 1:80
+End line: 1:81
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:75
+Start line: 1:99
+End line: 1:103
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:123
+Start line: 1:229
+End line: 1:231
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:146
+Start line: 4:138
+End line: 4:178
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:149
+Start line: 4:139
+End line: 4:177
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:154
+Start line: 4:151
+End line: 4:159
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['x_offset_source', 'y_offset_source']
+shared: ['samples']
+first private: ['origin_pix']
+reduction: []
+last private: []
+
+Do-all at: 4:169
+Start line: 4:162
+End line: 4:164
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: ['samples']
+reduction: []
+last private: []
+
+Do-all at: 4:239
+Start line: 4:242
+End line: 4:249
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:243
+Start line: 4:243
+End line: 4:248
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: ['i']
+reduction: []
+last private: []
+Time taken for pattern detection: 0.20764589309692383

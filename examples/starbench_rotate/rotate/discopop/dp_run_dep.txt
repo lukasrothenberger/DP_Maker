@@ -1,0 +1,264 @@
+START 3:53
+4:162 BGN loop 4
+4:167 END loop
+4:242 BGN loop 989
+4:250 END loop
+4:151 BGN loop 4
+4:162 END loop
+4:138 BGN loop 989
+4:180 END loop
+4:323 BGN loop 4
+4:327 END loop
+4:309 BGN loop 4
+4:313 END loop
+1:61 BGN loop 480000
+1:64 END loop
+1:209 BGN loop 2
+1:213 END loop
+4:243 BGN loop 989
+4:249 END loop
+4:139 BGN loop 989
+4:178 END loop
+1:99 BGN loop 978121
+1:104 END loop
+1:203 BGN loop 0
+1:206 END loop
+3:84 BGN func 3:118
+3:83 BGN func 3:118
+4:200 BGN func 1:184
+4:236 BGN func 1:129
+4:199 BGN func 4:228
+4:158 BGN func 1:120
+4:171 BGN func 1:157
+3:87 BGN func 5:44
+4:341 BGN func 4:270
+4:163 BGN func 1:148
+4:156 BGN func 1:111
+3:77 BGN func 4:97
+4:127 BGN func 4:281
+1:57 BGN func 1:198
+4:342 BGN func 4:270
+4:283 BGN func 4:307
+4:346 BGN func 4:354
+1:56 BGN func 1:198
+4:175 BGN func 1:157
+4:344 BGN func 4:354
+4:108 BGN func 1:111
+4:345 BGN func 4:354
+4:168 BGN func 4:338
+4:109 BGN func 1:129
+1:55 BGN func 1:198
+4:146 BGN func 1:171
+1:210 BGN func 1:222
+4:244 BGN func 1:148
+4:126 BGN func 4:259
+4:155 BGN func 1:111
+3:72 BGN func 1:30
+1:203 BGN func 1:222
+4:201 BGN func 1:184
+3:65 BGN func 4:46
+4:242 BGN func 1:120
+4:124 BGN func 4:259
+4:241 BGN func 1:111
+4:241 BGN func 1:120
+4:241 BGN func 1:138
+4:123 BGN func 4:259
+1:66 BGN func 1:111
+4:297 BGN func 4:321
+4:243 BGN func 1:111
+4:125 BGN func 4:259
+4:107 BGN func 1:120
+1:112 BGN func 1:120
+4:284 BGN func 4:321
+4:128 BGN func 4:294
+3:80 BGN func 4:198
+4:157 BGN func 1:120
+4:296 BGN func 4:307
+4:129 BGN func 1:91
+4:143 BGN func 4:259
+1:66 END func
+1:104 END func
+1:112 END func
+1:121 END func
+1:130 END func
+1:139 END func
+1:149 END func
+1:163 END func
+1:177 END func
+1:189 END func
+1:213 END func
+1:234 END func
+3:122 END func
+4:49 END func
+4:183 END func
+4:202 END func
+4:252 END func
+4:263 END func
+4:274 END func
+4:286 END func
+4:299 END func
+4:313 END func
+4:327 END func
+4:347 END func
+4:358 END func
+5:44 END func
+1:96 NOM  INIT *|this1 RAW 1:91|width.addr
+4:245 NOM  RAW 1:159|p
+1:92 NOM  INIT *|this1 RAW 1:91|width.addr
+4:284 NOM  INIT *|min
+4:141 NOM  RAW 1:159|x_offset_target RAW 1:160|i RAW 1:161|y_offset_target RAW 4:135|x_offset_target RAW 4:136|y_offset_target RAW 4:138|i RAW 4:139|j WAR 4:262|cur WAW 1:101|cur WAW 1:102|cur WAW 1:160|cur WAW 1:161|cur
+1:234 NOM  RAW 1:225|ch
+1:209 NOM  RAW 1:203|ch RAW 1:206|i RAW 1:209|i RAW 1:210|ch WAR 1:209|i
+1:53 NOM  INIT *|this1
+4:109 NOM  INIT *|depth
+1:112 NOM  RAW 1:101|this1 RAW 1:159|this1 RAW 1:160|this1 RAW 1:55|this1
+4:47 NOM  INIT *|this1
+1:111 NOM  INIT *|this.addr WAW 1:111|this.addr WAW 1:120|this.addr WAW 1:129|this.addr WAW 4:259|this.addr
+4:322 NOM  WAR 4:313|min
+1:222 NOM  INIT *|src.addr INIT *|this.addr WAR 1:225|src.addr WAW 1:222|this.addr
+4:136 NOM  RAW 1:100|target_h WAW 1:102|y_offset_target
+4:262 NOM  INIT *|* RAW 4:141|* RAW 4:259|pt.addr RAW 4:259|target.addr RAW 4:260|rad WAR 1:173|* WAR 4:342|* WAW 1:100|* WAW 1:159|*
+4:261 NOM  INIT *|* RAW 4:141|* RAW 4:259|pt.addr RAW 4:259|target.addr RAW 4:260|rad WAR 1:172|* WAR 4:341|* WAW 1:102|* WAW 1:161|*
+4:97 NOM  WAW 4:46|this.addr
+4:46 NOM  INIT *|this.addr
+4:355 NOM  RAW 1:100|a.addr RAW 1:100|b.addr RAW 1:159|a.addr RAW 1:159|b.addr RAW 4:354|a.addr RAW 4:354|b.addr RAW 4:354|dest.addr RAW 4:354|weight.addr RAW 4:355|a.addr RAW 4:355|b.addr WAR 1:159|dest.addr WAR 4:355|dest.addr WAW 1:100|dest.addr WAW 1:101|dest.addr WAW 1:159|dest.addr WAW 1:160|dest.addr
+3:121 NOM  RAW 1:161|finish.addr RAW 3:120|msec WAR 3:121|msec
+4:247 NOM  RAW 1:161|p
+4:157 NOM  RAW 4:151|k RAW 4:153|samples
+3:53 NOM  INIT *|argc.addr INIT *|argv.addr INIT *|retval WAW 1:159|cleanup.dest.slot
+4:260 NOM  INIT *|rad RAW 4:259|angle.addr WAR 4:262|rad WAR 4:342|rad WAW 1:101|rad WAW 1:160|rad
+4:127 NOM  INIT *|target_h
+1:185 NOM  RAW 1:161|this1
+1:121 NOM  RAW 1:102|this1 RAW 1:160|this1 RAW 1:161|this1 RAW 1:56|this1
+4:313 NOM  RAW 4:311|max
+1:213 NOM  RAW 1:209|i
+3:87 NOM  RAW 3:86|retval
+4:129 NOM  RAW 4:109|depth RAW 4:127|target_h RAW 4:128|target_w
+4:342 NOM  RAW 4:262|sample_pos.addr RAW 4:338|sample_pos.addr WAR 4:346|y_weight WAW 1:102|y_weight WAW 1:161|y_weight
+4:102 NOM  RAW 4:47|this1
+1:62 NOM  RAW 1:60|this1 RAW 1:61|i
+1:176 NOM  WAR 1:177|retval WAW 1:102|retval WAW 1:161|retval
+4:282 NOM  INIT *|seq RAW 4:262|this1 WAR 4:260|seq WAR 4:262|seq
+1:66 NOM  RAW 1:65|retval
+1:159 NOM  RAW 1:100|this1 RAW 1:101|p.addr RAW 1:101|this1 RAW 1:157|p.addr RAW 1:157|x.addr RAW 1:157|y.addr RAW 1:159|this1 RAW 1:160|p.addr RAW 1:160|this1 RAW 4:355|p.addr WAR 1:159|this1 WAR 1:161|this1 WAR 1:173|this1 WAR 4:134|this1 WAR 4:138|this1 WAR 4:141|this1 WAR 4:163|this1 WAR 4:175|this1 WAR 4:342|this1 WAR 4:345|this1 WAR 4:355|this1 WAR 4:357|this1 WAW 1:100|this1 WAW 1:159|this1
+1:175 NOM  WAR 1:177|retval WAW 1:161|retval
+4:272 NOM  RAW 4:270|digits.addr
+1:211 NOM  RAW 1:210|ch
+1:148 NOM  WAR 1:149|x.addr WAR 1:149|y.addr WAR 1:173|y.addr WAW 1:101|x.addr WAW 1:148|this.addr WAW 1:159|x.addr WAW 1:160|this.addr WAW 1:160|x.addr WAW 1:161|y.addr WAW 1:171|this.addr
+1:130 NOM  RAW 1:53|this1
+1:65 NOM  INIT *|retval
+1:120 NOM  INIT *|this.addr WAW 1:111|this.addr WAW 1:120|this.addr WAW 1:138|this.addr
+1:138 NOM  WAW 1:120|this.addr
+4:163 NOM  RAW 4:152|samples RAW 4:153|samples RAW 4:156|samples RAW 4:158|samples RAW 4:162|k93 WAW 1:101|tmp WAW 1:160|tmp WAW 4:163|tmp
+4:274 NOM  RAW 4:273|retval
+4:327 NOM  RAW 4:325|min
+4:325 NOM  RAW 4:282|seq.addr RAW 4:295|seq.addr RAW 4:321|seq.addr RAW 4:323|i WAR 4:324|min
+4:298 NOM  RAW 4:296|max RAW 4:297|min WAR 4:286|width
+4:134 NOM  RAW 1:100|this1 WAW 1:101|rev_angle
+1:57 NOM  INIT *|this1
+4:156 NOM  RAW 4:151|k WAR 4:155|samples
+1:184 NOM  WAR 4:163|this.addr WAW 1:184|this.addr
+1:158 NOM  RAW 1:100|this1 RAW 1:101|this1 RAW 1:157|x.addr RAW 1:157|y.addr RAW 1:159|this1 RAW 1:160|this1
+4:281 NOM  WAW 4:259|this.addr
+1:61 NOM  INIT *|i RAW 1:55|this1 RAW 1:56|this1 RAW 1:61|i WAR 1:61|i
+1:97 NOM  INIT *|this1 RAW 1:91|height.addr
+1:139 NOM  RAW 1:159|this1
+1:161 NOM  RAW 1:100|p.addr RAW 1:100|this1 RAW 1:101|this1 RAW 1:157|p.addr RAW 1:157|x.addr RAW 1:157|y.addr RAW 1:159|p.addr RAW 1:159|this1 RAW 1:159|x.addr RAW 1:160|this1 RAW 4:357|p.addr WAR 1:121|this1 WAR 1:149|this1 WAR 1:160|this1 WAR 1:161|this1 WAR 1:172|this1 WAR 1:174|this1 WAR 1:177|this1 WAR 4:139|this1 WAR 4:141|this1 WAR 4:151|this1 WAR 4:152|this1 WAR 4:163|this1 WAR 4:260|this1 WAR 4:262|this1 WAR 4:273|this1 WAR 4:341|this1 WAR 4:346|this1 WAR 4:356|this1 WAR 4:357|this1 WAW 1:102|this1 WAW 1:161|this1
+4:175 NOM  RAW 1:160|i RAW 4:138|i RAW 4:139|j
+5:44 NOM  WAR 3:121|this.addr
+4:344 NOM  RAW 4:338|colors.addr RAW 4:341|x_weight
+1:60 NOM  INIT *|this1 RAW 1:55|this1 RAW 1:56|this1
+4:48 NOM  INIT *|this1
+4:111 NOM  INIT *|x_offset_source RAW 4:108|width
+4:357 NOM  RAW 1:102|a.addr RAW 1:102|b.addr RAW 1:161|a.addr RAW 1:161|b.addr RAW 4:354|a.addr RAW 4:354|b.addr RAW 4:354|dest.addr RAW 4:354|weight.addr RAW 4:357|a.addr RAW 4:357|b.addr WAR 1:161|dest.addr WAR 4:357|dest.addr WAW 1:100|dest.addr WAW 1:102|dest.addr WAW 1:159|dest.addr WAW 1:161|dest.addr
+1:227 NOM  RAW 1:225|ch
+1:204 NOM  RAW 1:203|ch
+4:299 NOM  RAW 4:298|width
+1:59 NOM  INIT *|this1 RAW 1:56|this1
+4:308 NOM  INIT *|max WAR 4:327|max
+1:34 NOM  RAW 1:30|fname.addr
+1:177 NOM  RAW 1:175|retval RAW 1:176|retval
+4:324 NOM  RAW 4:282|seq.addr RAW 4:295|seq.addr RAW 4:321|seq.addr RAW 4:322|min RAW 4:323|i RAW 4:325|min
+4:311 NOM  RAW 4:282|seq.addr RAW 4:295|seq.addr RAW 4:307|seq.addr RAW 4:309|i WAR 4:310|max
+4:354 NOM  WAR 4:273|b.addr WAR 4:274|this.addr WAR 4:357|a.addr WAR 4:357|b.addr WAR 4:357|dest.addr WAR 4:357|weight.addr WAW 1:100|weight.addr WAW 1:101|dest.addr WAW 1:159|weight.addr WAW 1:160|dest.addr WAW 4:270|a.addr WAW 4:354|this.addr
+1:55 NOM  INIT *|this1
+4:321 NOM  WAR 4:310|seq.addr WAR 4:311|seq.addr WAW 4:307|this.addr
+4:244 NOM  RAW 4:242|i RAW 4:243|j WAW 1:161|tmp WAW 4:244|tmp
+1:101 NOM  INIT *|this1 RAW 1:100|i RAW 1:101|this1 RAW 1:98|this1 RAW 1:99|i WAR 1:101|this1 WAR 1:112|this1 WAR 1:211|this1 WAR 1:225|this1 WAR 1:61|this1 WAR 1:66|this1 WAR 1:94|this1 WAR 3:67|this1 WAR 4:111|this1 WAR 4:282|this1 WAR 4:295|this1 WAR 4:299|this1 WAR 4:325|this1 WAR 4:327|this1 WAR 4:98|this1 WAW 1:101|this1 WAW 1:198|this1 WAW 1:30|this1 WAW 1:57|this1 WAW 1:91|this1 WAW 1:93|this1 WAW 1:96|this1 WAW 4:112|this1 WAW 4:321|this1
+1:58 NOM  INIT *|this1 RAW 1:55|this1
+4:307 NOM  INIT *|seq.addr INIT *|this.addr WAR 4:324|seq.addr WAW 4:321|this.addr
+1:149 NOM  RAW 1:101|this1 RAW 1:102|this1 RAW 1:148|x.addr RAW 1:148|y.addr RAW 1:159|this1 RAW 1:160|this1 RAW 1:160|tmp RAW 1:161|this1 RAW 4:259|tmp
+1:186 NOM  RAW 1:161|this1
+4:310 NOM  RAW 4:282|seq.addr RAW 4:295|seq.addr RAW 4:307|seq.addr RAW 4:308|max RAW 4:309|i RAW 4:311|max
+4:135 NOM  RAW 1:102|target_w WAW 1:100|x_offset_target
+3:56 NOM  RAW 3:53|argc.addr
+4:98 NOM  RAW 4:48|this1
+1:171 NOM  WAR 4:262|pix.addr WAR 4:262|this.addr
+4:162 NOM  RAW 4:162|k93 WAR 4:162|k93 WAW 1:101|k93 WAW 1:160|k93
+1:160 NOM  RAW 1:100|this1 RAW 1:101|this1 RAW 1:102|p.addr RAW 1:157|p.addr RAW 1:157|x.addr RAW 1:157|y.addr RAW 1:159|p.addr RAW 1:159|this1 RAW 1:159|x.addr RAW 1:160|this1 RAW 1:161|p.addr RAW 4:356|p.addr WAR 1:149|this1 WAR 1:158|this1 WAR 1:159|this1 WAR 1:160|this1 WAR 1:174|this1 WAR 4:143|this1 WAR 4:153|this1 WAR 4:162|this1 WAR 4:163|this1 WAR 4:175|this1 WAR 4:262|this1 WAR 4:342|this1 WAR 4:355|this1 WAR 4:356|this1 WAR 4:357|this1 WAW 1:101|this1 WAW 1:157|this1 WAW 1:160|this1 WAW 4:163|this1 WAW 4:354|this1
+1:56 NOM  INIT *|this1
+3:120 NOM  RAW 1:161|finish.addr WAR 3:122|msec WAR 4:152|msec
+3:118 NOM  WAR 3:121|finish.addr WAR 3:121|start.addr WAW 1:160|finish.addr WAW 4:198|start.addr
+4:294 NOM  WAW 4:281|this.addr
+4:341 NOM  RAW 4:261|sample_pos.addr RAW 4:338|sample_pos.addr WAR 4:345|x_weight WAW 1:100|x_weight WAW 1:159|x_weight
+3:122 NOM  RAW 3:121|msec
+4:356 NOM  RAW 1:101|a.addr RAW 1:101|b.addr RAW 1:160|a.addr RAW 1:160|b.addr RAW 4:354|a.addr RAW 4:354|b.addr RAW 4:354|dest.addr RAW 4:354|weight.addr RAW 4:356|a.addr RAW 4:356|b.addr WAR 1:160|dest.addr WAR 4:356|dest.addr WAW 1:101|dest.addr WAW 1:102|dest.addr WAW 1:160|dest.addr WAW 1:161|dest.addr
+1:98 NOM  INIT *|this1 RAW 1:91|height.addr RAW 1:91|width.addr
+1:225 NOM  INIT *|ch RAW 1:222|src.addr WAR 1:234|ch
+4:228 NOM  WAR 4:163|this.addr WAW 1:160|cleanup.dest.slot
+4:108 NOM  INIT *|width
+1:95 NOM  INIT *|this1
+4:270 NOM  WAR 4:273|digits.addr WAR 4:273|num.addr WAR 4:357|num.addr WAR 4:357|this.addr WAW 1:100|num.addr WAW 1:102|digits.addr WAW 1:102|this.addr WAW 1:159|num.addr WAW 1:161|digits.addr WAW 1:161|this.addr WAW 4:270|this.addr
+4:152 NOM  RAW 1:102|x_offset_source RAW 1:161|x_offset_source RAW 4:151|k RAW 4:261|origin_pix WAR 4:163|samples WAW 1:100|samples WAW 1:101|samples WAW 1:102|samples WAW 1:159|samples WAW 1:160|samples WAW 1:161|samples
+4:251 NOM  WAW 1:161|retval
+4:309 NOM  INIT *|i RAW 4:309|i WAR 4:309|i WAR 4:323|i
+4:252 NOM  RAW 4:251|retval
+4:128 NOM  INIT *|target_w
+4:338 NOM  WAR 1:149|dest.addr WAR 4:262|sample_pos.addr WAW 1:120|this.addr WAW 1:148|colors.addr
+3:67 NOM  RAW 3:53|argc.addr RAW 3:53|argv.addr
+4:112 NOM  INIT *|y_offset_source RAW 4:107|height
+4:139 NOM  RAW 1:102|target_w RAW 1:159|j RAW 1:161|target_w RAW 4:139|j WAR 4:139|j WAW 1:100|j
+1:198 NOM  INIT *|src.addr INIT *|this.addr WAR 1:210|src.addr WAW 1:198|this.addr
+4:182 NOM  WAW 1:161|this1
+4:346 NOM  RAW 4:338|dest.addr RAW 4:342|y_weight
+4:151 NOM  RAW 4:151|k WAR 4:151|k WAW 1:102|k WAW 1:161|k
+3:86 NOM  WAW 1:161|retval
+4:295 NOM  RAW 4:261|this1 WAR 4:324|seq WAR 4:325|seq
+4:153 NOM  RAW 1:101|y_offset_source RAW 1:160|y_offset_source RAW 4:151|k RAW 4:262|origin_pix WAR 4:163|samples WAW 1:100|samples WAW 1:101|samples WAW 1:102|samples WAW 1:159|samples WAW 1:160|samples WAW 1:161|samples
+1:100 NOM  INIT *|this1 RAW 1:101|this1 RAW 1:98|this1 RAW 1:99|i WAR 1:100|this1 WAR 1:130|this1 WAR 1:213|this1 WAR 1:234|this1 WAR 1:99|this1 WAR 4:129|this1 WAR 4:282|this1 WAR 4:295|this1 WAR 4:298|this1 WAR 4:323|this1 WAW 1:100|this1 WAW 1:120|this1 WAW 1:222|this1 WAW 1:59|this1 WAW 1:92|this1 WAW 1:95|this1 WAW 4:97|this1
+4:259 NOM  INIT *|angle.addr INIT *|pt.addr INIT *|target.addr WAR 1:149|angle.addr WAR 1:161|pt.addr WAR 1:161|target.addr WAR 1:99|pt.addr WAR 1:99|target.addr WAR 4:260|angle.addr WAR 4:262|pt.addr WAR 4:262|target.addr WAW 1:101|this.addr WAW 1:102|angle.addr WAW 1:129|this.addr WAW 1:157|this.addr WAW 1:160|this.addr WAW 1:161|angle.addr WAW 1:161|pt.addr WAW 4:259|this.addr
+1:174 NOM  RAW 1:172|x_correct RAW 1:173|y_correct
+1:210 NOM  RAW 1:198|src.addr WAR 1:209|ch
+4:138 NOM  RAW 1:100|target_h RAW 1:159|target_h RAW 1:160|i RAW 4:138|i WAR 4:138|i WAW 1:101|i
+1:203 NOM  INIT *|ch RAW 1:198|src.addr WAR 1:204|ch WAR 1:211|ch
+1:91 NOM  INIT *|width.addr WAR 4:262|height.addr WAR 4:324|depth.addr WAW 4:294|this.addr
+1:187 NOM  WAR 1:186|this1
+4:198 NOM  WAW 1:159|this.addr
+4:345 NOM  RAW 4:338|colors.addr RAW 4:341|x_weight
+1:94 NOM  INIT *|this1 RAW 1:91|depth.addr
+4:229 NOM  RAW 4:182|this1
+1:172 NOM  RAW 1:102|this1 RAW 1:161|this1 RAW 1:171|pix.addr RAW 4:261|pix.addr WAR 1:174|x_correct WAW 1:102|x_correct WAW 1:161|x_correct
+1:206 NOM  INIT *|i WAR 1:213|i
+4:296 NOM  WAR 4:285|max
+4:246 NOM  RAW 1:160|p
+4:297 NOM  WAR 4:285|min
+4:155 NOM  RAW 4:151|k RAW 4:152|samples
+1:173 NOM  RAW 1:100|this1 RAW 1:159|this1 RAW 1:171|pix.addr RAW 4:262|pix.addr WAR 1:174|y_correct WAW 1:101|y_correct WAW 1:160|y_correct WAW 1:173|y_correct
+4:323 NOM  RAW 4:323|i WAR 4:309|i WAR 4:323|i
+4:171 NOM  RAW 1:160|i RAW 4:138|i RAW 4:139|j
+1:129 NOM  WAW 1:111|this.addr WAW 1:159|this.addr
+4:243 NOM  RAW 4:243|j WAR 4:243|j WAW 1:161|j
+4:283 NOM  INIT *|max
+4:242 NOM  RAW 4:242|i WAR 4:242|i WAW 1:159|i
+1:30 NOM  INIT *|cleanup.dest.slot INIT *|fname.addr INIT *|this.addr
+4:107 NOM  INIT *|height
+1:157 NOM  WAR 1:161|x.addr WAR 1:173|p.addr WAR 1:99|x.addr WAR 4:345|y.addr WAR 4:346|p.addr WAW 1:171|y.addr WAW 4:259|this.addr WAW 4:338|this.addr
+1:99 NOM  RAW 1:100|i RAW 1:100|width.addr RAW 1:102|height.addr RAW 1:91|height.addr RAW 1:91|width.addr RAW 1:99|i WAR 1:99|i WAR 4:324|i
+1:102 NOM  INIT *|this1 RAW 1:100|i RAW 1:101|this1 RAW 1:98|this1 RAW 1:99|i WAR 1:121|this1 WAR 1:210|this1 WAR 1:34|this1 WAR 1:62|this1 WAR 1:99|this1 WAR 3:67|this1 WAR 4:102|this1 WAR 4:112|this1 WAR 4:129|this1 WAR 4:282|this1 WAR 4:295|this1 WAR 4:298|this1 WAR 4:324|this1 WAW 1:102|this1 WAW 1:30|this1 WAW 1:58|this1 WAW 1:94|this1 WAW 1:97|this1 WAW 3:53|this1 WAW 4:111|this1
+4:143 NOM  RAW 1:160|rev_angle RAW 4:134|rev_angle
+4:273 NOM  RAW 1:102|v RAW 1:161|v RAW 4:270|digits.addr RAW 4:270|num.addr WAR 4:274|retval WAW 1:101|retval WAW 1:160|retval WAW 4:354|retval
+4:158 NOM  RAW 4:151|k WAR 4:157|samples
+4:286 NOM  RAW 4:285|height
+1:93 NOM  INIT *|this1 RAW 1:91|height.addr
+4:285 NOM  INIT *|height RAW 4:283|max RAW 4:284|min
+3:87 END program

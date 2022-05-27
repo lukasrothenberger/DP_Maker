@@ -1,0 +1,5 @@
+--- StarBENCH - rotate Kernel ---
+Trying to open image file input.ppm ... OK.
+Conversion timing:
+Compute: 8.319s
+Total: 8.646s
