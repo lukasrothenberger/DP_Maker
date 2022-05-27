@@ -1,0 +1,4 @@
+--- StarBENCH - rot-cc Workload ---
+Trying to open image file input.ppm ... OK.
+Compute: 11.551s
+Total: 11.551s
