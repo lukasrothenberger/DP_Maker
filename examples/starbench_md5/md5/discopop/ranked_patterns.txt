@@ -1,0 +1,216 @@
+105
+94
+101
+133
+140
+164
+167
+180
+203
+240
+Do-all at: 1:28
+Start line: 1:105
+End line: 1:189
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: ['ptr']
+first private: []
+reduction: []
+last private: ['a', 'd', 'b', 'c']
+
+Do-all at: 3:148
+Start line: 3:94
+End line: 3:103
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: ['index']
+reduction: []
+last private: []
+
+Do-all at: 3:155
+Start line: 3:101
+End line: 3:102
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: ['index']
+reduction: []
+last private: []
+
+Do-all at: 3:168
+Start line: 3:133
+End line: 3:146
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 3:171
+Start line: 3:140
+End line: 3:143
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: ['in', 'out']
+reduction: []
+last private: []
+
+Do-all at: 3:182
+Start line: 3:164
+End line: 3:174
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: ['fp', 'buffer']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 3:185
+Start line: 3:167
+End line: 3:170
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 3:194
+Start line: 3:180
+End line: 3:183
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 3:206
+Start line: 3:203
+End line: 3:206
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['datasize_mb']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 3:219
+Start line: 3:240
+End line: 3:258
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['opt', 'args']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+
+Geometric decomposition at: 3:134
+Start line: 3:73
+End line: 3:106
+Type: Geometric Decomposition Pattern
+Do-All loops: ['3:148', '3:155']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['args.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 3:166
+Start line: 3:132
+End line: 3:147
+Type: Geometric Decomposition Pattern
+Do-All loops: ['3:168', '3:171']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['args.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 3:178
+Start line: 3:154
+End line: 3:191
+Type: Geometric Decomposition Pattern
+Do-All loops: ['3:182', '3:185', '3:194']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['args.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 3:204
+Start line: 3:199
+End line: 3:207
+Type: Geometric Decomposition Pattern
+Do-All loops: ['3:206']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: []
+	first private: ['i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 3:217
+Start line: 3:223
+End line: 3:297
+Type: Geometric Decomposition Pattern
+Do-All loops: ['3:219', '3:148', '3:155', '3:168', '3:171', '3:182', '3:185', '3:194']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['argv.addr', 'argc.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+Time taken for pattern detection: 10.163763999938965
