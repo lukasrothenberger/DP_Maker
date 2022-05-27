@@ -1,0 +1,200 @@
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_c-ray/c-ray/c-ray-mt.c
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_c-ray/c-ray/c-ray-mt.c
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_c-ray/c-ray/c-ray-mt.c
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_c-ray/c-ray/c-ray-mt.c
+166
+230
+231
+232
+241
+263
+253
+539
+544
+550
+563
+277
+281
+314
+342
+357
+Reduction at: 1:79
+Start line: 1:539
+End line: 1:592
+pragma: #pragma omp parallel for
+private: ['type']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Reduction at: 1:136
+Start line: 1:281
+End line: 1:286
+pragma: #pragma omp parallel for
+private: ['i', 's']
+shared: []
+first private: []
+reduction: ['+:g', '+:r', '+:b']
+last private: []
+
+
+Do-all at: 1:2
+Start line: 1:166
+End line: 1:221
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['noout', 'i']
+shared: ['infile', 'outfile']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:33
+Start line: 1:230
+End line: 1:230
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:38
+Start line: 1:231
+End line: 1:231
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:43
+Start line: 1:232
+End line: 1:232
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:64
+Start line: 1:263
+End line: 1:266
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:70
+Start line: 1:253
+End line: 1:257
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: []
+first private: ['outfile']
+reduction: []
+last private: []
+
+Do-all at: 1:82
+Start line: 1:544
+End line: 1:544
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: ['ptr']
+reduction: []
+last private: []
+
+Do-all at: 1:91
+Start line: 1:550
+End line: 1:553
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: ['ptr']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:101
+Start line: 1:563
+End line: 1:566
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: ['ptr']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:223
+Start line: 1:342
+End line: 1:376
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:226
+Start line: 1:357
+End line: 1:362
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+
+Geometric decomposition at: 1:76
+Start line: 1:533
+End line: 1:595
+Type: Geometric Decomposition Pattern
+Do-All loops: ['1:79', '1:82', '1:91', '1:101']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['fp.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+Time taken for pattern detection: 4.609202146530151

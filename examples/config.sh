@@ -4,3 +4,4 @@
 HOME_DIR=/home/goerlibe/discopop/DP_Maker
 DP_PATH=/home/goerlibe/discopop/discopop
 DP_BUILD=${DP_PATH}/build
+DP_MAKER_BASE_PATH=/home/goerlibe/discopop/DP_Maker

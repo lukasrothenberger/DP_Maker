@@ -1,0 +1,4 @@
+ FileID : 1 Loop Line Number : 539 Reduction Line Number : 556 Variable Name : lnum Operation Name : +
+ FileID : 1 Loop Line Number : 281 Reduction Line Number : 283 Variable Name : r Operation Name : +
+ FileID : 1 Loop Line Number : 281 Reduction Line Number : 284 Variable Name : g Operation Name : +
+ FileID : 1 Loop Line Number : 281 Reduction Line Number : 285 Variable Name : b Operation Name : +
