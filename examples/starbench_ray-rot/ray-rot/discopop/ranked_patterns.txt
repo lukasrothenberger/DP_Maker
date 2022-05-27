@@ -1,0 +1,480 @@
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/rotation_engine.cpp
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/rotation_engine.cpp
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/ray_engine.cpp
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/ray_engine.cpp
+filepath: /home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/ray_engine.cpp
+61
+202
+208
+80
+99
+229
+125
+126
+138
+149
+220
+221
+287
+301
+369
+374
+380
+393
+56
+104
+108
+68
+141
+169
+184
+80
+116
+115
+Reduction at: 6:275
+Start line: 6:287
+End line: 6:290
+pragma: #pragma omp parallel for
+private: []
+shared: []
+first private: []
+reduction: ['>:max']
+last private: []
+
+Reduction at: 6:284
+Start line: 6:301
+End line: 6:304
+pragma: #pragma omp parallel for
+private: []
+shared: []
+first private: []
+reduction: ['>:min']
+last private: []
+
+Reduction at: 4:362
+Start line: 4:108
+End line: 4:113
+pragma: #pragma omp parallel for
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+
+Do-all at: 1:33
+Start line: 1:61
+End line: 1:63
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:47
+Start line: 1:202
+End line: 1:204
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:53
+Start line: 1:208
+End line: 1:211
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:67
+Start line: 1:80
+End line: 1:81
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:75
+Start line: 1:99
+End line: 1:103
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 1:123
+Start line: 1:229
+End line: 1:231
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 6:146
+Start line: 6:125
+End line: 6:165
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 6:149
+Start line: 6:126
+End line: 6:164
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 6:154
+Start line: 6:138
+End line: 6:146
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['x_offset_source', 'y_offset_source']
+shared: ['samples']
+first private: ['origin_pix']
+reduction: []
+last private: []
+
+Do-all at: 6:169
+Start line: 6:149
+End line: 6:151
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: ['samples']
+reduction: []
+last private: []
+
+Do-all at: 6:241
+Start line: 6:220
+End line: 6:227
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 6:245
+Start line: 6:221
+End line: 6:226
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: ['i']
+reduction: []
+last private: []
+
+Do-all at: 4:302
+Start line: 4:369
+End line: 4:422
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['type']
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:305
+Start line: 4:374
+End line: 4:374
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: ['ptr']
+reduction: []
+last private: []
+
+Do-all at: 4:314
+Start line: 4:380
+End line: 4:383
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: ['ptr']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:324
+Start line: 4:393
+End line: 4:396
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: ['i']
+shared: ['ptr']
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:350
+Start line: 4:56
+End line: 4:58
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:359
+Start line: 4:104
+End line: 4:122
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:383
+Start line: 4:68
+End line: 4:71
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:400
+Start line: 4:141
+End line: 4:148
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:462
+Start line: 4:169
+End line: 4:203
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 4:465
+Start line: 4:184
+End line: 4:189
+iterations: 1000
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 3:562
+Start line: 3:80
+End line: 3:80
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+Do-all at: 3:571
+Start line: 3:116
+End line: 3:118
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: ['args']
+reduction: []
+last private: []
+
+Do-all at: 3:577
+Start line: 3:115
+End line: 3:115
+iterations: 0
+instructions: 0
+workload: 0
+pragma: "#pragma omp parallel for"
+private: []
+shared: []
+first private: []
+reduction: []
+last private: []
+
+
+Geometric decomposition at: 4:299
+Start line: 4:0
+End line: 4:425
+Type: Geometric Decomposition Pattern
+Do-All loops: ['4:302', '4:305', '4:314', '4:324']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['fp.addr', 'this.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 4:348
+Start line: 4:0
+End line: 4:59
+Type: Geometric Decomposition Pattern
+Do-All loops: ['4:350', '4:359', '4:362', '4:400', '4:462', '4:465']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['this.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 4:356
+Start line: 4:0
+End line: 4:123
+Type: Geometric Decomposition Pattern
+Do-All loops: ['4:359', '4:362', '4:400', '4:462', '4:465']
+Reduction loops: []
+	Number of tasks: 2
+	Chunk limits: 1
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['xsz.addr', 'this.addr', 'sl.addr', 'out.addr', 'samples.addr']
+	first private: ['ysz.addr', 'i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 4:381
+Start line: 4:0
+End line: 4:73
+Type: Geometric Decomposition Pattern
+Do-All loops: ['4:383']
+Reduction loops: []
+	Number of tasks: 24
+	Chunk limits: 1000
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['this.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 4:394
+Start line: 4:0
+End line: 4:159
+Type: Geometric Decomposition Pattern
+Do-All loops: ['4:400', '4:462', '4:465']
+Reduction loops: []
+	Number of tasks: 2
+	Chunk limits: 1
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: []
+	shared: ['depth.addr', 'this.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+
+Geometric decomposition at: 4:460
+Start line: 4:194
+End line: 4:224
+Type: Geometric Decomposition Pattern
+Do-All loops: ['4:462', '4:465', '4:400']
+Reduction loops: []
+	Number of tasks: 2
+	Chunk limits: 1
+	pragma: for (i = 0; i < num-tasks; i++) #pragma omp task]
+	private: ['sp']
+	shared: ['this.addr', 'sp.addr', 'depth.addr', 'obj.addr']
+	first private: ['i']
+	reduction: []
+	last private: []
+Time taken for pattern detection: 1.0871455669403076

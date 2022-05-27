@@ -1,0 +1,5 @@
+ FileID : 6 Loop Line Number : 287 Reduction Line Number : 289 Variable Name : max Operation Name : >
+ FileID : 6 Loop Line Number : 301 Reduction Line Number : 303 Variable Name : min Operation Name : >
+ FileID : 4 Loop Line Number : 108 Reduction Line Number : 110 Variable Name : r Operation Name : +
+ FileID : 4 Loop Line Number : 108 Reduction Line Number : 111 Variable Name : g Operation Name : +
+ FileID : 4 Loop Line Number : 108 Reduction Line Number : 112 Variable Name : b Operation Name : +

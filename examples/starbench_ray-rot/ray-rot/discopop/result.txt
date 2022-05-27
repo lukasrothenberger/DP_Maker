@@ -1,0 +1,13 @@
+--- StarBENCH - ray-rot Workload ---
+RayTracing Kernel:
+Width: 320	 Height: 180
+Aspect Ratio: 1.8	 RPP: 5
+Number of lights: 2
+
+Rotation Kernel:
+Width: 320	 Height: 180
+Pixels: 0.06M	 Angle: 45°
+Dest. File: /home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/discopop/result.ppm
+
+Conversion timing:
+Total: 22.842s

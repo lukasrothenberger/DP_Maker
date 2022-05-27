@@ -1,0 +1,7 @@
+1	/home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/image.cpp
+2	/home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/image.h
+3	/home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/program.cpp
+4	/home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/ray_engine.cpp
+5	/home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/ray_engine.h
+6	/home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/rotation_engine.cpp
+7	/home/goerlibe/discopop/DP_Maker/examples/starbench_ray-rot/ray-rot/rotation_engine.h
