@@ -15,6 +15,7 @@ function printRed ()
 function execute_DP_Maker () {
     # required variables:
         # TARGET_PROJECT
+        # TARGET_BUILD
         # TARGET_MAKEFILE
         # COMPILER
         # DP_PATH
@@ -26,25 +27,25 @@ function execute_DP_Maker () {
     HOME_DIR=$PWD
 
     # cleanup to force complete rebuild
-    cd $TARGET_PROJECT && make clean
+    cd $TARGET_BUILD && make clean
     rm -rf $RESULT_DIR && mkdir $RESULT_DIR
 
     # CU GEN
     printYellow "CU GENERATION"
     cd $DP_MAKER_BASE_PATH && python -m Makefile_Analyzer --target-project=$TARGET_PROJECT --target-makefile=$TARGET_MAKEFILE --compiler=$COMPILER --dp-path=${DP_PATH} --dp-build-path=${DP_BUILD} --exec-mode=cu_gen
-    cd $TARGET_PROJECT && make -f tmp_makefile.mk
+    cd $TARGET_BUILD && make -f tmp_makefile.mk
     mv tmp_makefile.mk $RESULT_DIR/tmp_makefile_cu.mk
 
     # RED
     printYellow "REDUCTION"
     cd $DP_MAKER_BASE_PATH && python -m Makefile_Analyzer --target-project=$TARGET_PROJECT --target-makefile=$TARGET_MAKEFILE --compiler=$COMPILER --dp-path=${DP_PATH} --dp-build-path=${DP_BUILD} --exec-mode=dp_red
-    cd $TARGET_PROJECT && make -j7 -f tmp_makefile.mk
+    cd $TARGET_BUILD && make -f tmp_makefile.mk
     mv tmp_makefile.mk $RESULT_DIR/tmp_makefile_red.mk
 
     # DEP
     printYellow "BUILDING FOR INSTRUMENTATION"
     cd $DP_MAKER_BASE_PATH && python -m Makefile_Analyzer --target-project=$TARGET_PROJECT --target-makefile=$TARGET_MAKEFILE --compiler=$COMPILER --dp-path=${DP_PATH} --dp-build-path=${DP_BUILD} --exec-mode=dep
-    cd $TARGET_PROJECT && make -f tmp_makefile.mk
+    cd $TARGET_BUILD && make -f tmp_makefile.mk
     mv tmp_makefile.mk $RESULT_DIR/tmp_makefile_inst.mk
     
     printYellow "RUNNING INSTRUMENTATION"

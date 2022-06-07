@@ -19,7 +19,7 @@ private: []
 shared: ['ptr']
 first private: []
 reduction: []
-last private: ['a', 'd', 'b', 'c']
+last private: ['a', 'b', 'd', 'c']
 
 Do-all at: 3:148
 Start line: 3:94
@@ -213,4 +213,4 @@ Reduction loops: []
 	first private: ['i']
 	reduction: []
 	last private: []
-Time taken for pattern detection: 10.163763999938965
+Time taken for pattern detection: 10.62487530708313

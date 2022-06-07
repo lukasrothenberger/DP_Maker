@@ -2,6 +2,7 @@ source ../config.sh
 source ../functions.sh
 
 TARGET_PROJECT="$DP_MAKER_BASE_PATH/examples/starbench_tinyjpeg/tinyjpeg"
+TARGET_BUILD=$TARGET_PROJECT
 TARGET_MAKEFILE="$TARGET_PROJECT/Makefile"
 COMPILER="gcc"
 RESULT_DIR="$TARGET_PROJECT/discopop"
