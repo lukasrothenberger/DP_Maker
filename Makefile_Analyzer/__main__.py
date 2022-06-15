@@ -22,7 +22,8 @@ import os
 import logging
 
 from docopt import docopt  # type:ignore
-from schema import SchemaError, Schema, Use  # type:ignore
+from schema import SchemaError, Schema, Use
+from DP_Maker_Classes.FlagTable import FlagTable  # type:ignore
 
 from DP_Maker_Classes.RunConfiguration import RunConfiguration
 from .analyzer import analyze_makefile
@@ -52,6 +53,17 @@ def get_path(base_path: str, file_name: str) -> str:
 
 
 def main():
+
+    # test FlagTable
+    flagTable = FlagTable([("gcc", "gccFlags.csv"), ("g++", "g++Flags.csv")])
+    print(flagTable.getReplacementForFlag("gcc", "-someFlag2")) # should be ""
+    print(flagTable.getReplacementForFlag("gcc", "-someFlag3")) # should be "-someReplacement3"
+    print(flagTable.getReplacementForFlag("gcc", "-someFlag42")) # not configured, should be ""
+
+    flagTable.setDefaultCompiler("gcc")
+    print(flagTable.getDefaultCompilerReplacementForFlag("-someFlag3"))
+
+
     # configure logging
     logger = logging.getLogger("DP_Maker")
     console_handler = logging.StreamHandler()
